@@ -141,13 +141,13 @@ resource "coder_script" "clone_repo" {
   script = <<-EOT
     #!/bin/bash
     set -e
-    
+
     # Ensure git is installed
     if ! command -v git &> /dev/null; then
         echo "Installing git..."
         sudo apt-get update && sudo apt-get install -y git
     fi
-    
+
     # Clone repository if it doesn't exist
     if [ ! -d "${var.base_dir}/$(basename ${var.url} .git)" ]; then
         echo "Cloning ${var.url}..."
@@ -173,16 +173,16 @@ import { runTerraformApply, runTerraformInit, testRequiredVariables } from "~tes
 
 describe("git-clone", async () => {
   await testRequiredVariables("registry/[your-username]/modules/git-clone")
-  
+
   it("should clone repository successfully", async () => {
     await runTerraformInit("registry/[your-username]/modules/git-clone")
     await runTerraformApply("registry/[your-username]/modules/git-clone", {
       agent_id: "test-agent-id",
-      url: "https://github.com/coder/coder.git",
+      url: "https://github.com/DanielRondonGarcia/coder.git",
       base_dir: "/tmp"
     })
   })
-  
+
   it("should work with SSH URLs", async () => {
     await runTerraformInit("registry/[your-username]/modules/git-clone")
     await runTerraformApply("registry/[your-username]/modules/git-clone", {
@@ -216,9 +216,9 @@ This module clones a Git repository into your Coder workspace and ensures Git is
 module "git_clone" {
   source   = "registry.coder.com/[your-username]/git-clone/coder"
   version  = "~> 1.0"
-  
+
   agent_id = coder_agent.main.id
-  url      = "https://github.com/coder/coder.git"
+  url      = "https://github.com/DanielRondonGarcia/coder.git"
   base_dir = "/home/coder/projects"
 }
 ```

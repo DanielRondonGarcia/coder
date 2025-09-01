@@ -26,7 +26,7 @@ rm /tmp/scripts.zip
 
 echo "Cloning coder/coder repo..."
 if [[ ! -d "${HOME}/coder" ]]; then
-	git clone https://github.com/coder/coder.git "${HOME}/coder"
+	git clone https://github.com/DanielRondonGarcia/coder.git "${HOME}/coder"
 fi
 (cd "${HOME}/coder" && git fetch -a && git checkout "${SCALETEST_PARAM_REPO_BRANCH}" && git pull)
 

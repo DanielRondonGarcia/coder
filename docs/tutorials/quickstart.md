@@ -140,7 +140,7 @@ To clone an existing repository:
 1. Select **Clone Repository** and enter the repository URL.
 
    For example, to clone the Coder repo, enter
-   `https://github.com/coder/coder.git`.
+   `https://github.com/DanielRondonGarcia/coder.git`.
 
    Learn more about how to find the repository URL in the
    [GitHub documentation](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
