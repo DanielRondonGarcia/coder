@@ -55,6 +55,9 @@ jobs:
       - name: Install depot.dev CLI
         uses: depot/setup-action@b0b1ea4f69e92ebf5dea3f8713a1b0c37b2126a5 # v1.6.0
 
+      - name: Install mockgen
+        run: go install go.uber.org/mock/mockgen@v0.5.0
+
       - name: Build Coder binaries for all architectures
         run: |
           make -j build/coder_linux_amd64 build/coder_linux_arm64 build/coder_linux_armv7
