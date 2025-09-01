@@ -9,15 +9,15 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/dbfake"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbfake"
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/coder/coder/v2/cli/clitest"
-	"github.com/coder/coder/v2/coderd/coderdtest"
-	"github.com/coder/coder/v2/coderd/rbac"
-	"github.com/coder/coder/v2/provisioner/echo"
+	"github.com/DanielRondonGarcia/coder/v2/cli/clitest"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac"
+	"github.com/DanielRondonGarcia/coder/v2/provisioner/echo"
 )
 
 func TestStatePull(t *testing.T) {

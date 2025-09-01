@@ -4,7 +4,7 @@ Some Coder features are released in feature stages before they are generally
 available.
 
 If you encounter an issue with any Coder feature, please submit a
-[GitHub issue](https://github.com/coder/coder/issues) or join the
+[GitHub issue](https://github.com/DanielRondonGarcia/coder/issues) or join the
 [Coder Discord](https://discord.gg/coder).
 
 ## Feature stages
@@ -76,7 +76,7 @@ You can opt-out of a feature after you've enabled it.
 - **Stable**: No
 - **Production-ready**: Not fully
 - **Support**: Documentation, [Discord](https://discord.gg/coder), and
-  [GitHub issues](https://github.com/coder/coder/issues)
+  [GitHub issues](https://github.com/DanielRondonGarcia/coder/issues)
 
 Beta features are open to the public and are tagged with a `Beta` label.
 
@@ -93,7 +93,7 @@ information, including planned features, limitations, and workarounds. If you
 encounter an issue, please contact your
 [Coder account team](https://coder.com/contact), reach out on
 [Discord](https://discord.gg/coder), or create a
-[GitHub issues](https://github.com/coder/coder/issues) if there isn't one
+[GitHub issues](https://github.com/DanielRondonGarcia/coder/issues) if there isn't one
 already. While we will do our best to provide support with beta features, most
 issues will be escalated to the product team. Beta features are not covered
 within service-level agreements (SLA).
@@ -117,7 +117,7 @@ specific expectations.
 
 For support, consult our knowledgeable and growing community on
 [Discord](https://discord.gg/coder), or create a
-[GitHub issue](https://github.com/coder/coder/issues) if one doesn't exist
+[GitHub issue](https://github.com/DanielRondonGarcia/coder/issues) if one doesn't exist
 already. Customers with a valid Coder license, can submit a support request or
 contact your [account team](https://coder.com/contact).
 
@@ -126,7 +126,7 @@ We intend [Coder documentation](../../README.md) to be the
 and all features should have some form of complete documentation that outlines
 how to use or implement a feature. If you discover an error or if you have a
 suggestion that could improve the documentation, please
-[submit a GitHub issue](https://github.com/coder/internal/issues/new?title=request%28docs%29%3A+request+title+here&labels=["customer-feedback","docs"]&body=please+enter+your+request+here).
+[submit a GitHub issue](https://github.com/DanielRondonGarcia/internal/issues/new?title=request%28docs%29%3A+request+title+here&labels=["customer-feedback","docs"]&body=please+enter+your+request+here).
 
 Some GA features can be disabled for air-gapped deployments. Consult the
 feature's documentation or submit a support ticket for assistance.

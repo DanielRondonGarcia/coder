@@ -18,7 +18,7 @@ import (
 	"golang.org/x/xerrors"
 	"kernel.org/pub/linux/libs/security/libcap/cap"
 
-	"github.com/coder/coder/v2/agent/usershell"
+	"github.com/DanielRondonGarcia/coder/v2/agent/usershell"
 )
 
 // CLI runs the agent-exec command. It should only be called by the cli package.

@@ -30,15 +30,15 @@ import (
 	"cdr.dev/slog"
 	"cdr.dev/slog/sloggers/sloghuman"
 	"cdr.dev/slog/sloggers/slogtest"
-	"github.com/coder/coder/v2/agent/agentcontainers"
-	"github.com/coder/coder/v2/agent/agentcontainers/acmock"
-	"github.com/coder/coder/v2/agent/agentcontainers/watcher"
-	"github.com/coder/coder/v2/agent/usershell"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/pty"
-	"github.com/coder/coder/v2/testutil"
-	"github.com/coder/quartz"
-	"github.com/coder/websocket"
+	"github.com/DanielRondonGarcia/coder/v2/agent/agentcontainers"
+	"github.com/DanielRondonGarcia/coder/v2/agent/agentcontainers/acmock"
+	"github.com/DanielRondonGarcia/coder/v2/agent/agentcontainers/watcher"
+	"github.com/DanielRondonGarcia/coder/v2/agent/usershell"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/pty"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/quartz"
+	"github.com/DanielRondonGarcia/websocket"
 )
 
 // fakeContainerCLI implements the agentcontainers.ContainerCLI interface for
@@ -470,8 +470,8 @@ func TestAPI(t *testing.T) {
 			c.FriendlyName = "devcontainer1"
 			c.Image = "busybox:latest"
 			c.Labels = map[string]string{
-				agentcontainers.DevcontainerLocalFolderLabel: "/home/coder/project1",
-				agentcontainers.DevcontainerConfigFileLabel:  "/home/coder/project1/.devcontainer/devcontainer.json",
+				agentcontainers.DevcontainerLocalFolderLabel: "/home/DanielRondonGarcia/project1",
+				agentcontainers.DevcontainerConfigFileLabel:  "/home/DanielRondonGarcia/project1/.devcontainer/devcontainer.json",
 			}
 		})
 
@@ -480,8 +480,8 @@ func TestAPI(t *testing.T) {
 			c.FriendlyName = "devcontainer2"
 			c.Image = "ubuntu:latest"
 			c.Labels = map[string]string{
-				agentcontainers.DevcontainerLocalFolderLabel: "/home/coder/project2",
-				agentcontainers.DevcontainerConfigFileLabel:  "/home/coder/project2/.devcontainer/devcontainer.json",
+				agentcontainers.DevcontainerLocalFolderLabel: "/home/DanielRondonGarcia/project2",
+				agentcontainers.DevcontainerConfigFileLabel:  "/home/DanielRondonGarcia/project2/.devcontainer/devcontainer.json",
 			}
 		})
 
@@ -1416,15 +1416,15 @@ func TestAPI(t *testing.T) {
 			Running:      true,
 			CreatedAt:    time.Now().Add(-1 * time.Minute),
 			Labels: map[string]string{
-				agentcontainers.DevcontainerLocalFolderLabel: "/home/coder/project",
-				agentcontainers.DevcontainerConfigFileLabel:  "/home/coder/project/.devcontainer/devcontainer.json",
+				agentcontainers.DevcontainerLocalFolderLabel: "/home/DanielRondonGarcia/project",
+				agentcontainers.DevcontainerConfigFileLabel:  "/home/DanielRondonGarcia/project/.devcontainer/devcontainer.json",
 			},
 		}
 		dc := codersdk.WorkspaceAgentDevcontainer{
 			ID:              uuid.New(),
 			Name:            "test-devcontainer",
-			WorkspaceFolder: "/home/coder/project",
-			ConfigPath:      "/home/coder/project/.devcontainer/devcontainer.json",
+			WorkspaceFolder: "/home/DanielRondonGarcia/project",
+			ConfigPath:      "/home/DanielRondonGarcia/project/.devcontainer/devcontainer.json",
 			Status:          codersdk.WorkspaceAgentDevcontainerStatusRunning, // Corrected enum
 		}
 
@@ -1463,7 +1463,7 @@ func TestAPI(t *testing.T) {
 
 		// Simulate a file modification event to make the devcontainer dirty.
 		fWatcher.sendEventWaitNextCalled(ctx, fsnotify.Event{
-			Name: "/home/coder/project/.devcontainer/devcontainer.json",
+			Name: "/home/DanielRondonGarcia/project/.devcontainer/devcontainer.json",
 			Op:   fsnotify.Write,
 		})
 
@@ -1667,8 +1667,8 @@ func TestAPI(t *testing.T) {
 				Running:      true,
 				CreatedAt:    time.Now(),
 				Labels: map[string]string{
-					agentcontainers.DevcontainerLocalFolderLabel: "/home/coder/coder",
-					agentcontainers.DevcontainerConfigFileLabel:  "/home/coder/coder/.devcontainer/devcontainer.json",
+					agentcontainers.DevcontainerLocalFolderLabel: "/home/DanielRondonGarcia/coder",
+					agentcontainers.DevcontainerConfigFileLabel:  "/home/DanielRondonGarcia/coder/.devcontainer/devcontainer.json",
 				},
 			}
 		)
@@ -2546,7 +2546,7 @@ func TestAPI(t *testing.T) {
 				CreatedAt:    time.Now(),
 				Labels: map[string]string{
 					agentcontainers.DevcontainerLocalFolderLabel: "/workspaces/coder",
-					agentcontainers.DevcontainerConfigFileLabel:  "/workspaces/coder/.devcontainer/devcontainer.json",
+					agentcontainers.DevcontainerConfigFileLabel:  "/workspaces/DanielRondonGarcia/.devcontainer/devcontainer.json",
 				},
 			}
 		)
@@ -2653,7 +2653,7 @@ func TestAPI(t *testing.T) {
 				CreatedAt:    time.Now(),
 				Labels: map[string]string{
 					agentcontainers.DevcontainerLocalFolderLabel: "/workspaces/coder",
-					agentcontainers.DevcontainerConfigFileLabel:  "/workspaces/coder/.devcontainer/devcontainer.json",
+					agentcontainers.DevcontainerConfigFileLabel:  "/workspaces/DanielRondonGarcia/.devcontainer/devcontainer.json",
 				},
 			}
 		)
@@ -3002,8 +3002,8 @@ func TestSubAgentCreationWithNameRetry(t *testing.T) {
 		{
 			name: "SingleCollision",
 			workspaceFolders: []string{
-				"/home/coder/foo/project",
-				"/home/coder/bar/project",
+				"/home/DanielRondonGarcia/foo/project",
+				"/home/DanielRondonGarcia/bar/project",
 			},
 			expectedNames: []string{
 				"project",
@@ -3013,9 +3013,9 @@ func TestSubAgentCreationWithNameRetry(t *testing.T) {
 		{
 			name: "MultipleCollisions",
 			workspaceFolders: []string{
-				"/home/coder/foo/x/project",
-				"/home/coder/bar/x/project",
-				"/home/coder/baz/x/project",
+				"/home/DanielRondonGarcia/foo/x/project",
+				"/home/DanielRondonGarcia/bar/x/project",
+				"/home/DanielRondonGarcia/baz/x/project",
 			},
 			expectedNames: []string{
 				"project",
@@ -3027,7 +3027,7 @@ func TestSubAgentCreationWithNameRetry(t *testing.T) {
 			name:       "NameAlreadyTaken",
 			takenNames: []string{"project", "x-project"},
 			workspaceFolders: []string{
-				"/home/coder/foo/x/project",
+				"/home/DanielRondonGarcia/foo/x/project",
 			},
 			expectedNames: []string{
 				"foo-x-project",
@@ -3147,14 +3147,14 @@ func TestWithDevcontainersNameGeneration(t *testing.T) {
 		{
 			ID:              uuid.New(),
 			Name:            "original-name",
-			WorkspaceFolder: "/home/coder/foo/project",
-			ConfigPath:      "/home/coder/foo/project/.devcontainer/devcontainer.json",
+			WorkspaceFolder: "/home/DanielRondonGarcia/foo/project",
+			ConfigPath:      "/home/DanielRondonGarcia/foo/project/.devcontainer/devcontainer.json",
 		},
 		{
 			ID:              uuid.New(),
 			Name:            "another-name",
-			WorkspaceFolder: "/home/coder/bar/project",
-			ConfigPath:      "/home/coder/bar/project/.devcontainer/devcontainer.json",
+			WorkspaceFolder: "/home/DanielRondonGarcia/bar/project",
+			ConfigPath:      "/home/DanielRondonGarcia/bar/project/.devcontainer/devcontainer.json",
 		},
 	}
 
@@ -3174,8 +3174,8 @@ func TestWithDevcontainersNameGeneration(t *testing.T) {
 					fakeContainer(t, func(c *codersdk.WorkspaceAgentContainer) {
 						c.ID = "some-container-id-1"
 						c.FriendlyName = "container-name-1"
-						c.Labels[agentcontainers.DevcontainerLocalFolderLabel] = "/home/coder/baz/project"
-						c.Labels[agentcontainers.DevcontainerConfigFileLabel] = "/home/coder/baz/project/.devcontainer/devcontainer.json"
+						c.Labels[agentcontainers.DevcontainerLocalFolderLabel] = "/home/DanielRondonGarcia/baz/project"
+						c.Labels[agentcontainers.DevcontainerConfigFileLabel] = "/home/DanielRondonGarcia/baz/project/.devcontainer/devcontainer.json"
 					}),
 				},
 			},
@@ -3241,13 +3241,13 @@ func TestDevcontainerDiscovery(t *testing.T) {
 			name:     "GitProjectInRootDir/SingleProject",
 			agentDir: "/home/coder",
 			fs: map[string]string{
-				"/home/coder/.git/HEAD":                       "",
-				"/home/coder/.devcontainer/devcontainer.json": "",
+				"/home/DanielRondonGarcia/.git/HEAD":                       "",
+				"/home/DanielRondonGarcia/.devcontainer/devcontainer.json": "",
 			},
 			expected: []codersdk.WorkspaceAgentDevcontainer{
 				{
 					WorkspaceFolder: "/home/coder",
-					ConfigPath:      "/home/coder/.devcontainer/devcontainer.json",
+					ConfigPath:      "/home/DanielRondonGarcia/.devcontainer/devcontainer.json",
 					Status:          codersdk.WorkspaceAgentDevcontainerStatusStopped,
 				},
 			},
@@ -3256,19 +3256,19 @@ func TestDevcontainerDiscovery(t *testing.T) {
 			name:     "GitProjectInRootDir/MultipleProjects",
 			agentDir: "/home/coder",
 			fs: map[string]string{
-				"/home/coder/.git/HEAD":                            "",
-				"/home/coder/.devcontainer/devcontainer.json":      "",
-				"/home/coder/site/.devcontainer/devcontainer.json": "",
+				"/home/DanielRondonGarcia/.git/HEAD":                            "",
+				"/home/DanielRondonGarcia/.devcontainer/devcontainer.json":      "",
+				"/home/DanielRondonGarcia/site/.devcontainer/devcontainer.json": "",
 			},
 			expected: []codersdk.WorkspaceAgentDevcontainer{
 				{
 					WorkspaceFolder: "/home/coder",
-					ConfigPath:      "/home/coder/.devcontainer/devcontainer.json",
+					ConfigPath:      "/home/DanielRondonGarcia/.devcontainer/devcontainer.json",
 					Status:          codersdk.WorkspaceAgentDevcontainerStatusStopped,
 				},
 				{
-					WorkspaceFolder: "/home/coder/site",
-					ConfigPath:      "/home/coder/site/.devcontainer/devcontainer.json",
+					WorkspaceFolder: "/home/DanielRondonGarcia/site",
+					ConfigPath:      "/home/DanielRondonGarcia/site/.devcontainer/devcontainer.json",
 					Status:          codersdk.WorkspaceAgentDevcontainerStatusStopped,
 				},
 			},
@@ -3277,13 +3277,13 @@ func TestDevcontainerDiscovery(t *testing.T) {
 			name:     "GitProjectInChildDir/SingleProject",
 			agentDir: "/home/coder",
 			fs: map[string]string{
-				"/home/coder/coder/.git/HEAD":                       "",
-				"/home/coder/coder/.devcontainer/devcontainer.json": "",
+				"/home/DanielRondonGarcia/coder/.git/HEAD":                       "",
+				"/home/DanielRondonGarcia/coder/.devcontainer/devcontainer.json": "",
 			},
 			expected: []codersdk.WorkspaceAgentDevcontainer{
 				{
-					WorkspaceFolder: "/home/coder/coder",
-					ConfigPath:      "/home/coder/coder/.devcontainer/devcontainer.json",
+					WorkspaceFolder: "/home/DanielRondonGarcia/coder",
+					ConfigPath:      "/home/DanielRondonGarcia/coder/.devcontainer/devcontainer.json",
 					Status:          codersdk.WorkspaceAgentDevcontainerStatusStopped,
 				},
 			},
@@ -3292,19 +3292,19 @@ func TestDevcontainerDiscovery(t *testing.T) {
 			name:     "GitProjectInChildDir/MultipleProjects",
 			agentDir: "/home/coder",
 			fs: map[string]string{
-				"/home/coder/coder/.git/HEAD":                            "",
-				"/home/coder/coder/.devcontainer/devcontainer.json":      "",
-				"/home/coder/coder/site/.devcontainer/devcontainer.json": "",
+				"/home/DanielRondonGarcia/coder/.git/HEAD":                            "",
+				"/home/DanielRondonGarcia/coder/.devcontainer/devcontainer.json":      "",
+				"/home/DanielRondonGarcia/coder/site/.devcontainer/devcontainer.json": "",
 			},
 			expected: []codersdk.WorkspaceAgentDevcontainer{
 				{
-					WorkspaceFolder: "/home/coder/coder",
-					ConfigPath:      "/home/coder/coder/.devcontainer/devcontainer.json",
+					WorkspaceFolder: "/home/DanielRondonGarcia/coder",
+					ConfigPath:      "/home/DanielRondonGarcia/coder/.devcontainer/devcontainer.json",
 					Status:          codersdk.WorkspaceAgentDevcontainerStatusStopped,
 				},
 				{
-					WorkspaceFolder: "/home/coder/coder/site",
-					ConfigPath:      "/home/coder/coder/site/.devcontainer/devcontainer.json",
+					WorkspaceFolder: "/home/DanielRondonGarcia/coder/site",
+					ConfigPath:      "/home/DanielRondonGarcia/coder/site/.devcontainer/devcontainer.json",
 					Status:          codersdk.WorkspaceAgentDevcontainerStatusStopped,
 				},
 			},
@@ -3313,20 +3313,20 @@ func TestDevcontainerDiscovery(t *testing.T) {
 			name:     "GitProjectInMultipleChildDirs/SingleProjectEach",
 			agentDir: "/home/coder",
 			fs: map[string]string{
-				"/home/coder/coder/.git/HEAD":                            "",
-				"/home/coder/coder/.devcontainer/devcontainer.json":      "",
-				"/home/coder/envbuilder/.git/HEAD":                       "",
-				"/home/coder/envbuilder/.devcontainer/devcontainer.json": "",
+				"/home/DanielRondonGarcia/coder/.git/HEAD":                            "",
+				"/home/DanielRondonGarcia/coder/.devcontainer/devcontainer.json":      "",
+				"/home/DanielRondonGarcia/envbuilder/.git/HEAD":                       "",
+				"/home/DanielRondonGarcia/envbuilder/.devcontainer/devcontainer.json": "",
 			},
 			expected: []codersdk.WorkspaceAgentDevcontainer{
 				{
-					WorkspaceFolder: "/home/coder/coder",
-					ConfigPath:      "/home/coder/coder/.devcontainer/devcontainer.json",
+					WorkspaceFolder: "/home/DanielRondonGarcia/coder",
+					ConfigPath:      "/home/DanielRondonGarcia/coder/.devcontainer/devcontainer.json",
 					Status:          codersdk.WorkspaceAgentDevcontainerStatusStopped,
 				},
 				{
-					WorkspaceFolder: "/home/coder/envbuilder",
-					ConfigPath:      "/home/coder/envbuilder/.devcontainer/devcontainer.json",
+					WorkspaceFolder: "/home/DanielRondonGarcia/envbuilder",
+					ConfigPath:      "/home/DanielRondonGarcia/envbuilder/.devcontainer/devcontainer.json",
 					Status:          codersdk.WorkspaceAgentDevcontainerStatusStopped,
 				},
 			},
@@ -3335,32 +3335,32 @@ func TestDevcontainerDiscovery(t *testing.T) {
 			name:     "GitProjectInMultipleChildDirs/MultipleProjectEach",
 			agentDir: "/home/coder",
 			fs: map[string]string{
-				"/home/coder/coder/.git/HEAD":                              "",
-				"/home/coder/coder/.devcontainer/devcontainer.json":        "",
-				"/home/coder/coder/site/.devcontainer/devcontainer.json":   "",
-				"/home/coder/envbuilder/.git/HEAD":                         "",
-				"/home/coder/envbuilder/.devcontainer/devcontainer.json":   "",
-				"/home/coder/envbuilder/x/.devcontainer/devcontainer.json": "",
+				"/home/DanielRondonGarcia/coder/.git/HEAD":                              "",
+				"/home/DanielRondonGarcia/coder/.devcontainer/devcontainer.json":        "",
+				"/home/DanielRondonGarcia/coder/site/.devcontainer/devcontainer.json":   "",
+				"/home/DanielRondonGarcia/envbuilder/.git/HEAD":                         "",
+				"/home/DanielRondonGarcia/envbuilder/.devcontainer/devcontainer.json":   "",
+				"/home/DanielRondonGarcia/envbuilder/x/.devcontainer/devcontainer.json": "",
 			},
 			expected: []codersdk.WorkspaceAgentDevcontainer{
 				{
-					WorkspaceFolder: "/home/coder/coder",
-					ConfigPath:      "/home/coder/coder/.devcontainer/devcontainer.json",
+					WorkspaceFolder: "/home/DanielRondonGarcia/coder",
+					ConfigPath:      "/home/DanielRondonGarcia/coder/.devcontainer/devcontainer.json",
 					Status:          codersdk.WorkspaceAgentDevcontainerStatusStopped,
 				},
 				{
-					WorkspaceFolder: "/home/coder/coder/site",
-					ConfigPath:      "/home/coder/coder/site/.devcontainer/devcontainer.json",
+					WorkspaceFolder: "/home/DanielRondonGarcia/coder/site",
+					ConfigPath:      "/home/DanielRondonGarcia/coder/site/.devcontainer/devcontainer.json",
 					Status:          codersdk.WorkspaceAgentDevcontainerStatusStopped,
 				},
 				{
-					WorkspaceFolder: "/home/coder/envbuilder",
-					ConfigPath:      "/home/coder/envbuilder/.devcontainer/devcontainer.json",
+					WorkspaceFolder: "/home/DanielRondonGarcia/envbuilder",
+					ConfigPath:      "/home/DanielRondonGarcia/envbuilder/.devcontainer/devcontainer.json",
 					Status:          codersdk.WorkspaceAgentDevcontainerStatusStopped,
 				},
 				{
-					WorkspaceFolder: "/home/coder/envbuilder/x",
-					ConfigPath:      "/home/coder/envbuilder/x/.devcontainer/devcontainer.json",
+					WorkspaceFolder: "/home/DanielRondonGarcia/envbuilder/x",
+					ConfigPath:      "/home/DanielRondonGarcia/envbuilder/x/.devcontainer/devcontainer.json",
 					Status:          codersdk.WorkspaceAgentDevcontainerStatusStopped,
 				},
 			},
@@ -3369,15 +3369,15 @@ func TestDevcontainerDiscovery(t *testing.T) {
 			name:     "RespectGitIgnore",
 			agentDir: "/home/coder",
 			fs: map[string]string{
-				"/home/coder/coder/.git/HEAD":              "",
-				"/home/coder/coder/.gitignore":             "y/",
-				"/home/coder/coder/.devcontainer.json":     "",
-				"/home/coder/coder/x/y/.devcontainer.json": "",
+				"/home/DanielRondonGarcia/coder/.git/HEAD":              "",
+				"/home/DanielRondonGarcia/coder/.gitignore":             "y/",
+				"/home/DanielRondonGarcia/coder/.devcontainer.json":     "",
+				"/home/DanielRondonGarcia/coder/x/y/.devcontainer.json": "",
 			},
 			expected: []codersdk.WorkspaceAgentDevcontainer{
 				{
-					WorkspaceFolder: "/home/coder/coder",
-					ConfigPath:      "/home/coder/coder/.devcontainer.json",
+					WorkspaceFolder: "/home/DanielRondonGarcia/coder",
+					ConfigPath:      "/home/DanielRondonGarcia/coder/.devcontainer.json",
 					Status:          codersdk.WorkspaceAgentDevcontainerStatusStopped,
 				},
 			},
@@ -3386,21 +3386,21 @@ func TestDevcontainerDiscovery(t *testing.T) {
 			name:     "RespectNestedGitIgnore",
 			agentDir: "/home/coder",
 			fs: map[string]string{
-				"/home/coder/coder/.git/HEAD":              "",
-				"/home/coder/coder/.devcontainer.json":     "",
-				"/home/coder/coder/y/.devcontainer.json":   "",
-				"/home/coder/coder/x/.gitignore":           "y/",
-				"/home/coder/coder/x/y/.devcontainer.json": "",
+				"/home/DanielRondonGarcia/coder/.git/HEAD":              "",
+				"/home/DanielRondonGarcia/coder/.devcontainer.json":     "",
+				"/home/DanielRondonGarcia/coder/y/.devcontainer.json":   "",
+				"/home/DanielRondonGarcia/coder/x/.gitignore":           "y/",
+				"/home/DanielRondonGarcia/coder/x/y/.devcontainer.json": "",
 			},
 			expected: []codersdk.WorkspaceAgentDevcontainer{
 				{
-					WorkspaceFolder: "/home/coder/coder",
-					ConfigPath:      "/home/coder/coder/.devcontainer.json",
+					WorkspaceFolder: "/home/DanielRondonGarcia/coder",
+					ConfigPath:      "/home/DanielRondonGarcia/coder/.devcontainer.json",
 					Status:          codersdk.WorkspaceAgentDevcontainerStatusStopped,
 				},
 				{
-					WorkspaceFolder: "/home/coder/coder/y",
-					ConfigPath:      "/home/coder/coder/y/.devcontainer.json",
+					WorkspaceFolder: "/home/DanielRondonGarcia/coder/y",
+					ConfigPath:      "/home/DanielRondonGarcia/coder/y/.devcontainer.json",
 					Status:          codersdk.WorkspaceAgentDevcontainerStatusStopped,
 				},
 			},
@@ -3409,15 +3409,15 @@ func TestDevcontainerDiscovery(t *testing.T) {
 			name:     "RespectGitInfoExclude",
 			agentDir: "/home/coder",
 			fs: map[string]string{
-				"/home/coder/coder/.git/HEAD":              "",
-				"/home/coder/coder/.git/info/exclude":      "y/",
-				"/home/coder/coder/.devcontainer.json":     "",
-				"/home/coder/coder/x/y/.devcontainer.json": "",
+				"/home/DanielRondonGarcia/coder/.git/HEAD":              "",
+				"/home/DanielRondonGarcia/coder/.git/info/exclude":      "y/",
+				"/home/DanielRondonGarcia/coder/.devcontainer.json":     "",
+				"/home/DanielRondonGarcia/coder/x/y/.devcontainer.json": "",
 			},
 			expected: []codersdk.WorkspaceAgentDevcontainer{
 				{
-					WorkspaceFolder: "/home/coder/coder",
-					ConfigPath:      "/home/coder/coder/.devcontainer.json",
+					WorkspaceFolder: "/home/DanielRondonGarcia/coder",
+					ConfigPath:      "/home/DanielRondonGarcia/coder/.devcontainer.json",
 					Status:          codersdk.WorkspaceAgentDevcontainerStatusStopped,
 				},
 			},
@@ -3448,26 +3448,26 @@ func TestDevcontainerDiscovery(t *testing.T) {
 			name:     "IgnoreNonsenseDevcontainerNames",
 			agentDir: "/home/coder",
 			fs: map[string]string{
-				"/home/coder/.git/HEAD": "",
+				"/home/DanielRondonGarcia/.git/HEAD": "",
 
-				"/home/coder/.devcontainer/devcontainer.json.bak": "",
-				"/home/coder/.devcontainer/devcontainer.json.old": "",
-				"/home/coder/.devcontainer/devcontainer.json~":    "",
-				"/home/coder/.devcontainer/notdevcontainer.json":  "",
-				"/home/coder/.devcontainer/devcontainer.json.swp": "",
+				"/home/DanielRondonGarcia/.devcontainer/devcontainer.json.bak": "",
+				"/home/DanielRondonGarcia/.devcontainer/devcontainer.json.old": "",
+				"/home/DanielRondonGarcia/.devcontainer/devcontainer.json~":    "",
+				"/home/DanielRondonGarcia/.devcontainer/notdevcontainer.json":  "",
+				"/home/DanielRondonGarcia/.devcontainer/devcontainer.json.swp": "",
 
-				"/home/coder/foo/.devcontainer.json.bak": "",
-				"/home/coder/foo/.devcontainer.json.old": "",
-				"/home/coder/foo/.devcontainer.json~":    "",
-				"/home/coder/foo/.notdevcontainer.json":  "",
-				"/home/coder/foo/.devcontainer.json.swp": "",
+				"/home/DanielRondonGarcia/foo/.devcontainer.json.bak": "",
+				"/home/DanielRondonGarcia/foo/.devcontainer.json.old": "",
+				"/home/DanielRondonGarcia/foo/.devcontainer.json~":    "",
+				"/home/DanielRondonGarcia/foo/.notdevcontainer.json":  "",
+				"/home/DanielRondonGarcia/foo/.devcontainer.json.swp": "",
 
-				"/home/coder/bar/.devcontainer.json": "",
+				"/home/DanielRondonGarcia/bar/.devcontainer.json": "",
 			},
 			expected: []codersdk.WorkspaceAgentDevcontainer{
 				{
-					WorkspaceFolder: "/home/coder/bar",
-					ConfigPath:      "/home/coder/bar/.devcontainer.json",
+					WorkspaceFolder: "/home/DanielRondonGarcia/bar",
+					ConfigPath:      "/home/DanielRondonGarcia/bar/.devcontainer.json",
 					Status:          codersdk.WorkspaceAgentDevcontainerStatusStopped,
 				},
 			},
@@ -3602,11 +3602,11 @@ func TestDevcontainerDiscovery(t *testing.T) {
 				expectDevcontainerCount: 1,
 				expectUpCalledCount:     1,
 				fs: map[string]string{
-					"/home/coder/.git/HEAD":                       "",
-					"/home/coder/.devcontainer/devcontainer.json": "",
+					"/home/DanielRondonGarcia/.git/HEAD":                       "",
+					"/home/DanielRondonGarcia/.devcontainer/devcontainer.json": "",
 				},
 				configMap: map[string]agentcontainers.DevcontainerConfig{
-					"/home/coder/.devcontainer/devcontainer.json": {
+					"/home/DanielRondonGarcia/.devcontainer/devcontainer.json": {
 						Configuration: agentcontainers.DevcontainerConfiguration{
 							Customizations: agentcontainers.DevcontainerCustomizations{
 								Coder: agentcontainers.CoderCustomization{
@@ -3623,11 +3623,11 @@ func TestDevcontainerDiscovery(t *testing.T) {
 				expectDevcontainerCount: 1,
 				expectUpCalledCount:     0,
 				fs: map[string]string{
-					"/home/coder/.git/HEAD":                       "",
-					"/home/coder/.devcontainer/devcontainer.json": "",
+					"/home/DanielRondonGarcia/.git/HEAD":                       "",
+					"/home/DanielRondonGarcia/.devcontainer/devcontainer.json": "",
 				},
 				configMap: map[string]agentcontainers.DevcontainerConfig{
-					"/home/coder/.devcontainer/devcontainer.json": {
+					"/home/DanielRondonGarcia/.devcontainer/devcontainer.json": {
 						Configuration: agentcontainers.DevcontainerConfiguration{
 							Customizations: agentcontainers.DevcontainerCustomizations{
 								Coder: agentcontainers.CoderCustomization{
@@ -3644,12 +3644,12 @@ func TestDevcontainerDiscovery(t *testing.T) {
 				expectDevcontainerCount: 2,
 				expectUpCalledCount:     1,
 				fs: map[string]string{
-					"/home/coder/.git/HEAD":                       "",
-					"/home/coder/.devcontainer/devcontainer.json": "",
-					"/home/coder/project/.devcontainer.json":      "",
+					"/home/DanielRondonGarcia/.git/HEAD":                       "",
+					"/home/DanielRondonGarcia/.devcontainer/devcontainer.json": "",
+					"/home/DanielRondonGarcia/project/.devcontainer.json":      "",
 				},
 				configMap: map[string]agentcontainers.DevcontainerConfig{
-					"/home/coder/.devcontainer/devcontainer.json": {
+					"/home/DanielRondonGarcia/.devcontainer/devcontainer.json": {
 						Configuration: agentcontainers.DevcontainerConfiguration{
 							Customizations: agentcontainers.DevcontainerCustomizations{
 								Coder: agentcontainers.CoderCustomization{
@@ -3658,7 +3658,7 @@ func TestDevcontainerDiscovery(t *testing.T) {
 							},
 						},
 					},
-					"/home/coder/project/.devcontainer.json": {
+					"/home/DanielRondonGarcia/project/.devcontainer.json": {
 						Configuration: agentcontainers.DevcontainerConfiguration{
 							Customizations: agentcontainers.DevcontainerCustomizations{
 								Coder: agentcontainers.CoderCustomization{
@@ -3675,12 +3675,12 @@ func TestDevcontainerDiscovery(t *testing.T) {
 				expectDevcontainerCount: 2,
 				expectUpCalledCount:     2,
 				fs: map[string]string{
-					"/home/coder/.git/HEAD":                       "",
-					"/home/coder/.devcontainer/devcontainer.json": "",
-					"/home/coder/project/.devcontainer.json":      "",
+					"/home/DanielRondonGarcia/.git/HEAD":                       "",
+					"/home/DanielRondonGarcia/.devcontainer/devcontainer.json": "",
+					"/home/DanielRondonGarcia/project/.devcontainer.json":      "",
 				},
 				configMap: map[string]agentcontainers.DevcontainerConfig{
-					"/home/coder/.devcontainer/devcontainer.json": {
+					"/home/DanielRondonGarcia/.devcontainer/devcontainer.json": {
 						Configuration: agentcontainers.DevcontainerConfiguration{
 							Customizations: agentcontainers.DevcontainerCustomizations{
 								Coder: agentcontainers.CoderCustomization{
@@ -3689,7 +3689,7 @@ func TestDevcontainerDiscovery(t *testing.T) {
 							},
 						},
 					},
-					"/home/coder/project/.devcontainer.json": {
+					"/home/DanielRondonGarcia/project/.devcontainer.json": {
 						Configuration: agentcontainers.DevcontainerConfiguration{
 							Customizations: agentcontainers.DevcontainerCustomizations{
 								Coder: agentcontainers.CoderCustomization{
@@ -3789,8 +3789,8 @@ func TestDevcontainerDiscovery(t *testing.T) {
 				mDCCLI = acmock.NewMockDevcontainerCLI(gomock.NewController(t))
 
 				fs = map[string]string{
-					"/home/coder/.git/HEAD":                       "",
-					"/home/coder/.devcontainer/devcontainer.json": "",
+					"/home/DanielRondonGarcia/.git/HEAD":                       "",
+					"/home/DanielRondonGarcia/.devcontainer/devcontainer.json": "",
 				}
 
 				r = chi.NewRouter()
@@ -3801,7 +3801,7 @@ func TestDevcontainerDiscovery(t *testing.T) {
 			// to autostart devcontainers that it discovers.
 			mDCCLI.EXPECT().ReadConfig(gomock.Any(),
 				"/home/coder",
-				"/home/coder/.devcontainer/devcontainer.json",
+				"/home/DanielRondonGarcia/.devcontainer/devcontainer.json",
 				[]string{},
 			).Return(agentcontainers.DevcontainerConfig{
 				Configuration: agentcontainers.DevcontainerConfiguration{
@@ -3815,7 +3815,7 @@ func TestDevcontainerDiscovery(t *testing.T) {
 
 			mDCCLI.EXPECT().Up(gomock.Any(),
 				"/home/coder",
-				"/home/coder/.devcontainer/devcontainer.json",
+				"/home/DanielRondonGarcia/.devcontainer/devcontainer.json",
 				gomock.Any(),
 			).Return("", nil).Times(0)
 
@@ -3871,8 +3871,8 @@ func TestDevcontainerPrebuildSupport(t *testing.T) {
 
 		testDC = codersdk.WorkspaceAgentDevcontainer{
 			ID:              uuid.New(),
-			WorkspaceFolder: "/home/coder/coder",
-			ConfigPath:      "/home/coder/coder/.devcontainer/devcontainer.json",
+			WorkspaceFolder: "/home/DanielRondonGarcia/coder",
+			ConfigPath:      "/home/DanielRondonGarcia/coder/.devcontainer/devcontainer.json",
 		}
 
 		testContainer = newFakeContainer("test-container-id", testDC.ConfigPath, testDC.WorkspaceFolder)

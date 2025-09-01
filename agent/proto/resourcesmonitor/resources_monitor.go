@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"cdr.dev/slog"
-	"github.com/coder/coder/v2/agent/proto"
-	"github.com/coder/quartz"
+	"github.com/DanielRondonGarcia/coder/v2/agent/proto"
+	"github.com/DanielRondonGarcia/quartz"
 )
 
 type monitor struct {

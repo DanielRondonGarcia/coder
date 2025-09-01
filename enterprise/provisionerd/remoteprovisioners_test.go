@@ -10,13 +10,13 @@ import (
 	"go.uber.org/goleak"
 
 	"cdr.dev/slog"
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/enterprise/provisionerd"
-	"github.com/coder/coder/v2/provisioner/echo"
-	agpl "github.com/coder/coder/v2/provisionerd"
-	"github.com/coder/coder/v2/provisionerd/proto"
-	sdkproto "github.com/coder/coder/v2/provisionersdk/proto"
-	"github.com/coder/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/enterprise/provisionerd"
+	"github.com/DanielRondonGarcia/coder/v2/provisioner/echo"
+	agpl "github.com/DanielRondonGarcia/coder/v2/provisionerd"
+	"github.com/DanielRondonGarcia/coder/v2/provisionerd/proto"
+	sdkproto "github.com/DanielRondonGarcia/coder/v2/provisionersdk/proto"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
 )
 
 func TestMain(m *testing.M) {

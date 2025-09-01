@@ -22,7 +22,7 @@ Alternatively, install the devcontainer CLI manually in your base image.
 ## Configure Automatic Dev Container Startup
 
 The
-[`coder_devcontainer`](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/devcontainer)
+[`coder_devcontainer`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/devcontainer)
 resource automatically starts a dev container in your workspace, ensuring it's
 ready when you access the workspace:
 
@@ -30,7 +30,7 @@ ready when you access the workspace:
 resource "coder_devcontainer" "my-repository" {
   count            = data.coder_workspace.me.start_count
   agent_id         = coder_agent.dev.id
-  workspace_folder = "/home/coder/my-repository"
+  workspace_folder = "/home/DanielRondonGarcia/my-repository"
 }
 ```
 
@@ -105,7 +105,7 @@ module "devcontainers-cli" {
 resource "coder_devcontainer" "my-repository" {
   count            = data.coder_workspace.me.start_count
   agent_id         = coder_agent.dev.id
-  workspace_folder = "/home/coder/my-repository"
+  workspace_folder = "/home/DanielRondonGarcia/my-repository"
 }
 
 resource "docker_container" "workspace" {

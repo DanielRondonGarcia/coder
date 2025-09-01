@@ -1,6 +1,6 @@
 package coderdtest
 
-import "github.com/coder/coder/v2/codersdk/wsjson"
+import "github.com/DanielRondonGarcia/coder/v2/codersdk/wsjson"
 
 // SynchronousStream returns a function that assumes the stream is synchronous.
 // Meaning each request sent assumes exactly one response will be received.

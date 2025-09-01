@@ -15,16 +15,16 @@ import (
 	"go.uber.org/goleak"
 
 	"cdr.dev/slog"
-	"github.com/coder/coder/v2/coderd/coderdtest"
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/dbauthz"
-	"github.com/coder/coder/v2/coderd/database/dbgen"
-	"github.com/coder/coder/v2/coderd/database/dbtestutil"
-	"github.com/coder/coder/v2/coderd/jobreaper"
-	"github.com/coder/coder/v2/coderd/provisionerdserver"
-	"github.com/coder/coder/v2/coderd/rbac"
-	"github.com/coder/coder/v2/provisionersdk"
-	"github.com/coder/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbgen"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtestutil"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/jobreaper"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/provisionerdserver"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac"
+	"github.com/DanielRondonGarcia/coder/v2/provisionersdk"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
 )
 
 func TestMain(m *testing.M) {

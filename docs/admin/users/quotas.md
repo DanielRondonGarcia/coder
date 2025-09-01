@@ -22,7 +22,7 @@ Quotas are scoped to [Groups](./groups-roles.md) in Enterprise and
 ## Establishing Costs
 
 Templates describe their cost through the `daily_cost` attribute in
-[`resource_metadata`](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/metadata).
+[`resource_metadata`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/metadata).
 Since costs are associated with resources, an offline workspace may consume less
 quota than an online workspace.
 
@@ -44,7 +44,7 @@ resource "docker_container" "workspace" {
   image = "codercom/code-server:latest"
   ...
   volumes {
-    container_path = "/home/coder/"
+    container_path = "/home/DanielRondonGarcia/"
     volume_name    = docker_volume.home_volume.name
     read_only      = false
   }

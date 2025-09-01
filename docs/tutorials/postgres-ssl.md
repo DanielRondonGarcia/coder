@@ -68,7 +68,7 @@ coder:
 1. Lastly, your PG connection URL will look like:
 
 ```shell
-postgres://<user>:<password>@databasehost:<port>/<db-name>?sslmode=verify-full&sslrootcert="/home/coder/.postgresql/postgres-root.crt"
+postgres://<user>:<password>@databasehost:<port>/<db-name>?sslmode=verify-full&sslrootcert="/home/DanielRondonGarcia/.postgresql/postgres-root.crt"
 ```
 
 More information on connecting to PostgreSQL databases using certificates can

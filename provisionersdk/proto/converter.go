@@ -3,7 +3,7 @@ package proto
 import (
 	"golang.org/x/xerrors"
 
-	"github.com/coder/terraform-provider-coder/v2/provider"
+	"github.com/DanielRondonGarcia/terraform-provider-coder/v2/provider"
 )
 
 func ProviderFormType(ft ParameterFormType) (provider.ParameterFormType, error) {

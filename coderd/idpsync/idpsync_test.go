@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/coder/coder/v2/coderd/idpsync"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/idpsync"
 )
 
 // TestMarshalJSONEmpty ensures no empty maps are marshaled as `null` in JSON.

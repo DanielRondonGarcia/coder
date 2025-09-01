@@ -12,23 +12,23 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/coder/coder/v2/agent/agenttest"
-	"github.com/coder/coder/v2/coderd/audit"
-	"github.com/coder/coder/v2/coderd/coderdtest"
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/dbauthz"
-	"github.com/coder/coder/v2/coderd/database/dbgen"
-	"github.com/coder/coder/v2/coderd/database/dbtestutil"
-	"github.com/coder/coder/v2/coderd/database/dbtime"
-	"github.com/coder/coder/v2/coderd/notifications"
-	"github.com/coder/coder/v2/coderd/notifications/notificationstest"
-	"github.com/coder/coder/v2/coderd/rbac"
-	"github.com/coder/coder/v2/coderd/schedule"
-	"github.com/coder/coder/v2/coderd/util/ptr"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/codersdk/workspacesdk"
-	"github.com/coder/coder/v2/provisioner/echo"
-	"github.com/coder/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/coder/v2/agent/agenttest"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/audit"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbgen"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtestutil"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtime"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications/notificationstest"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/schedule"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/util/ptr"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/workspacesdk"
+	"github.com/DanielRondonGarcia/coder/v2/provisioner/echo"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
 )
 
 func TestTemplate(t *testing.T) {
@@ -1762,7 +1762,7 @@ func TestDeleteTemplate(t *testing.T) {
 func TestTemplateMetrics(t *testing.T) {
 	t.Parallel()
 
-	t.Skip("flaky test: https://github.com/coder/coder/issues/6481")
+	t.Skip("flaky test: https://github.com/DanielRondonGarcia/coder/issues/6481")
 
 	client := coderdtest.New(t, &coderdtest.Options{
 		IncludeProvisionerDaemon:    true,

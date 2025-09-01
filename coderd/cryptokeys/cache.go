@@ -12,10 +12,10 @@ import (
 	"golang.org/x/xerrors"
 
 	"cdr.dev/slog"
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/dbauthz"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/quartz"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/quartz"
 )
 
 var (

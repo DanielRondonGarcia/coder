@@ -47,13 +47,13 @@ You can filter audit logs by the following parameters:
 
 - `resource_type` - The type of the resource, such as a workspace, template,
   or user. For more resource types, refer to the
-  [CoderSDK package documentation](https://pkg.go.dev/github.com/coder/coder/v2/codersdk#ResourceType).
+  [CoderSDK package documentation](https://pkg.go.dev/github.com/DanielRondonGarcia/coder/v2/codersdk#ResourceType).
 - `resource_id` - The ID of the resource.
 - `resource_target` - The name of the resource. Can be used instead of
   `resource_id`.
 - `action`- The action applied to a resource, such as `create` or `delete`.
   For more actions, refer to the
-  [CoderSDK package documentation](https://pkg.go.dev/github.com/coder/coder/v2/codersdk#AuditAction).
+  [CoderSDK package documentation](https://pkg.go.dev/github.com/DanielRondonGarcia/coder/v2/codersdk#AuditAction).
 - `username` - The username of the user who triggered the action. You can also
   use `me` as a convenient alias for the logged-in user.
 - `email` - The email of the user who triggered the action.
@@ -61,7 +61,7 @@ You can filter audit logs by the following parameters:
 - `date_to` - The inclusive end date with format `YYYY-MM-DD`.
 - `build_reason` - The reason for the workspace build, if `resource_type` is
   `workspace_build`. Refer to the
-  [CoderSDK package documentation](https://pkg.go.dev/github.com/coder/coder/v2/codersdk#BuildReason)
+  [CoderSDK package documentation](https://pkg.go.dev/github.com/DanielRondonGarcia/coder/v2/codersdk#BuildReason)
   for a list of valid build reasons.
 
 ## Capturing/Exporting Audit Logs
@@ -90,8 +90,8 @@ log entry:
     "ts": "2023-06-13T03:45:37.294730279Z",
     "level": "INFO",
     "msg": "audit_log",
-    "caller": "/home/coder/coder/enterprise/audit/backends/slog.go:38",
-    "func": "github.com/coder/coder/v2/enterprise/audit/backends.(*SlogExporter).ExportStruct",
+    "caller": "/home/DanielRondonGarcia/coder/enterprise/audit/backends/slog.go:38",
+    "func": "github.com/DanielRondonGarcia/coder/v2/enterprise/audit/backends.(*SlogExporter).ExportStruct",
     "logger_names": ["coderd"],
     "fields": {
         "ID": "033a9ffa-b54d-4c10-8ec3-2aaf9e6d741a",

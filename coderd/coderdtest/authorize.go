@@ -16,14 +16,14 @@ import (
 	"github.com/stretchr/testify/require"
 	"golang.org/x/xerrors"
 
-	"github.com/coder/coder/v2/coderd"
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/dbauthz"
-	"github.com/coder/coder/v2/coderd/rbac"
-	"github.com/coder/coder/v2/coderd/rbac/policy"
-	"github.com/coder/coder/v2/coderd/rbac/regosql"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/cryptorand"
+	"github.com/DanielRondonGarcia/coder/v2/coderd"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac/policy"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac/regosql"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/cryptorand"
 )
 
 // RBACAsserter is a helper for asserting that the correct RBAC checks are

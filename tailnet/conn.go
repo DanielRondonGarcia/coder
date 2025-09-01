@@ -42,8 +42,8 @@ import (
 	"tailscale.com/wgengine/router"
 
 	"cdr.dev/slog"
-	"github.com/coder/coder/v2/cryptorand"
-	"github.com/coder/coder/v2/tailnet/proto"
+	"github.com/DanielRondonGarcia/coder/v2/cryptorand"
+	"github.com/DanielRondonGarcia/coder/v2/tailnet/proto"
 )
 
 var ErrConnClosed = xerrors.New("connection closed")

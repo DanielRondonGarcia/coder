@@ -18,12 +18,12 @@ import (
 	"golang.org/x/xerrors"
 
 	"cdr.dev/slog"
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/dbauthz"
-	"github.com/coder/coder/v2/coderd/prometheusmetrics"
-	agplproxyhealth "github.com/coder/coder/v2/coderd/proxyhealth"
-	"github.com/coder/coder/v2/coderd/workspaceapps/appurl"
-	"github.com/coder/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/prometheusmetrics"
+	agplproxyhealth "github.com/DanielRondonGarcia/coder/v2/coderd/proxyhealth"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/workspaceapps/appurl"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
 )
 
 type Status string

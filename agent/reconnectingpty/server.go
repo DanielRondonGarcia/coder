@@ -14,10 +14,10 @@ import (
 	"golang.org/x/xerrors"
 
 	"cdr.dev/slog"
-	"github.com/coder/coder/v2/agent/agentcontainers"
-	"github.com/coder/coder/v2/agent/agentssh"
-	"github.com/coder/coder/v2/agent/usershell"
-	"github.com/coder/coder/v2/codersdk/workspacesdk"
+	"github.com/DanielRondonGarcia/coder/v2/agent/agentcontainers"
+	"github.com/DanielRondonGarcia/coder/v2/agent/agentssh"
+	"github.com/DanielRondonGarcia/coder/v2/agent/usershell"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/workspacesdk"
 )
 
 type reportConnectionFunc func(id uuid.UUID, ip string) (disconnected func(code int, reason string))

@@ -15,10 +15,10 @@ import (
 	"golang.org/x/xerrors"
 
 	"cdr.dev/slog"
-	"github.com/coder/coder/v2/cli/cliui"
-	"github.com/coder/coder/v2/cryptorand"
-	"github.com/coder/pretty"
-	"github.com/coder/wgtunnel/tunnelsdk"
+	"github.com/DanielRondonGarcia/coder/v2/cli/cliui"
+	"github.com/DanielRondonGarcia/coder/v2/cryptorand"
+	"github.com/DanielRondonGarcia/pretty"
+	"github.com/DanielRondonGarcia/wgtunnel/tunnelsdk"
 )
 
 type Config struct {
@@ -56,7 +56,7 @@ func NewWithConfig(ctx context.Context, logger slog.Logger, cfg Config) (*tunnel
 // calls to New will always use the same URL. If multiple public URLs in
 // parallel are required, use NewWithConfig.
 //
-// This uses https://github.com/coder/wgtunnel as the server and client
+// This uses https://github.com/DanielRondonGarcia/wgtunnel as the server and client
 // implementation.
 func New(ctx context.Context, logger slog.Logger, customTunnelHost string) (*tunnelsdk.Tunnel, error) {
 	cfg, err := readOrGenerateConfig(customTunnelHost)

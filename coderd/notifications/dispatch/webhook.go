@@ -15,9 +15,9 @@ import (
 
 	"cdr.dev/slog"
 
-	"github.com/coder/coder/v2/coderd/notifications/types"
-	markdown "github.com/coder/coder/v2/coderd/render"
-	"github.com/coder/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications/types"
+	markdown "github.com/DanielRondonGarcia/coder/v2/coderd/render"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
 )
 
 // WebhookHandler dispatches notification messages via an HTTP POST webhook.

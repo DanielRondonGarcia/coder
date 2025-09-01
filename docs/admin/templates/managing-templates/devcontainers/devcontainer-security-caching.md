@@ -7,7 +7,7 @@ it with your existing HTTP proxies, firewalls, and artifact managers.
 
 You may need to authenticate to your container registry, such as Artifactory, or
 Git provider such as GitLab, to use Envbuilder. See the
-[Envbuilder documentation](https://github.com/coder/envbuilder/blob/main/docs/container-registry-auth.md)
+[Envbuilder documentation](https://github.com/DanielRondonGarcia/envbuilder/blob/main/docs/container-registry-auth.md)
 for more information.
 
 ## Layer and image caching
@@ -32,7 +32,7 @@ Note that caching requires push access to a registry, and may require approval
 from relevant infrastructure team(s).
 
 Refer to the
-[Envbuilder documentation](https://github.com/coder/envbuilder/blob/main/docs/caching.md)
+[Envbuilder documentation](https://github.com/DanielRondonGarcia/envbuilder/blob/main/docs/caching.md)
 for more information about Envbuilder and caching.
 
 Visit the
@@ -42,7 +42,7 @@ best practice documentation for more ways that you can speed up build times.
 ### Image caching
 
 To support resuming from a cached image, use the
-[Envbuilder Terraform Provider](https://github.com/coder/terraform-provider-envbuilder)
+[Envbuilder Terraform Provider](https://github.com/DanielRondonGarcia/terraform-provider-envbuilder)
 in your template. The provider will:
 
 1. Clone the remote Git repository,
@@ -56,9 +56,9 @@ The example templates listed above will use the provider if a remote cache
 repository is provided.
 
 If you are building your own Dev container template, you can consult the
-[provider documentation](https://registry.terraform.io/providers/coder/envbuilder/latest/docs/resources/cached_image).
+[provider documentation](https://registry.terraform.io/providers/DanielRondonGarcia/envbuilder/latest/docs/resources/cached_image).
 You may also wish to consult a
-[documented example usage of the `envbuilder_cached_image` resource](https://github.com/coder/terraform-provider-envbuilder/blob/main/examples/resources/envbuilder_cached_image/envbuilder_cached_image_resource.tf).
+[documented example usage of the `envbuilder_cached_image` resource](https://github.com/DanielRondonGarcia/terraform-provider-envbuilder/blob/main/examples/resources/envbuilder_cached_image/envbuilder_cached_image_resource.tf).
 
 ## Next steps
 

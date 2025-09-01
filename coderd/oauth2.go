@@ -3,7 +3,7 @@ package coderd
 import (
 	"net/http"
 
-	"github.com/coder/coder/v2/coderd/oauth2provider"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/oauth2provider"
 )
 
 // @Summary Get OAuth2 applications.

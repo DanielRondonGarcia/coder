@@ -10,10 +10,10 @@ import (
 	"golang.org/x/xerrors"
 
 	"cdr.dev/slog/sloggers/slogtest"
-	"github.com/coder/coder/v2/coderd/database/pubsub"
-	"github.com/coder/coder/v2/coderd/prebuilds"
-	"github.com/coder/coder/v2/codersdk/agentsdk"
-	"github.com/coder/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/pubsub"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/prebuilds"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/agentsdk"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
 )
 
 func TestPubsubWorkspaceClaimPublisher(t *testing.T) {

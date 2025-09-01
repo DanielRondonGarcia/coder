@@ -15,10 +15,10 @@ import (
 	"storj.io/drpc/drpcserver"
 
 	"cdr.dev/slog"
-	"github.com/coder/coder/v2/codersdk/drpcsdk"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/drpcsdk"
 
-	"github.com/coder/coder/v2/coderd/tracing"
-	"github.com/coder/coder/v2/provisionersdk/proto"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/tracing"
+	"github.com/DanielRondonGarcia/coder/v2/provisionersdk/proto"
 )
 
 // ServeOptions are configurations to serve a provisioner.

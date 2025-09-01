@@ -266,8 +266,8 @@ RUN update-alternatives --install /usr/local/bin/initdb initdb /usr/lib/postgres
 	update-alternatives --install /usr/local/bin/postgres postgres /usr/lib/postgresql/16/bin/postgres 100
 
 # Create links for injected dependencies
-RUN ln --symbolic /var/tmp/coder/coder-cli/coder /usr/local/bin/coder && \
-	ln --symbolic /var/tmp/coder/code-server/bin/code-server /usr/local/bin/code-server
+RUN ln --symbolic /var/tmp/DanielRondonGarcia/coder-cli/coder /usr/local/bin/coder && \
+	ln --symbolic /var/tmp/DanielRondonGarcia/code-server/bin/code-server /usr/local/bin/code-server
 
 # Disable the PostgreSQL systemd service.
 # Coder uses a custom timescale container to test the database instead.
@@ -407,7 +407,7 @@ USER coder
 # Ensure go bins are in the 'coder' user's path. Note that no go bins are
 # installed in this docker file, as they'd be mounted over by the persistent
 # home volume.
-ENV PATH="/home/coder/go/bin:${PATH}"
+ENV PATH="/home/DanielRondonGarcia/go/bin:${PATH}"
 
 # This setting prevents Go from using the public checksum database for
 # our module path prefixes. It is required because these are in private

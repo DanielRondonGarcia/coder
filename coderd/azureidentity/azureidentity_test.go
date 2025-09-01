@@ -10,13 +10,13 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/coder/coder/v2/coderd/azureidentity"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/azureidentity"
 )
 
 func TestValidate(t *testing.T) {
 	t.Parallel()
 	if runtime.GOOS == "darwin" {
-		// This test fails on MacOS for some reason. See https://github.com/coder/coder/issues/12978
+		// This test fails on MacOS for some reason. See https://github.com/DanielRondonGarcia/coder/issues/12978
 		t.Skip()
 	}
 

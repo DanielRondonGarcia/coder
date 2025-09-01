@@ -10,7 +10,7 @@ import type { FC } from "react";
 import { Link as RouterLink } from "react-router";
 import { docs } from "utils/docs";
 
-// Those are from https://github.com/coder/coder/tree/main/examples/templates
+// Those are from https://github.com/DanielRondonGarcia/coder/tree/main/examples/templates
 const featuredExampleIds = [
 	"docker",
 	"kubernetes",

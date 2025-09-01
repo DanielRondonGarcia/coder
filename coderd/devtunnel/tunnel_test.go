@@ -20,10 +20,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/coder/coder/v2/coderd/devtunnel"
-	"github.com/coder/coder/v2/testutil"
-	"github.com/coder/wgtunnel/tunneld"
-	"github.com/coder/wgtunnel/tunnelsdk"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/devtunnel"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/wgtunnel/tunneld"
+	"github.com/DanielRondonGarcia/wgtunnel/tunnelsdk"
 )
 
 // The tunnel leaks a few goroutines that aren't impactful to production scenarios.
@@ -35,7 +35,7 @@ func TestTunnel(t *testing.T) {
 	t.Parallel()
 
 	if runtime.GOOS == "windows" {
-		t.Skip("these tests are flaky on windows and cause the tests to fail with '(unknown)' and no output, see https://github.com/coder/internal/issues/579")
+		t.Skip("these tests are flaky on windows and cause the tests to fail with '(unknown)' and no output, see https://github.com/DanielRondonGarcia/internal/issues/579")
 	}
 
 	cases := []struct {

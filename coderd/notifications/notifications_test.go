@@ -35,22 +35,22 @@ import (
 	"golang.org/x/xerrors"
 
 	"cdr.dev/slog"
-	"github.com/coder/quartz"
-	"github.com/coder/serpent"
+	"github.com/DanielRondonGarcia/quartz"
+	"github.com/DanielRondonGarcia/serpent"
 
-	"github.com/coder/coder/v2/coderd/coderdtest"
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/dbauthz"
-	"github.com/coder/coder/v2/coderd/database/dbgen"
-	"github.com/coder/coder/v2/coderd/database/dbtestutil"
-	"github.com/coder/coder/v2/coderd/notifications"
-	"github.com/coder/coder/v2/coderd/notifications/dispatch"
-	"github.com/coder/coder/v2/coderd/notifications/dispatch/smtptest"
-	"github.com/coder/coder/v2/coderd/notifications/types"
-	"github.com/coder/coder/v2/coderd/rbac"
-	"github.com/coder/coder/v2/coderd/util/syncmap"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbgen"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtestutil"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications/dispatch"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications/dispatch/smtptest"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications/types"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/util/syncmap"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
 )
 
 // updateGoldenFiles is a flag that can be set to update golden files.
@@ -716,7 +716,7 @@ func TestNotifierPaused(t *testing.T) {
 var events []byte
 
 // enumerateAllTemplates gets all the template names from the coderd/notifications/events.go file.
-// TODO(dannyk): use code-generation to create a list of all templates: https://github.com/coder/team-coconut/issues/36
+// TODO(dannyk): use code-generation to create a list of all templates: https://github.com/DanielRondonGarcia/team-coconut/issues/36
 func enumerateAllTemplates(t *testing.T) ([]string, error) {
 	t.Helper()
 

@@ -26,36 +26,36 @@ import (
 	"storj.io/drpc"
 
 	"cdr.dev/slog/sloggers/slogtest"
-	"github.com/coder/quartz"
-	"github.com/coder/serpent"
+	"github.com/DanielRondonGarcia/quartz"
+	"github.com/DanielRondonGarcia/serpent"
 
-	"github.com/coder/coder/v2/buildinfo"
-	"github.com/coder/coder/v2/coderd/audit"
-	"github.com/coder/coder/v2/coderd/coderdtest"
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/dbauthz"
-	"github.com/coder/coder/v2/coderd/database/dbgen"
-	"github.com/coder/coder/v2/coderd/database/dbtestutil"
-	"github.com/coder/coder/v2/coderd/database/dbtime"
-	"github.com/coder/coder/v2/coderd/database/pubsub"
-	"github.com/coder/coder/v2/coderd/externalauth"
-	"github.com/coder/coder/v2/coderd/notifications"
-	"github.com/coder/coder/v2/coderd/notifications/notificationstest"
-	agplprebuilds "github.com/coder/coder/v2/coderd/prebuilds"
-	"github.com/coder/coder/v2/coderd/provisionerdserver"
-	"github.com/coder/coder/v2/coderd/rbac"
-	"github.com/coder/coder/v2/coderd/schedule"
-	"github.com/coder/coder/v2/coderd/schedule/cron"
-	"github.com/coder/coder/v2/coderd/telemetry"
-	"github.com/coder/coder/v2/coderd/usage"
-	"github.com/coder/coder/v2/coderd/usage/usagetypes"
-	"github.com/coder/coder/v2/coderd/wspubsub"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/codersdk/agentsdk"
-	"github.com/coder/coder/v2/provisionerd/proto"
-	"github.com/coder/coder/v2/provisionersdk"
-	sdkproto "github.com/coder/coder/v2/provisionersdk/proto"
-	"github.com/coder/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/coder/v2/buildinfo"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/audit"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbgen"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtestutil"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtime"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/pubsub"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/externalauth"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications/notificationstest"
+	agplprebuilds "github.com/DanielRondonGarcia/coder/v2/coderd/prebuilds"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/provisionerdserver"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/schedule"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/schedule/cron"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/telemetry"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/usage"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/usage/usagetypes"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/wspubsub"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/agentsdk"
+	"github.com/DanielRondonGarcia/coder/v2/provisionerd/proto"
+	"github.com/DanielRondonGarcia/coder/v2/provisionersdk"
+	sdkproto "github.com/DanielRondonGarcia/coder/v2/provisionersdk/proto"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
 )
 
 func testTemplateScheduleStore() *atomic.Pointer[schedule.TemplateScheduleStore] {
@@ -2897,7 +2897,7 @@ func TestCompleteJob(t *testing.T) {
 					expectHasAiTask:  true,
 					expectUsageEvent: true,
 				},
-				// Checks regression for https://github.com/coder/coder/issues/18776
+				// Checks regression for https://github.com/DanielRondonGarcia/coder/issues/18776
 				{
 					name:       "non-existing app",
 					transition: database.WorkspaceTransitionStart,

@@ -5,9 +5,9 @@ import (
 	"slices"
 	"time"
 
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/healthcheck/health"
-	"github.com/coder/coder/v2/codersdk/healthsdk"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/healthcheck/health"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/healthsdk"
 )
 
 const (

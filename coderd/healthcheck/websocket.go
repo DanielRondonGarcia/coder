@@ -11,9 +11,9 @@ import (
 
 	"golang.org/x/xerrors"
 
-	"github.com/coder/coder/v2/coderd/healthcheck/health"
-	"github.com/coder/coder/v2/codersdk/healthsdk"
-	"github.com/coder/websocket"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/healthcheck/health"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/healthsdk"
+	"github.com/DanielRondonGarcia/websocket"
 )
 
 type WebsocketReport healthsdk.WebsocketReport

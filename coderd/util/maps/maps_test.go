@@ -4,7 +4,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/coder/coder/v2/coderd/util/maps"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/util/maps"
 )
 
 func TestSubset(t *testing.T) {

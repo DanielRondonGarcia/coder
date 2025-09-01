@@ -22,11 +22,11 @@ import (
 
 	"github.com/coreos/go-oidc/v3/oidc"
 
-	"github.com/coder/serpent"
+	"github.com/DanielRondonGarcia/serpent"
 
-	"github.com/coder/coder/v2/buildinfo"
-	"github.com/coder/coder/v2/coderd/agentmetrics"
-	"github.com/coder/coder/v2/coderd/workspaceapps/appurl"
+	"github.com/DanielRondonGarcia/coder/v2/buildinfo"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/agentmetrics"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/workspaceapps/appurl"
 )
 
 // Entitlement represents whether a feature is licensed.
@@ -965,7 +965,7 @@ func DefaultSupportLinks(docsURL string) []LinkConfig {
 		},
 		{
 			Name:   "Report a bug",
-			Target: "https://github.com/coder/coder/issues/new?labels=needs+triage&body=" + buildInfo,
+			Target: "https://github.com/DanielRondonGarcia/coder/issues/new?labels=needs+triage&body=" + buildInfo,
 			Icon:   "bug",
 		},
 		{
@@ -975,7 +975,7 @@ func DefaultSupportLinks(docsURL string) []LinkConfig {
 		},
 		{
 			Name:   "Star the Repo",
-			Target: "https://github.com/coder/coder",
+			Target: "https://github.com/DanielRondonGarcia/coder",
 			Icon:   "star",
 		},
 	}
@@ -2783,7 +2783,7 @@ Write out the current server config as YAML to stdout.`,
 		},
 		{
 			Name:        "Custom wgtunnel Host",
-			Description: `Hostname of HTTPS server that runs https://github.com/coder/wgtunnel. By default, this will pick the best available wgtunnel server hosted by Coder. e.g. "tunnel.example.com".`,
+			Description: `Hostname of HTTPS server that runs https://github.com/DanielRondonGarcia/wgtunnel. By default, this will pick the best available wgtunnel server hosted by Coder. e.g. "tunnel.example.com".`,
 			Flag:        "wg-tunnel-host",
 			Env:         "WGTUNNEL_HOST",
 			YAML:        "wgtunnelHost",

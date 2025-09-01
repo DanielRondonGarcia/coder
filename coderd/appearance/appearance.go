@@ -3,7 +3,7 @@ package appearance
 import (
 	"context"
 
-	"github.com/coder/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
 )
 
 type Fetcher interface {

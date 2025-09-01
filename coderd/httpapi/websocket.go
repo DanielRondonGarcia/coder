@@ -8,7 +8,7 @@ import (
 	"golang.org/x/xerrors"
 
 	"cdr.dev/slog"
-	"github.com/coder/websocket"
+	"github.com/DanielRondonGarcia/websocket"
 )
 
 const HeartbeatInterval time.Duration = 15 * time.Second

@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/coder/coder/v2/coderd/proxyhealth"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/proxyhealth"
 )
 
 // cspDirectives is a map of all csp fetch directives to their values.
@@ -55,7 +55,7 @@ const (
 //   - staticAdditions: a map of CSP directives to append to the default CSP headers.
 //     Used to allow specific static additions to the CSP headers. Allows some niche
 //     use cases, such as embedding Coder in an iframe.
-//     Example: https://github.com/coder/coder/issues/15118
+//     Example: https://github.com/DanielRondonGarcia/coder/issues/15118
 //
 //nolint:revive
 func CSPHeaders(telemetry bool, proxyHosts func() []*proxyhealth.ProxyHost, staticAdditions map[CSPFetchDirective][]string) func(next http.Handler) http.Handler {

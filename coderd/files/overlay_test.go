@@ -7,7 +7,7 @@ import (
 	"github.com/spf13/afero"
 	"github.com/stretchr/testify/require"
 
-	"github.com/coder/coder/v2/coderd/files"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/files"
 )
 
 func TestOverlayFS(t *testing.T) {

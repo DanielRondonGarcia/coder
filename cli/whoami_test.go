@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/coder/coder/v2/cli/clitest"
-	"github.com/coder/coder/v2/coderd/coderdtest"
+	"github.com/DanielRondonGarcia/coder/v2/cli/clitest"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest"
 )
 
 func TestWhoami(t *testing.T) {

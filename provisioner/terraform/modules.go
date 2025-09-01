@@ -13,8 +13,8 @@ import (
 
 	"golang.org/x/xerrors"
 
-	"github.com/coder/coder/v2/coderd/util/xio"
-	"github.com/coder/coder/v2/provisionersdk/proto"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/util/xio"
+	"github.com/DanielRondonGarcia/coder/v2/provisionersdk/proto"
 )
 
 const (

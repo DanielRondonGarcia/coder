@@ -16,10 +16,10 @@ import (
 	"tailscale.com/tailcfg"
 
 	"cdr.dev/slog"
-	"github.com/coder/coder/v2/apiversion"
-	"github.com/coder/coder/v2/codersdk/drpcsdk"
-	"github.com/coder/coder/v2/tailnet/proto"
-	"github.com/coder/quartz"
+	"github.com/DanielRondonGarcia/coder/v2/apiversion"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/drpcsdk"
+	"github.com/DanielRondonGarcia/coder/v2/tailnet/proto"
+	"github.com/DanielRondonGarcia/quartz"
 )
 
 var ErrUnsupportedVersion = xerrors.New("unsupported version")

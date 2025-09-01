@@ -8,8 +8,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/coder/coder/v2/coderd/httpmw"
-	"github.com/coder/coder/v2/coderd/proxyhealth"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/httpmw"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/proxyhealth"
 )
 
 func TestCSP(t *testing.T) {

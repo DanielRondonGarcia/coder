@@ -117,7 +117,7 @@ updates:
     groups:
       coder:
         patterns:
-          - "registry.coder.com/coder/*/coder"
+          - "registry.coder.com/DanielRondonGarcia/*/coder"
     labels: []
     ignore:
       - dependency-name: "*"

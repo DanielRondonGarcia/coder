@@ -6,11 +6,11 @@ import (
 
 	"golang.org/x/xerrors"
 
-	agpl "github.com/coder/coder/v2/cli"
-	"github.com/coder/coder/v2/cli/cliui"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/pretty"
-	"github.com/coder/serpent"
+	agpl "github.com/DanielRondonGarcia/coder/v2/cli"
+	"github.com/DanielRondonGarcia/coder/v2/cli/cliui"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/pretty"
+	"github.com/DanielRondonGarcia/serpent"
 )
 
 func (r *RootCmd) provisionerKeys() *serpent.Command {

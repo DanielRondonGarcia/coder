@@ -1,7 +1,7 @@
 # Image Management
 
 While Coder provides example
-[base container images](https://github.com/coder/enterprise-images) for
+[base container images](https://github.com/DanielRondonGarcia/enterprise-images) for
 workspaces, it's often best to create custom images that matches the needs of
 your users. This document serves a guide to operational maturity with some best
 practices around managing workspaces images for Coder.
@@ -23,7 +23,7 @@ dependencies to work in your network and work with Coder. Here are some things
 to consider:
 
 - `curl`, `wget`, or `busybox` is required to download and run
-  [the agent](https://github.com/coder/coder/blob/main/provisionersdk/scripts/bootstrap_linux.sh)
+  [the agent](https://github.com/DanielRondonGarcia/coder/blob/main/provisionersdk/scripts/bootstrap_linux.sh)
 - `git` is recommended so developers can clone repositories
 - If the Coder server is using a certificate from an internal certificate
   authority (CA), you'll need to add or mount these into your image
@@ -32,7 +32,7 @@ to consider:
 - Consider creating (and starting the container with) a non-root user
 
 See Coder's
-[example base image](https://github.com/coder/enterprise-images/tree/main/images/minimal)
+[example base image](https://github.com/DanielRondonGarcia/enterprise-images/tree/main/images/minimal)
 for reference.
 
 ## Create general-purpose golden image(s) with standard tooling

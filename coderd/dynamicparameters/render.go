@@ -12,12 +12,12 @@ import (
 	"github.com/zclconf/go-cty/cty"
 	"golang.org/x/xerrors"
 
-	"github.com/coder/coder/v2/apiversion"
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/dbauthz"
-	"github.com/coder/coder/v2/coderd/files"
-	"github.com/coder/preview"
-	previewtypes "github.com/coder/preview/types"
+	"github.com/DanielRondonGarcia/coder/v2/apiversion"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/files"
+	"github.com/DanielRondonGarcia/preview"
+	previewtypes "github.com/DanielRondonGarcia/preview/types"
 
 	"github.com/hashicorp/hcl/v2"
 )

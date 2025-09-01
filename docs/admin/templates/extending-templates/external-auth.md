@@ -17,14 +17,14 @@ authenticate. After that, Coder will store and refresh tokens for future
 operations.
 
 <video autoplay playsinline loop>
-  <source src="https://github.com/coder/coder/blob/main/site/static/external-auth.mp4?raw=true" type="video/mp4">
+  <source src="https://github.com/DanielRondonGarcia/coder/blob/main/site/static/external-auth.mp4?raw=true" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
 ### Require git authentication in templates
 
 If your template requires git authentication (e.g. running `git clone` in the
-[startup_script](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/agent#startup_script)),
+[startup_script](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/agent#startup_script)),
 you can require users authenticate via git prior to creating a workspace:
 
 ![Git authentication in template](../../../images/admin/git-auth-template.png)
@@ -82,12 +82,12 @@ resource "coder_agent" "dev" {
   }
   startup_script = <<EOF
 if [ ! -d ~/coder ]; then
-    git clone https://github.com/coder/coder
+    git clone https://github.com/DanielRondonGarcia/coder
 fi
 EOF
 }
 ```
 
 See the
-[Terraform provider documentation](https://registry.terraform.io/providers/coder/coder/latest/docs/data-sources/external_auth)
+[Terraform provider documentation](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/data-sources/external_auth)
 for all available options.

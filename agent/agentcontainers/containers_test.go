@@ -15,10 +15,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/coder/coder/v2/agent/agentcontainers"
-	"github.com/coder/coder/v2/agent/agentexec"
-	"github.com/coder/coder/v2/pty"
-	"github.com/coder/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/coder/v2/agent/agentcontainers"
+	"github.com/DanielRondonGarcia/coder/v2/agent/agentexec"
+	"github.com/DanielRondonGarcia/coder/v2/pty"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
 )
 
 // TestIntegrationDocker tests agentcontainers functionality using a real

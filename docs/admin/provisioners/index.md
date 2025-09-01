@@ -29,7 +29,7 @@ workspaces at the same time.
 
 Provisioners are started with the
 [`coder provisioner start`](../../reference/cli/provisioner_start.md) command in
-the [full Coder binary](https://github.com/coder/coder/releases). Keep reading
+the [full Coder binary](https://github.com/DanielRondonGarcia/coder/releases). Keep reading
 to learn how to start provisioners via Docker, Kubernetes, Systemd, etc.
 
 You can use the dashboard, CLI, or API to [manage provisioners](./manage-provisioner-jobs.md).
@@ -162,7 +162,7 @@ This can also be done in the UI when building a template:
 ![template tags](../../images/admin/provisioner-tags.png)
 
 Alternatively, a template can target a provisioner via
-[workspace tags](https://github.com/coder/coder/tree/main/examples/workspace-tags)
+[workspace tags](https://github.com/DanielRondonGarcia/coder/tree/main/examples/workspace-tags)
 inside the Terraform. See the
 [workspace tags documentation](../../admin/templates/extending-templates/workspace-tags.md)
 for more information.
@@ -332,7 +332,7 @@ will use in concert with the Helm chart for deploying the Coder server.
    created. The set of tags is inferred automatically from the provisioner key.
 
    > Refer to the
-   > [values.yaml](https://github.com/coder/coder/blob/main/helm/provisioner/values.yaml)
+   > [values.yaml](https://github.com/DanielRondonGarcia/coder/blob/main/helm/provisioner/values.yaml)
    > file for the coder-provisioner chart for information on what values can be
    > specified.
 
@@ -365,7 +365,7 @@ docker run --rm -it \
   -e CODER_URL=https://coder.example.com/ \
   -e CODER_SESSION_TOKEN=your_token \
   --entrypoint /opt/coder \
-  ghcr.io/coder/coder:latest \
+  ghcr.io/DanielRondonGarcia/coder:latest \
   provisioner start
 ```
 

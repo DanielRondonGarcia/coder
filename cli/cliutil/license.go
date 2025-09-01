@@ -8,8 +8,8 @@ import (
 	"github.com/google/uuid"
 	"golang.org/x/xerrors"
 
-	"github.com/coder/coder/v2/cli/cliui"
-	"github.com/coder/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/cli/cliui"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
 )
 
 // NewLicenseFormatter returns a new license formatter.

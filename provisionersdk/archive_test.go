@@ -12,7 +12,7 @@ import (
 
 	"cdr.dev/slog/sloggers/slogtest"
 
-	"github.com/coder/coder/v2/provisionersdk"
+	"github.com/DanielRondonGarcia/coder/v2/provisionersdk"
 )
 
 func TestTar(t *testing.T) {
@@ -29,7 +29,7 @@ func TestTar(t *testing.T) {
 		_ = file.Close()
 
 		// If we follow symlinks, Tar would fail.
-		// See https://github.com/coder/coder/issues/5677.
+		// See https://github.com/DanielRondonGarcia/coder/issues/5677.
 		err = os.Symlink("no-exists", filepath.Join(dir, "link"))
 		require.NoError(t, err)
 

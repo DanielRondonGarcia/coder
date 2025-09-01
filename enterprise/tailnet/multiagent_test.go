@@ -8,11 +8,11 @@ import (
 
 	"cdr.dev/slog"
 	"cdr.dev/slog/sloggers/slogtest"
-	"github.com/coder/coder/v2/coderd/database/dbtestutil"
-	"github.com/coder/coder/v2/enterprise/tailnet"
-	agpl "github.com/coder/coder/v2/tailnet"
-	agpltest "github.com/coder/coder/v2/tailnet/test"
-	"github.com/coder/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtestutil"
+	"github.com/DanielRondonGarcia/coder/v2/enterprise/tailnet"
+	agpl "github.com/DanielRondonGarcia/coder/v2/tailnet"
+	agpltest "github.com/DanielRondonGarcia/coder/v2/tailnet/test"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
 )
 
 // TestPGCoordinator_MultiAgent tests a single coordinator with a MultiAgent

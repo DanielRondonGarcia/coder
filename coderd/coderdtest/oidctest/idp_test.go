@@ -15,9 +15,9 @@ import (
 	"github.com/stretchr/testify/require"
 	"golang.org/x/oauth2"
 
-	"github.com/coder/coder/v2/coderd"
-	"github.com/coder/coder/v2/coderd/coderdtest/oidctest"
-	"github.com/coder/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/coder/v2/coderd"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest/oidctest"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
 )
 
 // TestFakeIDPBasicFlow tests the basic flow of the fake IDP.

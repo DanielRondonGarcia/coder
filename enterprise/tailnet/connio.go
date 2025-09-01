@@ -13,8 +13,8 @@ import (
 
 	"cdr.dev/slog"
 
-	agpl "github.com/coder/coder/v2/tailnet"
-	"github.com/coder/coder/v2/tailnet/proto"
+	agpl "github.com/DanielRondonGarcia/coder/v2/tailnet"
+	"github.com/DanielRondonGarcia/coder/v2/tailnet/proto"
 )
 
 // connIO manages the reading and writing to a connected peer. It reads requests via its requests

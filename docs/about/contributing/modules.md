@@ -8,10 +8,10 @@ Coder modules are Terraform modules that integrate with Coder workspaces to prov
 
 Examples of modules include:
 
-- **Desktop IDEs**: [`jetbrains-fleet`](https://registry.coder.com/modules/coder/jetbrains-fleet), [`cursor`](https://registry.coder.com/modules/coder/cursor), [`windsurf`](https://registry.coder.com/modules/coder/windsurf), [`zed`](https://registry.coder.com/modules/coder/zed)
-- **Web IDEs**: [`code-server`](https://registry.coder.com/modules/coder/code-server), [`vscode-web`](https://registry.coder.com/modules/coder/vscode-web), [`jupyter-notebook`](https://registry.coder.com/modules/coder/jupyter-notebook), [`jupyter-lab`](https://registry.coder.com/modules/coder/jupyterlab)
-- **Integrations**: [`devcontainers-cli`](https://registry.coder.com/modules/coder/devcontainers-cli), [`vault-github`](https://registry.coder.com/modules/coder/vault-github), [`jfrog-oauth`](https://registry.coder.com/modules/coder/jfrog-oauth), [`jfrog-token`](https://registry.coder.com/modules/coder/jfrog-token)
-- **Workspace utilities**: [`git-clone`](https://registry.coder.com/modules/coder/git-clone), [`dotfiles`](https://registry.coder.com/modules/coder/dotfiles), [`filebrowser`](https://registry.coder.com/modules/coder/filebrowser), [`coder-login`](https://registry.coder.com/modules/coder/coder-login), [`personalize`](https://registry.coder.com/modules/coder/personalize)
+- **Desktop IDEs**: [`jetbrains-fleet`](https://registry.coder.com/modules/DanielRondonGarcia/jetbrains-fleet), [`cursor`](https://registry.coder.com/modules/DanielRondonGarcia/cursor), [`windsurf`](https://registry.coder.com/modules/DanielRondonGarcia/windsurf), [`zed`](https://registry.coder.com/modules/DanielRondonGarcia/zed)
+- **Web IDEs**: [`code-server`](https://registry.coder.com/modules/DanielRondonGarcia/code-server), [`vscode-web`](https://registry.coder.com/modules/DanielRondonGarcia/vscode-web), [`jupyter-notebook`](https://registry.coder.com/modules/DanielRondonGarcia/jupyter-notebook), [`jupyter-lab`](https://registry.coder.com/modules/DanielRondonGarcia/jupyterlab)
+- **Integrations**: [`devcontainers-cli`](https://registry.coder.com/modules/DanielRondonGarcia/devcontainers-cli), [`vault-github`](https://registry.coder.com/modules/DanielRondonGarcia/vault-github), [`jfrog-oauth`](https://registry.coder.com/modules/DanielRondonGarcia/jfrog-oauth), [`jfrog-token`](https://registry.coder.com/modules/DanielRondonGarcia/jfrog-token)
+- **Workspace utilities**: [`git-clone`](https://registry.coder.com/modules/DanielRondonGarcia/git-clone), [`dotfiles`](https://registry.coder.com/modules/DanielRondonGarcia/dotfiles), [`filebrowser`](https://registry.coder.com/modules/DanielRondonGarcia/filebrowser), [`coder-login`](https://registry.coder.com/modules/DanielRondonGarcia/coder-login), [`personalize`](https://registry.coder.com/modules/DanielRondonGarcia/personalize)
 
 ## Prerequisites
 
@@ -219,7 +219,7 @@ module "git_clone" {
 
   agent_id = coder_agent.main.id
   url      = "https://github.com/DanielRondonGarcia/coder.git"
-  base_dir = "/home/coder/projects"
+  base_dir = "/home/DanielRondonGarcia/projects"
 }
 ```
 
@@ -369,8 +369,8 @@ Use the version bump script to update versions:
 
 ## Get help
 
-- **Examples**: Review existing modules like [`code-server`](https://registry.coder.com/modules/coder/code-server), [`git-clone`](https://registry.coder.com/modules/coder/git-clone), and [`jetbrains`](https://registry.coder.com/modules/coder/jetbrains)
-- **Issues**: Open an issue at [github.com/coder/registry](https://github.com/coder/registry/issues)
+- **Examples**: Review existing modules like [`code-server`](https://registry.coder.com/modules/DanielRondonGarcia/code-server), [`git-clone`](https://registry.coder.com/modules/DanielRondonGarcia/git-clone), and [`jetbrains`](https://registry.coder.com/modules/DanielRondonGarcia/jetbrains)
+- **Issues**: Open an issue at [github.com/DanielRondonGarcia/registry](https://github.com/DanielRondonGarcia/registry/issues)
 - **Community**: Join the [Coder Discord](https://discord.gg/coder) for questions
 - **Documentation**: Check the [Coder docs](https://coder.com/docs) for help on Coder.
 

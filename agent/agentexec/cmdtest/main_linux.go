@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/coder/coder/v2/agent/agentexec"
+	"github.com/DanielRondonGarcia/coder/v2/agent/agentexec"
 )
 
 func main() {

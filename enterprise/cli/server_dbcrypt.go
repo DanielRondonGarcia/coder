@@ -10,12 +10,12 @@ import (
 
 	"cdr.dev/slog"
 	"cdr.dev/slog/sloggers/sloghuman"
-	"github.com/coder/coder/v2/cli"
-	"github.com/coder/coder/v2/cli/cliui"
-	"github.com/coder/coder/v2/coderd/database/awsiamrds"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/enterprise/dbcrypt"
-	"github.com/coder/serpent"
+	"github.com/DanielRondonGarcia/coder/v2/cli"
+	"github.com/DanielRondonGarcia/coder/v2/cli/cliui"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/awsiamrds"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/enterprise/dbcrypt"
+	"github.com/DanielRondonGarcia/serpent"
 
 	"golang.org/x/xerrors"
 )

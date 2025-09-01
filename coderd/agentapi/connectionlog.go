@@ -10,10 +10,10 @@ import (
 	"google.golang.org/protobuf/types/known/emptypb"
 
 	"cdr.dev/slog"
-	agentproto "github.com/coder/coder/v2/agent/proto"
-	"github.com/coder/coder/v2/coderd/connectionlog"
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/db2sdk"
+	agentproto "github.com/DanielRondonGarcia/coder/v2/agent/proto"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/connectionlog"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/db2sdk"
 )
 
 type ConnLogAPI struct {

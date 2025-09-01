@@ -52,12 +52,12 @@ new values.
 ### VM control plane
 
 If you deployed Coder on a VM, copy the kubeconfig file to
-`/home/coder/.kube/config`.
+`/home/DanielRondonGarcia/.kube/config`.
 
 ### Create a Coder template
 
 You can start from our
-[example template](https://github.com/coder/coder/tree/main/examples/templates/kubernetes).
+[example template](https://github.com/DanielRondonGarcia/coder/tree/main/examples/templates/kubernetes).
 From there, add
 [template parameters](../templates/extending-templates/parameters.md) to allow
 developers to pick their desired cluster.
@@ -158,7 +158,7 @@ rolebinding.rbac.authorization.k8s.io/coder-v2 created
 ### 2. Modify the Kubernetes template
 
 You can start from our
-[example template](https://github.com/coder/coder/tree/main/examples/templates/kubernetes).
+[example template](https://github.com/DanielRondonGarcia/coder/tree/main/examples/templates/kubernetes).
 
 ```tf
 variable "host" {

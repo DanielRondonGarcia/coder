@@ -7,9 +7,9 @@ import (
 	"github.com/spf13/afero"
 	"golang.org/x/xerrors"
 
-	"github.com/coder/clistat"
-	"github.com/coder/coder/v2/cli/cliui"
-	"github.com/coder/serpent"
+	"github.com/DanielRondonGarcia/clistat"
+	"github.com/DanielRondonGarcia/coder/v2/cli/cliui"
+	"github.com/DanielRondonGarcia/serpent"
 )
 
 func initStatterMW(tgt **clistat.Statter, fs afero.Fs) serpent.MiddlewareFunc {

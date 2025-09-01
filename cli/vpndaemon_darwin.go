@@ -6,8 +6,8 @@ import (
 	"golang.org/x/xerrors"
 
 	"cdr.dev/slog"
-	"github.com/coder/coder/v2/vpn"
-	"github.com/coder/serpent"
+	"github.com/DanielRondonGarcia/coder/v2/vpn"
+	"github.com/DanielRondonGarcia/serpent"
 )
 
 func (r *RootCmd) vpnDaemonRun() *serpent.Command {

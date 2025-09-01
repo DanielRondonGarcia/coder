@@ -8,11 +8,11 @@ import (
 
 	"golang.org/x/xerrors"
 
-	"github.com/coder/coder/v2/coderd/healthcheck/derphealth"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/codersdk/healthsdk"
-	"github.com/coder/coder/v2/codersdk/workspacesdk"
-	"github.com/coder/serpent"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/healthcheck/derphealth"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/healthsdk"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/workspacesdk"
+	"github.com/DanielRondonGarcia/serpent"
 )
 
 func (r *RootCmd) netcheck() *serpent.Command {

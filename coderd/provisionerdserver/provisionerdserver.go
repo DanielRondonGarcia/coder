@@ -28,31 +28,31 @@ import (
 	protobuf "google.golang.org/protobuf/proto"
 
 	"cdr.dev/slog"
-	"github.com/coder/coder/v2/coderd/apikey"
-	"github.com/coder/coder/v2/coderd/audit"
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/dbauthz"
-	"github.com/coder/coder/v2/coderd/database/dbtime"
-	"github.com/coder/coder/v2/coderd/database/pubsub"
-	"github.com/coder/coder/v2/coderd/externalauth"
-	"github.com/coder/coder/v2/coderd/notifications"
-	"github.com/coder/coder/v2/coderd/prebuilds"
-	"github.com/coder/coder/v2/coderd/promoauth"
-	"github.com/coder/coder/v2/coderd/schedule"
-	"github.com/coder/coder/v2/coderd/telemetry"
-	"github.com/coder/coder/v2/coderd/tracing"
-	"github.com/coder/coder/v2/coderd/usage"
-	"github.com/coder/coder/v2/coderd/usage/usagetypes"
-	"github.com/coder/coder/v2/coderd/util/slice"
-	"github.com/coder/coder/v2/coderd/wspubsub"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/codersdk/agentsdk"
-	"github.com/coder/coder/v2/codersdk/drpcsdk"
-	"github.com/coder/coder/v2/provisioner"
-	"github.com/coder/coder/v2/provisionerd/proto"
-	"github.com/coder/coder/v2/provisionersdk"
-	sdkproto "github.com/coder/coder/v2/provisionersdk/proto"
-	"github.com/coder/quartz"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/apikey"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/audit"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtime"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/pubsub"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/externalauth"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/prebuilds"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/promoauth"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/schedule"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/telemetry"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/tracing"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/usage"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/usage/usagetypes"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/util/slice"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/wspubsub"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/agentsdk"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/drpcsdk"
+	"github.com/DanielRondonGarcia/coder/v2/provisioner"
+	"github.com/DanielRondonGarcia/coder/v2/provisionerd/proto"
+	"github.com/DanielRondonGarcia/coder/v2/provisionersdk"
+	sdkproto "github.com/DanielRondonGarcia/coder/v2/provisionersdk/proto"
+	"github.com/DanielRondonGarcia/quartz"
 )
 
 const (
@@ -2031,7 +2031,7 @@ func (s *server) completeWorkspaceBuildJob(ctx context.Context, job database.Pro
 		}
 
 		if warnUnknownSidebarAppID {
-			// Ref: https://github.com/coder/coder/issues/18776
+			// Ref: https://github.com/DanielRondonGarcia/coder/issues/18776
 			// This can happen for a number of reasons:
 			// 1. Misconfigured template
 			// 2. Count=0 on the agent due to stop transition, meaning the associated coder_app was not inserted.
@@ -2053,7 +2053,7 @@ func (s *server) completeWorkspaceBuildJob(ctx context.Context, job database.Pro
 				Output: []string{
 					fmt.Sprintf("Unknown ai_task_sidebar_app_id %q. This workspace will be unable to run AI tasks. This may be due to a template configuration issue, please check with the template author.", sidebarAppID.UUID.String()),
 					"Template author: double-check the following:",
-					"  - You have associated the coder_ai_task with a valid coder_app in your template (ref: https://registry.terraform.io/providers/coder/coder/latest/docs/resources/ai_task).",
+					"  - You have associated the coder_ai_task with a valid coder_app in your template (ref: https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/ai_task).",
 					"  - You have associated the coder_agent with at least one other compute resource. Agents with no other associated resources are not inserted into the database.",
 				},
 			}); err != nil {

@@ -11,12 +11,12 @@ import (
 	"golang.org/x/xerrors"
 	"storj.io/drpc"
 
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/externalauth"
-	"github.com/coder/coder/v2/codersdk/drpcsdk"
-	proto "github.com/coder/coder/v2/provisionerd/proto"
-	sdkproto "github.com/coder/coder/v2/provisionersdk/proto"
-	"github.com/coder/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/externalauth"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/drpcsdk"
+	proto "github.com/DanielRondonGarcia/coder/v2/provisionerd/proto"
+	sdkproto "github.com/DanielRondonGarcia/coder/v2/provisionersdk/proto"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
 )
 
 // TestUploadFileLargeModuleFiles tests the UploadFile RPC with large module files

@@ -3,8 +3,8 @@ package coderd
 import (
 	"net/http"
 
-	"github.com/coder/coder/v2/coderd/httpapi"
-	"github.com/coder/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/httpapi"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
 )
 
 // @Summary Get enabled experiments

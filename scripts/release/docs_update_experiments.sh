@@ -30,15 +30,15 @@ fi
 
 echo_latest_stable_version() {
 	# Extract redirect URL to determine latest stable tag
-	version="$(curl -fsSLI -o /dev/null -w "%{url_effective}" https://github.com/coder/coder/releases/latest)"
-	version="${version#https://github.com/coder/coder/releases/tag/v}"
+	version="$(curl -fsSLI -o /dev/null -w "%{url_effective}" https://github.com/DanielRondonGarcia/coder/releases/latest)"
+	version="${version#https://github.com/DanielRondonGarcia/coder/releases/tag/v}"
 	echo "v${version}"
 }
 
 echo_latest_mainline_version() {
 	# Use GitHub API to get latest release version, authenticated
 	echo "v$(
-		curl -fsSL -H "Authorization: token ${GITHUB_TOKEN}" https://api.github.com/repos/coder/coder/releases |
+		curl -fsSL -H "Authorization: token ${GITHUB_TOKEN}" https://api.github.com/repos/DanielRondonGarcia/coder/releases |
 			awk -F'"' '/"tag_name"/ {print $4}' |
 			tr -d v |
 			tr . ' ' |

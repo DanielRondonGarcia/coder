@@ -34,20 +34,20 @@ import (
 
 	"cdr.dev/slog"
 	"cdr.dev/slog/sloggers/sloghuman"
-	"github.com/coder/coder/v2/agent/agentssh"
-	"github.com/coder/coder/v2/cli/cliui"
-	"github.com/coder/coder/v2/cli/cliutil"
-	"github.com/coder/coder/v2/coderd/autobuild/notify"
-	"github.com/coder/coder/v2/coderd/util/maps"
-	"github.com/coder/coder/v2/coderd/util/ptr"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/codersdk/workspacesdk"
-	"github.com/coder/coder/v2/cryptorand"
-	"github.com/coder/coder/v2/pty"
-	"github.com/coder/coder/v2/tailnet"
-	"github.com/coder/quartz"
-	"github.com/coder/retry"
-	"github.com/coder/serpent"
+	"github.com/DanielRondonGarcia/coder/v2/agent/agentssh"
+	"github.com/DanielRondonGarcia/coder/v2/cli/cliui"
+	"github.com/DanielRondonGarcia/coder/v2/cli/cliutil"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/autobuild/notify"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/util/maps"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/util/ptr"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/workspacesdk"
+	"github.com/DanielRondonGarcia/coder/v2/cryptorand"
+	"github.com/DanielRondonGarcia/coder/v2/pty"
+	"github.com/DanielRondonGarcia/coder/v2/tailnet"
+	"github.com/DanielRondonGarcia/quartz"
+	"github.com/DanielRondonGarcia/retry"
+	"github.com/DanielRondonGarcia/serpent"
 )
 
 const (
@@ -129,7 +129,7 @@ func (r *RootCmd) ssh() *serpent.Command {
 			defer cancel()
 
 			// Prevent unnecessary logs from the stdlib from messing up the TTY.
-			// See: https://github.com/coder/coder/issues/13144
+			// See: https://github.com/DanielRondonGarcia/coder/issues/13144
 			log.SetOutput(io.Discard)
 
 			logger := inv.Logger
@@ -767,7 +767,7 @@ func findWorkspaceAndAgentByHostname(
 // is stopped before the agent is shut down, the disconnect
 // will usually not propagate.
 //
-// See: https://github.com/coder/coder/issues/6180
+// See: https://github.com/DanielRondonGarcia/coder/issues/6180
 func watchAndClose(ctx context.Context, closer func() error, logger slog.Logger, client *codersdk.Client, workspace codersdk.Workspace, errCh <-chan error) {
 	// Ensure session is ended on both context cancellation
 	// and workspace stop.

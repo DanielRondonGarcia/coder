@@ -16,11 +16,11 @@ import (
 
 	"cdr.dev/slog"
 
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/dbtime"
-	"github.com/coder/coder/v2/coderd/httpmw"
-	"github.com/coder/coder/v2/coderd/idpsync"
-	"github.com/coder/coder/v2/coderd/tracing"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtime"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/httpmw"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/idpsync"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/tracing"
 )
 
 type RequestParams struct {

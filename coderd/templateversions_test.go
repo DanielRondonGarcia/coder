@@ -13,20 +13,20 @@ import (
 	"github.com/stretchr/testify/require"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/coder/coder/v2/coderd/audit"
-	"github.com/coder/coder/v2/coderd/coderdtest"
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/dbauthz"
-	"github.com/coder/coder/v2/coderd/database/dbtestutil"
-	"github.com/coder/coder/v2/coderd/externalauth"
-	"github.com/coder/coder/v2/coderd/rbac"
-	"github.com/coder/coder/v2/coderd/rbac/policy"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/examples"
-	"github.com/coder/coder/v2/provisioner/echo"
-	"github.com/coder/coder/v2/provisionersdk"
-	"github.com/coder/coder/v2/provisionersdk/proto"
-	"github.com/coder/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/audit"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtestutil"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/externalauth"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac/policy"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/examples"
+	"github.com/DanielRondonGarcia/coder/v2/provisioner/echo"
+	"github.com/DanielRondonGarcia/coder/v2/provisionersdk"
+	"github.com/DanielRondonGarcia/coder/v2/provisionersdk/proto"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
 )
 
 func TestTemplateVersion(t *testing.T) {
@@ -532,7 +532,7 @@ func TestPostTemplateVersionsByOrganization(t *testing.T) {
 				},
 				wantTags: map[string]string{"owner": templateAdminUser.ID.String(), "scope": "user"},
 			},
-			// Ref: https://github.com/coder/coder/issues/16021
+			// Ref: https://github.com/DanielRondonGarcia/coder/issues/16021
 			{
 				name: "main.tf with no workspace_tags and a function call in a parameter default",
 				files: map[string]string{

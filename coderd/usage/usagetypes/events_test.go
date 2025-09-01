@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/coder/coder/v2/coderd/usage/usagetypes"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/usage/usagetypes"
 )
 
 func TestParseEvent(t *testing.T) {

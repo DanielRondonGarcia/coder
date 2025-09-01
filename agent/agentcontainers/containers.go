@@ -3,7 +3,7 @@ package agentcontainers
 import (
 	"context"
 
-	"github.com/coder/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
 )
 
 // ContainerCLI is an interface for interacting with containers in a workspace.

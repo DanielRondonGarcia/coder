@@ -16,14 +16,14 @@ import (
 	"github.com/imulab/go-scim/pkg/v2/spec"
 	"golang.org/x/xerrors"
 
-	agpl "github.com/coder/coder/v2/coderd"
-	"github.com/coder/coder/v2/coderd/audit"
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/dbauthz"
-	"github.com/coder/coder/v2/coderd/database/dbtime"
-	"github.com/coder/coder/v2/coderd/httpapi"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/enterprise/coderd/scim"
+	agpl "github.com/DanielRondonGarcia/coder/v2/coderd"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/audit"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtime"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/httpapi"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/enterprise/coderd/scim"
 )
 
 func (api *API) scimVerifyAuthHeader(r *http.Request) bool {

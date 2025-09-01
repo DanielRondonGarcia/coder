@@ -29,7 +29,7 @@ into a structure compatible with [PlatformX by DX](https://help.getdx.com/en/art
 
 For more information about coder-platformx-events-middleware and how to
 integrate it with your Coder deployment and PlatformX events, refer to the
-[coder-platformx-notifications](https://github.com/coder/coder-platformx-notifications)
+[coder-platformx-notifications](https://github.com/DanielRondonGarcia/coder-platformx-notifications)
 repository.
 
 ### Supported Notification Types

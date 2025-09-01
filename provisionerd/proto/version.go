@@ -1,6 +1,6 @@
 package proto
 
-import "github.com/coder/coder/v2/apiversion"
+import "github.com/DanielRondonGarcia/coder/v2/apiversion"
 
 // Version history:
 //

@@ -81,7 +81,7 @@ docker run --rm -d \
 echo '== Waiting for keycloak to become ready'
 # Start the timeout in the background so interrupting this script
 # doesn't hang for 60s.
-timeout 60s bash -c 'until curl -s --fail http://localhost:9080/realms/coder/.well-known/openid-configuration > /dev/null 2>&1; do sleep 0.5; done' ||
+timeout 60s bash -c 'until curl -s --fail http://localhost:9080/realms/DanielRondonGarcia/.well-known/openid-configuration > /dev/null 2>&1; do sleep 0.5; done' ||
 	fatal 'Keycloak did not become ready in time' &
 wait $!
 

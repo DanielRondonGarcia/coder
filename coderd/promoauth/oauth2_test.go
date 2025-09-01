@@ -14,11 +14,11 @@ import (
 	"github.com/stretchr/testify/require"
 	"golang.org/x/oauth2"
 
-	"github.com/coder/coder/v2/coderd/coderdtest/oidctest"
-	"github.com/coder/coder/v2/coderd/coderdtest/promhelp"
-	"github.com/coder/coder/v2/coderd/externalauth"
-	"github.com/coder/coder/v2/coderd/promoauth"
-	"github.com/coder/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest/oidctest"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest/promhelp"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/externalauth"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/promoauth"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
 )
 
 func TestInstrument(t *testing.T) {

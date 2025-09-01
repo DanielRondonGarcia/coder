@@ -8,12 +8,12 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.uber.org/mock/gomock"
 
-	agentproto "github.com/coder/coder/v2/agent/proto"
-	"github.com/coder/coder/v2/coderd/agentapi"
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/dbmock"
-	"github.com/coder/coder/v2/coderd/wspubsub"
-	"github.com/coder/coder/v2/testutil"
+	agentproto "github.com/DanielRondonGarcia/coder/v2/agent/proto"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/agentapi"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbmock"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/wspubsub"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
 )
 
 func TestBatchUpdateAppHealths(t *testing.T) {

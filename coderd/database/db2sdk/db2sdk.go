@@ -16,19 +16,19 @@ import (
 	"golang.org/x/xerrors"
 	"tailscale.com/tailcfg"
 
-	previewtypes "github.com/coder/preview/types"
+	previewtypes "github.com/DanielRondonGarcia/preview/types"
 
-	agentproto "github.com/coder/coder/v2/agent/proto"
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/rbac"
-	"github.com/coder/coder/v2/coderd/rbac/policy"
-	"github.com/coder/coder/v2/coderd/render"
-	"github.com/coder/coder/v2/coderd/util/ptr"
-	"github.com/coder/coder/v2/coderd/util/slice"
-	"github.com/coder/coder/v2/coderd/workspaceapps/appurl"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/provisionersdk/proto"
-	"github.com/coder/coder/v2/tailnet"
+	agentproto "github.com/DanielRondonGarcia/coder/v2/agent/proto"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac/policy"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/render"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/util/ptr"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/util/slice"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/workspaceapps/appurl"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/provisionersdk/proto"
+	"github.com/DanielRondonGarcia/coder/v2/tailnet"
 )
 
 // List is a helper function to reduce boilerplate when converting slices of

@@ -4,14 +4,14 @@ import (
 	"net"
 	"testing"
 
-	"github.com/coder/coder/v2/coderd/coderdtest"
-	"github.com/coder/coder/v2/coderd/database/dbtestutil"
-	"github.com/coder/coder/v2/coderd/httpmw"
-	"github.com/coder/coder/v2/coderd/workspaceapps/apptest"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/enterprise/coderd/coderdenttest"
-	"github.com/coder/coder/v2/enterprise/coderd/license"
-	"github.com/coder/serpent"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtestutil"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/httpmw"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/workspaceapps/apptest"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/enterprise/coderd/coderdenttest"
+	"github.com/DanielRondonGarcia/coder/v2/enterprise/coderd/license"
+	"github.com/DanielRondonGarcia/serpent"
 )
 
 func TestWorkspaceApps(t *testing.T) {

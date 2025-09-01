@@ -23,16 +23,16 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/coder/terraform-provider-coder/v2/provider"
+	"github.com/DanielRondonGarcia/terraform-provider-coder/v2/provider"
 
 	"cdr.dev/slog"
 	"cdr.dev/slog/sloggers/slogtest"
 
-	"github.com/coder/coder/v2/codersdk/drpcsdk"
-	"github.com/coder/coder/v2/provisioner/terraform"
-	"github.com/coder/coder/v2/provisionersdk"
-	"github.com/coder/coder/v2/provisionersdk/proto"
-	"github.com/coder/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/drpcsdk"
+	"github.com/DanielRondonGarcia/coder/v2/provisioner/terraform"
+	"github.com/DanielRondonGarcia/coder/v2/provisionersdk"
+	"github.com/DanielRondonGarcia/coder/v2/provisionersdk/proto"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
 )
 
 type provisionerServeOptions struct {

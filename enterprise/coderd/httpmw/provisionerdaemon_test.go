@@ -12,13 +12,13 @@ import (
 	"go.uber.org/mock/gomock"
 	"golang.org/x/xerrors"
 
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/dbmock"
-	"github.com/coder/coder/v2/coderd/httpmw"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/enterprise/coderd/coderdenttest"
-	"github.com/coder/coder/v2/enterprise/coderd/license"
-	"github.com/coder/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbmock"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/httpmw"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/enterprise/coderd/coderdenttest"
+	"github.com/DanielRondonGarcia/coder/v2/enterprise/coderd/license"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
 )
 
 func TestExtractProvisionerDaemonAuthenticated(t *testing.T) {

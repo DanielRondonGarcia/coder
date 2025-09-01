@@ -5,9 +5,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/coder/coder/v2/coderd/notifications/render"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications/render"
 
-	"github.com/coder/coder/v2/coderd/notifications/types"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications/types"
 )
 
 func TestGoTemplate(t *testing.T) {

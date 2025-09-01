@@ -14,11 +14,11 @@ import (
 
 	"cdr.dev/slog"
 	"cdr.dev/slog/sloggers/sloghuman"
-	"github.com/coder/coder/v2/coderd/tracing"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/scaletest/harness"
-	"github.com/coder/coder/v2/scaletest/loadtestutil"
-	"github.com/coder/websocket"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/tracing"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/scaletest/harness"
+	"github.com/DanielRondonGarcia/coder/v2/scaletest/loadtestutil"
+	"github.com/DanielRondonGarcia/websocket"
 )
 
 type Runner struct {

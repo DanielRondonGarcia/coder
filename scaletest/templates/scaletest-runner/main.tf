@@ -42,7 +42,7 @@ locals {
   service_account_name                           = "scaletest-sa"
   home_disk_size                                 = 10
   scaletest_run_id                               = "scaletest-${replace(time_static.start_time.rfc3339, ":", "-")}"
-  scaletest_run_dir                              = "/home/coder/${local.scaletest_run_id}"
+  scaletest_run_dir                              = "/home/DanielRondonGarcia/${local.scaletest_run_id}"
   scaletest_run_start_time                       = time_static.start_time.rfc3339
   grafana_url                                    = "https://grafana.corp.tld"
   grafana_dashboard_uid                          = "qLVSTR-Vz"
@@ -562,7 +562,7 @@ resource "coder_agent" "main" {
   env = {
     VERBOSE : data.coder_parameter.verbose.value ? "1" : "0",
     DRY_RUN : data.coder_parameter.dry_run.value ? "1" : "0",
-    CODER_CONFIG_DIR : "/home/coder/.config/coderv2",
+    CODER_CONFIG_DIR : "/home/DanielRondonGarcia/.config/coderv2",
     CODER_USER_TOKEN : data.coder_workspace_owner.me.session_token,
     CODER_URL : data.coder_workspace.me.access_url,
     CODER_USER : data.coder_workspace_owner.me.name,

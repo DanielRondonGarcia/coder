@@ -16,9 +16,9 @@ import (
 	"golang.org/x/xerrors"
 
 	"cdr.dev/slog"
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/dbauthz"
-	"github.com/coder/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
 )
 
 // Dispatcher is an interface that can be used to dispatch
@@ -40,7 +40,7 @@ type Dispatcher interface {
 // and push notifications at time of implementation are being used
 // for updates inside of a workspace, which we want to be immediate.
 //
-// See: https://github.com/coder/internal/issues/528
+// See: https://github.com/DanielRondonGarcia/internal/issues/528
 func New(ctx context.Context, log *slog.Logger, db database.Store, vapidSub string) (Dispatcher, error) {
 	keys, err := db.GetWebpushVAPIDKeys(ctx)
 	if err != nil {

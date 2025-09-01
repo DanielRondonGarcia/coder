@@ -22,10 +22,10 @@ import (
 	"go.uber.org/goleak"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/dbtestutil"
-	"github.com/coder/coder/v2/coderd/database/migrations"
-	"github.com/coder/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtestutil"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/migrations"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
 )
 
 func TestMain(m *testing.M) {
@@ -286,7 +286,7 @@ func TestMigrateUpWithFixtures(t *testing.T) {
 		if len(emptyTables) > 0 {
 			t.Log("The following tables have zero rows, consider adding fixtures for them or create a full database dump:")
 			t.Errorf("tables have zero rows: %v", emptyTables)
-			t.Log("See https://github.com/coder/coder/blob/main/docs/about/contributing/backend.md#database-fixtures-for-testing-migrations for more information")
+			t.Log("See https://github.com/DanielRondonGarcia/coder/blob/main/docs/about/contributing/backend.md#database-fixtures-for-testing-migrations for more information")
 		}
 	})
 

@@ -1,7 +1,7 @@
 # Resource Metadata
 
 Expose key workspace information to your users with
-[`coder_metadata`](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/metadata)
+[`coder_metadata`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/metadata)
 resources in your template code.
 
 You can use `coder_metadata` to show Terraform resource attributes like these:

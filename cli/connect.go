@@ -1,9 +1,9 @@
 package cli
 
 import (
-	"github.com/coder/serpent"
+	"github.com/DanielRondonGarcia/serpent"
 
-	"github.com/coder/coder/v2/codersdk/workspacesdk"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/workspacesdk"
 )
 
 func (r *RootCmd) connectCmd() *serpent.Command {

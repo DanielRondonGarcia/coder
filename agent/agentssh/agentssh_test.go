@@ -27,10 +27,10 @@ import (
 	"cdr.dev/slog"
 	"cdr.dev/slog/sloggers/slogtest"
 
-	"github.com/coder/coder/v2/agent/agentexec"
-	"github.com/coder/coder/v2/agent/agentssh"
-	"github.com/coder/coder/v2/pty/ptytest"
-	"github.com/coder/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/coder/v2/agent/agentexec"
+	"github.com/DanielRondonGarcia/coder/v2/agent/agentssh"
+	"github.com/DanielRondonGarcia/coder/v2/pty/ptytest"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
 )
 
 func TestMain(m *testing.M) {

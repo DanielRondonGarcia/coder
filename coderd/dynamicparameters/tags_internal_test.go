@@ -10,10 +10,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	archivefs "github.com/coder/coder/v2/archive/fs"
-	"github.com/coder/preview"
+	archivefs "github.com/DanielRondonGarcia/coder/v2/archive/fs"
+	"github.com/DanielRondonGarcia/preview"
 
-	"github.com/coder/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
 )
 
 func Test_DynamicWorkspaceTagDefaultsFromFile(t *testing.T) {

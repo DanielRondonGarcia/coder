@@ -4,7 +4,7 @@ import (
 	"context"
 	"net"
 
-	"github.com/coder/websocket"
+	"github.com/DanielRondonGarcia/websocket"
 )
 
 // wsNetConn wraps net.Conn created by websocket.NetConn(). Cancel func

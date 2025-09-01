@@ -10,7 +10,7 @@ on creation,
 ## coderd Terraform Provider
 
 The
-[coderd Terraform provider](https://registry.terraform.io/providers/coder/coderd/latest)
+[coderd Terraform provider](https://registry.terraform.io/providers/DanielRondonGarcia/coderd/latest)
 can be used to push new template versions, either manually, or in CI/CD
 pipelines. To run the provider in a CI/CD pipeline, and to prevent drift, you'll
 need to store the Terraform state
@@ -58,13 +58,13 @@ resource "coderd_template" "kubernetes" {
 ```
 
 For an example, see how we push our development image and template
-[with GitHub actions](https://github.com/coder/coder/blob/main/.github/workflows/dogfood.yaml).
+[with GitHub actions](https://github.com/DanielRondonGarcia/coder/blob/main/.github/workflows/dogfood.yaml).
 
 ## Coder CLI
 
 You can [install Coder](../../../install/cli.md) CLI to automate pushing new
 template versions in CI/CD pipelines. For GitHub Actions, see our
-[setup-coder](https://github.com/coder/setup-coder) action.
+[setup-coder](https://github.com/DanielRondonGarcia/setup-coder) action.
 
 ```console
 # Install the Coder CLI
@@ -97,5 +97,5 @@ for an example of how to test and publish Coder templates in a CI/CD pipeline.
 ### Next steps
 
 - [Coder CLI Reference](../../../reference/cli/templates.md)
-- [Coderd Terraform Provider Reference](https://registry.terraform.io/providers/coder/coderd/latest/docs)
+- [Coderd Terraform Provider Reference](https://registry.terraform.io/providers/DanielRondonGarcia/coderd/latest/docs)
 - [Coderd API Reference](../../../reference/index.md)

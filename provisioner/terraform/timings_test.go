@@ -10,10 +10,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/coder/coder/v2/coderd/database"
-	terraform_internal "github.com/coder/coder/v2/provisioner/terraform/internal"
-	"github.com/coder/coder/v2/provisionersdk/proto"
-	"github.com/coder/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	terraform_internal "github.com/DanielRondonGarcia/coder/v2/provisioner/terraform/internal"
+	"github.com/DanielRondonGarcia/coder/v2/provisionersdk/proto"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
 )
 
 // TestTimingsFromProvision uses a fake terraform binary which spits out expected log content.

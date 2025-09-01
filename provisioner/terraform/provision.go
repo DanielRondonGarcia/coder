@@ -16,12 +16,12 @@ import (
 	"golang.org/x/xerrors"
 
 	"cdr.dev/slog"
-	"github.com/coder/terraform-provider-coder/v2/provider"
+	"github.com/DanielRondonGarcia/terraform-provider-coder/v2/provider"
 
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/tracing"
-	"github.com/coder/coder/v2/provisionersdk"
-	"github.com/coder/coder/v2/provisionersdk/proto"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/tracing"
+	"github.com/DanielRondonGarcia/coder/v2/provisionersdk"
+	"github.com/DanielRondonGarcia/coder/v2/provisionersdk/proto"
 )
 
 const staleTerraformPluginRetention = 30 * 24 * time.Hour
@@ -118,7 +118,7 @@ func (s *server) Plan(
 
 		s.logger.Debug(ctx, "init failed", slog.Error(err))
 
-		// Special handling for "text file busy" c.f. https://github.com/coder/coder/issues/14726
+		// Special handling for "text file busy" c.f. https://github.com/DanielRondonGarcia/coder/issues/14726
 		// We believe this might be due to some race condition that prevents the
 		// terraform-provider-coder process from exiting.  When terraform tries to install the
 		// provider during this init, it copies over the local cache. Normally this isn't an issue,
@@ -342,7 +342,7 @@ func logTerraformEnvVars(sink logSink) {
 }
 
 // tryGettingCoderProviderStacktrace attempts to dial a special pprof endpoint we added to
-// terraform-provider-coder in https://github.com/coder/terraform-provider-coder/pull/295 which
+// terraform-provider-coder in https://github.com/DanielRondonGarcia/terraform-provider-coder/pull/295 which
 // shipped in v1.0.4.  It will return the stacktraces of the provider, which will hopefully allow us
 // to figure out why it hasn't exited.
 func tryGettingCoderProviderStacktrace(sess *provisionersdk.Session) string {
@@ -378,7 +378,7 @@ func tryGettingCoderProviderStacktrace(sess *provisionersdk.Session) string {
 }
 
 // gitAuthAccessTokenEnvironmentVariable is copied from
-// github.com/coder/terraform-provider-coder/provider.GitAuthAccessTokenEnvironmentVariable@v1.0.4.
+// github.com/DanielRondonGarcia/terraform-provider-coder/provider.GitAuthAccessTokenEnvironmentVariable@v1.0.4.
 // While removed in v2 of the provider, we keep this to support customers using older templates that
 // depend on this environment variable. Once we are certain that no customers are still using v1 of
 // the provider, we can remove this function.

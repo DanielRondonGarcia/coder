@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.opentelemetry.io/otel/propagation"
 
-	"github.com/coder/coder/v2/coderd/audit"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/audit"
 )
 
 func TestBaggage(t *testing.T) {

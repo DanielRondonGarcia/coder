@@ -120,8 +120,8 @@ Run the following commands to copy the Azure credentials and give the `coder`
 user access to them:
 
 ```shell
-sudo cp -r ~/.azure /home/coder/.azure
-sudo chown -R coder:coder /home/coder/.azure/
+sudo cp -r ~/.azure /home/DanielRondonGarcia/.azure
+sudo chown -R coder:coder /home/DanielRondonGarcia/.azure/
 ```
 
 Navigate to the `./azure-linux` folder where you created your template and run

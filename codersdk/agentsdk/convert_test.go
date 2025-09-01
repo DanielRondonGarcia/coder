@@ -9,11 +9,11 @@ import (
 	"google.golang.org/protobuf/types/known/timestamppb"
 	"tailscale.com/tailcfg"
 
-	"github.com/coder/coder/v2/agent/proto"
-	"github.com/coder/coder/v2/coderd/database/dbtime"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/codersdk/agentsdk"
-	"github.com/coder/coder/v2/tailnet"
+	"github.com/DanielRondonGarcia/coder/v2/agent/proto"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtime"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/agentsdk"
+	"github.com/DanielRondonGarcia/coder/v2/tailnet"
 )
 
 func TestManifest(t *testing.T) {
@@ -134,8 +134,8 @@ func TestManifest(t *testing.T) {
 		Devcontainers: []codersdk.WorkspaceAgentDevcontainer{
 			{
 				ID:              uuid.New(),
-				WorkspaceFolder: "/home/coder/coder",
-				ConfigPath:      "/home/coder/coder/.devcontainer/devcontainer.json",
+				WorkspaceFolder: "/home/DanielRondonGarcia/coder",
+				ConfigPath:      "/home/DanielRondonGarcia/coder/.devcontainer/devcontainer.json",
 			},
 		},
 	}

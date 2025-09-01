@@ -12,7 +12,7 @@ workspaces.
 ![Grafana Dashboard](../../images/admin/monitoring/grafana-dashboard.png)
 
 Learn how to install & read the docs on the
-[Observability Helm Chart GitHub](https://github.com/coder/observability)
+[Observability Helm Chart GitHub](https://github.com/DanielRondonGarcia/observability)
 
 ## Table of Contents
 

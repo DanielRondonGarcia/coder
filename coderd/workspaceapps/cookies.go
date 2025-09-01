@@ -3,8 +3,8 @@ package workspaceapps
 import (
 	"net/http"
 
-	"github.com/coder/coder/v2/coderd/httpmw"
-	"github.com/coder/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/httpmw"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
 )
 
 // AppConnectSessionTokenCookieName returns the cookie name for the session

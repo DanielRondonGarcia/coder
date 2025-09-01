@@ -6,7 +6,7 @@ development.
 Follow this guide to use Windsurf to access your Coder workspaces.
 
 If your team uses Windsurf regularly, ask your Coder administrator to add Windsurf as a workspace application in your template.
-You can also use the [Windsurf module](https://registry.coder.com/modules/coder/windsurf) to easily add Windsurf to your Coder templates.
+You can also use the [Windsurf module](https://registry.coder.com/modules/DanielRondonGarcia/windsurf) to easily add Windsurf to your Coder templates.
 
 ## Install Windsurf
 
@@ -35,7 +35,7 @@ Windsurf can connect to your Coder workspaces via SSH:
 
    ## Manually
 
-   1. Download the [latest vscode-coder extension](https://github.com/coder/vscode-coder/releases/latest) `.vsix` file.
+   1. Download the [latest vscode-coder extension](https://github.com/DanielRondonGarcia/vscode-coder/releases/latest) `.vsix` file.
 
    1. Drag the `.vsix` file into the extensions pane of Windsurf.
 

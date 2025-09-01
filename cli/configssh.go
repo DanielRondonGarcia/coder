@@ -22,10 +22,10 @@ import (
 	"golang.org/x/exp/constraints"
 	"golang.org/x/xerrors"
 
-	"github.com/coder/serpent"
+	"github.com/DanielRondonGarcia/serpent"
 
-	"github.com/coder/coder/v2/cli/cliui"
-	"github.com/coder/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/cli/cliui"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
 )
 
 const (
@@ -788,7 +788,7 @@ func sshConfigSplitOnCoderSection(data []byte) (before, section []byte, after []
 // would be the literal string '\t', not a tab.
 //
 // See:
-//   - https://github.com/coder/coder/issues/2853
+//   - https://github.com/DanielRondonGarcia/coder/issues/2853
 //   - https://github.com/openssh/openssh-portable/blob/V_9_0_P1/sshconnect.c#L158-L167
 //   - https://github.com/PowerShell/openssh-portable/blob/v8.1.0.0/sshconnect.c#L231-L293
 //   - https://github.com/PowerShell/openssh-portable/blob/v8.1.0.0/contrib/win32/win32compat/w32fd.c#L1075-L1100

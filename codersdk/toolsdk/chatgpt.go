@@ -10,8 +10,8 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/coder/aisdk-go"
-	"github.com/coder/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/aisdk-go"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
 )
 
 type ObjectType string

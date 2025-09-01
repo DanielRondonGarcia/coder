@@ -20,7 +20,7 @@ Provision AWS EC2 VMs as [Coder workspaces](https://coder.com/docs) with this ex
 
 By default, this template authenticates to AWS using the provider's default [authentication methods](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#authentication-and-configuration).
 
-The simplest way (without making changes to the template) is via environment variables (e.g. `AWS_ACCESS_KEY_ID`) or a [credentials file](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html#cli-configure-files-format). If you are running Coder on a VM, this file must be in `/home/coder/aws/credentials`.
+The simplest way (without making changes to the template) is via environment variables (e.g. `AWS_ACCESS_KEY_ID`) or a [credentials file](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html#cli-configure-files-format). If you are running Coder on a VM, this file must be in `/home/DanielRondonGarcia/aws/credentials`.
 
 To use another [authentication method](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#authentication), edit the template.
 
@@ -95,7 +95,7 @@ Coder uses `aws_ec2_instance_state` to start and stop the VM. This example templ
 To speed up your builds, you can use a container registry as a cache.
 When creating the template, set the parameter `cache_repo` to a valid Docker repository in the form `host.tld/path/to/repo`.
 
-See the [Envbuilder Terraform Provider Examples](https://github.com/coder/terraform-provider-envbuilder/blob/main/examples/resources/envbuilder_cached_image/envbuilder_cached_image_resource.tf/) for a more complete example of how the provider works.
+See the [Envbuilder Terraform Provider Examples](https://github.com/DanielRondonGarcia/terraform-provider-envbuilder/blob/main/examples/resources/envbuilder_cached_image/envbuilder_cached_image_resource.tf/) for a more complete example of how the provider works.
 
 > [!NOTE]
 > We recommend using a registry cache with authentication enabled.

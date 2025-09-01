@@ -22,17 +22,17 @@ import (
 	"golang.org/x/xerrors"
 	"tailscale.com/tailcfg"
 
-	"github.com/coder/coder/v2/agent"
-	"github.com/coder/coder/v2/agent/agenttest"
-	"github.com/coder/coder/v2/agent/proto"
-	"github.com/coder/coder/v2/coderd"
-	"github.com/coder/coder/v2/coderd/workspaceapps/appurl"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/codersdk/agentsdk"
-	"github.com/coder/coder/v2/codersdk/workspacesdk"
-	"github.com/coder/coder/v2/tailnet"
-	"github.com/coder/coder/v2/tailnet/tailnettest"
-	"github.com/coder/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/coder/v2/agent"
+	"github.com/DanielRondonGarcia/coder/v2/agent/agenttest"
+	"github.com/DanielRondonGarcia/coder/v2/agent/proto"
+	"github.com/DanielRondonGarcia/coder/v2/coderd"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/workspaceapps/appurl"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/agentsdk"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/workspacesdk"
+	"github.com/DanielRondonGarcia/coder/v2/tailnet"
+	"github.com/DanielRondonGarcia/coder/v2/tailnet/tailnettest"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
 )
 
 func TestServerTailnet_AgentConn_OK(t *testing.T) {

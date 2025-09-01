@@ -8,7 +8,7 @@ import (
 
 	"golang.org/x/xerrors"
 
-	"github.com/coder/websocket"
+	"github.com/DanielRondonGarcia/websocket"
 )
 
 // countReadWriteCloser wraps an io.ReadWriteCloser and counts the number of bytes read and written.

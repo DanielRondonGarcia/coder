@@ -9,7 +9,7 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 
 	"cdr.dev/slog"
-	"github.com/coder/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
 )
 
 type metricsStore struct {

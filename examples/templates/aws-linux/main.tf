@@ -193,7 +193,7 @@ resource "coder_agent" "dev" {
   }
 }
 
-# See https://registry.coder.com/modules/coder/code-server
+# See https://registry.coder.com/modules/DanielRondonGarcia/code-server
 module "code-server" {
   count  = data.coder_workspace.me.start_count
   source = "registry.coder.com/modules/code-server/coder"
@@ -205,10 +205,10 @@ module "code-server" {
   order    = 1
 }
 
-# See https://registry.coder.com/modules/coder/jetbrains
+# See https://registry.coder.com/modules/DanielRondonGarcia/jetbrains
 module "jetbrains" {
   count      = data.coder_workspace.me.start_count
-  source     = "registry.coder.com/coder/jetbrains/coder"
+  source     = "registry.coder.com/DanielRondonGarcia/jetbrains/coder"
   version    = "~> 1.0"
   agent_id   = coder_agent.dev[0].id
   agent_name = "dev"

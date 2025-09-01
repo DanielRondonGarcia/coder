@@ -1,4 +1,4 @@
-module github.com/coder/coder/v2
+module github.com/DanielRondonGarcia/coder/v2
 
 go 1.24.6
 
@@ -9,7 +9,7 @@ go 1.24.6
 replace github.com/alecthomas/chroma/v2 => github.com/kylecarbs/chroma/v2 v2.0.0-20240401211003-9e036e0631f3
 
 // Required until https://github.com/hashicorp/terraform-config-inspect/pull/74 is merged.
-replace github.com/hashicorp/terraform-config-inspect => github.com/coder/terraform-config-inspect v0.0.0-20250107175719-6d06d90c630e
+replace github.com/hashicorp/terraform-config-inspect => github.com/DanielRondonGarcia/terraform-config-inspect v0.0.0-20250107175719-6d06d90c630e
 
 // Required until https://github.com/chzyer/readline/pull/198 is merged.
 replace github.com/chzyer/readline => github.com/kylecarbs/readline v0.0.0-20220211054233-0d62993714c8
@@ -23,50 +23,50 @@ replace go.opencensus.io => github.com/kylecarbs/opencensus-go v0.23.1-0.2022030
 // See https://github.com/kylecarbs/tview/commit/8464256e10a1e85074c7ef9c80346baa60e9ede6
 replace github.com/rivo/tview => github.com/kylecarbs/tview v0.0.0-20220309202238-8464256e10a1
 
-// glog has a single goroutine leak on start that we removed in a fork: https://github.com/coder/glog/pull/1.
-replace github.com/golang/glog => github.com/coder/glog v1.0.1-0.20220322161911-7365fe7f2cd1
+// glog has a single goroutine leak on start that we removed in a fork: https://github.com/DanielRondonGarcia/glog/pull/1.
+replace github.com/golang/glog => github.com/DanielRondonGarcia/glog v1.0.1-0.20220322161911-7365fe7f2cd1
 
 // kcp-go starts a goroutine in an init function that we can't stop. It was
 // fixed in our fork:
-// https://github.com/coder/kcp-go/commit/83c0904cec69dcf21ec10c54ea666bda18ada831
-replace github.com/fatedier/kcp-go => github.com/coder/kcp-go v2.0.4-0.20220409183554-83c0904cec69+incompatible
+// https://github.com/DanielRondonGarcia/kcp-go/commit/83c0904cec69dcf21ec10c54ea666bda18ada831
+replace github.com/fatedier/kcp-go => github.com/DanielRondonGarcia/kcp-go v2.0.4-0.20220409183554-83c0904cec69+incompatible
 
 // https://github.com/tcnksm/go-httpstat/pull/29
-replace github.com/tcnksm/go-httpstat => github.com/coder/go-httpstat v0.0.0-20230801153223-321c88088322
+replace github.com/tcnksm/go-httpstat => github.com/DanielRondonGarcia/go-httpstat v0.0.0-20230801153223-321c88088322
 
 // There are a few minor changes we make to Tailscale that we're slowly upstreaming. Compare here:
 // https://github.com/tailscale/tailscale/compare/main...coder:tailscale:main
-replace tailscale.com => github.com/coder/tailscale v1.1.1-0.20250829055706-6eafe0f9199e
+replace tailscale.com => github.com/DanielRondonGarcia/tailscale v1.1.1-0.20250829055706-6eafe0f9199e
 
 // This is replaced to include
 // 1. a fix for a data race: c.f. https://github.com/tailscale/wireguard-go/pull/25
 // 2. update to the latest gVisor
-replace github.com/tailscale/wireguard-go => github.com/coder/wireguard-go v0.0.0-20240522052547-769cdd7f7818
+replace github.com/tailscale/wireguard-go => github.com/DanielRondonGarcia/wireguard-go v0.0.0-20240522052547-769cdd7f7818
 
 // Switch to our fork that imports fixes from http://github.com/tailscale/ssh.
-// See: https://github.com/coder/coder/issues/3371
+// See: https://github.com/DanielRondonGarcia/coder/issues/3371
 //
 // Note that http://github.com/tailscale/ssh has been merged into the Tailscale
 // repo as tailscale.com/tempfork/gliderlabs/ssh, however, we can't replace the
 // subpath and it includes changes to golang.org/x/crypto/ssh as well which
 // makes importing it directly a bit messy.
-replace github.com/gliderlabs/ssh => github.com/coder/ssh v0.0.0-20231128192721-70855dedb788
+replace github.com/gliderlabs/ssh => github.com/DanielRondonGarcia/ssh v0.0.0-20231128192721-70855dedb788
 
 // Waiting on https://github.com/imulab/go-scim/pull/95 to merge.
-replace github.com/imulab/go-scim/pkg/v2 => github.com/coder/go-scim/pkg/v2 v2.0.0-20230221055123-1d63c1222136
+replace github.com/imulab/go-scim/pkg/v2 => github.com/DanielRondonGarcia/go-scim/pkg/v2 v2.0.0-20230221055123-1d63c1222136
 
 // Adds support for a new Listener from a driver.Connector
 // This lets us use rotating authentication tokens for passwords in connection strings
 // which we use in the awsiamrds package.
-replace github.com/lib/pq => github.com/coder/pq v1.10.5-0.20250807075151-6ad9b0a25151
+replace github.com/lib/pq => github.com/DanielRondonGarcia/pq v1.10.5-0.20250807075151-6ad9b0a25151
 
 // Removes an init() function that causes terminal sequences to be printed to the web terminal when
-// used in conjunction with agent-exec. See https://github.com/coder/coder/pull/15817
-replace github.com/charmbracelet/bubbletea => github.com/coder/bubbletea v1.2.2-0.20241212190825-007a1cdb2c41
+// used in conjunction with agent-exec. See https://github.com/DanielRondonGarcia/coder/pull/15817
+replace github.com/charmbracelet/bubbletea => github.com/DanielRondonGarcia/bubbletea v1.2.2-0.20241212190825-007a1cdb2c41
 
 // Trivy has some issues that we're floating patches for, and will hopefully
 // be upstreamed eventually.
-replace github.com/aquasecurity/trivy => github.com/coder/trivy v0.0.0-20250527170238-9416a59d7019
+replace github.com/aquasecurity/trivy => github.com/DanielRondonGarcia/trivy v0.0.0-20250527170238-9416a59d7019
 
 // afero/tarfs has a bug that breaks our usage. A PR has been submitted upstream.
 // https://github.com/spf13/afero/pull/487
@@ -95,15 +95,15 @@ require (
 	github.com/chromedp/cdproto v0.0.0-20250724212937-08a3db8b4327
 	github.com/chromedp/chromedp v0.14.1
 	github.com/cli/safeexec v1.0.1
-	github.com/coder/flog v1.1.0
-	github.com/coder/guts v1.5.0
-	github.com/coder/pretty v0.0.0-20230908205945-e89ba86370e0
-	github.com/coder/quartz v0.2.1
-	github.com/coder/retry v1.5.1
-	github.com/coder/serpent v0.10.0
-	github.com/coder/terraform-provider-coder/v2 v2.10.0
-	github.com/coder/websocket v1.8.13
-	github.com/coder/wgtunnel v0.1.13-0.20240522110300-ade90dfb2da0
+	github.com/DanielRondonGarcia/flog v1.1.0
+	github.com/DanielRondonGarcia/guts v1.5.0
+	github.com/DanielRondonGarcia/pretty v0.0.0-20230908205945-e89ba86370e0
+	github.com/DanielRondonGarcia/quartz v0.2.1
+	github.com/DanielRondonGarcia/retry v1.5.1
+	github.com/DanielRondonGarcia/serpent v0.10.0
+	github.com/DanielRondonGarcia/terraform-provider-coder/v2 v2.10.0
+	github.com/DanielRondonGarcia/websocket v1.8.13
+	github.com/DanielRondonGarcia/wgtunnel v0.1.13-0.20240522110300-ade90dfb2da0
 	github.com/coreos/go-oidc/v3 v3.15.0
 	github.com/coreos/go-systemd v0.0.0-20191104093116-d3cd4ed1dbcf
 	github.com/creack/pty v1.1.21
@@ -464,7 +464,7 @@ require (
 	sigs.k8s.io/yaml v1.4.0 // indirect
 )
 
-require github.com/coder/clistat v1.0.0
+require github.com/DanielRondonGarcia/clistat v1.0.0
 
 require github.com/SherClockHolmes/webpush-go v1.4.0
 
@@ -479,9 +479,9 @@ require (
 require (
 	github.com/anthropics/anthropic-sdk-go v1.4.0
 	github.com/brianvoe/gofakeit/v7 v7.5.1
-	github.com/coder/agentapi-sdk-go v0.0.0-20250505131810-560d1d88d225
-	github.com/coder/aisdk-go v0.0.9
-	github.com/coder/preview v1.0.3
+	github.com/DanielRondonGarcia/agentapi-sdk-go v0.0.0-20250505131810-560d1d88d225
+	github.com/DanielRondonGarcia/aisdk-go v0.0.9
+	github.com/DanielRondonGarcia/preview v1.0.3
 	github.com/fsnotify/fsnotify v1.9.0
 	github.com/go-git/go-git/v5 v5.16.2
 	github.com/mark3labs/mcp-go v0.32.0

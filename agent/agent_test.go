@@ -47,21 +47,21 @@ import (
 	"cdr.dev/slog"
 	"cdr.dev/slog/sloggers/slogtest"
 
-	"github.com/coder/coder/v2/agent"
-	"github.com/coder/coder/v2/agent/agentcontainers"
-	"github.com/coder/coder/v2/agent/agentssh"
-	"github.com/coder/coder/v2/agent/agenttest"
-	"github.com/coder/coder/v2/agent/proto"
-	"github.com/coder/coder/v2/agent/usershell"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/codersdk/agentsdk"
-	"github.com/coder/coder/v2/codersdk/workspacesdk"
-	"github.com/coder/coder/v2/cryptorand"
-	"github.com/coder/coder/v2/pty/ptytest"
-	"github.com/coder/coder/v2/tailnet"
-	"github.com/coder/coder/v2/tailnet/tailnettest"
-	"github.com/coder/coder/v2/testutil"
-	"github.com/coder/quartz"
+	"github.com/DanielRondonGarcia/coder/v2/agent"
+	"github.com/DanielRondonGarcia/coder/v2/agent/agentcontainers"
+	"github.com/DanielRondonGarcia/coder/v2/agent/agentssh"
+	"github.com/DanielRondonGarcia/coder/v2/agent/agenttest"
+	"github.com/DanielRondonGarcia/coder/v2/agent/proto"
+	"github.com/DanielRondonGarcia/coder/v2/agent/usershell"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/agentsdk"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/workspacesdk"
+	"github.com/DanielRondonGarcia/coder/v2/cryptorand"
+	"github.com/DanielRondonGarcia/coder/v2/pty/ptytest"
+	"github.com/DanielRondonGarcia/coder/v2/tailnet"
+	"github.com/DanielRondonGarcia/coder/v2/tailnet/tailnettest"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/quartz"
 )
 
 func TestMain(m *testing.M) {
@@ -76,7 +76,7 @@ func TestMain(m *testing.M) {
 
 var sshPorts = []uint16{workspacesdk.AgentSSHPort, workspacesdk.AgentStandardSSHPort}
 
-// TestAgent_CloseWhileStarting is a regression test for https://github.com/coder/coder/issues/17328
+// TestAgent_CloseWhileStarting is a regression test for https://github.com/DanielRondonGarcia/coder/issues/17328
 func TestAgent_ImmediateClose(t *testing.T) {
 	t.Parallel()
 
@@ -797,7 +797,7 @@ func TestAgent_Session_TTY_FastCommandHasOutput(t *testing.T) {
 	// This test is here to prevent regressions where quickly executing
 	// commands (with TTY) don't sync their output to the SSH session.
 	//
-	// See: https://github.com/coder/coder/issues/6656
+	// See: https://github.com/DanielRondonGarcia/coder/issues/6656
 	ctx, cancel := context.WithTimeout(context.Background(), testutil.WaitLong)
 	defer cancel()
 	//nolint:dogsled
@@ -847,7 +847,7 @@ func TestAgent_Session_TTY_HugeOutputIsNotLost(t *testing.T) {
 	// SSH session. On unix systems, this was fixed by duplicating the file
 	// descriptor of the PTY master and using it for copying the output.
 	//
-	// See: https://github.com/coder/coder/issues/6656
+	// See: https://github.com/DanielRondonGarcia/coder/issues/6656
 	ctx, cancel := context.WithTimeout(context.Background(), testutil.WaitLong)
 	defer cancel()
 	//nolint:dogsled

@@ -123,12 +123,12 @@ data "coder_parameter" "devcontainer_builder" {
   description  = <<-EOF
 Image that will build the devcontainer.
 We highly recommend using a specific release as the `:latest` tag will change.
-Find the latest version of Envbuilder here: https://github.com/coder/envbuilder/pkgs/container/envbuilder
+Find the latest version of Envbuilder here: https://github.com/DanielRondonGarcia/envbuilder/pkgs/container/envbuilder
 EOF
   display_name = "Devcontainer Builder"
   mutable      = true
   name         = "devcontainer_builder"
-  default      = "ghcr.io/coder/envbuilder:latest"
+  default      = "ghcr.io/DanielRondonGarcia/envbuilder:latest"
   order        = 7
 }
 
@@ -414,10 +414,10 @@ resource "coder_agent" "main" {
   }
 }
 
-# See https://registry.coder.com/modules/coder/code-server
+# See https://registry.coder.com/modules/DanielRondonGarcia/code-server
 module "code-server" {
   count  = data.coder_workspace.me.start_count
-  source = "registry.coder.com/coder/code-server/coder"
+  source = "registry.coder.com/DanielRondonGarcia/code-server/coder"
 
   # This ensures that the latest non-breaking version of the module gets downloaded, you can also pin the module version to prevent breaking changes in production.
   version = "~> 1.0"
@@ -426,10 +426,10 @@ module "code-server" {
   order    = 1
 }
 
-# See https://registry.coder.com/modules/coder/jetbrains
+# See https://registry.coder.com/modules/DanielRondonGarcia/jetbrains
 module "jetbrains" {
   count      = data.coder_workspace.me.start_count
-  source     = "registry.coder.com/coder/jetbrains/coder"
+  source     = "registry.coder.com/DanielRondonGarcia/jetbrains/coder"
   version    = "~> 1.0"
   agent_id   = coder_agent.main.id
   agent_name = "main"

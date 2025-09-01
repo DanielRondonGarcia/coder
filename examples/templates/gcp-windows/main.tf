@@ -15,9 +15,9 @@ variable "project_id" {
   description = "Which Google Compute Project should your workspace live in?"
 }
 
-# See https://registry.coder.com/modules/coder/gcp-region
+# See https://registry.coder.com/modules/DanielRondonGarcia/gcp-region
 module "gcp_region" {
-  source = "registry.coder.com/coder/gcp-region/coder"
+  source = "registry.coder.com/DanielRondonGarcia/gcp-region/coder"
 
   # This ensures that the latest non-breaking version of the module gets downloaded, you can also pin the module version to prevent breaking changes in production.
   version = "~> 1.0"

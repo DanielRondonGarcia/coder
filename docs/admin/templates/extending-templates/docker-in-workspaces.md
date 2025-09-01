@@ -120,7 +120,7 @@ resource "kubernetes_pod" "dev" {
 
 ## Envbox
 
-[Envbox](https://github.com/coder/envbox) is an image developed and maintained
+[Envbox](https://github.com/DanielRondonGarcia/envbox) is an image developed and maintained
 by Coder that bundles the sysbox runtime. It works by starting an outer
 container that manages the various sysbox daemons and spawns an unprivileged
 inner container that acts as the user's workspace. The inner container is able
@@ -148,8 +148,8 @@ nodes. Refer to sysbox's
 to ensure your nodes are compliant.
 
 To get started with `envbox` check out the
-[starter template](https://github.com/coder/coder/tree/main/examples/templates/kubernetes-envbox)
-or visit the [repo](https://github.com/coder/envbox).
+[starter template](https://github.com/DanielRondonGarcia/coder/tree/main/examples/templates/kubernetes-envbox)
+or visit the [repo](https://github.com/DanielRondonGarcia/envbox).
 
 ### Authenticating with a Private Registry
 
@@ -254,7 +254,7 @@ Before using Podman, please review the following documentation:
    systems), you might need to disable SELinux or set it to permissive mode.
 
 4. Use this
-   [kubernetes-with-podman](https://github.com/coder/community-templates/tree/main/kubernetes-podman)
+   [kubernetes-with-podman](https://github.com/DanielRondonGarcia/community-templates/tree/main/kubernetes-podman)
    example template, or make your own.
 
    ```shell

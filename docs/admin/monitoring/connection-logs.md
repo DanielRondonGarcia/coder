@@ -34,7 +34,7 @@ You can filter connection logs by the following parameters:
     to.
 - `type` - The type of the connection, such as SSH, VS Code, or workspace app.
     For more connection types, refer to the
-    [CoderSDK documentation](https://pkg.go.dev/github.com/coder/coder/v2/codersdk#ConnectionType).
+    [CoderSDK documentation](https://pkg.go.dev/github.com/DanielRondonGarcia/coder/v2/codersdk#ConnectionType).
 - `username`: The name of the user who initiated the connection.
    Results will not include SSH or IDE sessions.
 - `user_email`: The email of the user who initiated the connection.
@@ -74,8 +74,8 @@ connection log entry, when an SSH connection is made:
     "ts": "2025-07-03T05:09:41.929840747Z",
     "level": "INFO",
     "msg": "connection_log",
-    "caller": "/home/coder/coder/enterprise/audit/backends/slog.go:38",
-    "func": "github.com/coder/coder/v2/enterprise/audit/backends.(*SlogExporter).ExportStruct",
+    "caller": "/home/DanielRondonGarcia/coder/enterprise/audit/backends/slog.go:38",
+    "func": "github.com/DanielRondonGarcia/coder/v2/enterprise/audit/backends.(*SlogExporter).ExportStruct",
     "logger_names": ["coderd"],
     "fields": {
         "request_id": "916ad077-e120-4861-8640-f449d56d2bae",

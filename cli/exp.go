@@ -1,6 +1,6 @@
 package cli
 
-import "github.com/coder/serpent"
+import "github.com/DanielRondonGarcia/serpent"
 
 func (r *RootCmd) expCmd() *serpent.Command {
 	cmd := &serpent.Command{

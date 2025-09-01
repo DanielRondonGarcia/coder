@@ -20,7 +20,7 @@ base64 -d <<<"${SCRIPTS_ZIP}" >/tmp/scripts.zip
 rm -rf "${SCRIPTS_DIR}" || true
 mkdir -p "${SCRIPTS_DIR}"
 unzip -o /tmp/scripts.zip -d "${SCRIPTS_DIR}"
-# Chmod to work around https://github.com/coder/coder/issues/10034
+# Chmod to work around https://github.com/DanielRondonGarcia/coder/issues/10034
 chmod +x "${SCRIPTS_DIR}"/*.sh
 rm /tmp/scripts.zip
 

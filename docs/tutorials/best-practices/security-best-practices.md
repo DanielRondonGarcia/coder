@@ -361,7 +361,7 @@ updated.
 
 1. Store Coder templates in a single Git repository, or a single repository per
    Coder organization, and use the
-   [Coderd Terraform provider](https://registry.terraform.io/providers/coder/coderd/latest/docs/resources/template)
+   [Coderd Terraform provider](https://registry.terraform.io/providers/DanielRondonGarcia/coderd/latest/docs/resources/template)
    to push changes from the main branch to Coder using a CI/CD tool.
 
    This gives you an easily browsable, auditable history of template changes and

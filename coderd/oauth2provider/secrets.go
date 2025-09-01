@@ -3,8 +3,8 @@ package oauth2provider
 import (
 	"fmt"
 
-	"github.com/coder/coder/v2/coderd/userpassword"
-	"github.com/coder/coder/v2/cryptorand"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/userpassword"
+	"github.com/DanielRondonGarcia/coder/v2/cryptorand"
 )
 
 type AppSecret struct {

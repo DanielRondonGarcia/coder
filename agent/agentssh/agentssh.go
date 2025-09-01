@@ -29,12 +29,12 @@ import (
 
 	"cdr.dev/slog"
 
-	"github.com/coder/coder/v2/agent/agentcontainers"
-	"github.com/coder/coder/v2/agent/agentexec"
-	"github.com/coder/coder/v2/agent/agentrsa"
-	"github.com/coder/coder/v2/agent/usershell"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/pty"
+	"github.com/DanielRondonGarcia/coder/v2/agent/agentcontainers"
+	"github.com/DanielRondonGarcia/coder/v2/agent/agentexec"
+	"github.com/DanielRondonGarcia/coder/v2/agent/agentrsa"
+	"github.com/DanielRondonGarcia/coder/v2/agent/usershell"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/pty"
 )
 
 const (
@@ -614,7 +614,7 @@ func (s *Server) startNonPTYSession(logger slog.Logger, session ssh.Session, mag
 	// to match OpenSSH, we don't actually tear a non-TTY command down, even if the session ends. OpenSSH closes the
 	// pipes to the process when the session ends; which is what happens here since we wire the command up to the
 	// session for I/O.
-	// c.f. https://github.com/coder/coder/issues/18519#issuecomment-3019118271
+	// c.f. https://github.com/DanielRondonGarcia/coder/issues/18519#issuecomment-3019118271
 	cmd.Cancel = nil
 
 	cmd.Stdout = session
@@ -677,7 +677,7 @@ func (s *Server) startPTYSession(logger slog.Logger, session ptySession, magicTy
 
 	ctx := session.Context()
 	// Disable minimal PTY emulation set by gliderlabs/ssh (NL-to-CRNL).
-	// See https://github.com/coder/coder/issues/3371.
+	// See https://github.com/DanielRondonGarcia/coder/issues/3371.
 	session.DisablePTYEmulation()
 
 	if isLoginShell(session.RawCommand()) {

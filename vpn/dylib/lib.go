@@ -11,7 +11,7 @@ import (
 
 	"cdr.dev/slog"
 
-	"github.com/coder/coder/v2/vpn"
+	"github.com/DanielRondonGarcia/coder/v2/vpn"
 )
 
 const (

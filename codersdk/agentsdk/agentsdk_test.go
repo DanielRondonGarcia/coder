@@ -13,8 +13,8 @@ import (
 	"tailscale.com/tailcfg"
 
 	"cdr.dev/slog/sloggers/slogtest"
-	"github.com/coder/coder/v2/codersdk/agentsdk"
-	"github.com/coder/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/agentsdk"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
 )
 
 func TestStreamAgentReinitEvents(t *testing.T) {

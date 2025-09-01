@@ -28,7 +28,7 @@ locals {
     "za-jnb"      = "tcp://greenhill-jnb-cdr-dev.tailscale.svc.cluster.local:2375"
   }
 
-  envbuilder_repo = "ghcr.io/coder/envbuilder-preview"
+  envbuilder_repo = "ghcr.io/DanielRondonGarcia/envbuilder-preview"
   container_name  = "coder-${data.coder_workspace_owner.me.name}-${lower(data.coder_workspace.me.name)}"
   // Envbuilder clones repos to /workspaces by default.
   repo_dir = "/workspaces/coder"
@@ -37,7 +37,7 @@ locals {
 data "coder_parameter" "devcontainer_repo" {
   type        = "string"
   name        = "Devcontainer Repository"
-  default     = "https://github.com/coder/coder"
+  default     = "https://github.com/DanielRondonGarcia/coder"
   description = "Repo containing a devcontainer.json. This is only cloned once."
   mutable     = false
 }
@@ -45,7 +45,7 @@ data "coder_parameter" "devcontainer_repo" {
 data "coder_parameter" "devcontainer_dir" {
   type        = "string"
   name        = "Devcontainer Directory"
-  default     = "dogfood/coder/"
+  default     = "dogfood/DanielRondonGarcia/"
   description = "Directory containing a devcontainer.json relative to the repository root"
   mutable     = true
 }
@@ -109,26 +109,26 @@ data "coder_workspace" "me" {}
 data "coder_workspace_owner" "me" {}
 
 module "slackme" {
-  source           = "dev.registry.coder.com/coder/slackme/coder"
+  source           = "dev.registry.coder.com/DanielRondonGarcia/slackme/coder"
   version          = "1.0.31"
   agent_id         = coder_agent.dev.id
   auth_provider_id = "slack"
 }
 
 module "dotfiles" {
-  source   = "dev.registry.coder.com/coder/dotfiles/coder"
+  source   = "dev.registry.coder.com/DanielRondonGarcia/dotfiles/coder"
   version  = "1.2.1"
   agent_id = coder_agent.dev.id
 }
 
 module "personalize" {
-  source   = "dev.registry.coder.com/coder/personalize/coder"
+  source   = "dev.registry.coder.com/DanielRondonGarcia/personalize/coder"
   version  = "1.0.31"
   agent_id = coder_agent.dev.id
 }
 
 module "code-server" {
-  source                  = "dev.registry.coder.com/coder/code-server/coder"
+  source                  = "dev.registry.coder.com/DanielRondonGarcia/code-server/coder"
   version                 = "1.3.1"
   agent_id                = coder_agent.dev.id
   folder                  = local.repo_dir
@@ -137,7 +137,7 @@ module "code-server" {
 
 module "jetbrains" {
   count      = data.coder_workspace.me.start_count
-  source     = "dev.registry.coder.com/coder/jetbrains/coder"
+  source     = "dev.registry.coder.com/DanielRondonGarcia/jetbrains/coder"
   version    = "~> 1.0"
   agent_id   = coder_agent.dev.id
   agent_name = "dev"
@@ -145,13 +145,13 @@ module "jetbrains" {
 }
 
 module "filebrowser" {
-  source   = "dev.registry.coder.com/coder/filebrowser/coder"
+  source   = "dev.registry.coder.com/DanielRondonGarcia/filebrowser/coder"
   version  = "1.1.2"
   agent_id = coder_agent.dev.id
 }
 
 module "coder-login" {
-  source   = "dev.registry.coder.com/coder/coder-login/coder"
+  source   = "dev.registry.coder.com/DanielRondonGarcia/coder-login/coder"
   version  = "1.1.0"
   agent_id = coder_agent.dev.id
 }
@@ -400,7 +400,7 @@ resource "docker_container" "workspace" {
     ip   = "host-gateway"
   }
   volumes {
-    container_path = "/home/coder/"
+    container_path = "/home/DanielRondonGarcia/"
     volume_name    = docker_volume.home_volume.name
     read_only      = false
   }

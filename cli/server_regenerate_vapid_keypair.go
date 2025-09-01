@@ -10,12 +10,12 @@ import (
 	"cdr.dev/slog"
 	"cdr.dev/slog/sloggers/sloghuman"
 
-	"github.com/coder/coder/v2/cli/cliui"
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/awsiamrds"
-	"github.com/coder/coder/v2/coderd/webpush"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/serpent"
+	"github.com/DanielRondonGarcia/coder/v2/cli/cliui"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/awsiamrds"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/webpush"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/serpent"
 )
 
 func (r *RootCmd) newRegenerateVapidKeypairCommand() *serpent.Command {

@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/coder/quartz"
+	"github.com/DanielRondonGarcia/quartz"
 )
 
 // Notifier triggers callbacks at given intervals until some event happens.  The

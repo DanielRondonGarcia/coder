@@ -18,7 +18,7 @@ on your local machine, and enable RDP on your workspace.
 
 [Coder Desktop](../desktop/index.md)'s **Coder Connect** feature creates a connection to your workspaces in the background. Use your favorite RDP client to connect to `<workspace-name>.coder`.
 
-You can use the [RDP Desktop](https://registry.coder.com/modules/coder/local-windows-rdp) module to add a single-click button to open an RDP session in the browser.
+You can use the [RDP Desktop](https://registry.coder.com/modules/DanielRondonGarcia/local-windows-rdp) module to add a single-click button to open an RDP session in the browser.
 
 ![RDP Desktop Button](../../images/user-guides/remote-desktops/rdp-button.gif)
 
@@ -69,7 +69,7 @@ Then, connect to your workspace via RDP at `localhost:3399`.
 > [!NOTE]
 > Some versions of Windows, including Windows Server 2022, do not communicate correctly over UDP when using Coder Connect because they do not respect the maximum transmission unit (MTU) of the link. When this happens, the RDP client will appear to connect, but displays a blank screen.
 >
-> To avoid this error, Coder's [Windows RDP](https://registry.coder.com/modules/windows-rdp) module [disables RDP over UDP automatically](https://github.com/coder/registry/blob/b58bfebcf3bcdcde4f06a183f92eb3e01842d270/registry/coder/modules/windows-rdp/powershell-installation-script.tftpl#L22).
+> To avoid this error, Coder's [Windows RDP](https://registry.coder.com/modules/windows-rdp) module [disables RDP over UDP automatically](https://github.com/DanielRondonGarcia/registry/blob/b58bfebcf3bcdcde4f06a183f92eb3e01842d270/registry/DanielRondonGarcia/modules/windows-rdp/powershell-installation-script.tftpl#L22).
 >
 > To disable RDP over UDP manually, run the following in PowerShell:
 >
@@ -127,7 +127,7 @@ Our [Amazon DCV Windows](https://registry.coder.com/modules/amazon-dcv-windows) 
 
 The common way to connect to a desktop session of a Linux workspace is to use a VNC client. The VNC client can be installed on your local machine or accessed through a web browser. There is an additional requirement to install the VNC server on the workspace.
 
-Installation instructions vary depending on your workspace's operating system, platform, and build system. Refer to the [enterprise-desktop](https://github.com/coder/images/tree/main/images/desktop) image for a starting point which can be used to provision a Dockerized workspace with the following software:
+Installation instructions vary depending on your workspace's operating system, platform, and build system. Refer to the [enterprise-desktop](https://github.com/DanielRondonGarcia/images/tree/main/images/desktop) image for a starting point which can be used to provision a Dockerized workspace with the following software:
 
 - Ubuntu 24.04
 - XFCE Desktop
@@ -159,7 +159,7 @@ Now you can connect to your workspace's VNC server using a VNC client at `localh
 
 ### Browser
 
-The [KasmVNC module](https://registry.coder.com/modules/coder/kasmvnc) allows browser-based access to your workspace by installing and configuring the [KasmVNC](https://github.com/kasmtech/KasmVNC) server and web client.
+The [KasmVNC module](https://registry.coder.com/modules/DanielRondonGarcia/kasmvnc) allows browser-based access to your workspace by installing and configuring the [KasmVNC](https://github.com/kasmtech/KasmVNC) server and web client.
 
 </div>
 

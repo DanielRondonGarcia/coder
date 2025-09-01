@@ -15,7 +15,7 @@ import (
 	"golang.org/x/crypto/pbkdf2"
 	"golang.org/x/xerrors"
 
-	"github.com/coder/coder/v2/coderd/util/lazy"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/util/lazy"
 )
 
 var (

@@ -56,4 +56,4 @@ The template sets the image tag as `latest`. We highly recommend pinning the ima
 
 ## Contributions
 
-Contributions are welcome and can be made against the [envbox repo](https://github.com/coder/envbox).
+Contributions are welcome and can be made against the [envbox repo](https://github.com/DanielRondonGarcia/envbox).

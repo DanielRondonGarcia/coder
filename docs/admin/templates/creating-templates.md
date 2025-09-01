@@ -154,7 +154,7 @@ Refer to the following resources:
   around templates (agents, parameters, variables, etc)
 - [Coder Registry](https://registry.coder.com/templates): Official and community
   templates for Coder
-- [Coder Terraform Provider Reference](https://registry.terraform.io/providers/coder/coder)
+- [Coder Terraform Provider Reference](https://registry.terraform.io/providers/DanielRondonGarcia/coder)
 
 ### Next steps
 

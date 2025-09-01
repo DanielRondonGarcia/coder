@@ -12,12 +12,12 @@ import (
 
 	"cdr.dev/slog"
 
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/pubsub"
-	"github.com/coder/coder/v2/coderd/notifications/dispatch"
-	"github.com/coder/coder/v2/coderd/pproflabel"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/quartz"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/pubsub"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications/dispatch"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/pproflabel"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/quartz"
 )
 
 var ErrInvalidDispatchTimeout = xerrors.New("dispatch timeout must be less than lease period")

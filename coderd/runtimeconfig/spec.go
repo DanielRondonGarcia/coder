@@ -5,7 +5,7 @@ import (
 
 	"golang.org/x/xerrors"
 
-	"github.com/coder/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
 )
 
 var (

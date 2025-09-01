@@ -17,11 +17,11 @@ import (
 	"github.com/stretchr/testify/require"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/coder/coder/v2/coderd/coderdtest"
-	mcpserver "github.com/coder/coder/v2/coderd/mcp"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/codersdk/toolsdk"
-	"github.com/coder/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest"
+	mcpserver "github.com/DanielRondonGarcia/coder/v2/coderd/mcp"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/toolsdk"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
 )
 
 func TestMCPHTTP_E2E_ClientIntegration(t *testing.T) {

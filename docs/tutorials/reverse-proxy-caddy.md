@@ -16,7 +16,7 @@ certificates, you'll need a domain name that resolves to your Caddy server.
    ```yaml
    services:
    coder:
-       image: ghcr.io/coder/coder:${CODER_VERSION:-latest}
+       image: ghcr.io/DanielRondonGarcia/coder:${CODER_VERSION:-latest}
        environment:
            CODER_PG_CONNECTION_URL: "postgresql://${POSTGRES_USER:-username}:${POSTGRES_PASSWORD:-password}@database/${POSTGRES_DB:-coder}?sslmode=disable"
            CODER_HTTP_ADDRESS: "0.0.0.0:7080"

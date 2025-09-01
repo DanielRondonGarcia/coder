@@ -13,9 +13,9 @@ import (
 	"github.com/google/uuid"
 	"golang.org/x/xerrors"
 
-	"github.com/coder/coder/v2/coderd/tracing"
-	"github.com/coder/coder/v2/codersdk/wsjson"
-	"github.com/coder/websocket"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/tracing"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/wsjson"
+	"github.com/DanielRondonGarcia/websocket"
 )
 
 type WorkspaceAgentStatus string

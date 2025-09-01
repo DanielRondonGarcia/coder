@@ -20,19 +20,19 @@ import (
 
 	"cdr.dev/slog"
 	"cdr.dev/slog/sloggers/slogtest"
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/dbmock"
-	"github.com/coder/coder/v2/coderd/database/dbtime"
-	"github.com/coder/coder/v2/coderd/httpmw"
-	"github.com/coder/coder/v2/coderd/workspaceapps/appurl"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/codersdk/workspacesdk"
-	"github.com/coder/coder/v2/codersdk/workspacesdk/agentconnmock"
-	"github.com/coder/coder/v2/codersdk/wsjson"
-	"github.com/coder/coder/v2/tailnet"
-	"github.com/coder/coder/v2/tailnet/tailnettest"
-	"github.com/coder/coder/v2/testutil"
-	"github.com/coder/websocket"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbmock"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtime"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/httpmw"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/workspaceapps/appurl"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/workspacesdk"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/workspacesdk/agentconnmock"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/wsjson"
+	"github.com/DanielRondonGarcia/coder/v2/tailnet"
+	"github.com/DanielRondonGarcia/coder/v2/tailnet/tailnettest"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/websocket"
 )
 
 type fakeAgentProvider struct {
@@ -67,7 +67,7 @@ func TestWatchAgentContainers(t *testing.T) {
 
 		// This test ensures that the agent containers `/watch` websocket can gracefully
 		// handle the underlying websocket unexpectedly closing. This test was created in
-		// response to this issue: https://github.com/coder/coder/issues/19372
+		// response to this issue: https://github.com/DanielRondonGarcia/coder/issues/19372
 
 		var (
 			ctx    = testutil.Context(t, testutil.WaitShort)

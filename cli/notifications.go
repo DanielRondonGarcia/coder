@@ -5,9 +5,9 @@ import (
 
 	"golang.org/x/xerrors"
 
-	"github.com/coder/serpent"
+	"github.com/DanielRondonGarcia/serpent"
 
-	"github.com/coder/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
 )
 
 func (r *RootCmd) notifications() *serpent.Command {

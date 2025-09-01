@@ -6,9 +6,9 @@ import (
 	"github.com/stretchr/testify/require"
 	"golang.org/x/xerrors"
 
-	"github.com/coder/clistat"
-	"github.com/coder/coder/v2/agent/proto/resourcesmonitor"
-	"github.com/coder/coder/v2/coderd/util/ptr"
+	"github.com/DanielRondonGarcia/clistat"
+	"github.com/DanielRondonGarcia/coder/v2/agent/proto/resourcesmonitor"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/util/ptr"
 )
 
 type mockStatter struct {

@@ -1,8 +1,8 @@
 package cliui
 
 import (
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/serpent"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/serpent"
 )
 
 var defaultQuery = "owner:me"

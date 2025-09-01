@@ -79,7 +79,7 @@ export const MockLogs = [
 	{
 		id: 3295732,
 		level: "info",
-		output: "/home/coder/coder already exists and isn't empty, skipping clone!",
+		output: "/home/DanielRondonGarcia/coder already exists and isn't empty, skipping clone!",
 		time: "2024-03-14T11:31:04.239194Z",
 		sourceId: "310562c2-5a1d-4e0b-9a32-d214dadd1624",
 	},
@@ -101,7 +101,7 @@ export const MockLogs = [
 		id: 3295737,
 		level: "info",
 		output:
-			"Run \u001b[36;40;1mtouch /home/coder/personalize && chmod +x /home/coder/personalize\u001b[0m to create one.",
+			"Run \u001b[36;40;1mtouch /home/DanielRondonGarcia/personalize && chmod +x /home/DanielRondonGarcia/personalize\u001b[0m to create one.",
 		time: "2024-03-14T11:31:04.383656Z",
 		sourceId: "db9e2fdc-a227-42e4-a1a3-e534c1511eb7",
 	},
@@ -158,14 +158,14 @@ export const MockLogs = [
 	{
 		id: 3295745,
 		level: "error",
-		output: "+ [[ -f /home/coder/coder/site/package.json ]]",
+		output: "+ [[ -f /home/DanielRondonGarcia/coder/site/package.json ]]",
 		time: "2024-03-14T11:31:04.67431Z",
 		sourceId: "d9475581-8a42-4bce-b4d0-e4d2791d5c98",
 	},
 	{
 		id: 3295746,
 		level: "error",
-		output: "+ cd /home/coder/coder/site",
+		output: "+ cd /home/DanielRondonGarcia/coder/site",
 		time: "2024-03-14T11:31:04.67431Z",
 		sourceId: "d9475581-8a42-4bce-b4d0-e4d2791d5c98",
 	},
@@ -350,7 +350,7 @@ export const MockLogs = [
 	{
 		id: 3295775,
 		level: "info",
-		output: "> coder-v2@ playwright:install /home/coder/coder/site",
+		output: "> coder-v2@ playwright:install /home/DanielRondonGarcia/coder/site",
 		time: "2024-03-14T11:31:06.349058Z",
 		sourceId: "d9475581-8a42-4bce-b4d0-e4d2791d5c98",
 	},

@@ -3,16 +3,16 @@
 There are a variety of Coder-native features to extend the configuration of your
 development environments. Many of the following features are defined in your
 templates using the
-[Coder Terraform provider](https://registry.terraform.io/providers/coder/coder/latest/docs).
+[Coder Terraform provider](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs).
 The provider docs will provide code examples for usage; alternatively, you can
 view our
-[example templates](https://github.com/coder/coder/tree/main/examples/templates)
+[example templates](https://github.com/DanielRondonGarcia/coder/tree/main/examples/templates)
 to get started.
 
 ## Workspace agents
 
 For users to connect to a workspace, the template must include a
-[`coder_agent`](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/agent).
+[`coder_agent`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/agent).
 The associated agent will facilitate
 [workspace connections](../../../user-guides/workspace-access/index.md) via SSH,
 port forwarding, and IDEs. The agent may also display real-time
@@ -75,15 +75,15 @@ resources associated with the workspace.
 
 Additional IDEs, documentation, or services can be associated to your workspace
 using the
-[`coder_app`](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/app)
+[`coder_app`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/app)
 resource.
 
 ![Coder Apps in the dashboard](../../../images/admin/templates/coder-apps-ui.png)
 
 Note that some apps are associated to the agent by default as
-[`display_apps`](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/agent#nested-schema-for-display_apps)
+[`display_apps`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/agent#nested-schema-for-display_apps)
 and can be hidden directly in the
-[`coder_agent`](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/agent)
+[`coder_agent`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/agent)
 resource. You can arrange the display orientation of Coder apps in your template
 using [resource ordering](./resource-ordering.md).
 

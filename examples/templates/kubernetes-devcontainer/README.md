@@ -17,9 +17,9 @@ Provision Devcontainers as [Coder workspaces](https://coder.com/docs/workspaces)
 
 **Cluster**: This template requires an existing Kubernetes cluster.
 
-**Container Image**: This template uses the [envbuilder image](https://github.com/coder/envbuilder) to build a Devcontainer from a `devcontainer.json`.
+**Container Image**: This template uses the [envbuilder image](https://github.com/DanielRondonGarcia/envbuilder) to build a Devcontainer from a `devcontainer.json`.
 
-**(Optional) Cache Registry**: Envbuilder can utilize a Docker registry as a cache to speed up workspace builds. The [envbuilder Terraform provider](https://github.com/coder/terraform-provider-envbuilder) will check the contents of the cache to determine if a prebuilt image exists. In the case of some missing layers in the registry (partial cache miss), Envbuilder can still utilize some of the build cache from the registry.
+**(Optional) Cache Registry**: Envbuilder can utilize a Docker registry as a cache to speed up workspace builds. The [envbuilder Terraform provider](https://github.com/DanielRondonGarcia/terraform-provider-envbuilder) will check the contents of the cache to determine if a prebuilt image exists. In the case of some missing layers in the registry (partial cache miss), Envbuilder can still utilize some of the build cache from the registry.
 
 ### Authentication
 
@@ -27,7 +27,7 @@ This template authenticates using a `~/.kube/config`, if present on the server, 
 
 ## Architecture
 
-Coder supports devcontainers with [envbuilder](https://github.com/coder/envbuilder), an open source project. Read more about this in [Coder's documentation](https://coder.com/docs/templates/dev-containers).
+Coder supports devcontainers with [envbuilder](https://github.com/DanielRondonGarcia/envbuilder), an open source project. Read more about this in [Coder's documentation](https://coder.com/docs/templates/dev-containers).
 
 This template provisions the following resources:
 
@@ -36,7 +36,7 @@ This template provisions the following resources:
 - Envbuilder cached image (optional, persistent).
 
 This template will fetch a Git repo containing a `devcontainer.json` specified by the `repo` parameter, and builds it
-with [`envbuilder`](https://github.com/coder/envbuilder).
+with [`envbuilder`](https://github.com/DanielRondonGarcia/envbuilder).
 The Git repository is cloned inside the `/workspaces` volume if not present.
 Any local changes to the Devcontainer files inside the volume will be applied when you restart the workspace.
 As you might suspect, any tools or files outside of `/workspaces` or not added as part of the Devcontainer specification are not persisted.
@@ -50,7 +50,7 @@ Edit the `devcontainer.json` instead!
 To speed up your builds, you can use a container registry as a cache.
 When creating the template, set the parameter `cache_repo`.
 
-See the [Envbuilder Terraform Provider Examples](https://github.com/coder/terraform-provider-envbuilder/blob/main/examples/resources/envbuilder_cached_image/envbuilder_cached_image_resource.tf/) for a more complete example of how the provider works.
+See the [Envbuilder Terraform Provider Examples](https://github.com/DanielRondonGarcia/terraform-provider-envbuilder/blob/main/examples/resources/envbuilder_cached_image/envbuilder_cached_image_resource.tf/) for a more complete example of how the provider works.
 
 > [!NOTE]
 > We recommend using a registry cache with authentication enabled.

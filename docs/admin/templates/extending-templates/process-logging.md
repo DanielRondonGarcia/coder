@@ -27,7 +27,7 @@ impact) to perform in-kernel logging and filtering of all exec system calls
 originating from the workspace container.
 
 The core of this feature is also open source and can be found in the
-[exectrace](https://github.com/coder/exectrace) GitHub repo. The enterprise
+[exectrace](https://github.com/DanielRondonGarcia/exectrace) GitHub repo. The enterprise
 component (in the `enterprise/` directory of the repo) is responsible for
 starting the eBPF program with the correct filtering options for the specific
 workspace.
@@ -66,7 +66,7 @@ is compatible with our `envbox` template family.
 We provide working example templates for Kubernetes, and Kubernetes with
 `envbox` (for [Docker support in workspaces](./docker-in-workspaces.md)). You
 can view these templates in the
-[exectrace repo](https://github.com/coder/exectrace/tree/main/enterprise/templates).
+[exectrace repo](https://github.com/DanielRondonGarcia/exectrace/tree/main/enterprise/templates).
 
 ## Configuring custom templates to use workspace process logging
 
@@ -185,7 +185,7 @@ would like to add workspace process logging to, follow these steps:
        // template
        container {
          name              = "exectrace"
-         image             = "ghcr.io/coder/exectrace:latest"
+         image             = "ghcr.io/DanielRondonGarcia/exectrace:latest"
          image_pull_policy = "Always"
          command = [
            "/opt/exectrace",

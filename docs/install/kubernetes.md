@@ -117,9 +117,9 @@ coder:
 ```
 
 You can view our
-[Helm README](https://github.com/coder/coder/blob/main/helm/coder#readme) for
+[Helm README](https://github.com/DanielRondonGarcia/coder/blob/main/helm/coder#readme) for
 details on the values that are available, or you can view the
-[values.yaml](https://github.com/coder/coder/blob/main/helm/coder/values.yaml)
+[values.yaml](https://github.com/DanielRondonGarcia/coder/blob/main/helm/DanielRondonGarcia/values.yaml)
 file directly.
 
 We support two release channels: mainline and stable - read the
@@ -143,7 +143,7 @@ We support two release channels: mainline and stable - read the
     <!-- autoversion(mainline): "--version [version]" -->
 
     ```shell
-    helm install coder oci://ghcr.io/coder/chart/coder \
+    helm install coder oci://ghcr.io/DanielRondonGarcia/chart/coder \
         --namespace coder \
         --values values.yaml \
         --version 2.25.0
@@ -167,7 +167,7 @@ We support two release channels: mainline and stable - read the
     <!-- autoversion(stable): "--version [version]" -->
 
     ```shell
-    helm install coder oci://ghcr.io/coder/chart/coder \
+    helm install coder oci://ghcr.io/DanielRondonGarcia/chart/coder \
         --namespace coder \
         --values values.yaml \
         --version 2.25.0
@@ -199,7 +199,7 @@ helm upgrade coder coder-v2/coder \
 
 ## Coder Observability Chart
 
-Use the [Observability Helm chart](https://github.com/coder/observability) for a
+Use the [Observability Helm chart](https://github.com/DanielRondonGarcia/observability) for a
 pre-built set of dashboards to monitor your control plane over time. It includes
 Grafana, Prometheus, Loki, and Alert Manager out-of-the-box, and can be deployed
 on your existing Grafana instance.
@@ -207,7 +207,7 @@ on your existing Grafana instance.
 We recommend that all administrators deploying on Kubernetes set the
 observability bundle up with the control plane from the start. For installation
 instructions, visit the
-[observability repository](https://github.com/coder/observability?tab=readme-ov-file#installation).
+[observability repository](https://github.com/DanielRondonGarcia/observability?tab=readme-ov-file#installation).
 
 ## Kubernetes Security Reference
 
@@ -219,26 +219,26 @@ reference, and not all security requirements may apply to your business.
 
    - Control plane - To pull the control plane image from the appropriate
      registry,
-     [update this Helm chart value](https://github.com/coder/coder/blob/f57ce97b5aadd825ddb9a9a129bb823a3725252b/helm/coder/values.yaml#L43-L50).
+     [update this Helm chart value](https://github.com/DanielRondonGarcia/coder/blob/f57ce97b5aadd825ddb9a9a129bb823a3725252b/helm/DanielRondonGarcia/values.yaml#L43-L50).
    - Workspaces - To pull the workspace image from your registry,
-     [update the Terraform template code here](https://github.com/coder/coder/blob/f57ce97b5aadd825ddb9a9a129bb823a3725252b/examples/templates/kubernetes/main.tf#L271).
+     [update the Terraform template code here](https://github.com/DanielRondonGarcia/coder/blob/f57ce97b5aadd825ddb9a9a129bb823a3725252b/examples/templates/kubernetes/main.tf#L271).
      This assumes your cluster nodes are authenticated to pull from the internal
      registry.
 
 2. **All containers must run as non-root user**
 
    - Control plane - Our control plane pod
-     [runs as non-root by default](https://github.com/coder/coder/blob/f57ce97b5aadd825ddb9a9a129bb823a3725252b/helm/coder/values.yaml#L124-L127).
+     [runs as non-root by default](https://github.com/DanielRondonGarcia/coder/blob/f57ce97b5aadd825ddb9a9a129bb823a3725252b/helm/DanielRondonGarcia/values.yaml#L124-L127).
    - Workspaces - Workspace pod UID is
-     [set in the Terraform template here](https://github.com/coder/coder/blob/f57ce97b5aadd825ddb9a9a129bb823a3725252b/examples/templates/kubernetes/main.tf#L274-L276),
+     [set in the Terraform template here](https://github.com/DanielRondonGarcia/coder/blob/f57ce97b5aadd825ddb9a9a129bb823a3725252b/examples/templates/kubernetes/main.tf#L274-L276),
      and are not required to run as `root`.
 
 3. **Containers cannot run privileged**
 
    - Coder's control plane does not run as privileged.
-     [We disable](https://github.com/coder/coder/blob/f57ce97b5aadd825ddb9a9a129bb823a3725252b/helm/coder/values.yaml#L141)
+     [We disable](https://github.com/DanielRondonGarcia/coder/blob/f57ce97b5aadd825ddb9a9a129bb823a3725252b/helm/DanielRondonGarcia/values.yaml#L141)
      `allowPrivilegeEscalation`
-     [by default](https://github.com/coder/coder/blob/f57ce97b5aadd825ddb9a9a129bb823a3725252b/helm/coder/values.yaml#L141).
+     [by default](https://github.com/DanielRondonGarcia/coder/blob/f57ce97b5aadd825ddb9a9a129bb823a3725252b/helm/DanielRondonGarcia/values.yaml#L141).
    - Workspace pods do not require any elevated privileges, with the exception
      of our `envbox` workspace template (used for docker-in-docker workspaces,
      not required).
@@ -262,7 +262,7 @@ reference, and not all security requirements may apply to your business.
 
    - Control plane - The control plane Deployment has liveness and readiness
      probes
-     [configured by default here](https://github.com/coder/coder/blob/f57ce97b5aadd825ddb9a9a129bb823a3725252b/helm/coder/templates/_coder.tpl#L98-L107).
+     [configured by default here](https://github.com/DanielRondonGarcia/coder/blob/f57ce97b5aadd825ddb9a9a129bb823a3725252b/helm/DanielRondonGarcia/templates/_coder.tpl#L98-L107).
    - Workspaces - the Kubernetes Deployment template does not configure
      liveness/readiness probes for the workspace, but this can be added to the
      Terraform template, and is supported.

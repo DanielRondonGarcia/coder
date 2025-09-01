@@ -1,5 +1,5 @@
 
--- https://github.com/coder/coder/issues/14893
+-- https://github.com/DanielRondonGarcia/coder/issues/14893
 
 -- UserAccountSuspended
 UPDATE notification_templates

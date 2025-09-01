@@ -86,7 +86,7 @@ These limitations will be addressed in future updates as the feature matures.
 Choose the appropriate solution based on your team's needs and infrastructure
 constraints. For additional details on Envbuilder's dev container support, see
 the
-[Envbuilder devcontainer spec support documentation](https://github.com/coder/envbuilder/blob/main/docs/devcontainer-spec-support.md).
+[Envbuilder devcontainer spec support documentation](https://github.com/DanielRondonGarcia/envbuilder/blob/main/docs/devcontainer-spec-support.md).
 
 ## Next Steps
 

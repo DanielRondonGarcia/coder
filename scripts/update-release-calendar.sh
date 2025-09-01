@@ -142,7 +142,7 @@ generate_release_calendar() {
 		# Get latest patch version
 		latest_patch=$(get_latest_patch "$version_major" "$rel_minor")
 		if [ -n "$latest_patch" ]; then
-			patch_link="[v${latest_patch}](https://github.com/coder/coder/releases/tag/v${latest_patch})"
+			patch_link="[v${latest_patch}](https://github.com/DanielRondonGarcia/coder/releases/tag/v${latest_patch})"
 		else
 			patch_link="N/A"
 		fi

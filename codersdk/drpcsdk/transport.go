@@ -11,7 +11,7 @@ import (
 	"storj.io/drpc/drpcconn"
 	"storj.io/drpc/drpcmanager"
 
-	"github.com/coder/coder/v2/coderd/tracing"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/tracing"
 )
 
 const (

@@ -22,12 +22,12 @@ Use the Coder CLI to log in and configure SSH, then connect to your workspace wi
    curl -L https://coder.com/install.sh | sh
    ```
 
-   Refer to [GitHub releases](https://github.com/coder/coder/releases) for
+   Refer to [GitHub releases](https://github.com/DanielRondonGarcia/coder/releases) for
    alternate installation methods (e.g. standalone binaries, system packages).
 
    ### Windows
 
-   Use [GitHub releases](https://github.com/coder/coder/releases) to download the
+   Use [GitHub releases](https://github.com/DanielRondonGarcia/coder/releases) to download the
    Windows installer (`.msi`) or standalone binary (`.exe`).
 
    ![Windows setup wizard](../../images/install/windows-installer.png)
@@ -68,5 +68,5 @@ Use the Coder CLI to log in and configure SSH, then connect to your workspace wi
 
 > [!NOTE]
 > If you have any suggestions or experience any issues, please
-> [create a GitHub issue](https://github.com/coder/coder/issues) or share in
+> [create a GitHub issue](https://github.com/DanielRondonGarcia/coder/issues) or share in
 > [our Discord channel](https://discord.gg/coder).

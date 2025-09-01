@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/coder/coder/v2/coderd/dynamicparameters"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/dynamicparameters"
 )
 
 func TestProvisionerVersionSupportsDynamicParameters(t *testing.T) {

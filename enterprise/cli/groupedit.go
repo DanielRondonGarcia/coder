@@ -7,12 +7,12 @@ import (
 	"github.com/google/uuid"
 	"golang.org/x/xerrors"
 
-	"github.com/coder/pretty"
+	"github.com/DanielRondonGarcia/pretty"
 
-	agpl "github.com/coder/coder/v2/cli"
-	"github.com/coder/coder/v2/cli/cliui"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/serpent"
+	agpl "github.com/DanielRondonGarcia/coder/v2/cli"
+	"github.com/DanielRondonGarcia/coder/v2/cli/cliui"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/serpent"
 )
 
 func (r *RootCmd) groupEdit() *serpent.Command {

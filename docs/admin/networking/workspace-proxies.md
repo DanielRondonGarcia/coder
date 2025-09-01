@@ -178,24 +178,24 @@ regular Coder server.
 #### Docker Compose
 
 Change the provided
-[`compose.yml`](https://github.com/coder/coder/blob/main/compose.yaml)
+[`compose.yml`](https://github.com/DanielRondonGarcia/coder/blob/main/compose.yaml)
 file to include a custom entrypoint:
 
 ```diff
-  image: ghcr.io/coder/coder:${CODER_VERSION:-latest}
+  image: ghcr.io/DanielRondonGarcia/coder:${CODER_VERSION:-latest}
 + entrypoint: /opt/coder wsproxy server
 ```
 
 #### Docker run
 
 ```bash
-docker run --rm -it --entrypoint /opt/coder ghcr.io/coder/coder:latest wsproxy server
+docker run --rm -it --entrypoint /opt/coder ghcr.io/DanielRondonGarcia/coder:latest wsproxy server
 ```
 
 #### Custom Dockerfile
 
 ```Dockerfile
-FROM ghcr.io/coder/coder:latest
+FROM ghcr.io/DanielRondonGarcia/coder:latest
 ENTRYPOINT ["/opt/coder", "wsproxy", "server"]
 ```
 

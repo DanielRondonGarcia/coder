@@ -8,8 +8,8 @@ import (
 	"golang.org/x/xerrors"
 
 	"cdr.dev/slog"
-	"github.com/coder/coder/v2/codersdk/drpcsdk"
-	"github.com/coder/coder/v2/tailnet/proto"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/drpcsdk"
+	"github.com/DanielRondonGarcia/coder/v2/tailnet/proto"
 )
 
 func NewDRPCClient(conn net.Conn, logger slog.Logger) (proto.DRPCTailnetClient, error) {

@@ -39,7 +39,7 @@ jobs:
           remote-organization-name: "coder"
           remote-repository-name: "cla"
           path-to-signatures: "v2022-09-04/signatures.json"
-          path-to-document: "https://github.com/coder/cla/blob/main/README.md"
+          path-to-document: "https://github.com/DanielRondonGarcia/cla/blob/main/README.md"
           # branch should not be protected
           branch: "main"
           # Some users have signed a corporate CLA with Coder so are exempt from signing our community one.

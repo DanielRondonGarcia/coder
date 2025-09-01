@@ -142,7 +142,7 @@ function publicGithubIssueLink(
 	pathName: string,
 	error: unknown,
 ): string {
-	const baseLink = "https://github.com/coder/coder/issues/new";
+	const baseLink = "https://github.com/DanielRondonGarcia/coder/issues/new";
 
 	// Anytime you see \`\`\`txt, that's wrapping the text in a GitHub codeblock
 	let printableError: string;

@@ -11,15 +11,15 @@ import (
 
 	"cdr.dev/slog"
 
-	agentproto "github.com/coder/coder/v2/agent/proto"
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/dbtime"
-	"github.com/coder/coder/v2/coderd/database/pubsub"
-	"github.com/coder/coder/v2/coderd/prometheusmetrics"
-	"github.com/coder/coder/v2/coderd/schedule"
-	"github.com/coder/coder/v2/coderd/util/slice"
-	"github.com/coder/coder/v2/coderd/workspaceapps"
-	"github.com/coder/coder/v2/coderd/wspubsub"
+	agentproto "github.com/DanielRondonGarcia/coder/v2/agent/proto"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtime"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/pubsub"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/prometheusmetrics"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/schedule"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/util/slice"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/workspaceapps"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/wspubsub"
 )
 
 type ReporterOptions struct {

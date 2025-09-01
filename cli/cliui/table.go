@@ -10,7 +10,7 @@ import (
 	"github.com/jedib0t/go-pretty/v6/table"
 	"golang.org/x/xerrors"
 
-	"github.com/coder/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
 )
 
 // Table creates a new table with standardized styles.

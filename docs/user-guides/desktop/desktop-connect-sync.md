@@ -3,7 +3,7 @@
 Use Coder Desktop to work on your workspaces and files as though they're on your LAN.
 
 > [!NOTE]
-> Coder Desktop requires a Coder deployment running [v2.20.0](https://github.com/coder/coder/releases/tag/v2.20.0) or later.
+> Coder Desktop requires a Coder deployment running [v2.20.0](https://github.com/DanielRondonGarcia/coder/releases/tag/v2.20.0) or later.
 
 ## Coder Connect
 

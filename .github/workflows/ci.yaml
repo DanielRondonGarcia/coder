@@ -115,7 +115,7 @@ jobs:
         env:
           FILTER_JSON: ${{ toJSON(steps.filter.outputs) }}
 
-  # Disabled due to instability. See: https://github.com/coder/coder/issues/14553
+  # Disabled due to instability. See: https://github.com/DanielRondonGarcia/coder/issues/14553
   # Re-enable once the flake hash calculation is stable.
   # update-flake:
   #   needs: changes
@@ -174,7 +174,7 @@ jobs:
 
       - name: Get golangci-lint cache dir
         run: |
-          linter_ver=$(grep -Eo 'GOLANGCI_LINT_VERSION=\S+' dogfood/coder/Dockerfile | cut -d '=' -f 2)
+          linter_ver=$(grep -Eo 'GOLANGCI_LINT_VERSION=\S+' dogfood/DanielRondonGarcia/Dockerfile | cut -d '=' -f 2)
           go install "github.com/golangci/golangci-lint/cmd/golangci-lint@v$linter_ver"
           dir=$(golangci-lint cache status | awk '/Dir/ { print $2 }')
           echo "LINT_CACHE_DIR=$dir" >> "$GITHUB_ENV"
@@ -620,7 +620,7 @@ jobs:
       # We run race tests with reduced parallelism because they use more CPU and we were finding
       # instances where tests appear to hang for multiple seconds, resulting in flaky tests when
       # short timeouts are used.
-      # c.f. discussion on https://github.com/coder/coder/pull/15106
+      # c.f. discussion on https://github.com/DanielRondonGarcia/coder/pull/15106
       - name: Run Tests
         env:
           POSTGRES_VERSION: "17"
@@ -1088,7 +1088,7 @@ jobs:
           make build
 
   build:
-    # This builds and publishes ghcr.io/coder/coder-preview:main for each commit
+    # This builds and publishes ghcr.io/DanielRondonGarcia/coder-preview:main for each commit
     # to main branch.
     needs:
       - changes
@@ -1107,7 +1107,7 @@ jobs:
     env:
       DOCKER_CLI_EXPERIMENTAL: "enabled"
     outputs:
-      IMAGE: ghcr.io/coder/coder-preview:${{ steps.build-docker.outputs.tag }}
+      IMAGE: ghcr.io/DanielRondonGarcia/coder-preview:${{ steps.build-docker.outputs.tag }}
     steps:
       - name: Harden Runner
         uses: step-security/harden-runner@ec9f2d5744a09debf3a187a3f4f675c53b671911 # v2.13.0
@@ -1277,7 +1277,7 @@ jobs:
                 # shellcheck disable=SC2046
                 ./scripts/build_docker_multiarch.sh \
                     --push \
-                    --target "ghcr.io/coder/coder-preview:$t" \
+                    --target "ghcr.io/DanielRondonGarcia/coder-preview:$t" \
                     --version "$version" \
                     $(cat build/coder_"$version"_linux_{amd64,arm64,armv7}.tag)
             done
@@ -1293,7 +1293,7 @@ jobs:
           set -euxo pipefail
 
           # Define image base and tags
-          IMAGE_BASE="ghcr.io/coder/coder-preview"
+          IMAGE_BASE="ghcr.io/DanielRondonGarcia/coder-preview"
           TAGS=("${BUILD_TAG}" "main" "latest")
 
           # Generate and attest SBOM for each tag
@@ -1325,7 +1325,7 @@ jobs:
         continue-on-error: true
         uses: actions/attest@ce27ba3b4a9a139d9a20a4a07d69fabb52f1e5bc # v2.4.0
         with:
-          subject-name: "ghcr.io/coder/coder-preview:main"
+          subject-name: "ghcr.io/DanielRondonGarcia/coder-preview:main"
           predicate-type: "https://slsa.dev/provenance/v1"
           predicate: |
             {
@@ -1362,7 +1362,7 @@ jobs:
         continue-on-error: true
         uses: actions/attest@ce27ba3b4a9a139d9a20a4a07d69fabb52f1e5bc # v2.4.0
         with:
-          subject-name: "ghcr.io/coder/coder-preview:latest"
+          subject-name: "ghcr.io/DanielRondonGarcia/coder-preview:latest"
           predicate-type: "https://slsa.dev/provenance/v1"
           predicate: |
             {
@@ -1399,7 +1399,7 @@ jobs:
         continue-on-error: true
         uses: actions/attest@ce27ba3b4a9a139d9a20a4a07d69fabb52f1e5bc # v2.4.0
         with:
-          subject-name: "ghcr.io/coder/coder-preview:${{ steps.build-docker.outputs.tag }}"
+          subject-name: "ghcr.io/DanielRondonGarcia/coder-preview:${{ steps.build-docker.outputs.tag }}"
           predicate-type: "https://slsa.dev/provenance/v1"
           predicate: |
             {

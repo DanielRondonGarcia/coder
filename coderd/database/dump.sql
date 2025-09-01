@@ -2151,7 +2151,7 @@ COMMENT ON COLUMN workspace_agents.motd_file IS 'Path to file inside workspace c
 
 COMMENT ON COLUMN workspace_agents.lifecycle_state IS 'The current lifecycle state reported by the workspace agent.';
 
-COMMENT ON COLUMN workspace_agents.expanded_directory IS 'The resolved path of a user-specified directory. e.g. ~/coder -> /home/coder/coder';
+COMMENT ON COLUMN workspace_agents.expanded_directory IS 'The resolved path of a user-specified directory. e.g. ~/coder -> /home/DanielRondonGarcia/coder';
 
 COMMENT ON COLUMN workspace_agents.logs_length IS 'Total length of startup logs';
 

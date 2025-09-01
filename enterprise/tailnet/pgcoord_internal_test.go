@@ -19,15 +19,15 @@ import (
 
 	"cdr.dev/slog"
 	"cdr.dev/slog/sloggers/slogtest"
-	"github.com/coder/quartz"
+	"github.com/DanielRondonGarcia/quartz"
 
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/dbmock"
-	"github.com/coder/coder/v2/coderd/database/dbtestutil"
-	"github.com/coder/coder/v2/coderd/database/pubsub"
-	agpl "github.com/coder/coder/v2/tailnet"
-	"github.com/coder/coder/v2/tailnet/proto"
-	"github.com/coder/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbmock"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtestutil"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/pubsub"
+	agpl "github.com/DanielRondonGarcia/coder/v2/tailnet"
+	"github.com/DanielRondonGarcia/coder/v2/tailnet/proto"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
 )
 
 // UpdateGoldenFiles indicates golden files should be updated.
@@ -396,7 +396,7 @@ func TestPGCoordinatorUnhealthy(t *testing.T) {
 		Times(3).
 		Return(database.TailnetCoordinator{}, xerrors.New("badness"))
 	// But, in particular we DO NOT want the coordinator to call DeleteTailnetPeer, as this is
-	// unnecessary and can spam the database. c.f. https://github.com/coder/coder/issues/12923
+	// unnecessary and can spam the database. c.f. https://github.com/DanielRondonGarcia/coder/issues/12923
 
 	// these cleanup queries run, but we don't care for this test
 	mStore.EXPECT().CleanTailnetCoordinators(gomock.Any()).AnyTimes().Return(nil)

@@ -18,16 +18,16 @@ import (
 	"tailscale.com/tailcfg"
 
 	"cdr.dev/slog"
-	"github.com/coder/retry"
-	"github.com/coder/websocket"
+	"github.com/DanielRondonGarcia/retry"
+	"github.com/DanielRondonGarcia/websocket"
 
-	"github.com/coder/coder/v2/agent/proto"
-	"github.com/coder/coder/v2/apiversion"
-	"github.com/coder/coder/v2/coderd/httpapi"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/codersdk/drpcsdk"
-	"github.com/coder/coder/v2/tailnet"
-	tailnetproto "github.com/coder/coder/v2/tailnet/proto"
+	"github.com/DanielRondonGarcia/coder/v2/agent/proto"
+	"github.com/DanielRondonGarcia/coder/v2/apiversion"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/httpapi"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/drpcsdk"
+	"github.com/DanielRondonGarcia/coder/v2/tailnet"
+	tailnetproto "github.com/DanielRondonGarcia/coder/v2/tailnet/proto"
 )
 
 // ExternalLogSourceID is the statically-defined ID of a log-source that

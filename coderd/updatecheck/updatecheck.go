@@ -19,13 +19,13 @@ import (
 
 	"cdr.dev/slog"
 
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/dbauthz"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
 )
 
 const (
 	// defaultURL defines the URL to check for the latest version of Coder.
-	defaultURL = "https://api.github.com/repos/coder/coder/releases/latest"
+	defaultURL = "https://api.github.com/repos/DanielRondonGarcia/coder/releases/latest"
 )
 
 // Checker is responsible for periodically checking for updates.

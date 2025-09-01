@@ -233,4 +233,4 @@ This implementation follows established OAuth2 standards including [RFC 6749](ht
 
 ## Feedback
 
-This is an experimental feature under active development. Please report issues and feedback through [GitHub Issues](https://github.com/coder/coder/issues) with the `oauth2` label.
+This is an experimental feature under active development. Please report issues and feedback through [GitHub Issues](https://github.com/DanielRondonGarcia/coder/issues) with the `oauth2` label.

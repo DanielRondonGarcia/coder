@@ -1,7 +1,7 @@
 # Install Coder via Docker
 
 You can install and run Coder using the official Docker images published on
-[GitHub Container Registry](https://github.com/coder/coder/pkgs/container/coder).
+[GitHub Container Registry](https://github.com/DanielRondonGarcia/coder/pkgs/container/coder).
 
 ## Requirements
 
@@ -25,10 +25,10 @@ export CODER_DATA=$HOME/.config/coderv2-docker
 export DOCKER_GROUP=$(getent group docker | cut -d: -f3)
 mkdir -p $CODER_DATA
 docker run --rm -it \
-  -v $CODER_DATA:/home/coder/.config \
+  -v $CODER_DATA:/home/DanielRondonGarcia/.config \
   -v /var/run/docker.sock:/var/run/docker.sock \
   --group-add $DOCKER_GROUP \
-  ghcr.io/coder/coder:latest
+  ghcr.io/DanielRondonGarcia/coder:latest
 ```
 
 ### External database (recommended)
@@ -44,20 +44,20 @@ docker run --rm -it \
   -e CODER_PG_CONNECTION_URL="postgresql://username:password@database/coder" \
   -v /var/run/docker.sock:/var/run/docker.sock \
   --group-add $DOCKER_GROUP \
-  ghcr.io/coder/coder:latest
+  ghcr.io/DanielRondonGarcia/coder:latest
 ```
 
 ## Install Coder via `docker compose`
 
 Coder's publishes a
-[docker compose example](https://github.com/coder/coder/blob/main/compose.yaml)
+[docker compose example](https://github.com/DanielRondonGarcia/coder/blob/main/compose.yaml)
 which includes an PostgreSQL container and volume.
 
 1. Make sure you have [Docker Compose](https://docs.docker.com/compose/install/)
    installed.
 
 1. Download the
-   [`docker-compose.yaml`](https://github.com/coder/coder/blob/main/compose.yaml)
+   [`docker-compose.yaml`](https://github.com/DanielRondonGarcia/coder/blob/main/compose.yaml)
    file.
 
 1. Update `group_add:` in `docker-compose.yaml` with the `gid` of `docker`
@@ -83,12 +83,12 @@ Coder's [configuration options](../admin/setup/index.md).
 > We do not recommend using preview releases in production environments.
 
 You can install and test a
-[preview release of Coder](https://github.com/coder/coder/pkgs/container/coder-preview)
+[preview release of Coder](https://github.com/DanielRondonGarcia/coder/pkgs/container/coder-preview)
 by using the `coder-preview:latest` image tag.
 This image is automatically updated with the latest changes from the `main` branch.
 
-Replace `ghcr.io/coder/coder:latest` in the `docker run` command in the
-[steps above](#install-coder-via-docker-run) with `ghcr.io/coder/coder-preview:latest`.
+Replace `ghcr.io/DanielRondonGarcia/coder:latest` in the `docker run` command in the
+[steps above](#install-coder-via-docker-run) with `ghcr.io/DanielRondonGarcia/coder-preview:latest`.
 
 ## Troubleshooting
 

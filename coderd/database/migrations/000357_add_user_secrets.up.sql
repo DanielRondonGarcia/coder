@@ -13,7 +13,7 @@ CREATE TABLE user_secrets (
     -- Empty string means don't inject as env var
     env_name TEXT NOT NULL DEFAULT '',
 
-    -- File path where secret should be written (e.g., "/home/coder/.ssh/id_rsa")
+    -- File path where secret should be written (e.g., "/home/DanielRondonGarcia/.ssh/id_rsa")
     -- Empty string means don't inject as file
     file_path TEXT NOT NULL DEFAULT '',
 

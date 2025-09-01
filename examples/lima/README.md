@@ -13,7 +13,7 @@ This lets you quickly test out Coder in a self-contained environment.
 
 ## Getting Started
 
-- Run `limactl start --name=coder https://raw.githubusercontent.com/coder/coder/main/examples/lima/coder.yaml`
+- Run `limactl start --name=coder https://raw.githubusercontent.com/DanielRondonGarcia/coder/main/examples/lima/coder.yaml`
 - You can use the configuration as-is, or edit it to your liking.
 
 This will:
@@ -22,7 +22,7 @@ This will:
 - Install Docker and Terraform from the official repos
 - Install Coder using the [installation script](../../docs/install/install.sh.md)
 - Generates an initial user account `admin@coder.com` with a randomly generated password (stored in the VM under `/home/${USER}.linux/.config/coderv2/password`)
-- Initializes a [sample Docker template](https://github.com/coder/coder/tree/main/examples/templates/docker) for creating workspaces
+- Initializes a [sample Docker template](https://github.com/DanielRondonGarcia/coder/tree/main/examples/templates/docker) for creating workspaces
 
 Once this completes, you can visit `http://localhost:3000` and start creating workspaces!
 

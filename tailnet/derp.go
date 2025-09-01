@@ -15,7 +15,7 @@ import (
 
 	"cdr.dev/slog"
 
-	"github.com/coder/websocket"
+	"github.com/DanielRondonGarcia/websocket"
 )
 
 // WithWebsocketSupport returns an http.Handler that upgrades

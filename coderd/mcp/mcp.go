@@ -14,9 +14,9 @@ import (
 
 	"cdr.dev/slog"
 
-	"github.com/coder/coder/v2/buildinfo"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/codersdk/toolsdk"
+	"github.com/DanielRondonGarcia/coder/v2/buildinfo"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/toolsdk"
 )
 
 const (

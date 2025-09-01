@@ -9,7 +9,7 @@ import (
 	"tailscale.com/tailcfg"
 	"tailscale.com/types/netmap"
 
-	"github.com/coder/coder/v2/tailnet/proto"
+	"github.com/DanielRondonGarcia/coder/v2/tailnet/proto"
 )
 
 func TestTelemetryStore(t *testing.T) {

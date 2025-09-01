@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/coder/coder/v2/coderd/httpapi"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/httpapi"
 )
 
 func TestStripCoderCookies(t *testing.T) {

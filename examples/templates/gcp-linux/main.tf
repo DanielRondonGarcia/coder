@@ -15,9 +15,9 @@ variable "project_id" {
   description = "Which Google Compute Project should your workspace live in?"
 }
 
-# See https://registry.coder.com/modules/coder/gcp-region
+# See https://registry.coder.com/modules/DanielRondonGarcia/gcp-region
 module "gcp_region" {
-  source = "registry.coder.com/coder/gcp-region/coder"
+  source = "registry.coder.com/DanielRondonGarcia/gcp-region/coder"
 
   # This ensures that the latest non-breaking version of the module gets downloaded, you can also pin the module version to prevent breaking changes in production.
   version = "~> 1.0"
@@ -91,10 +91,10 @@ resource "coder_agent" "main" {
   }
 }
 
-# See https://registry.coder.com/modules/coder/code-server
+# See https://registry.coder.com/modules/DanielRondonGarcia/code-server
 module "code-server" {
   count  = data.coder_workspace.me.start_count
-  source = "registry.coder.com/coder/code-server/coder"
+  source = "registry.coder.com/DanielRondonGarcia/code-server/coder"
 
   # This ensures that the latest non-breaking version of the module gets downloaded, you can also pin the module version to prevent breaking changes in production.
   version = "~> 1.0"
@@ -103,10 +103,10 @@ module "code-server" {
   order    = 1
 }
 
-# See https://registry.coder.com/modules/coder/jetbrains
+# See https://registry.coder.com/modules/DanielRondonGarcia/jetbrains
 module "jetbrains" {
   count      = data.coder_workspace.me.start_count
-  source     = "registry.coder.com/coder/jetbrains/coder"
+  source     = "registry.coder.com/DanielRondonGarcia/jetbrains/coder"
   version    = "~> 1.0"
   agent_id   = coder_agent.main.id
   agent_name = "main"

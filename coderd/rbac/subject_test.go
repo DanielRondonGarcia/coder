@@ -3,7 +3,7 @@ package rbac_test
 import (
 	"testing"
 
-	"github.com/coder/coder/v2/coderd/rbac"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac"
 )
 
 func TestSubjectEqual(t *testing.T) {

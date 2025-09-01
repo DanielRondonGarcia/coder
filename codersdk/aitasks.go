@@ -10,7 +10,7 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/coder/terraform-provider-coder/v2/provider"
+	"github.com/DanielRondonGarcia/terraform-provider-coder/v2/provider"
 )
 
 const AITaskPromptParameterName = provider.TaskPromptParameterName

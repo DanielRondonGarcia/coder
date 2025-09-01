@@ -12,11 +12,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/dbgen"
-	"github.com/coder/coder/v2/coderd/database/dbtestutil"
-	"github.com/coder/coder/v2/coderd/searchquery"
-	"github.com/coder/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbgen"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtestutil"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/searchquery"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
 )
 
 func TestSearchWorkspace(t *testing.T) {
@@ -165,10 +165,10 @@ func TestSearchWorkspace(t *testing.T) {
 		},
 		{
 			Name:  "QuotedParamValue",
-			Query: `param:"image=ghcr.io/coder/coder-preview:main"`,
+			Query: `param:"image=ghcr.io/DanielRondonGarcia/coder-preview:main"`,
 			Expected: database.GetWorkspacesParams{
 				ParamNames:  []string{"image"},
-				ParamValues: []string{"ghcr.io/coder/coder-preview:main"},
+				ParamValues: []string{"ghcr.io/DanielRondonGarcia/coder-preview:main"},
 			},
 		},
 		{

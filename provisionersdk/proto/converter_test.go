@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/coder/coder/v2/provisionersdk/proto"
-	"github.com/coder/terraform-provider-coder/v2/provider"
+	"github.com/DanielRondonGarcia/coder/v2/provisionersdk/proto"
+	"github.com/DanielRondonGarcia/terraform-provider-coder/v2/provider"
 )
 
 // TestProviderFormTypeEnum keeps the provider.ParameterFormTypes() enum in sync with the

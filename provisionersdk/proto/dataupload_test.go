@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/coder/coder/v2/provisionersdk/proto"
+	"github.com/DanielRondonGarcia/coder/v2/provisionersdk/proto"
 )
 
 // Fuzz must be run manually with the `-fuzz` flag to generate random test cases.

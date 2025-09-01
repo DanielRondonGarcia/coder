@@ -8,7 +8,7 @@ import (
 
 	"cdr.dev/slog"
 
-	"github.com/coder/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
 )
 
 // Rotate rotates the database encryption keys by re-encrypting all user tokens

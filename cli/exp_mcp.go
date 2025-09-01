@@ -16,14 +16,14 @@ import (
 	"github.com/spf13/afero"
 	"golang.org/x/xerrors"
 
-	agentapi "github.com/coder/agentapi-sdk-go"
-	"github.com/coder/coder/v2/buildinfo"
-	"github.com/coder/coder/v2/cli/cliui"
-	"github.com/coder/coder/v2/cli/cliutil"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/codersdk/agentsdk"
-	"github.com/coder/coder/v2/codersdk/toolsdk"
-	"github.com/coder/serpent"
+	agentapi "github.com/DanielRondonGarcia/agentapi-sdk-go"
+	"github.com/DanielRondonGarcia/coder/v2/buildinfo"
+	"github.com/DanielRondonGarcia/coder/v2/cli/cliui"
+	"github.com/DanielRondonGarcia/coder/v2/cli/cliutil"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/agentsdk"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/toolsdk"
+	"github.com/DanielRondonGarcia/serpent"
 )
 
 const (

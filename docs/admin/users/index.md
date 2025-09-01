@@ -93,7 +93,7 @@ with the user so that they can log into Coder:
 
 ```console
 Download the Coder command line for your operating system:
-https://github.com/coder/coder/releases/latest
+https://github.com/DanielRondonGarcia/coder/releases/latest
 
 Run  coder login https://<accessURL>.coder.app  to authenticate.
 
@@ -198,14 +198,14 @@ The following filters are supported:
 - `status` - Indicates the status of the user. It can be either `active`,
   `dormant` or `suspended`.
 - `role` - Represents the role of the user. You can refer to the
-  [TemplateRole documentation](https://pkg.go.dev/github.com/coder/coder/v2/codersdk#TemplateRole)
+  [TemplateRole documentation](https://pkg.go.dev/github.com/DanielRondonGarcia/coder/v2/codersdk#TemplateRole)
   for a list of supported user roles.
 - `last_seen_before` and `last_seen_after` - The last time a user has used the
   platform (e.g. logging in, any API requests, connecting to workspaces). Uses
   the RFC3339Nano format.
 - `created_before` and `created_after` - The time a user was created. Uses the
   RFC3339Nano format.
-- `login_type` - Represents the login type of the user. Refer to the [LoginType documentation](https://pkg.go.dev/github.com/coder/coder/v2/codersdk#LoginType) for a list of supported values
+- `login_type` - Represents the login type of the user. Refer to the [LoginType documentation](https://pkg.go.dev/github.com/DanielRondonGarcia/coder/v2/codersdk#LoginType) for a list of supported values
 
 ## Retrieve your list of Coder users
 

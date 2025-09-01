@@ -245,7 +245,7 @@ export const MockSupportLinks: TypesGen.LinkConfig[] = [
 	{
 		name: "Third link",
 		target:
-			"https://github.com/coder/coder/issues/new?labels=needs+grooming&body={CODER_BUILD_INFO}",
+			"https://github.com/DanielRondonGarcia/coder/issues/new?labels=needs+grooming&body={CODER_BUILD_INFO}",
 		icon: "",
 	},
 	{
@@ -1009,7 +1009,7 @@ export const MockWorkspaceAppStatus: TypesGen.WorkspaceAppStatus = {
 	agent_id: "test-workspace-agent",
 	workspace_id: "test-workspace",
 	app_id: MockWorkspaceApp.id,
-	uri: "https://github.com/coder/coder/pull/1234",
+	uri: "https://github.com/DanielRondonGarcia/coder/pull/1234",
 	message: "Your competitors page is completed!",
 	state: "complete",
 	// Deprecated fields
@@ -2977,7 +2977,7 @@ export const MockTemplateACLEmpty: TypesGen.TemplateACL = {
 
 export const MockTemplateExample: TypesGen.TemplateExample = {
 	id: "aws-windows",
-	url: "https://github.com/coder/coder/tree/main/examples/templates/aws-windows",
+	url: "https://github.com/DanielRondonGarcia/coder/tree/main/examples/templates/aws-windows",
 	name: "Develop in an ECS-hosted container",
 	description: "Get started with Linux development on AWS ECS.",
 	markdown:
@@ -2988,7 +2988,7 @@ export const MockTemplateExample: TypesGen.TemplateExample = {
 
 export const MockTemplateExample2: TypesGen.TemplateExample = {
 	id: "aws-linux",
-	url: "https://github.com/coder/coder/tree/main/examples/templates/aws-linux",
+	url: "https://github.com/DanielRondonGarcia/coder/tree/main/examples/templates/aws-linux",
 	name: "Develop in Linux on AWS EC2",
 	description: "Get started with Linux development on AWS EC2.",
 	markdown:
@@ -4646,7 +4646,7 @@ export const MockNotification: TypesGen.InboxNotification = {
 	actions: [
 		{
 			label: "View template",
-			url: "https://dev.coder.com/templates/coder/coder",
+			url: "https://dev.coder.com/templates/DanielRondonGarcia/coder",
 		},
 	],
 	user_id: MockUserOwner.id,
@@ -4730,7 +4730,7 @@ export const MockWorkspaceAppStatuses: TypesGen.WorkspaceAppStatus[] = [
 		icon: "/emojis/1f4dd.png", // 📝
 		message: "Creating PR with gh CLI",
 		created_at: createTimestamp(4, 38), // 15:04:38
-		uri: "https://github.com/coder/coder/pull/5678",
+		uri: "https://github.com/DanielRondonGarcia/coder/pull/5678",
 		state: "complete" as const,
 	},
 	{

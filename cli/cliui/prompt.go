@@ -14,9 +14,9 @@ import (
 	"github.com/mattn/go-isatty"
 	"golang.org/x/xerrors"
 
-	"github.com/coder/coder/v2/pty"
-	"github.com/coder/pretty"
-	"github.com/coder/serpent"
+	"github.com/DanielRondonGarcia/coder/v2/pty"
+	"github.com/DanielRondonGarcia/pretty"
+	"github.com/DanielRondonGarcia/serpent"
 )
 
 // PromptOptions supply a set of options to the prompt.

@@ -19,20 +19,20 @@ import (
 	"golang.org/x/xerrors"
 
 	"cdr.dev/slog"
-	"github.com/coder/coder/v2/coderd/files"
-	"github.com/coder/coder/v2/coderd/pproflabel"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/files"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/pproflabel"
 
-	"github.com/coder/coder/v2/coderd/audit"
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/dbauthz"
-	"github.com/coder/coder/v2/coderd/database/dbtime"
-	"github.com/coder/coder/v2/coderd/database/provisionerjobs"
-	"github.com/coder/coder/v2/coderd/database/pubsub"
-	"github.com/coder/coder/v2/coderd/notifications"
-	"github.com/coder/coder/v2/coderd/provisionerdserver"
-	"github.com/coder/coder/v2/coderd/schedule"
-	"github.com/coder/coder/v2/coderd/wsbuilder"
-	"github.com/coder/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/audit"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtime"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/provisionerjobs"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/pubsub"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/provisionerdserver"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/schedule"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/wsbuilder"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
 )
 
 // Executor automatically starts or stops workspaces.
@@ -143,7 +143,7 @@ func (e *Executor) hasValidProvisioner(ctx context.Context, tx database.Store, t
 
 	// nolint: gocritic // The user (in this case, the user/context for autostart builds) may not have the full
 	// permissions to read provisioner daemons, but we need to check if there's any for the job prior to the
-	// execution of the job via autostart to fix: https://github.com/coder/coder/issues/17941
+	// execution of the job via autostart to fix: https://github.com/DanielRondonGarcia/coder/issues/17941
 	provisionerDaemons, err := tx.GetProvisionerDaemonsByOrganization(dbauthz.AsSystemReadProvisionerDaemons(ctx), queryParams)
 	if err != nil {
 		return false, xerrors.Errorf("get provisioner daemons: %w", err)

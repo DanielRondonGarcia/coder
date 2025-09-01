@@ -25,27 +25,27 @@ import (
 
 	"cdr.dev/slog"
 
-	"github.com/coder/coder/v2/coderd/cryptokeys"
-	"github.com/coder/coder/v2/coderd/idpsync"
-	"github.com/coder/coder/v2/coderd/jwtutils"
-	"github.com/coder/coder/v2/coderd/telemetry"
-	"github.com/coder/coder/v2/coderd/util/ptr"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/cryptokeys"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/idpsync"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/jwtutils"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/telemetry"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/util/ptr"
 
-	"github.com/coder/coder/v2/coderd/apikey"
-	"github.com/coder/coder/v2/coderd/audit"
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/dbauthz"
-	"github.com/coder/coder/v2/coderd/database/dbtime"
-	"github.com/coder/coder/v2/coderd/externalauth"
-	"github.com/coder/coder/v2/coderd/httpapi"
-	"github.com/coder/coder/v2/coderd/httpmw"
-	"github.com/coder/coder/v2/coderd/notifications"
-	"github.com/coder/coder/v2/coderd/promoauth"
-	"github.com/coder/coder/v2/coderd/rbac"
-	"github.com/coder/coder/v2/coderd/render"
-	"github.com/coder/coder/v2/coderd/userpassword"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/cryptorand"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/apikey"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/audit"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtime"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/externalauth"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/httpapi"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/httpmw"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/promoauth"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/render"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/userpassword"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/cryptorand"
 )
 
 type MergedClaimsSource string
@@ -1047,7 +1047,7 @@ func (api *API) userOAuth2Github(rw http.ResponseWriter, r *http.Request) {
 	if user.ID == uuid.Nil {
 		aReq.Action = database.AuditActionRegister
 	}
-	// See: https://github.com/coder/coder/discussions/13340
+	// See: https://github.com/DanielRondonGarcia/coder/discussions/13340
 	// In GitHub Enterprise, admins are permitted to have `_`
 	// in their usernames. This is janky, but much better
 	// than changing the username format globally.
@@ -1307,7 +1307,7 @@ func (api *API) userOIDC(rw http.ResponseWriter, r *http.Request) {
 		// Email is an optional claim in OIDC and
 		// instead the email is frequently sent in
 		// "preferred_username". See:
-		// https://github.com/coder/coder/issues/4472
+		// https://github.com/DanielRondonGarcia/coder/issues/4472
 		_, err = mail.ParseAddress(username)
 		if err != nil {
 			httpapi.Write(ctx, rw, http.StatusBadRequest, codersdk.Response{

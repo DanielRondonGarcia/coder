@@ -65,7 +65,7 @@ ENV PATH="${TERRAFORM_BIN_DIR}:${PATH}"
 ARG TERRAFORM_PLUGINS_DIR=/opt/terraform/plugins
 ARG TERRAFORM_CODER_PROVIDER_VERSION
 ARG TERRAFORM_CODER_PROVIDER_ZIP=terraform-provider-coder.zip
-COPY "$TERRAFORM_CODER_PROVIDER_ZIP" "${TERRAFORM_PLUGINS_DIR}/registry.terraform.io/coder/coder/terraform-provider-coder_${TERRAFORM_CODER_PROVIDER_VERSION}_linux_amd64.zip"
+COPY "$TERRAFORM_CODER_PROVIDER_ZIP" "${TERRAFORM_PLUGINS_DIR}/registry.terraform.io/DanielRondonGarcia/coder/terraform-provider-coder_${TERRAFORM_CODER_PROVIDER_VERSION}_linux_amd64.zip"
 
 # Configure Terraform to use plugins from this dir.
 COPY terraform-filesystem-mirror.tfrc /opt/terraform/config.tfrc

@@ -4,7 +4,7 @@ You can embed an "Open in Coder" button into your git repos or internal wikis to
 let developers quickly launch a new workspace.
 
 <video autoplay playsinline loop>
-  <source src="https://github.com/coder/coder/blob/main/docs/images/templates/open-in-coder.mp4?raw=true" type="video/mp4">
+  <source src="https://github.com/DanielRondonGarcia/coder/blob/main/docs/images/templates/open-in-coder.mp4?raw=true" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
@@ -39,7 +39,7 @@ resource "coder_agent" "dev" {
     # Clone repo from GitHub
     if [ ! -d "coder" ]
     then
-        git clone https://github.com/coder/coder
+        git clone https://github.com/DanielRondonGarcia/coder
     fi
 
     EOF
@@ -50,7 +50,7 @@ resource "coder_agent" "dev" {
 > The `dir` attribute can be set in multiple ways, for example:
 >
 > - `~/coder`
-> - `/home/coder/coder`
+> - `/home/DanielRondonGarcia/coder`
 > - `coder` (relative to the home directory)
 
 If you want the template to support any repository via
@@ -66,7 +66,7 @@ data "coder_external_auth" "github" {
 data "coder_parameter" "git_repo" {
     name          = "git_repo"
     display_name  = "Git repository"
-    default       = "https://github.com/coder/coder"
+    default       = "https://github.com/DanielRondonGarcia/coder"
 }
 
 locals {
@@ -102,7 +102,7 @@ Be sure to replace `YOUR_ACCESS_URL` with your Coder access url (e.g.
 This can be used to pre-fill the git repo URL, disk size, image, etc.
 
 ```md
-[![Open in Coder](https://YOUR_ACCESS_URL/open-in-coder.svg)](https://YOUR_ACCESS_URL/templates/YOUR_TEMPLATE/workspace?param.git_repo=https://github.com/coder/slog&param.home_disk_size%20%28GB%29=20)
+[![Open in Coder](https://YOUR_ACCESS_URL/open-in-coder.svg)](https://YOUR_ACCESS_URL/templates/YOUR_TEMPLATE/workspace?param.git_repo=https://github.com/DanielRondonGarcia/slog&param.home_disk_size%20%28GB%29=20)
 ```
 
 ![Pre-filled parameters](../../images/templates/pre-filled-parameters.png)

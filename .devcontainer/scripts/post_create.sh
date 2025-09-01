@@ -10,28 +10,28 @@ install_devcontainer_cli() {
 
 install_ssh_config() {
 	echo "🔑 Installing SSH configuration..."
-	rsync -a /mnt/home/coder/.ssh/ ~/.ssh/
+	rsync -a /mnt/home/DanielRondonGarcia/.ssh/ ~/.ssh/
 	chmod 0700 ~/.ssh
 }
 
 install_git_config() {
 	echo "📂 Installing Git configuration..."
-	if [ -f /mnt/home/coder/git/config ]; then
-		rsync -a /mnt/home/coder/git/ ~/.config/git/
-	elif [ -d /mnt/home/coder/.gitconfig ]; then
-		rsync -a /mnt/home/coder/.gitconfig ~/.gitconfig
+	if [ -f /mnt/home/DanielRondonGarcia/git/config ]; then
+		rsync -a /mnt/home/DanielRondonGarcia/git/ ~/.config/git/
+	elif [ -d /mnt/home/DanielRondonGarcia/.gitconfig ]; then
+		rsync -a /mnt/home/DanielRondonGarcia/.gitconfig ~/.gitconfig
 	else
 		echo "⚠️ Git configuration directory not found."
 	fi
 }
 
 install_dotfiles() {
-	if [ ! -d /mnt/home/coder/.config/coderv2/dotfiles ]; then
+	if [ ! -d /mnt/home/DanielRondonGarcia/.config/coderv2/dotfiles ]; then
 		echo "⚠️ Dotfiles directory not found."
 		return
 	fi
 
-	cd /mnt/home/coder/.config/coderv2/dotfiles || return
+	cd /mnt/home/DanielRondonGarcia/.config/coderv2/dotfiles || return
 	for script in install.sh install bootstrap.sh bootstrap script/bootstrap setup.sh setup script/setup; do
 		if [ -x $script ]; then
 			echo "📦 Installing dotfiles..."
@@ -51,9 +51,9 @@ personalize() {
 	# synchronize startup script execution.
 	touch /tmp/.coder-startup-script.done
 
-	if [ -x /mnt/home/coder/personalize ]; then
+	if [ -x /mnt/home/DanielRondonGarcia/personalize ]; then
 		echo "🎨 Personalizing environment..."
-		/mnt/home/coder/personalize
+		/mnt/home/DanielRondonGarcia/personalize
 	fi
 }
 

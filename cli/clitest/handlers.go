@@ -3,7 +3,7 @@ package clitest
 import (
 	"testing"
 
-	"github.com/coder/serpent"
+	"github.com/DanielRondonGarcia/serpent"
 )
 
 // HandlersOK asserts that all commands have a handler.

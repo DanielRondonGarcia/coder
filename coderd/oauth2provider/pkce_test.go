@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/coder/coder/v2/coderd/oauth2provider"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/oauth2provider"
 )
 
 func TestVerifyPKCE(t *testing.T) {

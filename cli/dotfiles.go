@@ -13,10 +13,10 @@ import (
 
 	"golang.org/x/xerrors"
 
-	"github.com/coder/pretty"
+	"github.com/DanielRondonGarcia/pretty"
 
-	"github.com/coder/coder/v2/cli/cliui"
-	"github.com/coder/serpent"
+	"github.com/DanielRondonGarcia/coder/v2/cli/cliui"
+	"github.com/DanielRondonGarcia/serpent"
 )
 
 func (r *RootCmd) dotfiles() *serpent.Command {
@@ -41,7 +41,7 @@ func (r *RootCmd) dotfiles() *serpent.Command {
 				cfgDir      = string(cfg)
 				dotfilesDir = filepath.Join(cfgDir, dotfilesRepoDir)
 				// This follows the same pattern outlined by others in the market:
-				// https://github.com/coder/coder/pull/1696#issue-1245742312
+				// https://github.com/DanielRondonGarcia/coder/pull/1696#issue-1245742312
 				installScriptSet = installScriptFiles()
 			)
 

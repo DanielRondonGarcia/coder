@@ -5,9 +5,9 @@ import (
 
 	"golang.org/x/xerrors"
 
-	"github.com/coder/coder/v2/coderd/cryptokeys"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/enterprise/wsproxy/wsproxysdk"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/cryptokeys"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/enterprise/wsproxy/wsproxysdk"
 )
 
 var _ cryptokeys.Fetcher = &ProxyFetcher{}

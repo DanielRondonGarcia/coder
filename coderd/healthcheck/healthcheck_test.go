@@ -6,10 +6,10 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/coder/coder/v2/coderd/healthcheck"
-	"github.com/coder/coder/v2/coderd/healthcheck/derphealth"
-	"github.com/coder/coder/v2/coderd/healthcheck/health"
-	"github.com/coder/coder/v2/codersdk/healthsdk"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/healthcheck"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/healthcheck/derphealth"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/healthcheck/health"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/healthsdk"
 )
 
 type testChecker struct {

@@ -143,7 +143,7 @@ if [[ "$windows_resources" == 1 ]]; then
 fi
 
 ldflags=(
-	-X "'github.com/coder/coder/v2/buildinfo.tag=$version'"
+	-X "'github.com/DanielRondonGarcia/coder/v2/buildinfo.tag=$version'"
 )
 # Disable deubgger information if not building a binary for debuggers.
 if [[ "$debug" == 0 ]]; then
@@ -153,7 +153,7 @@ fi
 if [[ "$develop_in_coder" == 1 ]]; then
 	echo "INFO : Overriding codersdk.SessionTokenCookie as we are developing inside a Coder workspace."
 	ldflags+=(
-		-X "'github.com/coder/coder/v2/codersdk.SessionTokenCookie=dev_coder_session_token'"
+		-X "'github.com/DanielRondonGarcia/coder/v2/codersdk.SessionTokenCookie=dev_coder_session_token'"
 	)
 fi
 
@@ -168,7 +168,7 @@ fi
 if [[ "$agpl" == 1 ]]; then
 	# We don't use a tag to control AGPL because we don't want code to depend on
 	# a flag to control AGPL vs. enterprise behavior.
-	ldflags+=(-X "'github.com/coder/coder/v2/buildinfo.agpl=true'")
+	ldflags+=(-X "'github.com/DanielRondonGarcia/coder/v2/buildinfo.agpl=true'")
 fi
 cgo=0
 if [[ "$dylib" == 1 ]]; then

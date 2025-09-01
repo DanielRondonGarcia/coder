@@ -3,9 +3,9 @@ package sdk2db_test
 import (
 	"testing"
 
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/sdk2db"
-	"github.com/coder/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/sdk2db"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
 )
 
 func TestProvisionerDaemonStatus(t *testing.T) {

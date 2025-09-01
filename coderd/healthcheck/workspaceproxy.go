@@ -6,10 +6,10 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/coder/coder/v2/coderd/healthcheck/health"
-	"github.com/coder/coder/v2/coderd/util/ptr"
-	"github.com/coder/coder/v2/codersdk"
-	"github.com/coder/coder/v2/codersdk/healthsdk"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/healthcheck/health"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/util/ptr"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk/healthsdk"
 )
 
 type WorkspaceProxyReport healthsdk.WorkspaceProxyReport

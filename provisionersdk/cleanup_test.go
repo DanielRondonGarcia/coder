@@ -11,11 +11,11 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"cdr.dev/slog"
-	"github.com/coder/coder/v2/provisionersdk"
-	"github.com/coder/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/coder/v2/provisionersdk"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
 )
 
-const workDirectory = "/tmp/coder/provisioner-34/work"
+const workDirectory = "/tmp/DanielRondonGarcia/provisioner-34/work"
 
 var now = time.Date(2023, time.June, 3, 4, 5, 6, 0, time.UTC)
 

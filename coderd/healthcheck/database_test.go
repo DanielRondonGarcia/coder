@@ -10,10 +10,10 @@ import (
 	"go.uber.org/mock/gomock"
 	"golang.org/x/xerrors"
 
-	"github.com/coder/coder/v2/coderd/database/dbmock"
-	"github.com/coder/coder/v2/coderd/healthcheck"
-	"github.com/coder/coder/v2/coderd/healthcheck/health"
-	"github.com/coder/coder/v2/testutil"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbmock"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/healthcheck"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/healthcheck/health"
+	"github.com/DanielRondonGarcia/coder/v2/testutil"
 )
 
 func TestDatabase(t *testing.T) {

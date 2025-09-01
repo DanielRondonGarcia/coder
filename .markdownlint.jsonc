@@ -15,7 +15,7 @@
 	// cli/exp_scaletest.go L-9
 
 	"MD041": false, // First line in file should be a top level heading: All of our changelogs do not start with a top level heading
-	// TODO: We need to update /home/coder/repos/coder/coder/scripts/release/generate_release_notes.sh to generate changelogs that follow this rule
+	// TODO: We need to update /home/DanielRondonGarcia/repos/DanielRondonGarcia/coder/scripts/release/generate_release_notes.sh to generate changelogs that follow this rule
 
 	"MD052": false, // Image reference: Not a valid reference in generated docs
 	// docs/reference/cli/server.md L628

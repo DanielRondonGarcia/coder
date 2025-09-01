@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/coder/coder/v2/provisioner"
+	"github.com/DanielRondonGarcia/coder/v2/provisioner"
 )
 
 func TestSafeAgentName(t *testing.T) {
@@ -219,28 +219,28 @@ func TestExpandedAgentName(t *testing.T) {
 	}{
 		{
 			name:            "simple path depth 1",
-			workspaceFolder: "/home/coder/project",
+			workspaceFolder: "/home/DanielRondonGarcia/project",
 			friendlyName:    "friendly-fallback",
 			depth:           0,
 			expected:        "project",
 		},
 		{
 			name:            "simple path depth 2",
-			workspaceFolder: "/home/coder/project",
+			workspaceFolder: "/home/DanielRondonGarcia/project",
 			friendlyName:    "friendly-fallback",
 			depth:           1,
 			expected:        "coder-project",
 		},
 		{
 			name:            "simple path depth 3",
-			workspaceFolder: "/home/coder/project",
+			workspaceFolder: "/home/DanielRondonGarcia/project",
 			friendlyName:    "friendly-fallback",
 			depth:           2,
 			expected:        "home-coder-project",
 		},
 		{
 			name:            "simple path depth exceeds available",
-			workspaceFolder: "/home/coder/project",
+			workspaceFolder: "/home/DanielRondonGarcia/project",
 			friendlyName:    "friendly-fallback",
 			depth:           9,
 			expected:        "home-coder-project",
@@ -248,7 +248,7 @@ func TestExpandedAgentName(t *testing.T) {
 		// Cases with special characters that need sanitization
 		{
 			name:            "path with spaces and special chars",
-			workspaceFolder: "/home/coder/My Project_v2",
+			workspaceFolder: "/home/DanielRondonGarcia/My Project_v2",
 			friendlyName:    "friendly-fallback",
 			depth:           1,
 			expected:        "coder-my-project-v2",
@@ -294,28 +294,28 @@ func TestExpandedAgentName(t *testing.T) {
 		// Collision simulation cases
 		{
 			name:            "foo/project depth 1",
-			workspaceFolder: "/home/coder/foo/project",
+			workspaceFolder: "/home/DanielRondonGarcia/foo/project",
 			friendlyName:    "friendly-fallback",
 			depth:           0,
 			expected:        "project",
 		},
 		{
 			name:            "foo/project depth 2",
-			workspaceFolder: "/home/coder/foo/project",
+			workspaceFolder: "/home/DanielRondonGarcia/foo/project",
 			friendlyName:    "friendly-fallback",
 			depth:           1,
 			expected:        "foo-project",
 		},
 		{
 			name:            "bar/project depth 1",
-			workspaceFolder: "/home/coder/bar/project",
+			workspaceFolder: "/home/DanielRondonGarcia/bar/project",
 			friendlyName:    "friendly-fallback",
 			depth:           0,
 			expected:        "project",
 		},
 		{
 			name:            "bar/project depth 2",
-			workspaceFolder: "/home/coder/bar/project",
+			workspaceFolder: "/home/DanielRondonGarcia/bar/project",
 			friendlyName:    "friendly-fallback",
 			depth:           1,
 			expected:        "bar-project",
@@ -323,14 +323,14 @@ func TestExpandedAgentName(t *testing.T) {
 		// Path with trailing slashes
 		{
 			name:            "path with trailing slash",
-			workspaceFolder: "/home/coder/project/",
+			workspaceFolder: "/home/DanielRondonGarcia/project/",
 			friendlyName:    "friendly-fallback",
 			depth:           1,
 			expected:        "coder-project",
 		},
 		{
 			name:            "path with multiple trailing slashes",
-			workspaceFolder: "/home/coder/project///",
+			workspaceFolder: "/home/DanielRondonGarcia/project///",
 			friendlyName:    "friendly-fallback",
 			depth:           1,
 			expected:        "coder-project",
@@ -338,7 +338,7 @@ func TestExpandedAgentName(t *testing.T) {
 		// Path with leading slashes
 		{
 			name:            "path with multiple leading slashes",
-			workspaceFolder: "///home/coder/project",
+			workspaceFolder: "///home/DanielRondonGarcia/project",
 			friendlyName:    "friendly-fallback",
 			depth:           1,
 			expected:        "coder-project",

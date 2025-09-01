@@ -17,15 +17,15 @@ import (
 
 	"cdr.dev/slog"
 
-	"github.com/coder/coder/v2/coderd/database"
-	"github.com/coder/coder/v2/coderd/database/dbtime"
-	"github.com/coder/coder/v2/coderd/httpapi/httpapiconstraints"
-	"github.com/coder/coder/v2/coderd/httpmw/loggermw"
-	"github.com/coder/coder/v2/coderd/rbac"
-	"github.com/coder/coder/v2/coderd/rbac/policy"
-	"github.com/coder/coder/v2/coderd/rbac/rolestore"
-	"github.com/coder/coder/v2/coderd/util/slice"
-	"github.com/coder/coder/v2/provisionersdk"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtime"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/httpapi/httpapiconstraints"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/httpmw/loggermw"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac/policy"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac/rolestore"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/util/slice"
+	"github.com/DanielRondonGarcia/coder/v2/provisionersdk"
 )
 
 var _ database.Store = (*querier)(nil)
@@ -2630,13 +2630,13 @@ func (q *querier) GetProvisionerJobsByIDs(ctx context.Context, ids []uuid.UUID) 
 
 func (q *querier) GetProvisionerJobsByIDsWithQueuePosition(ctx context.Context, ids database.GetProvisionerJobsByIDsWithQueuePositionParams) ([]database.GetProvisionerJobsByIDsWithQueuePositionRow, error) {
 	// TODO: Remove this once we have a proper rbac check for provisioner jobs.
-	// Details in https://github.com/coder/coder/issues/16160
+	// Details in https://github.com/DanielRondonGarcia/coder/issues/16160
 	return q.db.GetProvisionerJobsByIDsWithQueuePosition(ctx, ids)
 }
 
 func (q *querier) GetProvisionerJobsByOrganizationAndStatusWithQueuePositionAndProvisioner(ctx context.Context, arg database.GetProvisionerJobsByOrganizationAndStatusWithQueuePositionAndProvisionerParams) ([]database.GetProvisionerJobsByOrganizationAndStatusWithQueuePositionAndProvisionerRow, error) {
 	// TODO: Remove this once we have a proper rbac check for provisioner jobs.
-	// Details in https://github.com/coder/coder/issues/16160
+	// Details in https://github.com/DanielRondonGarcia/coder/issues/16160
 	return fetchWithPostFilter(q.auth, policy.ActionRead, q.db.GetProvisionerJobsByOrganizationAndStatusWithQueuePositionAndProvisioner)(ctx, arg)
 }
 
@@ -3923,13 +3923,13 @@ func (q *querier) InsertPresetPrebuildSchedule(ctx context.Context, arg database
 
 func (q *querier) InsertProvisionerJob(ctx context.Context, arg database.InsertProvisionerJobParams) (database.ProvisionerJob, error) {
 	// TODO: Remove this once we have a proper rbac check for provisioner jobs.
-	// Details in https://github.com/coder/coder/issues/16160
+	// Details in https://github.com/DanielRondonGarcia/coder/issues/16160
 	return q.db.InsertProvisionerJob(ctx, arg)
 }
 
 func (q *querier) InsertProvisionerJobLogs(ctx context.Context, arg database.InsertProvisionerJobLogsParams) ([]database.ProvisionerJobLog, error) {
 	// TODO: Remove this once we have a proper rbac check for provisioner jobs.
-	// Details in https://github.com/coder/coder/issues/16160
+	// Details in https://github.com/DanielRondonGarcia/coder/issues/16160
 	return q.db.InsertProvisionerJobLogs(ctx, arg)
 }
 
@@ -4635,7 +4635,7 @@ func (q *querier) UpdateProvisionerJobLogsOverflowed(ctx context.Context, arg da
 
 func (q *querier) UpdateProvisionerJobWithCancelByID(ctx context.Context, arg database.UpdateProvisionerJobWithCancelByIDParams) error {
 	// TODO: Remove this once we have a proper rbac check for provisioner jobs.
-	// Details in https://github.com/coder/coder/issues/16160
+	// Details in https://github.com/DanielRondonGarcia/coder/issues/16160
 
 	job, err := q.db.GetProvisionerJobByID(ctx, arg.ID)
 	if err != nil {

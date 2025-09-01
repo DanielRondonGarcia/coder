@@ -27,10 +27,10 @@ import (
 
 	"cdr.dev/slog"
 
-	"github.com/coder/coder/v2/coderd/notifications/render"
-	"github.com/coder/coder/v2/coderd/notifications/types"
-	markdown "github.com/coder/coder/v2/coderd/render"
-	"github.com/coder/coder/v2/codersdk"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications/render"
+	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications/types"
+	markdown "github.com/DanielRondonGarcia/coder/v2/coderd/render"
+	"github.com/DanielRondonGarcia/coder/v2/codersdk"
 )
 
 var (
