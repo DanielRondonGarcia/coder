@@ -74,6 +74,9 @@ jobs:
           sudo cp -r ./include /usr/local/bin/include
           popd
 
+      - name: Setup Node.js and pnpm
+        uses: ./.github/actions/setup-node
+
       - name: Build Coder binaries for all architectures
         run: |
           make -j build/coder_linux_amd64 build/coder_linux_arm64 build/coder_linux_armv7
