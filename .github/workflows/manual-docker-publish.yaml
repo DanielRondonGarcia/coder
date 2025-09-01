@@ -58,6 +58,22 @@ jobs:
       - name: Install mockgen
         run: go install go.uber.org/mock/mockgen@v0.5.0
 
+      - name: Install protoc-gen-go
+        run: go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.30
+
+      - name: Install protoc-gen-go-drpc
+        run: go install storj.io/drpc/cmd/protoc-gen-go-drpc@v0.0.34
+
+      - name: Install Protoc
+        run: |
+          mkdir -p /tmp/proto
+          pushd /tmp/proto
+          curl -L -o protoc.zip https://github.com/protocolbuffers/protobuf/releases/download/v23.4/protoc-23.4-linux-x86_64.zip
+          unzip protoc.zip
+          sudo cp -r ./bin/* /usr/local/bin
+          sudo cp -r ./include /usr/local/bin/include
+          popd
+
       - name: Build Coder binaries for all architectures
         run: |
           make -j build/coder_linux_amd64 build/coder_linux_arm64 build/coder_linux_armv7
