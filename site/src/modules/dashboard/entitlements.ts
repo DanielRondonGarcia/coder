@@ -9,18 +9,9 @@ export const getFeatureVisibility = (
 	hasLicense: boolean,
 	features: Record<string, Feature>,
 ): Record<string, boolean> => {
-	if (!hasLicense) {
-		return {};
-	}
-
-	const permissionPairs = Object.entries(features).map(
-		([feature, { entitlement, limit, actual, enabled }]) => {
-			const entitled = ["entitled", "grace_period"].includes(entitlement);
-			const limitCompliant = limit && actual ? limit >= actual : true;
-			return [feature, entitled && limitCompliant && enabled];
-		},
-	);
-	return Object.fromEntries(permissionPairs);
+	// Always return true for all features to bypass license checks.
+	const allFeatures = Object.keys(features).map(feature => [feature, true]);
+	return Object.fromEntries(allFeatures);
 };
 
 export const selectFeatureVisibility = (

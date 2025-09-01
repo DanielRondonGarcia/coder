@@ -1245,7 +1245,7 @@ jobs:
       - name: Build Linux Docker images
         id: build-docker
         env:
-          CODER_IMAGE_BASE: ghcr.io/coder/coder-preview
+          CODER_IMAGE_BASE: ghcr.io/DanielRondonGarcia/coder-preview
           CODER_IMAGE_TAG_PREFIX: main
           DOCKER_CLI_EXPERIMENTAL: "enabled"
         run: |
