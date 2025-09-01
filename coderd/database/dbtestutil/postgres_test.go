@@ -8,9 +8,9 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.uber.org/goleak"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtestutil"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/migrations"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/coder/coder/v2/coderd/database/dbtestutil"
+	"github.com/coder/coder/v2/coderd/database/migrations"
+	"github.com/coder/coder/v2/testutil"
 )
 
 func TestMain(m *testing.M) {

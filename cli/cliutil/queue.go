@@ -5,7 +5,7 @@ import (
 
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/coder/coder/v2/codersdk"
 )
 
 // Queue is a FIFO queue with a fixed size.  If the size is exceeded, the first

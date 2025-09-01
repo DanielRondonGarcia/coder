@@ -13,9 +13,9 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/pretty"
-	"github.com/DanielRondonGarcia/serpent"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/pretty"
+	"github.com/coder/serpent"
 )
 
 const defaultSelectModelHeight = 7

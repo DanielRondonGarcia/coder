@@ -16,12 +16,12 @@ import (
 	"golang.org/x/exp/maps"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/buildinfo"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/drpcsdk"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/wsjson"
-	"github.com/DanielRondonGarcia/coder/v2/provisionerd/proto"
-	"github.com/DanielRondonGarcia/coder/v2/provisionerd/runner"
-	"github.com/DanielRondonGarcia/websocket"
+	"github.com/coder/coder/v2/buildinfo"
+	"github.com/coder/coder/v2/codersdk/drpcsdk"
+	"github.com/coder/coder/v2/codersdk/wsjson"
+	"github.com/coder/coder/v2/provisionerd/proto"
+	"github.com/coder/coder/v2/provisionerd/runner"
+	"github.com/coder/websocket"
 )
 
 type LogSource string

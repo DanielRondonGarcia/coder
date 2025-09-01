@@ -5,9 +5,9 @@ import (
 
 	"github.com/golang-jwt/jwt/v4"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/idpsync"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/idpsync"
+	"github.com/coder/coder/v2/codersdk"
 )
 
 func (e EnterpriseIDPSync) OrganizationSyncEntitled() bool {

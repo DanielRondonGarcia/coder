@@ -18,8 +18,8 @@ import (
 	"github.com/stretchr/testify/require"
 	"golang.org/x/oauth2"
 
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/testutil"
 )
 
 // AuthorizeParams contains parameters for OAuth2 authorization

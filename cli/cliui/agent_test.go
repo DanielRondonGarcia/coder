@@ -18,16 +18,16 @@ import (
 	"golang.org/x/xerrors"
 	"tailscale.com/tailcfg"
 
-	"github.com/DanielRondonGarcia/coder/v2/cli/clitest"
-	"github.com/DanielRondonGarcia/coder/v2/cli/cliui"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/healthcheck/health"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/ptr"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/healthsdk"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/workspacesdk"
-	"github.com/DanielRondonGarcia/coder/v2/tailnet"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
-	"github.com/DanielRondonGarcia/serpent"
+	"github.com/coder/coder/v2/cli/clitest"
+	"github.com/coder/coder/v2/cli/cliui"
+	"github.com/coder/coder/v2/coderd/healthcheck/health"
+	"github.com/coder/coder/v2/coderd/util/ptr"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/codersdk/healthsdk"
+	"github.com/coder/coder/v2/codersdk/workspacesdk"
+	"github.com/coder/coder/v2/tailnet"
+	"github.com/coder/coder/v2/testutil"
+	"github.com/coder/serpent"
 )
 
 func TestAgent(t *testing.T) {

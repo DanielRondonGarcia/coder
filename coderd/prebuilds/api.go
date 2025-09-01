@@ -8,8 +8,8 @@ import (
 	"github.com/google/uuid"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	sdkproto "github.com/DanielRondonGarcia/coder/v2/provisionersdk/proto"
+	"github.com/coder/coder/v2/coderd/database"
+	sdkproto "github.com/coder/coder/v2/provisionersdk/proto"
 )
 
 var (

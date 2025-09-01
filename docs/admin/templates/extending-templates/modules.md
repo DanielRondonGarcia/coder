@@ -40,14 +40,14 @@ in the Terraform documentation.
 Coder publishes plenty of modules that can be used to simplify some common tasks
 across templates. Some of the modules we publish are,
 
-1. [`code-server`](https://registry.coder.com/modules/DanielRondonGarcia/code-server) and
-   [`vscode-web`](https://registry.coder.com/modules/DanielRondonGarcia/vscode-web)
-2. [`git-clone`](https://registry.coder.com/modules/DanielRondonGarcia/git-clone)
-3. [`dotfiles`](https://registry.coder.com/modules/DanielRondonGarcia/dotfiles)
-4. [`jetbrains`](https://registry.coder.com/modules/DanielRondonGarcia/jetbrains)
-5. [`jfrog-oauth`](https://registry.coder.com/modules/DanielRondonGarcia/jfrog-oauth) and
-   [`jfrog-token`](https://registry.coder.com/modules/DanielRondonGarcia/jfrog-token)
-6. [`vault-github`](https://registry.coder.com/modules/DanielRondonGarcia/vault-github)
+1. [`code-server`](https://registry.coder.com/modules/coder/code-server) and
+   [`vscode-web`](https://registry.coder.com/modules/coder/vscode-web)
+2. [`git-clone`](https://registry.coder.com/modules/coder/git-clone)
+3. [`dotfiles`](https://registry.coder.com/modules/coder/dotfiles)
+4. [`jetbrains`](https://registry.coder.com/modules/coder/jetbrains)
+5. [`jfrog-oauth`](https://registry.coder.com/modules/coder/jfrog-oauth) and
+   [`jfrog-token`](https://registry.coder.com/modules/coder/jfrog-token)
+6. [`vault-github`](https://registry.coder.com/modules/coder/vault-github)
 
 For a full list of available modules please check
 [Coder module registry](https://registry.coder.com/modules).
@@ -61,7 +61,7 @@ In offline and restricted deployments, there are two ways to fetch modules.
 
 ### Artifactory
 
-Air gapped users can clone the [coder/registry](https://github.com/DanielRondonGarcia/registry/)
+Air gapped users can clone the [coder/registry](https://github.com/coder/registry/)
 repo and publish a
 [local terraform module repository](https://jfrog.com/help/r/jfrog-artifactory-documentation/set-up-a-terraform-module/provider-registry)
 to resolve modules via [Artifactory](https://jfrog.com/artifactory/).
@@ -71,8 +71,8 @@ to resolve modules via [Artifactory](https://jfrog.com/artifactory/).
 3. Follow the below instructions to publish coder modules to Artifactory
 
    ```shell
-   git clone https://github.com/DanielRondonGarcia/registry
-   cd registry/DanielRondonGarcia/modules
+   git clone https://github.com/coder/registry
+   cd registry/coder/modules
    jf tfc
    jf tf p --namespace="coder" --provider="coder" --tag="1.0.0"
    ```
@@ -80,7 +80,7 @@ to resolve modules via [Artifactory](https://jfrog.com/artifactory/).
 4. Generate a token with access to the `tf` repo and set an `ENV` variable
    `TF_TOKEN_example.jfrog.io="XXXXXXXXXXXXXXX"` on the Coder provisioner.
 5. Create a file `.terraformrc` with following content and mount at
-   `/home/DanielRondonGarcia/.terraformrc` within the Coder provisioner.
+   `/home/coder/.terraformrc` within the Coder provisioner.
 
    ```tf
    provider_installation {
@@ -112,9 +112,9 @@ Based on the instructions
 #### Example template
 
 We have an example template
-[here](https://github.com/DanielRondonGarcia/coder/blob/main/examples/jfrog/remote/main.tf)
+[here](https://github.com/coder/coder/blob/main/examples/jfrog/remote/main.tf)
 that uses our
-[JFrog Docker](https://github.com/DanielRondonGarcia/coder/blob/main/examples/jfrog/docker/main.tf)
+[JFrog Docker](https://github.com/coder/coder/blob/main/examples/jfrog/docker/main.tf)
 template as the underlying module.
 
 ### Private git repository
@@ -131,13 +131,13 @@ If you are running Coder on a VM, make sure that you have `git` installed and
 the `coder` user has access to the following files:
 
 ```shell
-# /home/DanielRondonGarcia/.gitconfig
+# /home/coder/.gitconfig
 [credential]
   helper = store
 ```
 
 ```shell
-# /home/DanielRondonGarcia/.git-credentials
+# /home/coder/.git-credentials
 
 # GitHub example:
 https://your-github-username:your-github-pat@github.com
@@ -181,11 +181,11 @@ coder:
         secretName: git-secrets
   volumeMounts:
     - name: git-secrets
-      mountPath: "/home/DanielRondonGarcia/.gitconfig"
+      mountPath: "/home/coder/.gitconfig"
       subPath: .gitconfig
       readOnly: true
     - name: git-secrets
-      mountPath: "/home/DanielRondonGarcia/.git-credentials"
+      mountPath: "/home/coder/.git-credentials"
       subPath: .git-credentials
       readOnly: true
 ```

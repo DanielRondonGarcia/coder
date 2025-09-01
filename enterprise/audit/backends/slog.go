@@ -8,8 +8,8 @@ import (
 	"github.com/sqlc-dev/pqtype"
 
 	"cdr.dev/slog"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/enterprise/audit"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/enterprise/audit"
 )
 
 type SlogExporter struct {

@@ -3939,7 +3939,7 @@ type WorkspaceAgent struct {
 	MOTDFile string `db:"motd_file" json:"motd_file"`
 	// The current lifecycle state reported by the workspace agent.
 	LifecycleState WorkspaceAgentLifecycleState `db:"lifecycle_state" json:"lifecycle_state"`
-	// The resolved path of a user-specified directory. e.g. ~/coder -> /home/DanielRondonGarcia/coder
+	// The resolved path of a user-specified directory. e.g. ~/coder -> /home/coder/coder
 	ExpandedDirectory string `db:"expanded_directory" json:"expanded_directory"`
 	// Total length of startup logs
 	LogsLength int32 `db:"logs_length" json:"logs_length"`

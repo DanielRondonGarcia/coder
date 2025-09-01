@@ -11,18 +11,18 @@ import (
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbgen"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtestutil"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtime"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications/dispatch"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications/types"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
-	"github.com/DanielRondonGarcia/websocket"
+	"github.com/coder/coder/v2/coderd/coderdtest"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database/dbgen"
+	"github.com/coder/coder/v2/coderd/database/dbtestutil"
+	"github.com/coder/coder/v2/coderd/database/dbtime"
+	"github.com/coder/coder/v2/coderd/notifications"
+	"github.com/coder/coder/v2/coderd/notifications/dispatch"
+	"github.com/coder/coder/v2/coderd/notifications/types"
+	"github.com/coder/coder/v2/coderd/rbac"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/testutil"
+	"github.com/coder/websocket"
 )
 
 const (
@@ -37,7 +37,7 @@ func TestInboxNotification_Watch(t *testing.T) {
 	// I skip these tests specifically on windows as for now they are flaky - only on Windows.
 	// For now the idea is that the runner takes too long to insert the entries, could be worth
 	// investigating a manual Tx.
-	// see: https://github.com/DanielRondonGarcia/internal/issues/503
+	// see: https://github.com/coder/internal/issues/503
 	if runtime.GOOS == "windows" {
 		t.Skip("our runners are randomly taking too long to insert entries")
 	}
@@ -371,7 +371,7 @@ func TestInboxNotifications_List(t *testing.T) {
 	// I skip these tests specifically on windows as for now they are flaky - only on Windows.
 	// For now the idea is that the runner takes too long to insert the entries, could be worth
 	// investigating a manual Tx.
-	// see: https://github.com/DanielRondonGarcia/internal/issues/503
+	// see: https://github.com/coder/internal/issues/503
 	if runtime.GOOS == "windows" {
 		t.Skip("our runners are randomly taking too long to insert entries")
 	}
@@ -718,7 +718,7 @@ func TestInboxNotifications_ReadStatus(t *testing.T) {
 	// I skip these tests specifically on windows as for now they are flaky - only on Windows.
 	// For now the idea is that the runner takes too long to insert the entries, could be worth
 	// investigating a manual Tx.
-	// see: https://github.com/DanielRondonGarcia/internal/issues/503
+	// see: https://github.com/coder/internal/issues/503
 	if runtime.GOOS == "windows" {
 		t.Skip("our runners are randomly taking too long to insert entries")
 	}
@@ -861,7 +861,7 @@ func TestInboxNotifications_MarkAllAsRead(t *testing.T) {
 	// I skip these tests specifically on windows as for now they are flaky - only on Windows.
 	// For now the idea is that the runner takes too long to insert the entries, could be worth
 	// investigating a manual Tx.
-	// see: https://github.com/DanielRondonGarcia/internal/issues/503
+	// see: https://github.com/coder/internal/issues/503
 	if runtime.GOOS == "windows" {
 		t.Skip("our runners are randomly taking too long to insert entries")
 	}

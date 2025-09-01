@@ -21,16 +21,16 @@ import (
 	"golang.org/x/oauth2"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest/oidctest"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbmock"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtestutil"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/externalauth"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/promoauth"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/coder/coder/v2/coderd"
+	"github.com/coder/coder/v2/coderd/coderdtest/oidctest"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database/dbauthz"
+	"github.com/coder/coder/v2/coderd/database/dbmock"
+	"github.com/coder/coder/v2/coderd/database/dbtestutil"
+	"github.com/coder/coder/v2/coderd/externalauth"
+	"github.com/coder/coder/v2/coderd/promoauth"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/testutil"
 )
 
 func TestRefreshToken(t *testing.T) {

@@ -2,7 +2,7 @@
 set -eu
 
 # Coder's automatic install script.
-# See https://github.com/DanielRondonGarcia/coder#install
+# See https://github.com/coder/coder#install
 #
 # To run:
 # curl -fsSL "{{ .Origin }}/install.sh" | sh
@@ -294,7 +294,7 @@ install_standalone() {
 	"$sh_c" mkdir -p "$STANDALONE_INSTALL_PREFIX/bin"
 
 	# Remove the file if it already exists to
-	# avoid https://github.com/DanielRondonGarcia/coder/issues/2086
+	# avoid https://github.com/coder/coder/issues/2086
 	if [ -f "$STANDALONE_BINARY_LOCATION" ]; then
 		"$sh_c" rm "$STANDALONE_BINARY_LOCATION"
 	fi
@@ -391,9 +391,9 @@ sudo_sh_c() {
 
 echo_cache_dir() {
 	if [ "${XDG_CACHE_HOME-}" ]; then
-		echo "$XDG_CACHE_HOME/DanielRondonGarcia/local_downloads"
+		echo "$XDG_CACHE_HOME/coder/local_downloads"
 	elif [ "${HOME-}" ]; then
-		echo "$HOME/.cache/DanielRondonGarcia/local_downloads"
+		echo "$HOME/.cache/coder/local_downloads"
 	else
 		echo "/tmp/coder-cache/local_downloads"
 	fi

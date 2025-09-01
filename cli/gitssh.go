@@ -13,9 +13,9 @@ import (
 
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/cli/cliui"
-	"github.com/DanielRondonGarcia/pretty"
-	"github.com/DanielRondonGarcia/serpent"
+	"github.com/coder/coder/v2/cli/cliui"
+	"github.com/coder/pretty"
+	"github.com/coder/serpent"
 )
 
 func (r *RootCmd) gitssh() *serpent.Command {

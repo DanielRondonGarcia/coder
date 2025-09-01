@@ -24,7 +24,7 @@ to this data by administering the GitHub app.
 
 To use the default configuration:
 
-1. [Install the GitHub app](https://github.com/apps/DanielRondonGarcia/installations/select_target)
+1. [Install the GitHub app](https://github.com/apps/coder/installations/select_target)
    in any GitHub organization that you want to use with Coder.
 
    The default GitHub app requires [device flow](#device-flow) to authenticate.

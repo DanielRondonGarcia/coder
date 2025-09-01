@@ -81,7 +81,7 @@ You can develop in your Coder workspace remotely with
 [VS Code](https://code.visualstudio.com/download).
 We support connecting with the desktop client and VS Code in the browser with [code-server](#code-server).
 
-![Demo](https://github.com/DanielRondonGarcia/vscode-coder/raw/main/demo.gif?raw=true)
+![Demo](https://github.com/coder/vscode-coder/raw/main/demo.gif?raw=true)
 
 Read more details on [using VS Code in your workspace](./vscode.md).
 
@@ -117,7 +117,7 @@ on connecting your JetBrains IDEs.
 
 ## code-server
 
-[code-server](https://github.com/DanielRondonGarcia/code-server) is our supported method of
+[code-server](https://github.com/coder/code-server) is our supported method of
 running VS Code in the web browser.
 Learn more about [what makes code-server different from VS Code web](./code-server.md) or visit the
 [documentation for code-server](https://coder.com/docs/code-server/latest).
@@ -141,7 +141,7 @@ Supported IDEs:
 Our [Module Registry](https://registry.coder.com/modules) also hosts a variety
 of tools for extending the capability of your workspace. If you have a request
 for a new IDE or tool, please file an issue in our
-[Modules repo](https://github.com/DanielRondonGarcia/registry/issues).
+[Modules repo](https://github.com/coder/registry/issues).
 
 ## Ports and Port forwarding
 

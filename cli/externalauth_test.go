@@ -6,11 +6,11 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/DanielRondonGarcia/coder/v2/cli/clitest"
-	"github.com/DanielRondonGarcia/coder/v2/cli/cliui"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/httpapi"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/agentsdk"
-	"github.com/DanielRondonGarcia/coder/v2/pty/ptytest"
+	"github.com/coder/coder/v2/cli/clitest"
+	"github.com/coder/coder/v2/cli/cliui"
+	"github.com/coder/coder/v2/coderd/httpapi"
+	"github.com/coder/coder/v2/codersdk/agentsdk"
+	"github.com/coder/coder/v2/pty/ptytest"
 )
 
 func TestExternalAuth(t *testing.T) {

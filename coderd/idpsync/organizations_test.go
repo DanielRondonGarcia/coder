@@ -10,14 +10,14 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"cdr.dev/slog/sloggers/slogtest"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/db2sdk"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbfake"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbgen"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtestutil"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/idpsync"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/runtimeconfig"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database/db2sdk"
+	"github.com/coder/coder/v2/coderd/database/dbfake"
+	"github.com/coder/coder/v2/coderd/database/dbgen"
+	"github.com/coder/coder/v2/coderd/database/dbtestutil"
+	"github.com/coder/coder/v2/coderd/idpsync"
+	"github.com/coder/coder/v2/coderd/runtimeconfig"
+	"github.com/coder/coder/v2/testutil"
 )
 
 func TestFromLegacySettings(t *testing.T) {

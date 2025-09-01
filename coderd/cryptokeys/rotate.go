@@ -10,10 +10,10 @@ import (
 	"golang.org/x/xerrors"
 
 	"cdr.dev/slog"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtime"
-	"github.com/DanielRondonGarcia/quartz"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database/dbauthz"
+	"github.com/coder/coder/v2/coderd/database/dbtime"
+	"github.com/coder/quartz"
 )
 
 const (

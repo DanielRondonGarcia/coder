@@ -7,7 +7,7 @@
  * @see {@link https://www.figma.com/design/WfqIgsTFXN2BscBSSyXWF8/Coder-kit?node-id=711-383&t=xqxOSUk48GvDsjGK-0}
  *
  * It was also simplified to make usage easier and reduce boilerplate.
- * @see {@link https://github.com/DanielRondonGarcia/coder/pull/15930#issuecomment-2552292440}
+ * @see {@link https://github.com/coder/coder/pull/15930#issuecomment-2552292440}
  */
 
 import { useTheme } from "@emotion/react";

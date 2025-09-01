@@ -44,7 +44,7 @@ Optional parameters:
 - `ide_product_code`: Specific IDE product code (e.g., "IU" for IntelliJ IDEA Ultimate)
 - `ide_build_number`: Specific build number of the JetBrains IDE
 
-For more details, see the [coder-jetbrains-toolbox repository](https://github.com/DanielRondonGarcia/coder-jetbrains-toolbox#connect-to-a-coder-workspace-via-jetbrains-toolbox-uri).
+For more details, see the [coder-jetbrains-toolbox repository](https://github.com/coder/coder-jetbrains-toolbox#connect-to-a-coder-workspace-via-jetbrains-toolbox-uri).
 
 ## Configure internal certificates
 
@@ -80,4 +80,4 @@ If you encounter issues connecting to your Coder workspace via JetBrains Toolbox
 ## Additional Resources
 
 - [JetBrains Toolbox documentation](https://www.jetbrains.com/help/toolbox-app)
-- [Coder JetBrains Toolbox Plugin Github](https://github.com/DanielRondonGarcia/coder-jetbrains-toolbox)
+- [Coder JetBrains Toolbox Plugin Github](https://github.com/coder/coder-jetbrains-toolbox)

@@ -4,7 +4,7 @@ Coder Desktop provides seamless access to your remote workspaces without the nee
 Connect to workspace services using simple hostnames like `myworkspace.coder`, launch native applications with one click,
 and synchronize files between local and remote environments.
 
-Coder Desktop requires a Coder deployment running [v2.20.0](https://github.com/DanielRondonGarcia/coder/releases/tag/v2.20.0) or later.
+Coder Desktop requires a Coder deployment running [v2.20.0](https://github.com/coder/coder/releases/tag/v2.20.0) or later.
 
 ## Install Coder Desktop
 
@@ -17,10 +17,10 @@ You can install Coder Desktop on macOS or Windows.
 1. Use [Homebrew](https://brew.sh/) to install Coder Desktop:
 
    ```shell
-   brew install --cask coder/DanielRondonGarcia/coder-desktop
+   brew install --cask coder/coder/coder-desktop
    ```
 
-   Alternatively, you can manually install Coder Desktop from the [releases page](https://github.com/DanielRondonGarcia/coder-desktop-macos/releases).
+   Alternatively, you can manually install Coder Desktop from the [releases page](https://github.com/coder/coder-desktop-macos/releases).
 
 1. Open **Coder Desktop** from the Applications directory.
 
@@ -40,7 +40,7 @@ If you use [WinGet](https://github.com/microsoft/winget-cli), run `winget instal
 
 To manually install Coder Desktop:
 
-1. Download the latest `CoderDesktop` installer executable (`.exe`) from the [coder-desktop-windows release page](https://github.com/DanielRondonGarcia/coder-desktop-windows/releases).
+1. Download the latest `CoderDesktop` installer executable (`.exe`) from the [coder-desktop-windows release page](https://github.com/coder/coder-desktop-windows/releases).
 
    Choose the architecture that fits your Windows system, `x64` or `arm64`.
 
@@ -122,9 +122,9 @@ Before you can use Coder Desktop, you will need to sign in.
 ## Troubleshooting
 
 If you encounter an issue with Coder Desktop that is not listed here, file an issue in the GitHub repository for
-Coder Desktop for [macOS](https://github.com/DanielRondonGarcia/coder-desktop-macos/issues) or
-[Windows](https://github.com/DanielRondonGarcia/coder-desktop-windows/issues), in the
-[main Coder repository](https://github.com/DanielRondonGarcia/coder/issues), or consult the
+Coder Desktop for [macOS](https://github.com/coder/coder-desktop-macos/issues) or
+[Windows](https://github.com/coder/coder-desktop-windows/issues), in the
+[main Coder repository](https://github.com/coder/coder/issues), or consult the
 [community on Discord](https://coder.com/chat).
 
 ### Known Issues

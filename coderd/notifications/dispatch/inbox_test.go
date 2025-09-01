@@ -10,12 +10,12 @@ import (
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbgen"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtestutil"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications/dispatch"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications/types"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database/dbgen"
+	"github.com/coder/coder/v2/coderd/database/dbtestutil"
+	"github.com/coder/coder/v2/coderd/notifications"
+	"github.com/coder/coder/v2/coderd/notifications/dispatch"
+	"github.com/coder/coder/v2/coderd/notifications/types"
 )
 
 func TestInbox(t *testing.T) {

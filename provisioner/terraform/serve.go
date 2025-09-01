@@ -15,9 +15,9 @@ import (
 
 	"cdr.dev/slog"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/jobreaper"
-	"github.com/DanielRondonGarcia/coder/v2/provisionersdk"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/jobreaper"
+	"github.com/coder/coder/v2/provisionersdk"
 )
 
 type ServeOptions struct {

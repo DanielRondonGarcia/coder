@@ -11,14 +11,14 @@ import (
 	"github.com/google/uuid"
 	"github.com/prometheus/client_golang/prometheus"
 
-	"github.com/DanielRondonGarcia/serpent"
+	"github.com/coder/serpent"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbgen"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications/dispatch"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications/types"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database/dbgen"
+	"github.com/coder/coder/v2/coderd/notifications"
+	"github.com/coder/coder/v2/coderd/notifications/dispatch"
+	"github.com/coder/coder/v2/coderd/notifications/types"
+	"github.com/coder/coder/v2/codersdk"
 )
 
 func defaultNotificationsConfig(method database.NotificationMethod) codersdk.NotificationsConfig {

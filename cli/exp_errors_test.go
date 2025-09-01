@@ -8,9 +8,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/DanielRondonGarcia/coder/v2/cli"
-	"github.com/DanielRondonGarcia/coder/v2/cli/clitest"
-	"github.com/DanielRondonGarcia/serpent"
+	"github.com/coder/coder/v2/cli"
+	"github.com/coder/coder/v2/cli/clitest"
+	"github.com/coder/serpent"
 )
 
 type commandErrorCase struct {

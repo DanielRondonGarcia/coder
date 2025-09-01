@@ -31,7 +31,7 @@ Cursor can connect to a Coder workspace using the Coder extension:
 
    ## Manually
 
-   1. Download the [latest vscode-coder extension](https://github.com/DanielRondonGarcia/vscode-coder/releases/latest) `.vsix` file.
+   1. Download the [latest vscode-coder extension](https://github.com/coder/vscode-coder/releases/latest) `.vsix` file.
 
    1. Drag the `.vsix` file into the extensions pane of Cursor.
 

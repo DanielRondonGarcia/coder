@@ -22,11 +22,11 @@ import (
 	"github.com/sqlc-dev/pqtype"
 	xgithub "golang.org/x/oauth2/github"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtime"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/promoauth"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/retry"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database/dbtime"
+	"github.com/coder/coder/v2/coderd/promoauth"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/retry"
 )
 
 const (

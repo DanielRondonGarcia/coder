@@ -19,20 +19,20 @@ import (
 	"go.opentelemetry.io/otel/trace"
 
 	"cdr.dev/slog"
-	"github.com/DanielRondonGarcia/coder/v2/agent/agentssh"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/cryptokeys"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtime"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/httpapi"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/httpmw"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/jwtutils"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/tracing"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/slice"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/workspaceapps/appurl"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/workspaceapps/cors"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/workspacesdk"
-	"github.com/DanielRondonGarcia/coder/v2/site"
-	"github.com/DanielRondonGarcia/websocket"
+	"github.com/coder/coder/v2/agent/agentssh"
+	"github.com/coder/coder/v2/coderd/cryptokeys"
+	"github.com/coder/coder/v2/coderd/database/dbtime"
+	"github.com/coder/coder/v2/coderd/httpapi"
+	"github.com/coder/coder/v2/coderd/httpmw"
+	"github.com/coder/coder/v2/coderd/jwtutils"
+	"github.com/coder/coder/v2/coderd/tracing"
+	"github.com/coder/coder/v2/coderd/util/slice"
+	"github.com/coder/coder/v2/coderd/workspaceapps/appurl"
+	"github.com/coder/coder/v2/coderd/workspaceapps/cors"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/codersdk/workspacesdk"
+	"github.com/coder/coder/v2/site"
+	"github.com/coder/websocket"
 )
 
 const (
@@ -567,7 +567,7 @@ func (s *Server) proxyWorkspaceApp(rw http.ResponseWriter, r *http.Request, appT
 	if path == "" {
 		// Web applications typically request paths relative to the
 		// root URL. This allows for routing behind a proxy or subpath.
-		// See https://github.com/DanielRondonGarcia/code-server/issues/241 for examples.
+		// See https://github.com/coder/code-server/issues/241 for examples.
 		http.Redirect(rw, r, r.URL.Path+"/", http.StatusTemporaryRedirect)
 		return
 	}

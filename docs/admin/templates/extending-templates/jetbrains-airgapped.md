@@ -9,7 +9,7 @@ This page is an example that the Coder team used as a proof-of-concept (POC) of 
 
 We used Ubuntu on a virtual machine to test the steps.
 If you have a suggestion or encounter an issue, please
-[file a GitHub issue](https://github.com/DanielRondonGarcia/coder/issues/new?title=request%28docs%29%3A+jetbrains-airgapped+-+request+title+here%0D%0A&labels=["community","docs"]&body=doc%3A+%5Bjetbrains-airgapped%5D%28https%3A%2F%2Fcoder.com%2Fdocs%2Fuser-guides%2Fworkspace-access%2Fjetbrains%2Fjetbrains-airgapped%29%0D%0A%0D%0Aplease+enter+your+request+here%0D%0A).
+[file a GitHub issue](https://github.com/coder/coder/issues/new?title=request%28docs%29%3A+jetbrains-airgapped+-+request+title+here%0D%0A&labels=["community","docs"]&body=doc%3A+%5Bjetbrains-airgapped%5D%28https%3A%2F%2Fcoder.com%2Fdocs%2Fuser-guides%2Fworkspace-access%2Fjetbrains%2Fjetbrains-airgapped%29%0D%0A%0D%0Aplease+enter+your+request+here%0D%0A).
 
 ## 1. Deploy the server and install the Client Downloader
 

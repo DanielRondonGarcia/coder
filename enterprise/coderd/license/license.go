@@ -12,10 +12,10 @@ import (
 	"github.com/golang-jwt/jwt/v4"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/ptr"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database/dbauthz"
+	"github.com/coder/coder/v2/coderd/util/ptr"
+	"github.com/coder/coder/v2/codersdk"
 )
 
 const (

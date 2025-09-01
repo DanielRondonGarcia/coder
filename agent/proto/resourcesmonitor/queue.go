@@ -5,7 +5,7 @@ import (
 
 	"google.golang.org/protobuf/types/known/timestamppb"
 
-	"github.com/DanielRondonGarcia/coder/v2/agent/proto"
+	"github.com/coder/coder/v2/agent/proto"
 )
 
 type Datapoint struct {

@@ -10,7 +10,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/coder/coder/v2/codersdk"
 )
 
 func TestWrapDockerExec(t *testing.T) {
@@ -211,8 +211,8 @@ func TestConvertDockerInspect(t *testing.T) {
 					Status:       "running",
 					Ports:        []codersdk.WorkspaceAgentContainerPort{},
 					Volumes: map[string]string{
-						"/tmp/test/a": "/var/DanielRondonGarcia/a",
-						"/tmp/test/b": "/var/DanielRondonGarcia/b",
+						"/tmp/test/a": "/var/coder/a",
+						"/tmp/test/b": "/var/coder/b",
 					},
 				},
 			},
@@ -332,7 +332,7 @@ func TestConvertDockerInspect(t *testing.T) {
 					FriendlyName: "optimistic_hopper",
 					Image:        "debian:bookworm",
 					Labels: map[string]string{
-						"devcontainer.config_file": "/home/DanielRondonGarcia/src/DanielRondonGarcia/coder/agent/agentcontainers/testdata/devcontainer_simple.json",
+						"devcontainer.config_file": "/home/coder/src/coder/coder/agent/agentcontainers/testdata/devcontainer_simple.json",
 						"devcontainer.metadata":    "[]",
 					},
 					Running: true,
@@ -351,7 +351,7 @@ func TestConvertDockerInspect(t *testing.T) {
 					FriendlyName: "serene_khayyam",
 					Image:        "debian:bookworm",
 					Labels: map[string]string{
-						"devcontainer.config_file": "/home/DanielRondonGarcia/src/DanielRondonGarcia/coder/agent/agentcontainers/testdata/devcontainer_forwardport.json",
+						"devcontainer.config_file": "/home/coder/src/coder/coder/agent/agentcontainers/testdata/devcontainer_forwardport.json",
 						"devcontainer.metadata":    "[]",
 					},
 					Running: true,
@@ -370,7 +370,7 @@ func TestConvertDockerInspect(t *testing.T) {
 					FriendlyName: "suspicious_margulis",
 					Image:        "debian:bookworm",
 					Labels: map[string]string{
-						"devcontainer.config_file": "/home/DanielRondonGarcia/src/DanielRondonGarcia/coder/agent/agentcontainers/testdata/devcontainer_appport.json",
+						"devcontainer.config_file": "/home/coder/src/coder/coder/agent/agentcontainers/testdata/devcontainer_appport.json",
 						"devcontainer.metadata":    "[]",
 					},
 					Running: true,

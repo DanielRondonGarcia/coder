@@ -7,9 +7,9 @@ import (
 
 	tea "github.com/charmbracelet/bubbletea"
 
-	"github.com/DanielRondonGarcia/coder/v2/agent/agentexec"
-	_ "github.com/DanielRondonGarcia/coder/v2/buildinfo/resources"
-	"github.com/DanielRondonGarcia/coder/v2/cli"
+	"github.com/coder/coder/v2/agent/agentexec"
+	_ "github.com/coder/coder/v2/buildinfo/resources"
+	"github.com/coder/coder/v2/cli"
 )
 
 func main() {
@@ -19,7 +19,7 @@ func main() {
 		os.Exit(1)
 	}
 	// This preserves backwards compatibility with an init function that is causing grief for
-	// web terminals using agent-exec + screen. See https://github.com/DanielRondonGarcia/coder/pull/15817
+	// web terminals using agent-exec + screen. See https://github.com/coder/coder/pull/15817
 	tea.InitTerminal()
 
 	var rootCmd cli.RootCmd

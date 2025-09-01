@@ -7,7 +7,7 @@ import (
 	tfjson "github.com/hashicorp/terraform-json"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DanielRondonGarcia/coder/v2/provisionersdk/proto"
+	"github.com/coder/coder/v2/provisionersdk/proto"
 )
 
 type mockLogger struct {

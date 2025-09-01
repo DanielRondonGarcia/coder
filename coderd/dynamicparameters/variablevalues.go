@@ -7,7 +7,7 @@ import (
 	"github.com/zclconf/go-cty/cty/json"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database"
 )
 
 // VariableValues is a helper function that converts a slice of TemplateVersionVariable

@@ -132,7 +132,7 @@ export const RunningWithAppStatuses: Story = {
 												icon: "/emojis/1f4dd.png", // 📝
 												message: "Creating PR with gh CLI",
 												created_at: createTimestamp(4, 38), // 15:04:38
-												uri: "https://github.com/DanielRondonGarcia/coder/pull/5678",
+												uri: "https://github.com/coder/coder/pull/5678",
 												state: "working" as const,
 												agent_id: Mocks.MockWorkspaceAgent.id,
 											},

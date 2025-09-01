@@ -36,14 +36,14 @@ variable "cache_repo" {
 
 variable "cache_repo_docker_config_path" {
   default     = ""
-  description = "(Optional) Path to a docker config.json containing credentials to the provided cache repo, if required. This will depend on your Coder setup. Example: `/home/DanielRondonGarcia/.docker/config.json`."
+  description = "(Optional) Path to a docker config.json containing credentials to the provided cache repo, if required. This will depend on your Coder setup. Example: `/home/coder/.docker/config.json`."
   sensitive   = true
   type        = string
 }
 
-# See https://registry.coder.com/modules/DanielRondonGarcia/gcp-region
+# See https://registry.coder.com/modules/coder/gcp-region
 module "gcp_region" {
-  source = "registry.coder.com/DanielRondonGarcia/gcp-region/coder"
+  source = "registry.coder.com/coder/gcp-region/coder"
   # This ensures that the latest non-breaking version of the module gets downloaded, you can also pin the module version to prevent breaking changes in production.
   version = "~> 1.0"
   regions = ["us", "europe"]
@@ -83,20 +83,20 @@ data "coder_parameter" "fallback_image" {
 data "coder_parameter" "devcontainer_builder" {
   description  = <<-EOF
 Image that will build the devcontainer.
-Find the latest version of Envbuilder here: https://ghcr.io/DanielRondonGarcia/envbuilder
+Find the latest version of Envbuilder here: https://ghcr.io/coder/envbuilder
 Be aware that using the `:latest` tag may expose you to breaking changes.
 EOF
   display_name = "Devcontainer Builder"
   mutable      = true
   name         = "devcontainer_builder"
-  default      = "ghcr.io/DanielRondonGarcia/envbuilder:latest"
+  default      = "ghcr.io/coder/envbuilder:latest"
   order        = 4
 }
 
 data "coder_parameter" "repo_url" {
   name         = "repo_url"
   display_name = "Repository URL"
-  default      = "https://github.com/DanielRondonGarcia/envbuilder-starter-devcontainer"
+  default      = "https://github.com/coder/envbuilder-starter-devcontainer"
   description  = "Repository URL"
   mutable      = true
 }
@@ -135,7 +135,7 @@ locals {
     "ENVBUILDER_CACHE_REPO" : var.cache_repo,
     "ENVBUILDER_PUSH_IMAGE" : var.cache_repo == "" ? "" : "true",
     # You can add other required environment variables here.
-    # See: https://github.com/DanielRondonGarcia/envbuilder/?tab=readme-ov-file#environment-variables
+    # See: https://github.com/coder/envbuilder/?tab=readme-ov-file#environment-variables
   }
   # If we have a cached image, use the cached image's environment variables. Otherwise, just use
   # the environment variables we've defined above.
@@ -283,10 +283,10 @@ resource "coder_agent" "dev" {
   }
 }
 
-# See https://registry.coder.com/modules/DanielRondonGarcia/code-server
+# See https://registry.coder.com/modules/coder/code-server
 module "code-server" {
   count  = data.coder_workspace.me.start_count
-  source = "registry.coder.com/DanielRondonGarcia/code-server/coder"
+  source = "registry.coder.com/coder/code-server/coder"
 
   # This ensures that the latest non-breaking version of the module gets downloaded, you can also pin the module version to prevent breaking changes in production.
   version = "~> 1.0"
@@ -295,10 +295,10 @@ module "code-server" {
   order    = 1
 }
 
-# See https://registry.coder.com/modules/DanielRondonGarcia/jetbrains
+# See https://registry.coder.com/modules/coder/jetbrains
 module "jetbrains" {
   count      = data.coder_workspace.me.start_count
-  source     = "registry.coder.com/DanielRondonGarcia/jetbrains/coder"
+  source     = "registry.coder.com/coder/jetbrains/coder"
   version    = "~> 1.0"
   agent_id   = coder_agent.main.id
   agent_name = "main"

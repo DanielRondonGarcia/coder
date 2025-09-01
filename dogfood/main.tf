@@ -101,9 +101,9 @@ resource "coderd_template" "envbuilder_dogfood" {
       directory = "./coder-envbuilder"
       active    = true
       tf_vars = [{
-        # clusters/dogfood-v2/DanielRondonGarcia/provisioner/configs/values.yaml#L191-L194
+        # clusters/dogfood-v2/coder/provisioner/configs/values.yaml#L191-L194
         name  = "envbuilder_cache_dockerconfigjson_path"
-        value = "/home/DanielRondonGarcia/envbuilder-cache-dockerconfig.json"
+        value = "/home/coder/envbuilder-cache-dockerconfig.json"
       }]
     }
   ]

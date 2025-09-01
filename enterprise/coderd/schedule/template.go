@@ -14,14 +14,14 @@ import (
 	"go.opentelemetry.io/otel/trace"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtime"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications"
-	agpl "github.com/DanielRondonGarcia/coder/v2/coderd/schedule"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/tracing"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/quartz"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database/dbauthz"
+	"github.com/coder/coder/v2/coderd/database/dbtime"
+	"github.com/coder/coder/v2/coderd/notifications"
+	agpl "github.com/coder/coder/v2/coderd/schedule"
+	"github.com/coder/coder/v2/coderd/tracing"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/quartz"
 )
 
 // EnterpriseTemplateScheduleStore provides an agpl.TemplateScheduleStore that

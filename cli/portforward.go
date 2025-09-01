@@ -18,11 +18,11 @@ import (
 	"cdr.dev/slog"
 	"cdr.dev/slog/sloggers/sloghuman"
 
-	"github.com/DanielRondonGarcia/coder/v2/agent/agentssh"
-	"github.com/DanielRondonGarcia/coder/v2/cli/cliui"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/workspacesdk"
-	"github.com/DanielRondonGarcia/serpent"
+	"github.com/coder/coder/v2/agent/agentssh"
+	"github.com/coder/coder/v2/cli/cliui"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/codersdk/workspacesdk"
+	"github.com/coder/serpent"
 )
 
 var (

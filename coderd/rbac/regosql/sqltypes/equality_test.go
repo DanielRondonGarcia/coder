@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac/regosql/sqltypes"
+	"github.com/coder/coder/v2/coderd/rbac/regosql/sqltypes"
 )
 
 func TestEquality(t *testing.T) {

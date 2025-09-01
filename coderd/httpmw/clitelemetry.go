@@ -11,9 +11,9 @@ import (
 	"tailscale.com/tstime/rate"
 
 	"cdr.dev/slog"
-	clitelemetry "github.com/DanielRondonGarcia/coder/v2/cli/telemetry"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/telemetry"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	clitelemetry "github.com/coder/coder/v2/cli/telemetry"
+	"github.com/coder/coder/v2/coderd/telemetry"
+	"github.com/coder/coder/v2/codersdk"
 )
 
 func ReportCLITelemetry(log slog.Logger, rep telemetry.Reporter) func(http.Handler) http.Handler {

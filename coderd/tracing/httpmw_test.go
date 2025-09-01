@@ -14,8 +14,8 @@ import (
 	"github.com/go-chi/chi/v5"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/tracing"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/coder/coder/v2/coderd/tracing"
+	"github.com/coder/coder/v2/testutil"
 )
 
 // noopTracer is just an alias because the fakeTracer implements a method

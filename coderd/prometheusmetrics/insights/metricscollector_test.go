@@ -18,17 +18,17 @@ import (
 
 	"cdr.dev/slog"
 	"cdr.dev/slog/sloggers/slogtest"
-	agentproto "github.com/DanielRondonGarcia/coder/v2/agent/proto"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbgen"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtestutil"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/prometheusmetrics/insights"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/workspaceapps"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/workspacestats"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/agentsdk"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	agentproto "github.com/coder/coder/v2/agent/proto"
+	"github.com/coder/coder/v2/coderd/coderdtest"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database/dbauthz"
+	"github.com/coder/coder/v2/coderd/database/dbgen"
+	"github.com/coder/coder/v2/coderd/database/dbtestutil"
+	"github.com/coder/coder/v2/coderd/prometheusmetrics/insights"
+	"github.com/coder/coder/v2/coderd/workspaceapps"
+	"github.com/coder/coder/v2/coderd/workspacestats"
+	"github.com/coder/coder/v2/codersdk/agentsdk"
+	"github.com/coder/coder/v2/testutil"
 )
 
 func TestCollectInsights(t *testing.T) {

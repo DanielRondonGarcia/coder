@@ -194,8 +194,8 @@ test.describe("CustomRolesPage", () => {
 
 test("custom roles disabled", async ({ page }) => {
 	requiresUnlicensed();
-	await page.goto("/organizations/DanielRondonGarcia/roles");
-	await expect(page).toHaveURL("/organizations/DanielRondonGarcia/roles");
+	await page.goto("/organizations/coder/roles");
+	await expect(page).toHaveURL("/organizations/coder/roles");
 
 	await expect(
 		page.getByText("Upgrade to a premium license to create a custom role"),

@@ -13,12 +13,12 @@ import (
 	"golang.org/x/term"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/cli/cliui"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/slice"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/workspacesdk"
-	"github.com/DanielRondonGarcia/coder/v2/pty"
-	"github.com/DanielRondonGarcia/serpent"
+	"github.com/coder/coder/v2/cli/cliui"
+	"github.com/coder/coder/v2/coderd/util/slice"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/codersdk/workspacesdk"
+	"github.com/coder/coder/v2/pty"
+	"github.com/coder/serpent"
 )
 
 func (r *RootCmd) rptyCommand() *serpent.Command {

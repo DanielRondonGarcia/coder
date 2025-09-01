@@ -6,7 +6,7 @@ import (
 
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/websocket"
+	"github.com/coder/websocket"
 )
 
 type Encoder[T any] struct {

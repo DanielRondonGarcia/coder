@@ -136,7 +136,7 @@ Coder control plane. Follow the below steps for your specific deployment type:
   directory:
 
 ```console
-/home/DanielRondonGarcia/.aws/gcp-identity-token
+/home/coder/.aws/gcp-identity-token
 ```
 
 ### Kubernetes control plane
@@ -160,7 +160,7 @@ coder:
         secretName: "gcp-identity-token"
   volumeMounts:
     - name: "gcp-identity-mount"
-      mountPath: "/home/DanielRondonGarcia/.aws/gcp-identity-token"
+      mountPath: "/home/coder/.aws/gcp-identity-token"
       readOnly: true
 ```
 
@@ -177,7 +177,7 @@ provider "aws" {
     # arbitrary value for logging
     session_name = "coder-session"
     # define location of token file on control plane here
-    web_identity_token_file = "/home/DanielRondonGarcia/.aws/gcp-identity-token"
+    web_identity_token_file = "/home/coder/.aws/gcp-identity-token"
   }
 }
 ```

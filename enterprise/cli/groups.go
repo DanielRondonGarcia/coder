@@ -1,6 +1,6 @@
 package cli
 
-import "github.com/DanielRondonGarcia/serpent"
+import "github.com/coder/serpent"
 
 func (r *RootCmd) groups() *serpent.Command {
 	cmd := &serpent.Command{

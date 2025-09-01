@@ -15,16 +15,16 @@ import (
 
 	"cdr.dev/slog"
 
-	"github.com/DanielRondonGarcia/terraform-provider-coder/v2/provider"
+	"github.com/coder/terraform-provider-coder/v2/provider"
 
 	tfaddr "github.com/hashicorp/go-terraform-address"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/slice"
-	stringutil "github.com/DanielRondonGarcia/coder/v2/coderd/util/strings"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/provisioner"
-	"github.com/DanielRondonGarcia/coder/v2/provisionersdk"
-	"github.com/DanielRondonGarcia/coder/v2/provisionersdk/proto"
+	"github.com/coder/coder/v2/coderd/util/slice"
+	stringutil "github.com/coder/coder/v2/coderd/util/strings"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/provisioner"
+	"github.com/coder/coder/v2/provisionersdk"
+	"github.com/coder/coder/v2/provisionersdk/proto"
 )
 
 type agentMetadata struct {
@@ -478,7 +478,7 @@ func ConvertState(ctx context.Context, modules []*tfjson.StateModule, rawGraph s
 					// Only apply the instance ID if the agent authentication
 					// type is set to do so. A user ran into a bug where they
 					// had the instance ID block, but auth was set to "token". See:
-					// https://github.com/DanielRondonGarcia/coder/issues/4551#issuecomment-1336293468
+					// https://github.com/coder/coder/issues/4551#issuecomment-1336293468
 					switch t := agent.Auth.(type) {
 					case *proto.Agent_Token:
 						continue
@@ -568,7 +568,7 @@ func ConvertState(ctx context.Context, modules []*tfjson.StateModule, rawGraph s
 					id := attrs.ID
 					if id == "" {
 						// This should never happen since the "id" attribute is set on creation:
-						// https://github.com/DanielRondonGarcia/terraform-provider-coder/blob/cfa101df4635e405e66094fa7779f9a89d92f400/provider/app.go#L37
+						// https://github.com/coder/terraform-provider-coder/blob/cfa101df4635e405e66094fa7779f9a89d92f400/provider/app.go#L37
 						logger.Warn(ctx, "coder_app's id was unexpectedly empty", slog.F("name", attrs.Name))
 
 						id = uuid.NewString()

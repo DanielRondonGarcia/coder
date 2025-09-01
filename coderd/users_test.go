@@ -10,13 +10,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/DanielRondonGarcia/serpent"
+	"github.com/coder/serpent"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest/oidctest"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications/notificationstest"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac/policy"
+	"github.com/coder/coder/v2/coderd"
+	"github.com/coder/coder/v2/coderd/coderdtest/oidctest"
+	"github.com/coder/coder/v2/coderd/notifications"
+	"github.com/coder/coder/v2/coderd/notifications/notificationstest"
+	"github.com/coder/coder/v2/coderd/rbac/policy"
 
 	"github.com/golang-jwt/jwt/v4"
 	"github.com/google/uuid"
@@ -25,19 +25,19 @@ import (
 	"golang.org/x/sync/errgroup"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/audit"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/db2sdk"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbfake"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbgen"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtime"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/ptr"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/slice"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/coder/coder/v2/coderd/audit"
+	"github.com/coder/coder/v2/coderd/coderdtest"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database/db2sdk"
+	"github.com/coder/coder/v2/coderd/database/dbauthz"
+	"github.com/coder/coder/v2/coderd/database/dbfake"
+	"github.com/coder/coder/v2/coderd/database/dbgen"
+	"github.com/coder/coder/v2/coderd/database/dbtime"
+	"github.com/coder/coder/v2/coderd/rbac"
+	"github.com/coder/coder/v2/coderd/util/ptr"
+	"github.com/coder/coder/v2/coderd/util/slice"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/testutil"
 )
 
 func TestFirstUser(t *testing.T) {
@@ -2291,7 +2291,7 @@ func TestDormantUser(t *testing.T) {
 // This is mainly to confirm the db fake has the same behavior.
 func TestSuspendedPagination(t *testing.T) {
 	t.Parallel()
-	t.Skip("This fails when two users are created at the exact same time. The reason is unknown... See: https://github.com/DanielRondonGarcia/coder/actions/runs/3057047622/jobs/4931863163")
+	t.Skip("This fails when two users are created at the exact same time. The reason is unknown... See: https://github.com/coder/coder/actions/runs/3057047622/jobs/4931863163")
 	client := coderdtest.New(t, nil)
 	coderdtest.CreateFirstUser(t, client)
 

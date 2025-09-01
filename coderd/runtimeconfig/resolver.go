@@ -9,7 +9,7 @@ import (
 	"github.com/google/uuid"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database"
 )
 
 // NoopResolver implements the Resolver interface

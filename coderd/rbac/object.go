@@ -7,8 +7,8 @@ import (
 	"github.com/google/uuid"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac/policy"
-	cstrings "github.com/DanielRondonGarcia/coder/v2/coderd/util/strings"
+	"github.com/coder/coder/v2/coderd/rbac/policy"
+	cstrings "github.com/coder/coder/v2/coderd/util/strings"
 )
 
 // ResourceUserObject is a helper function to create a user object for authz checks.

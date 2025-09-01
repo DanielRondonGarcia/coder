@@ -6,13 +6,13 @@ air-gapped with Kubernetes or Docker.
 
 |                    | Public deployments                                                                                                                                                                                                                                                 | Air-gapped deployments                                                                                                                                                                                                                                                                               |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Terraform binary   | By default, Coder downloads Terraform binary from [releases.hashicorp.com](https://releases.hashicorp.com)                                                                                                                                                         | Terraform binary must be included in `PATH` for the VM or container image. [Supported versions](https://github.com/DanielRondonGarcia/coder/blob/main/provisioner/terraform/install.go#L23-L24)                                                                                                                   |
+| Terraform binary   | By default, Coder downloads Terraform binary from [releases.hashicorp.com](https://releases.hashicorp.com)                                                                                                                                                         | Terraform binary must be included in `PATH` for the VM or container image. [Supported versions](https://github.com/coder/coder/blob/main/provisioner/terraform/install.go#L23-L24)                                                                                                                   |
 | Terraform registry | Coder templates will attempt to download providers from [registry.terraform.io](https://registry.terraform.io) or [custom source addresses](https://developer.hashicorp.com/terraform/language/providers/requirements#source-addresses) specified in each template | [Custom source addresses](https://developer.hashicorp.com/terraform/language/providers/requirements#source-addresses) can be specified in each Coder template, or a custom registry/mirror can be used. More details below                                                                           |
 | STUN               | By default, Coder uses Google's public STUN server for direct workspace connections                                                                                                                                                                                | STUN can be safely [disabled](../reference/cli/server.md#--derp-server-stun-addresses) users can still connect via [relayed connections](../admin/networking/index.md#-geo-distribution). Alternatively, you can set a [custom DERP server](../reference/cli/server.md#--derp-server-stun-addresses) |
 | DERP               | By default, Coder's built-in DERP relay can be used, or [Tailscale's public relays](../admin/networking/index.md#relayed-connections).                                                                                                                             | By default, Coder's built-in DERP relay can be used, or [custom relays](../admin/networking/index.md#custom-relays).                                                                                                                                                                                 |
 | PostgreSQL         | If no [PostgreSQL connection URL](../reference/cli/server.md#--postgres-url) is specified, Coder will download Postgres from [repo1.maven.org](https://repo1.maven.org)                                                                                            | An external database is required, you must specify a [PostgreSQL connection URL](../reference/cli/server.md#--postgres-url)                                                                                                                                                                          |
 | Telemetry          | Telemetry is on by default, and [can be disabled](../reference/cli/server.md#--telemetry)                                                                                                                                                                          | Telemetry [can be disabled](../reference/cli/server.md#--telemetry)                                                                                                                                                                                                                                  |
-| Update check       | By default, Coder checks for updates from [GitHub releases](https://github.com/DanielRondonGarcia/coder/releases)                                                                                                                                                               | Update checks [can be disabled](../reference/cli/server.md#--update-check)                                                                                                                                                                                                                           |
+| Update check       | By default, Coder checks for updates from [GitHub releases](https://github.com/coder/coder/releases)                                                                                                                                                               | Update checks [can be disabled](../reference/cli/server.md#--update-check)                                                                                                                                                                                                                           |
 
 ## Air-gapped container images
 
@@ -31,14 +31,14 @@ following:
 
 > [!NOTE]
 > Coder includes the latest
-> [supported version](https://github.com/DanielRondonGarcia/coder/blob/main/provisioner/terraform/install.go#L23-L24)
+> [supported version](https://github.com/coder/coder/blob/main/provisioner/terraform/install.go#L23-L24)
 > of Terraform in the official Docker images. If you need to bundle a different
 > version of terraform, you can do so by customizing the image.
 
 Here's an example Dockerfile:
 
 ```Dockerfile
-FROM ghcr.io/DanielRondonGarcia/coder:latest
+FROM ghcr.io/coder/coder:latest
 
 USER root
 
@@ -48,10 +48,10 @@ RUN apk add curl unzip
 RUN mkdir -p /opt/terraform
 
 # Terraform is already included in the official Coder image.
-# See https://github.com/DanielRondonGarcia/coder/blob/main/scripts/Dockerfile.base#L15
+# See https://github.com/coder/coder/blob/main/scripts/Dockerfile.base#L15
 # If you need to install a different version of Terraform, you can do so here.
 # The below step is optional if you wish to keep the existing version.
-# See https://github.com/DanielRondonGarcia/coder/blob/main/provisioner/terraform/install.go#L23-L24
+# See https://github.com/coder/coder/blob/main/provisioner/terraform/install.go#L23-L24
 # for supported Terraform versions.
 ARG TERRAFORM_VERSION=1.11.0
 RUN apk update && \
@@ -71,16 +71,16 @@ ENV PATH=/opt/terraform:${PATH}
 #  https://developer.hashicorp.com/terraform/cli/config/config-file#filesystem_mirror
 #  Be sure to add all the providers you use in your templates to /opt/terraform/plugins
 
-RUN mkdir -p /home/DanielRondonGarcia/.terraform.d/plugins/registry.terraform.io
-ADD filesystem-mirror-example.tfrc /home/DanielRondonGarcia/.terraformrc
+RUN mkdir -p /home/coder/.terraform.d/plugins/registry.terraform.io
+ADD filesystem-mirror-example.tfrc /home/coder/.terraformrc
 
 # Optionally, we can "seed" the filesystem mirror with common providers.
 # Comment out lines 40-49 if you plan on only using a volume or network mirror:
-WORKDIR /home/DanielRondonGarcia/.terraform.d/plugins/registry.terraform.io
+WORKDIR /home/coder/.terraform.d/plugins/registry.terraform.io
 ARG CODER_PROVIDER_VERSION=2.2.0
 RUN echo "Adding coder/coder v${CODER_PROVIDER_VERSION}" \
     && mkdir -p coder/coder && cd coder/coder \
-    && curl -LOs https://github.com/DanielRondonGarcia/terraform-provider-coder/releases/download/v${CODER_PROVIDER_VERSION}/terraform-provider-coder_${CODER_PROVIDER_VERSION}_linux_amd64.zip
+    && curl -LOs https://github.com/coder/terraform-provider-coder/releases/download/v${CODER_PROVIDER_VERSION}/terraform-provider-coder_${CODER_PROVIDER_VERSION}_linux_amd64.zip
 ARG DOCKER_PROVIDER_VERSION=3.0.2
 RUN echo "Adding kreuzwerker/docker v${DOCKER_PROVIDER_VERSION}" \
     && mkdir -p kreuzwerker/docker && cd kreuzwerker/docker \
@@ -94,7 +94,7 @@ RUN echo "Adding aws/aws v${AWS_PROVIDER_VERSION}" \
     && mkdir -p aws/aws && cd aws/aws \
     && curl -LOs https://releases.hashicorp.com/terraform-provider-aws/${AWS_PROVIDER_VERSION}/terraform-provider-aws_${AWS_PROVIDER_VERSION}_linux_amd64.zip
 
-RUN chown -R coder:coder /home/DanielRondonGarcia/.terraform*
+RUN chown -R coder:coder /home/coder/.terraform*
 WORKDIR /home/coder
 
 # Option 2) Use a network mirror.
@@ -102,25 +102,25 @@ WORKDIR /home/coder
 #  Be sure uncomment line 60 and edit network-mirror-example.tfrc to
 #  specify the HTTPS base URL of your mirror.
 
-# ADD network-mirror-example.tfrc /home/DanielRondonGarcia/.terraformrc
+# ADD network-mirror-example.tfrc /home/coder/.terraformrc
 
 USER coder
 
 # Use the .terraformrc file to inform Terraform of the locally installed providers.
-ENV TF_CLI_CONFIG_FILE=/home/DanielRondonGarcia/.terraformrc
+ENV TF_CLI_CONFIG_FILE=/home/coder/.terraformrc
 ```
 
 > [!NOTE]
 > If you are bundling Terraform providers into your Coder image, be sure the
 > provider version matches any templates or
-> [example templates](https://github.com/DanielRondonGarcia/coder/tree/main/examples/templates)
+> [example templates](https://github.com/coder/coder/tree/main/examples/templates)
 > you intend to use.
 
 ```tf
 # filesystem-mirror-example.tfrc
 provider_installation {
   filesystem_mirror {
-    path = "/home/DanielRondonGarcia/.terraform.d/plugins"
+    path = "/home/coder/.terraform.d/plugins"
   }
 }
 ```
@@ -181,7 +181,7 @@ This can be uploaded into the `plugins` directory on your offline server.
 ### Kubernetes
 
 We publish the Helm chart for download on
-[GitHub Releases](https://github.com/DanielRondonGarcia/coder/releases/latest). Follow our
+[GitHub Releases](https://github.com/coder/coder/releases/latest). Follow our
 [Kubernetes](./kubernetes.md) documentation and modify the Helm values to
 specify your custom Coder image.
 
@@ -219,7 +219,7 @@ own server. The docs are exported as static files that you can host on any web
 server, as demonstrated in the example below:
 
 1. Go to the release page. In this case, we want to use the
-   [latest version](https://github.com/DanielRondonGarcia/coder/releases/latest).
+   [latest version](https://github.com/coder/coder/releases/latest).
 2. Download the documentation files from the "Assets" section. It is named as
    `coder_docs_<version>.tgz`.
 3. Extract the file and move its contents to your server folder.

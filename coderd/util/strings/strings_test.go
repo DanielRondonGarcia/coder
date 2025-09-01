@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/strings"
+	"github.com/coder/coder/v2/coderd/util/strings"
 )
 
 func TestJoinWithConjunction(t *testing.T) {

@@ -7,7 +7,7 @@ import (
 	"github.com/lib/pq"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database"
 )
 
 var _ database.DialerConnector = &Connector{}

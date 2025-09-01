@@ -12,8 +12,8 @@ import (
 	"github.com/google/uuid"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac/policy"
+	"github.com/coder/coder/v2/coderd/rbac"
+	"github.com/coder/coder/v2/coderd/rbac/policy"
 )
 
 type SubjectJSON struct {

@@ -19,12 +19,12 @@ import (
 	"tailscale.com/tailcfg"
 	"tailscale.com/util/dnsname"
 
-	"github.com/DanielRondonGarcia/quartz"
+	"github.com/coder/quartz"
 
-	maputil "github.com/DanielRondonGarcia/coder/v2/coderd/util/maps"
-	"github.com/DanielRondonGarcia/coder/v2/tailnet"
-	"github.com/DanielRondonGarcia/coder/v2/tailnet/proto"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	maputil "github.com/coder/coder/v2/coderd/util/maps"
+	"github.com/coder/coder/v2/tailnet"
+	"github.com/coder/coder/v2/tailnet/proto"
+	"github.com/coder/coder/v2/testutil"
 )
 
 func newFakeClient(ctx context.Context, t *testing.T) *fakeClient {

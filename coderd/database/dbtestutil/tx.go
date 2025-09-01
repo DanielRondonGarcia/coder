@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database"
 )
 
 type DBTx struct {

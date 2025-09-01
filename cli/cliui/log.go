@@ -5,7 +5,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/DanielRondonGarcia/pretty"
+	"github.com/coder/pretty"
 )
 
 // cliMessage provides a human-readable message for CLI errors and messages.

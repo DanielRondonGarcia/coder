@@ -12,9 +12,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/DanielRondonGarcia/coder/v2/archive"
-	"github.com/DanielRondonGarcia/coder/v2/provisionersdk"
-	"github.com/DanielRondonGarcia/coder/v2/provisionersdk/proto"
+	"github.com/coder/coder/v2/archive"
+	"github.com/coder/coder/v2/provisionersdk"
+	"github.com/coder/coder/v2/provisionersdk/proto"
 
 	"github.com/hashicorp/hcl/v2"
 	"github.com/hashicorp/hcl/v2/hclparse"

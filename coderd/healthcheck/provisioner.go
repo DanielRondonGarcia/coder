@@ -6,17 +6,17 @@ import (
 
 	"golang.org/x/mod/semver"
 
-	"github.com/DanielRondonGarcia/coder/v2/apiversion"
-	"github.com/DanielRondonGarcia/coder/v2/buildinfo"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/db2sdk"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtime"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/healthcheck/health"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/provisionerdserver"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/ptr"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/healthsdk"
-	"github.com/DanielRondonGarcia/coder/v2/provisionerd/proto"
+	"github.com/coder/coder/v2/apiversion"
+	"github.com/coder/coder/v2/buildinfo"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database/db2sdk"
+	"github.com/coder/coder/v2/coderd/database/dbauthz"
+	"github.com/coder/coder/v2/coderd/database/dbtime"
+	"github.com/coder/coder/v2/coderd/healthcheck/health"
+	"github.com/coder/coder/v2/coderd/provisionerdserver"
+	"github.com/coder/coder/v2/coderd/util/ptr"
+	"github.com/coder/coder/v2/codersdk/healthsdk"
+	"github.com/coder/coder/v2/provisionerd/proto"
 )
 
 type ProvisionerDaemonsReport healthsdk.ProvisionerDaemonsReport

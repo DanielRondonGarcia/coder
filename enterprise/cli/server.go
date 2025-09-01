@@ -14,20 +14,20 @@ import (
 	"tailscale.com/derp"
 	"tailscale.com/types/key"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/cryptorand"
-	"github.com/DanielRondonGarcia/coder/v2/enterprise/audit"
-	"github.com/DanielRondonGarcia/coder/v2/enterprise/audit/backends"
-	"github.com/DanielRondonGarcia/coder/v2/enterprise/coderd"
-	"github.com/DanielRondonGarcia/coder/v2/enterprise/coderd/dormancy"
-	"github.com/DanielRondonGarcia/coder/v2/enterprise/coderd/usage"
-	"github.com/DanielRondonGarcia/coder/v2/enterprise/dbcrypt"
-	"github.com/DanielRondonGarcia/coder/v2/enterprise/trialer"
-	"github.com/DanielRondonGarcia/coder/v2/tailnet"
-	"github.com/DanielRondonGarcia/quartz"
-	"github.com/DanielRondonGarcia/serpent"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/cryptorand"
+	"github.com/coder/coder/v2/enterprise/audit"
+	"github.com/coder/coder/v2/enterprise/audit/backends"
+	"github.com/coder/coder/v2/enterprise/coderd"
+	"github.com/coder/coder/v2/enterprise/coderd/dormancy"
+	"github.com/coder/coder/v2/enterprise/coderd/usage"
+	"github.com/coder/coder/v2/enterprise/dbcrypt"
+	"github.com/coder/coder/v2/enterprise/trialer"
+	"github.com/coder/coder/v2/tailnet"
+	"github.com/coder/quartz"
+	"github.com/coder/serpent"
 
-	agplcoderd "github.com/DanielRondonGarcia/coder/v2/coderd"
+	agplcoderd "github.com/coder/coder/v2/coderd"
 )
 
 func (r *RootCmd) Server(_ func()) *serpent.Command {

@@ -2,9 +2,9 @@ package enidpsync
 
 import (
 	"cdr.dev/slog"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/entitlements"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/idpsync"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/runtimeconfig"
+	"github.com/coder/coder/v2/coderd/entitlements"
+	"github.com/coder/coder/v2/coderd/idpsync"
+	"github.com/coder/coder/v2/coderd/runtimeconfig"
 )
 
 var _ idpsync.IDPSync = &EnterpriseIDPSync{}

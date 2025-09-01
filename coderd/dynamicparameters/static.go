@@ -8,13 +8,13 @@ import (
 	"github.com/hashicorp/hcl/v2"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/db2sdk"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/ptr"
-	sdkproto "github.com/DanielRondonGarcia/coder/v2/provisionersdk/proto"
-	"github.com/DanielRondonGarcia/preview"
-	previewtypes "github.com/DanielRondonGarcia/preview/types"
-	"github.com/DanielRondonGarcia/terraform-provider-coder/v2/provider"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database/db2sdk"
+	"github.com/coder/coder/v2/coderd/util/ptr"
+	sdkproto "github.com/coder/coder/v2/provisionersdk/proto"
+	"github.com/coder/preview"
+	previewtypes "github.com/coder/preview/types"
+	"github.com/coder/terraform-provider-coder/v2/provider"
 )
 
 type staticRender struct {

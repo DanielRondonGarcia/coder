@@ -1,7 +1,7 @@
 package cli
 
 import (
-	"github.com/DanielRondonGarcia/serpent"
+	"github.com/coder/serpent"
 )
 
 func (r *RootCmd) tasksCommand() *serpent.Command {

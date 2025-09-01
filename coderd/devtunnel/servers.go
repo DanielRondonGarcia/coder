@@ -10,8 +10,8 @@ import (
 	"golang.org/x/sync/errgroup"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/slice"
-	"github.com/DanielRondonGarcia/coder/v2/cryptorand"
+	"github.com/coder/coder/v2/coderd/util/slice"
+	"github.com/coder/coder/v2/cryptorand"
 )
 
 type Region struct {

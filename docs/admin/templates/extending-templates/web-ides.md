@@ -1,7 +1,7 @@
 # Web IDEs
 
 In Coder, web IDEs are defined as
-[coder_app](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/app)
+[coder_app](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/app)
 resources in the template. With our generic model, any web application can be
 used as a Coder application. For example:
 
@@ -25,7 +25,7 @@ resource "coder_app" "portainer" {
 
 ## code-server
 
-[code-server](https://github.com/DanielRondonGarcia/code-server) is our supported method of running
+[code-server](https://github.com/coder/code-server) is our supported method of running
 VS Code in the web browser. A simple way to install code-server in Linux/macOS
 workspaces is via the Coder agent in your template:
 
@@ -281,7 +281,7 @@ resource "coder_agent" "coder" {
 #!/bin/bash
 # install and start airflow
 pip3 install apache-airflow
-/home/DanielRondonGarcia/.local/bin/airflow standalone &
+/home/coder/.local/bin/airflow standalone &
 EOT
 }
 

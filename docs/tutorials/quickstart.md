@@ -47,7 +47,7 @@ persistent environment from your main device, a tablet, or your phone.
 
    - For standalone binaries, system packages, or other alternate installation
      methods, refer to the
-     [latest release on GitHub](https://github.com/DanielRondonGarcia/coder/releases/latest).
+     [latest release on GitHub](https://github.com/coder/coder/releases/latest).
 
 1. Start Coder:
 

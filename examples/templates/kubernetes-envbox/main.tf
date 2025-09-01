@@ -98,10 +98,10 @@ resource "coder_agent" "main" {
   EOT
 }
 
-# See https://registry.coder.com/modules/DanielRondonGarcia/code-server
+# See https://registry.coder.com/modules/coder/code-server
 module "code-server" {
   count  = data.coder_workspace.me.start_count
-  source = "registry.coder.com/DanielRondonGarcia/code-server/coder"
+  source = "registry.coder.com/coder/code-server/coder"
 
   # This ensures that the latest non-breaking version of the module gets downloaded, you can also pin the module version to prevent breaking changes in production.
   version = "~> 1.0"
@@ -110,10 +110,10 @@ module "code-server" {
   order    = 1
 }
 
-# See https://registry.coder.com/modules/DanielRondonGarcia/jetbrains
+# See https://registry.coder.com/modules/coder/jetbrains
 module "jetbrains" {
   count      = data.coder_workspace.me.start_count
-  source     = "registry.coder.com/DanielRondonGarcia/jetbrains/coder"
+  source     = "registry.coder.com/coder/jetbrains/coder"
   version    = "~> 1.0"
   agent_id   = coder_agent.main.id
   agent_name = "main"
@@ -150,7 +150,7 @@ resource "kubernetes_pod" "main" {
     container {
       name = "dev"
       # We highly recommend pinning this to a specific release of envbox, as the latest tag may change.
-      image             = "ghcr.io/DanielRondonGarcia/envbox:latest"
+      image             = "ghcr.io/coder/envbox:latest"
       image_pull_policy = "Always"
       command           = ["/envbox", "docker"]
 
@@ -241,13 +241,13 @@ resource "kubernetes_pod" "main" {
       }
 
       volume_mount {
-        mount_path = "/var/lib/DanielRondonGarcia/docker"
+        mount_path = "/var/lib/coder/docker"
         name       = "home"
         sub_path   = "cache/docker"
       }
 
       volume_mount {
-        mount_path = "/var/lib/DanielRondonGarcia/containers"
+        mount_path = "/var/lib/coder/containers"
         name       = "home"
         sub_path   = "cache/containers"
       }

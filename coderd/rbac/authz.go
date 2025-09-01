@@ -20,11 +20,11 @@ import (
 	"go.opentelemetry.io/otel/trace"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac/policy"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac/regosql"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac/regosql/sqltypes"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/tracing"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/slice"
+	"github.com/coder/coder/v2/coderd/rbac/policy"
+	"github.com/coder/coder/v2/coderd/rbac/regosql"
+	"github.com/coder/coder/v2/coderd/rbac/regosql/sqltypes"
+	"github.com/coder/coder/v2/coderd/tracing"
+	"github.com/coder/coder/v2/coderd/util/slice"
 )
 
 type AuthCall struct {

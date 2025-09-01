@@ -12,10 +12,10 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.uber.org/goleak"
 
-	"github.com/DanielRondonGarcia/coder/v2/tailnet"
-	"github.com/DanielRondonGarcia/coder/v2/tailnet/proto"
-	"github.com/DanielRondonGarcia/coder/v2/tailnet/tailnettest"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/coder/coder/v2/tailnet"
+	"github.com/coder/coder/v2/tailnet/proto"
+	"github.com/coder/coder/v2/tailnet/tailnettest"
+	"github.com/coder/coder/v2/testutil"
 )
 
 func TestMain(m *testing.M) {

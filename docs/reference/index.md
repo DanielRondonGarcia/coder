@@ -5,10 +5,10 @@
 All actions possible through the Coder dashboard can also be automated. There
 are several ways to extend/automate Coder:
 
-- [coderd Terraform Provider](https://registry.terraform.io/providers/DanielRondonGarcia/coderd/latest)
+- [coderd Terraform Provider](https://registry.terraform.io/providers/coder/coderd/latest)
 - [CLI](../reference/cli/index.md)
 - [REST API](../reference/api/index.md)
-- [Coder SDK](https://pkg.go.dev/github.com/DanielRondonGarcia/coder/v2/codersdk)
+- [Coder SDK](https://pkg.go.dev/github.com/coder/coder/v2/codersdk)
 - [Agent API](../reference/agent-api/index.md)
 
 ## Quickstart
@@ -48,8 +48,8 @@ payloads, we recommend checking the relevant documentation.
 
 ### Users & Groups
 
-- [Manage Users via Terraform](https://registry.terraform.io/providers/DanielRondonGarcia/coderd/latest/docs/resources/user)
-- [Manage Groups via Terraform](https://registry.terraform.io/providers/DanielRondonGarcia/coderd/latest/docs/resources/group)
+- [Manage Users via Terraform](https://registry.terraform.io/providers/coder/coderd/latest/docs/resources/user)
+- [Manage Groups via Terraform](https://registry.terraform.io/providers/coder/coderd/latest/docs/resources/group)
 
 ### Templates
 
@@ -64,7 +64,7 @@ activity.
 - [Custom workspace logs](../reference/api/agents.md#patch-workspace-agent-logs):
   Expose messages prior to the Coder init script running (e.g. pulling image, VM
   starting, restoring snapshot).
-  [coder-logstream-kube](https://github.com/DanielRondonGarcia/coder-logstream-kube) uses
+  [coder-logstream-kube](https://github.com/coder/coder-logstream-kube) uses
   this to show Kubernetes events, such as image pulls or ResourceQuota
   restrictions.
 

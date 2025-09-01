@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/DanielRondonGarcia/coder/v2/provisionersdk/proto"
+	"github.com/coder/coder/v2/provisionersdk/proto"
 )
 
 var (
@@ -40,7 +40,7 @@ var (
 )
 
 // AgentScriptEnv returns a key-pair of scripts that are consumed by the Coder Terraform Provider.
-// https://github.com/DanielRondonGarcia/terraform-provider-coder/blob/main/provider/agent.go (updateInitScript)
+// https://github.com/coder/terraform-provider-coder/blob/main/provider/agent.go (updateInitScript)
 // performs additional string substitutions.
 func AgentScriptEnv() map[string]string {
 	env := map[string]string{}

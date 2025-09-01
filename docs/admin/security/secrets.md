@@ -79,7 +79,7 @@ cloud's secret management system.
 
 While you can inject secrets into the workspace via environment variables, you
 can also show them in the Workspace UI with
-[`coder_metadata`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/metadata).
+[`coder_metadata`](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/metadata).
 
 ![Secrets UI](../../images/admin/secret-metadata.PNG)
 

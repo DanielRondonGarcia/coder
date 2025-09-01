@@ -10,9 +10,9 @@ import (
 
 	"cdr.dev/slog"
 	"cdr.dev/slog/sloggers/sloghuman"
-	"github.com/DanielRondonGarcia/coder/v2/agent/proto"
-	"github.com/DanielRondonGarcia/coder/v2/agent/proto/resourcesmonitor"
-	"github.com/DanielRondonGarcia/quartz"
+	"github.com/coder/coder/v2/agent/proto"
+	"github.com/coder/coder/v2/agent/proto/resourcesmonitor"
+	"github.com/coder/quartz"
 )
 
 type datapointsPusherMock struct {

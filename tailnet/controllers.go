@@ -22,12 +22,12 @@ import (
 	"tailscale.com/util/dnsname"
 
 	"cdr.dev/slog"
-	"github.com/DanielRondonGarcia/quartz"
-	"github.com/DanielRondonGarcia/retry"
+	"github.com/coder/quartz"
+	"github.com/coder/retry"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/ptr"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/tailnet/proto"
+	"github.com/coder/coder/v2/coderd/util/ptr"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/tailnet/proto"
 )
 
 // A Controller connects to the tailnet control plane, and then uses the control protocols to

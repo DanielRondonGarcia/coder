@@ -4,9 +4,9 @@ import (
 	"math"
 	"time"
 
-	"github.com/DanielRondonGarcia/coder/v2/agent/proto"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/slice"
+	"github.com/coder/coder/v2/agent/proto"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/util/slice"
 )
 
 type State int

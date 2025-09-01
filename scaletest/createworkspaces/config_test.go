@@ -7,12 +7,12 @@ import (
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/httpapi"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/scaletest/agentconn"
-	"github.com/DanielRondonGarcia/coder/v2/scaletest/createworkspaces"
-	"github.com/DanielRondonGarcia/coder/v2/scaletest/reconnectingpty"
-	"github.com/DanielRondonGarcia/coder/v2/scaletest/workspacebuild"
+	"github.com/coder/coder/v2/coderd/httpapi"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/scaletest/agentconn"
+	"github.com/coder/coder/v2/scaletest/createworkspaces"
+	"github.com/coder/coder/v2/scaletest/reconnectingpty"
+	"github.com/coder/coder/v2/scaletest/workspacebuild"
 )
 
 func Test_UserConfig(t *testing.T) {

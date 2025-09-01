@@ -14,9 +14,9 @@ import (
 	"golang.org/x/xerrors"
 
 	"cdr.dev/slog"
-	"github.com/DanielRondonGarcia/coder/v2/agent/agentexec"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/workspacesdk"
-	"github.com/DanielRondonGarcia/coder/v2/pty"
+	"github.com/coder/coder/v2/agent/agentexec"
+	"github.com/coder/coder/v2/codersdk/workspacesdk"
+	"github.com/coder/coder/v2/pty"
 )
 
 // attachTimeout is the initial timeout for attaching and will probably be far

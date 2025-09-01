@@ -2,7 +2,7 @@
 
 A template can prompt the user for additional information when creating
 workspaces with
-[_parameters_](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/data-sources/parameter).
+[_parameters_](https://registry.terraform.io/providers/coder/coder/latest/docs/data-sources/parameter).
 
 ![Parameters in Create Workspace screen](../../../images/parameters.png)
 
@@ -294,7 +294,7 @@ data "coder_parameter" "instances" {
 
 > [!NOTE]
 > As of
-> [`terraform-provider-coder` v0.19.0](https://registry.terraform.io/providers/DanielRondonGarcia/coder/0.19.0/docs),
+> [`terraform-provider-coder` v0.19.0](https://registry.terraform.io/providers/coder/coder/0.19.0/docs),
 > `options` can be specified in `number` parameters; this also works with
 > validations such as `monotonic`.
 

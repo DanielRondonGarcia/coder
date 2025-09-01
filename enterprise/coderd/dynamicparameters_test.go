@@ -10,15 +10,15 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/slice"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/enterprise/coderd/coderdenttest"
-	"github.com/DanielRondonGarcia/coder/v2/enterprise/coderd/license"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
-	"github.com/DanielRondonGarcia/websocket"
+	"github.com/coder/coder/v2/coderd/coderdtest"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/rbac"
+	"github.com/coder/coder/v2/coderd/util/slice"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/enterprise/coderd/coderdenttest"
+	"github.com/coder/coder/v2/enterprise/coderd/license"
+	"github.com/coder/coder/v2/testutil"
+	"github.com/coder/websocket"
 )
 
 func TestDynamicParameterBuild(t *testing.T) {

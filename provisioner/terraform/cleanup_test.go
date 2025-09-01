@@ -18,11 +18,11 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"cdr.dev/slog"
-	"github.com/DanielRondonGarcia/coder/v2/provisioner/terraform"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/coder/coder/v2/provisioner/terraform"
+	"github.com/coder/coder/v2/testutil"
 )
 
-const cachePath = "/tmp/DanielRondonGarcia/provisioner-0/tf"
+const cachePath = "/tmp/coder/provisioner-0/tf"
 
 // updateGoldenFiles is a flag that can be set to update golden files.
 var updateGoldenFiles = flag.Bool("update", false, "Update golden files")

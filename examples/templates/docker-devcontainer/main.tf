@@ -28,7 +28,7 @@ data "coder_parameter" "repo_url" {
   name         = "repo_url"
   display_name = "Git Repository"
   description  = "Enter the URL of the Git repository to clone into your workspace. This repository should contain a devcontainer.json file to configure your development environment."
-  default      = "https://github.com/DanielRondonGarcia/coder"
+  default      = "https://github.com/coder/coder"
   mutable      = true
 }
 
@@ -160,10 +160,10 @@ resource "coder_script" "init_docker_in_docker" {
   script       = file("${path.module}/scripts/init-docker-in-docker.sh")
 }
 
-# See https://registry.coder.com/modules/DanielRondonGarcia/devcontainers-cli
+# See https://registry.coder.com/modules/coder/devcontainers-cli
 module "devcontainers-cli" {
   count    = data.coder_workspace.me.start_count
-  source   = "registry.coder.com/DanielRondonGarcia/devcontainers-cli/coder"
+  source   = "registry.coder.com/coder/devcontainers-cli/coder"
   agent_id = coder_agent.main.id
 
   # This ensures that the latest non-breaking version of the module gets
@@ -172,10 +172,10 @@ module "devcontainers-cli" {
   version = "~> 1.0"
 }
 
-# See https://registry.coder.com/modules/DanielRondonGarcia/git-clone
+# See https://registry.coder.com/modules/coder/git-clone
 module "git-clone" {
   count    = data.coder_workspace.me.start_count
-  source   = "registry.coder.com/DanielRondonGarcia/git-clone/coder"
+  source   = "registry.coder.com/coder/git-clone/coder"
   agent_id = coder_agent.main.id
   url      = data.coder_parameter.repo_url.value
   base_dir = "~"

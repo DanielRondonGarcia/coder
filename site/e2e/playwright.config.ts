@@ -96,7 +96,7 @@ export default defineConfig({
 			CODER_GITAUTH_0_CLIENT_SECRET: "secret",
 			CODER_GITAUTH_0_DEVICE_FLOW: "true",
 			CODER_GITAUTH_0_APP_INSTALL_URL:
-				"https://github.com/apps/DanielRondonGarcia/installations/new",
+				"https://github.com/apps/coder/installations/new",
 			CODER_GITAUTH_0_APP_INSTALLATIONS_URL: localURL(
 				gitAuth.devicePort,
 				gitAuth.installationsPath,

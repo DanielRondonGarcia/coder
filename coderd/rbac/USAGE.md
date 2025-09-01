@@ -63,7 +63,7 @@ These can be found in `coderd/rbac/policy/policy.go`.
 In the following example, we're going to create a new RBAC noun for a new entity
 called a "frobulator" _(just some nonsense word for demonstration purposes)_.
 
-_Refer to https://github.com/DanielRondonGarcia/coder/pull/14055 to see a full
+_Refer to https://github.com/coder/coder/pull/14055 to see a full
 implementation._
 
 ## Creating a new entity
@@ -181,7 +181,7 @@ resources.
 
 Let's run the RBAC test suite:
 
-`go test github.com/DanielRondonGarcia/coder/v2/coderd/rbac`
+`go test github.com/coder/coder/v2/coderd/rbac`
 
 We'll see a failure like this:
 
@@ -189,7 +189,7 @@ We'll see a failure like this:
 --- FAIL: TestRolePermissions (0.61s)
     --- FAIL: TestRolePermissions/frobulator-AllActions (0.00s)
         roles_test.go:705:
-            	Error Trace:	/tmp/DanielRondonGarcia/coderd/rbac/roles_test.go:705
+            	Error Trace:	/tmp/coder/coderd/rbac/roles_test.go:705
             	Error:      	Not equal:
             	            	expected: map[policy.Action]bool{}
             	            	actual  : map[policy.Action]bool{"create":true, "delete":true, "read":true, "update":true}
@@ -208,7 +208,7 @@ We'll see a failure like this:
             	Test:       	TestRolePermissions/frobulator-AllActions
             	Messages:   	remaining permissions should be empty for type "frobulator"
 FAIL
-FAIL	github.com/DanielRondonGarcia/coder/v2/coderd/rbac	1.314s
+FAIL	github.com/coder/coder/v2/coderd/rbac	1.314s
 FAIL
 ```
 
@@ -217,7 +217,7 @@ indicates that we're missing tests which validate the desired actions on our new
 noun.
 
 > Take a look at `coderd/rbac/roles_test.go` in the
-> [reference PR](https://github.com/DanielRondonGarcia/coder/pull/14055) for a complete
+> [reference PR](https://github.com/coder/coder/pull/14055) for a complete
 > example
 
 Let's add a test case:
@@ -260,13 +260,13 @@ admins & auditors have the `policy.ActionRead` policy which enables them to read
 frobulators belonging to any user in a given organization.
 
 The above tests are illustrative not exhaustive, see
-[the reference PR](https://github.com/DanielRondonGarcia/coder/pull/14055) for the rest.
+[the reference PR](https://github.com/coder/coder/pull/14055) for the rest.
 
 Once we have covered all the possible scenarios, the tests will pass:
 
 ```bash
-$ go test github.com/DanielRondonGarcia/coder/v2/coderd/rbac -count=1
-ok  	github.com/DanielRondonGarcia/coder/v2/coderd/rbac	1.313s
+$ go test github.com/coder/coder/v2/coderd/rbac -count=1
+ok  	github.com/coder/coder/v2/coderd/rbac	1.313s
 ```
 
 When a case is not covered, you'll see an error like this (I moved the
@@ -276,12 +276,12 @@ When a case is not covered, you'll see an error like this (I moved the
 --- FAIL: TestRolePermissions (0.79s)
     --- FAIL: TestRolePermissions/FrobulatorsReadOnly (0.01s)
         roles_test.go:737:
-            	Error Trace:	/tmp/DanielRondonGarcia/coderd/rbac/roles_test.go:737
+            	Error Trace:	/tmp/coder/coderd/rbac/roles_test.go:737
             	Error:      	An error is expected but got nil.
             	Test:       	TestRolePermissions/FrobulatorsReadOnly
             	Messages:   	Should fail: FrobulatorsReadOnly as "org_auditor" doing "read" on "frobulator"
 FAIL
-FAIL	github.com/DanielRondonGarcia/coder/v2/coderd/rbac	1.390s
+FAIL	github.com/coder/coder/v2/coderd/rbac	1.390s
 FAIL
 ```
 
@@ -357,7 +357,7 @@ authorization in place, but it's a good practice to reject requests as soon as
 possible when the requester is unprivileged.
 
 > Take a look at `coderd/frobulators.go` in the
-> [reference PR](https://github.com/DanielRondonGarcia/coder/pull/14055) for a complete
+> [reference PR](https://github.com/coder/coder/pull/14055) for a complete
 > example
 
 ```go

@@ -18,15 +18,15 @@ import (
 	"tailscale.com/net/dns"
 	"tailscale.com/tailcfg"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/httpapi"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/workspacesdk"
-	"github.com/DanielRondonGarcia/coder/v2/tailnet"
-	"github.com/DanielRondonGarcia/coder/v2/tailnet/proto"
-	"github.com/DanielRondonGarcia/coder/v2/tailnet/tailnettest"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
-	"github.com/DanielRondonGarcia/coder/v2/vpn"
-	"github.com/DanielRondonGarcia/websocket"
+	"github.com/coder/coder/v2/coderd/httpapi"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/codersdk/workspacesdk"
+	"github.com/coder/coder/v2/tailnet"
+	"github.com/coder/coder/v2/tailnet/proto"
+	"github.com/coder/coder/v2/tailnet/tailnettest"
+	"github.com/coder/coder/v2/testutil"
+	"github.com/coder/coder/v2/vpn"
+	"github.com/coder/websocket"
 )
 
 func TestClient_WorkspaceUpdates(t *testing.T) {

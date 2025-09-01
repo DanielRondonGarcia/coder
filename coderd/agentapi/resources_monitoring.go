@@ -13,13 +13,13 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/DanielRondonGarcia/coder/v2/agent/proto"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/agentapi/resourcesmonitor"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtime"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications"
-	"github.com/DanielRondonGarcia/quartz"
+	"github.com/coder/coder/v2/agent/proto"
+	"github.com/coder/coder/v2/coderd/agentapi/resourcesmonitor"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database/dbauthz"
+	"github.com/coder/coder/v2/coderd/database/dbtime"
+	"github.com/coder/coder/v2/coderd/notifications"
+	"github.com/coder/quartz"
 )
 
 type ResourcesMonitoringAPI struct {

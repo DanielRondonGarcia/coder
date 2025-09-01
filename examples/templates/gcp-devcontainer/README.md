@@ -51,10 +51,10 @@ a service account:
 
 This template provisions the following resources:
 
-- Envbuilder cached image (conditional, persistent) using [`terraform-provider-envbuilder`](https://github.com/DanielRondonGarcia/terraform-provider-envbuilder)
+- Envbuilder cached image (conditional, persistent) using [`terraform-provider-envbuilder`](https://github.com/coder/terraform-provider-envbuilder)
 - GCP VM (persistent) with a running Docker daemon
 - GCP Disk (persistent, mounted to root)
-- [Envbuilder container](https://github.com/DanielRondonGarcia/envbuilder) inside the GCP VM
+- [Envbuilder container](https://github.com/coder/envbuilder) inside the GCP VM
 
 Coder persists the root volume. The full filesystem is preserved when the workspace restarts.
 When the GCP VM starts, a startup script runs that ensures a running Docker daemon, and starts
@@ -68,7 +68,7 @@ an Envbuilder container using this Docker daemon. The Docker socket is also moun
 To speed up your builds, you can use a container registry as a cache.
 When creating the template, set the parameter `cache_repo` to a valid Docker repository in the form `host.tld/path/to/repo`.
 
-See the [Envbuilder Terraform Provider Examples](https://github.com/DanielRondonGarcia/terraform-provider-envbuilder/blob/main/examples/resources/envbuilder_cached_image/envbuilder_cached_image_resource.tf/) for a more complete example of how the provider works.
+See the [Envbuilder Terraform Provider Examples](https://github.com/coder/terraform-provider-envbuilder/blob/main/examples/resources/envbuilder_cached_image/envbuilder_cached_image_resource.tf/) for a more complete example of how the provider works.
 
 > [!NOTE]
 > We recommend using a registry cache with authentication enabled.

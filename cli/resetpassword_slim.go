@@ -2,7 +2,7 @@
 
 package cli
 
-import "github.com/DanielRondonGarcia/serpent"
+import "github.com/coder/serpent"
 
 func (*RootCmd) resetPassword() *serpent.Command {
 	root := &serpent.Command{

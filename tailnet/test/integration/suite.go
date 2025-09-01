@@ -13,8 +13,8 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"cdr.dev/slog"
-	"github.com/DanielRondonGarcia/coder/v2/tailnet"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/coder/coder/v2/tailnet"
+	"github.com/coder/coder/v2/testutil"
 )
 
 // nolint:revive

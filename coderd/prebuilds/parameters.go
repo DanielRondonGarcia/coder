@@ -8,7 +8,7 @@ import (
 	"github.com/google/uuid"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database"
 )
 
 // FindMatchingPresetID finds a preset ID that matches the provided parameters.

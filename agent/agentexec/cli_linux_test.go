@@ -21,8 +21,8 @@ import (
 	"golang.org/x/sys/unix"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/agent/agentexec"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/coder/coder/v2/agent/agentexec"
+	"github.com/coder/coder/v2/testutil"
 )
 
 //nolint:paralleltest // This test is sensitive to environment variables

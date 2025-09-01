@@ -3,8 +3,8 @@ package cliui
 import (
 	"fmt"
 
-	"github.com/DanielRondonGarcia/pretty"
-	"github.com/DanielRondonGarcia/serpent"
+	"github.com/coder/pretty"
+	"github.com/coder/serpent"
 )
 
 func DeprecationWarning(message string) serpent.MiddlewareFunc {

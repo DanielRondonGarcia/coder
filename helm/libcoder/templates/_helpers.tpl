@@ -70,9 +70,9 @@ Coder TLS environment variables.
 - name: CODER_TLS_ADDRESS
   value: "0.0.0.0:8443"
 - name: CODER_TLS_CERT_FILE
-  value: "{{ range $idx, $secretName := .Values.coder.tls.secretNames -}}{{ if $idx }},{{ end }}/etc/ssl/certs/DanielRondonGarcia/{{ $secretName }}/tls.crt{{- end }}"
+  value: "{{ range $idx, $secretName := .Values.coder.tls.secretNames -}}{{ if $idx }},{{ end }}/etc/ssl/certs/coder/{{ $secretName }}/tls.crt{{- end }}"
 - name: CODER_TLS_KEY_FILE
-  value: "{{ range $idx, $secretName := .Values.coder.tls.secretNames -}}{{ if $idx }},{{ end }}/etc/ssl/certs/DanielRondonGarcia/{{ $secretName }}/tls.key{{- end }}"
+  value: "{{ range $idx, $secretName := .Values.coder.tls.secretNames -}}{{ if $idx }},{{ end }}/etc/ssl/certs/coder/{{ $secretName }}/tls.key{{- end }}"
 {{- end }}
 {{- end }}
 
@@ -128,7 +128,7 @@ Coder volume mounts.
 {{- if hasKey .Values.coder "tls" }}
 {{ range $secretName := .Values.coder.tls.secretNames -}}
 - name: "tls-{{ $secretName }}"
-  mountPath: "/etc/ssl/certs/DanielRondonGarcia/{{ $secretName }}"
+  mountPath: "/etc/ssl/certs/coder/{{ $secretName }}"
   readOnly: true
 {{ end -}}
 {{- end }}

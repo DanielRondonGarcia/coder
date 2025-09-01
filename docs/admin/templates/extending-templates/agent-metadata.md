@@ -6,7 +6,7 @@ You can show live operational metrics to workspace users with agent metadata. It
 is the dynamic complement of [resource metadata](./resource-metadata.md).
 
 You specify agent metadata in the
-[`coder_agent`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/agent).
+[`coder_agent`](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/agent).
 
 ## Examples
 

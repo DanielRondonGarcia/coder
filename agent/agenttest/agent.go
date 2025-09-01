@@ -7,9 +7,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/DanielRondonGarcia/coder/v2/agent"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/agentsdk"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/coder/coder/v2/agent"
+	"github.com/coder/coder/v2/codersdk/agentsdk"
+	"github.com/coder/coder/v2/testutil"
 )
 
 // New starts a new agent for use in tests.

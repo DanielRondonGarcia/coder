@@ -67,7 +67,7 @@ jobs:
           file: scripts/Dockerfile
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           build-args: |
-            BASE_IMAGE=ghcr.io/DanielRondonGarcia/coder-base:latest
+            BASE_IMAGE=ghcr.io/coder/coder-base:latest
             CODER_VERSION=${{ inputs.version }}
           provenance: true
           sbom: true

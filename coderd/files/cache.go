@@ -11,12 +11,12 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promauto"
 	"golang.org/x/xerrors"
 
-	archivefs "github.com/DanielRondonGarcia/coder/v2/archive/fs"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac/policy"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/lazy"
+	archivefs "github.com/coder/coder/v2/archive/fs"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database/dbauthz"
+	"github.com/coder/coder/v2/coderd/rbac"
+	"github.com/coder/coder/v2/coderd/rbac/policy"
+	"github.com/coder/coder/v2/coderd/util/lazy"
 )
 
 type FileAcquirer interface {

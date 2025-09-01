@@ -13,8 +13,8 @@ import (
 	context "context"
 	reflect "reflect"
 
-	agentcontainers "github.com/DanielRondonGarcia/coder/v2/agent/agentcontainers"
-	codersdk "github.com/DanielRondonGarcia/coder/v2/codersdk"
+	agentcontainers "github.com/coder/coder/v2/agent/agentcontainers"
+	codersdk "github.com/coder/coder/v2/codersdk"
 	gomock "go.uber.org/mock/gomock"
 )
 

@@ -3,7 +3,7 @@ package notifications
 import "github.com/google/uuid"
 
 // These vars are mapped to UUIDs in the notification_templates table.
-// TODO: autogenerate these: https://github.com/DanielRondonGarcia/team-coconut/issues/36
+// TODO: autogenerate these: https://github.com/coder/team-coconut/issues/36
 // TODO(defelmnq): add fallback icon to coderd/inboxnofication.go when adding a new template
 
 // Workspace-related events.

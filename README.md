@@ -24,12 +24,12 @@
 [Quickstart](#quickstart) | [Docs](https://coder.com/docs) | [Why Coder](https://coder.com/why) | [Premium](https://coder.com/pricing#compare-plans)
 
 [![discord](https://img.shields.io/discord/747933592273027093?label=discord)](https://discord.gg/coder)
-[![release](https://img.shields.io/github/v/release/DanielRondonGarcia/coder)](https://github.com/DanielRondonGarcia/coder/releases/latest)
-[![godoc](https://pkg.go.dev/badge/github.com/DanielRondonGarcia/coder.svg)](https://pkg.go.dev/github.com/DanielRondonGarcia/coder)
-[![Go Report Card](https://goreportcard.com/badge/github.com/DanielRondonGarcia/coder/v2)](https://goreportcard.com/report/github.com/DanielRondonGarcia/coder/v2)
+[![release](https://img.shields.io/github/v/release/coder/coder)](https://github.com/coder/coder/releases/latest)
+[![godoc](https://pkg.go.dev/badge/github.com/coder/coder.svg)](https://pkg.go.dev/github.com/coder/coder)
+[![Go Report Card](https://goreportcard.com/badge/github.com/coder/coder/v2)](https://goreportcard.com/report/github.com/coder/coder/v2)
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/9511/badge)](https://www.bestpractices.dev/projects/9511)
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/DanielRondonGarcia/coder/badge)](https://scorecard.dev/viewer/?uri=github.com%2Fcoder%2Fcoder)
-[![license](https://img.shields.io/github/license/DanielRondonGarcia/coder)](./LICENSE)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/coder/coder/badge)](https://scorecard.dev/viewer/?uri=github.com%2Fcoder%2Fcoder)
+[![license](https://img.shields.io/github/license/coder/coder)](./LICENSE)
 
 </div>
 
@@ -62,7 +62,7 @@ coder server
 ## Install
 
 The easiest way to install Coder is to use our
-[install script](https://github.com/DanielRondonGarcia/coder/blob/main/install.sh) for Linux
+[install script](https://github.com/coder/coder/blob/main/install.sh) for Linux
 and macOS. For Windows, use the latest `..._installer.exe` file from GitHub
 Releases.
 
@@ -98,7 +98,7 @@ Browse our docs [here](https://coder.com/docs) or visit a specific section below
 
 ## Support
 
-Feel free to [open an issue](https://github.com/DanielRondonGarcia/coder/issues/new) if you have questions, run into bugs, or have a feature request.
+Feel free to [open an issue](https://github.com/coder/coder/issues/new) if you have questions, run into bugs, or have a feature request.
 
 [Join our Discord](https://discord.gg/coder) to provide feedback on in-progress features and chat with the community using Coder!
 
@@ -111,10 +111,10 @@ We are always working on new integrations. Please feel free to open an issue and
 - [**VS Code Extension**](https://marketplace.visualstudio.com/items?itemName=coder.coder-remote): Open any Coder workspace in VS Code with a single click
 - [**JetBrains Toolbox Plugin**](https://plugins.jetbrains.com/plugin/26968-coder): Open any Coder workspace from JetBrains Toolbox with a single click
 - [**JetBrains Gateway Plugin**](https://plugins.jetbrains.com/plugin/19620-coder): Open any Coder workspace in JetBrains Gateway with a single click
-- [**Dev Container Builder**](https://github.com/DanielRondonGarcia/envbuilder): Build development environments using `devcontainer.json` on Docker, Kubernetes, and OpenShift
+- [**Dev Container Builder**](https://github.com/coder/envbuilder): Build development environments using `devcontainer.json` on Docker, Kubernetes, and OpenShift
 - [**Coder Registry**](https://registry.coder.com): Build and extend development environments with common use-cases
-- [**Kubernetes Log Stream**](https://github.com/DanielRondonGarcia/coder-logstream-kube): Stream Kubernetes Pod events to the Coder startup logs
-- [**Self-Hosted VS Code Extension Marketplace**](https://github.com/DanielRondonGarcia/code-marketplace): A private extension marketplace that works in restricted or airgapped networks integrating with [code-server](https://github.com/DanielRondonGarcia/code-server).
+- [**Kubernetes Log Stream**](https://github.com/coder/coder-logstream-kube): Stream Kubernetes Pod events to the Coder startup logs
+- [**Self-Hosted VS Code Extension Marketplace**](https://github.com/coder/code-marketplace): A private extension marketplace that works in restricted or airgapped networks integrating with [code-server](https://github.com/coder/code-server).
 - [**Setup Coder**](https://github.com/marketplace/actions/setup-coder): An action to setup coder CLI in GitHub workflows.
 
 ### Community

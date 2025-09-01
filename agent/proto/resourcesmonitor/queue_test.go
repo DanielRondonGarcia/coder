@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/DanielRondonGarcia/coder/v2/agent/proto/resourcesmonitor"
+	"github.com/coder/coder/v2/agent/proto/resourcesmonitor"
 )
 
 func TestResourceMonitorQueue(t *testing.T) {

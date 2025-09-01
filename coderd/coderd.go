@@ -20,11 +20,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/oauth2provider"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/pproflabel"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/prebuilds"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/usage"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/wsbuilder"
+	"github.com/coder/coder/v2/coderd/oauth2provider"
+	"github.com/coder/coder/v2/coderd/pproflabel"
+	"github.com/coder/coder/v2/coderd/prebuilds"
+	"github.com/coder/coder/v2/coderd/usage"
+	"github.com/coder/coder/v2/coderd/wsbuilder"
 
 	"github.com/andybalholm/brotli"
 	"github.com/go-chi/chi/v5"
@@ -45,60 +45,60 @@ import (
 	"tailscale.com/util/singleflight"
 
 	"cdr.dev/slog"
-	"github.com/DanielRondonGarcia/quartz"
-	"github.com/DanielRondonGarcia/serpent"
+	"github.com/coder/quartz"
+	"github.com/coder/serpent"
 
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/drpcsdk"
+	"github.com/coder/coder/v2/codersdk/drpcsdk"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/cryptokeys"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/entitlements"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/files"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/idpsync"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/runtimeconfig"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/webpush"
+	"github.com/coder/coder/v2/coderd/cryptokeys"
+	"github.com/coder/coder/v2/coderd/entitlements"
+	"github.com/coder/coder/v2/coderd/files"
+	"github.com/coder/coder/v2/coderd/idpsync"
+	"github.com/coder/coder/v2/coderd/runtimeconfig"
+	"github.com/coder/coder/v2/coderd/webpush"
 
-	agentproto "github.com/DanielRondonGarcia/coder/v2/agent/proto"
-	"github.com/DanielRondonGarcia/coder/v2/buildinfo"
-	_ "github.com/DanielRondonGarcia/coder/v2/coderd/apidoc" // Used for swagger docs.
-	"github.com/DanielRondonGarcia/coder/v2/coderd/appearance"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/audit"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/awsidentity"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/connectionlog"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbrollup"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtime"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/pubsub"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/externalauth"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/gitsshkey"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/healthcheck"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/healthcheck/derphealth"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/httpapi"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/httpmw"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/httpmw/loggermw"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/metricscache"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/portsharing"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/prometheusmetrics"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/provisionerdserver"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/proxyhealth"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac/policy"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac/rolestore"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/schedule"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/telemetry"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/tracing"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/updatecheck"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/slice"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/workspaceapps"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/workspaceapps/appurl"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/workspacestats"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/healthsdk"
-	"github.com/DanielRondonGarcia/coder/v2/provisionerd/proto"
-	"github.com/DanielRondonGarcia/coder/v2/provisionersdk"
-	"github.com/DanielRondonGarcia/coder/v2/site"
-	"github.com/DanielRondonGarcia/coder/v2/tailnet"
+	agentproto "github.com/coder/coder/v2/agent/proto"
+	"github.com/coder/coder/v2/buildinfo"
+	_ "github.com/coder/coder/v2/coderd/apidoc" // Used for swagger docs.
+	"github.com/coder/coder/v2/coderd/appearance"
+	"github.com/coder/coder/v2/coderd/audit"
+	"github.com/coder/coder/v2/coderd/awsidentity"
+	"github.com/coder/coder/v2/coderd/connectionlog"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database/dbauthz"
+	"github.com/coder/coder/v2/coderd/database/dbrollup"
+	"github.com/coder/coder/v2/coderd/database/dbtime"
+	"github.com/coder/coder/v2/coderd/database/pubsub"
+	"github.com/coder/coder/v2/coderd/externalauth"
+	"github.com/coder/coder/v2/coderd/gitsshkey"
+	"github.com/coder/coder/v2/coderd/healthcheck"
+	"github.com/coder/coder/v2/coderd/healthcheck/derphealth"
+	"github.com/coder/coder/v2/coderd/httpapi"
+	"github.com/coder/coder/v2/coderd/httpmw"
+	"github.com/coder/coder/v2/coderd/httpmw/loggermw"
+	"github.com/coder/coder/v2/coderd/metricscache"
+	"github.com/coder/coder/v2/coderd/notifications"
+	"github.com/coder/coder/v2/coderd/portsharing"
+	"github.com/coder/coder/v2/coderd/prometheusmetrics"
+	"github.com/coder/coder/v2/coderd/provisionerdserver"
+	"github.com/coder/coder/v2/coderd/proxyhealth"
+	"github.com/coder/coder/v2/coderd/rbac"
+	"github.com/coder/coder/v2/coderd/rbac/policy"
+	"github.com/coder/coder/v2/coderd/rbac/rolestore"
+	"github.com/coder/coder/v2/coderd/schedule"
+	"github.com/coder/coder/v2/coderd/telemetry"
+	"github.com/coder/coder/v2/coderd/tracing"
+	"github.com/coder/coder/v2/coderd/updatecheck"
+	"github.com/coder/coder/v2/coderd/util/slice"
+	"github.com/coder/coder/v2/coderd/workspaceapps"
+	"github.com/coder/coder/v2/coderd/workspaceapps/appurl"
+	"github.com/coder/coder/v2/coderd/workspacestats"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/codersdk/healthsdk"
+	"github.com/coder/coder/v2/provisionerd/proto"
+	"github.com/coder/coder/v2/provisionersdk"
+	"github.com/coder/coder/v2/site"
+	"github.com/coder/coder/v2/tailnet"
 )
 
 // We must only ever instantiate one httpSwagger.Handler because of a data race
@@ -292,7 +292,7 @@ type Options struct {
 // @contact.email support@coder.com
 
 // @license.name AGPL-3.0
-// @license.url https://github.com/DanielRondonGarcia/coder/blob/main/LICENSE
+// @license.url https://github.com/coder/coder/blob/main/LICENSE
 
 // @BasePath /api/v2
 
@@ -892,7 +892,7 @@ func New(options *Options) *API {
 		// This header stops a browser from trying to MIME-sniff the content type and
 		// forces it to stick with the declared content-type. This is the only valid
 		// value for this header.
-		// See: https://github.com/DanielRondonGarcia/security/issues/12
+		// See: https://github.com/coder/security/issues/12
 		func(next http.Handler) http.Handler {
 			return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 				w.Header().Add("X-Content-Type-Options", "nosniff")

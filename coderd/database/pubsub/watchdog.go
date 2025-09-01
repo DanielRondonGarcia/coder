@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"cdr.dev/slog"
-	"github.com/DanielRondonGarcia/quartz"
+	"github.com/coder/quartz"
 )
 
 const (

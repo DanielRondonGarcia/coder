@@ -8,7 +8,7 @@ import (
 
 	"github.com/briandowns/spinner"
 
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/coder/coder/v2/codersdk"
 )
 
 type ExternalAuthOptions struct {

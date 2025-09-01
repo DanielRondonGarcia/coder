@@ -25,7 +25,7 @@ users:
 packages:
   - git
 write_files:
-  - path: /opt/DanielRondonGarcia/init
+  - path: /opt/coder/init
     permissions: "0755"
     encoding: b64
     content: ${init_script}
@@ -39,7 +39,7 @@ write_files:
 
       [Service]
       User=${username}
-      ExecStart=/opt/DanielRondonGarcia/init
+      ExecStart=/opt/coder/init
       Restart=always
       RestartSec=10
       TimeoutStopSec=90

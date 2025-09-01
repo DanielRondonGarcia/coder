@@ -382,7 +382,7 @@ func loadInterfaceFuncs(f *dst.File, interfaceName string) ([]querierFunction, e
 				if !ident.IsExported() {
 					continue
 				}
-				ident.Path = "github.com/DanielRondonGarcia/coder/v2/coderd/database"
+				ident.Path = "github.com/coder/coder/v2/coderd/database"
 			}
 		}
 

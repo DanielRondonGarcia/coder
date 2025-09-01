@@ -13,11 +13,11 @@ import (
 	gossh "golang.org/x/crypto/ssh"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/aisdk-go"
+	"github.com/coder/aisdk-go"
 
-	"github.com/DanielRondonGarcia/coder/v2/cli/cliui"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/workspacesdk"
+	"github.com/coder/coder/v2/cli/cliui"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/codersdk/workspacesdk"
 )
 
 type WorkspaceBashArgs struct {

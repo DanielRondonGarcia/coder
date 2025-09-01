@@ -19,31 +19,31 @@ import (
 
 	"cdr.dev/slog"
 
-	"github.com/DanielRondonGarcia/coder/v2/agent/proto"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/audit"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/db2sdk"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtime"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/provisionerjobs"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/httpapi"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/httpapi/httperror"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/httpmw"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/prebuilds"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac/acl"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac/policy"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/schedule"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/schedule/cron"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/searchquery"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/telemetry"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/ptr"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/slice"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/wsbuilder"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/wspubsub"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/agentsdk"
+	"github.com/coder/coder/v2/agent/proto"
+	"github.com/coder/coder/v2/coderd/audit"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database/db2sdk"
+	"github.com/coder/coder/v2/coderd/database/dbauthz"
+	"github.com/coder/coder/v2/coderd/database/dbtime"
+	"github.com/coder/coder/v2/coderd/database/provisionerjobs"
+	"github.com/coder/coder/v2/coderd/httpapi"
+	"github.com/coder/coder/v2/coderd/httpapi/httperror"
+	"github.com/coder/coder/v2/coderd/httpmw"
+	"github.com/coder/coder/v2/coderd/notifications"
+	"github.com/coder/coder/v2/coderd/prebuilds"
+	"github.com/coder/coder/v2/coderd/rbac"
+	"github.com/coder/coder/v2/coderd/rbac/acl"
+	"github.com/coder/coder/v2/coderd/rbac/policy"
+	"github.com/coder/coder/v2/coderd/schedule"
+	"github.com/coder/coder/v2/coderd/schedule/cron"
+	"github.com/coder/coder/v2/coderd/searchquery"
+	"github.com/coder/coder/v2/coderd/telemetry"
+	"github.com/coder/coder/v2/coderd/util/ptr"
+	"github.com/coder/coder/v2/coderd/util/slice"
+	"github.com/coder/coder/v2/coderd/wsbuilder"
+	"github.com/coder/coder/v2/coderd/wspubsub"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/codersdk/agentsdk"
 )
 
 var (
@@ -2188,7 +2188,7 @@ func (api *API) workspaceACL(rw http.ResponseWriter, r *http.Request) {
 		}
 		userIDs = append(userIDs, id)
 	}
-	// For context see https://github.com/DanielRondonGarcia/coder/pull/19375
+	// For context see https://github.com/coder/coder/pull/19375
 	// nolint:gocritic
 	dbUsers, err := api.Database.GetUsersByIDs(dbauthz.AsSystemRestricted(ctx), userIDs)
 	if err != nil && !xerrors.Is(err, sql.ErrNoRows) {
@@ -2215,7 +2215,7 @@ func (api *API) workspaceACL(rw http.ResponseWriter, r *http.Request) {
 		}
 		groupIDs = append(groupIDs, id)
 	}
-	// For context see https://github.com/DanielRondonGarcia/coder/pull/19375
+	// For context see https://github.com/coder/coder/pull/19375
 	// nolint:gocritic
 	dbGroups, err := api.Database.GetGroups(dbauthz.AsSystemRestricted(ctx), database.GetGroupsParams{GroupIds: groupIDs})
 	if err != nil && !xerrors.Is(err, sql.ErrNoRows) {
@@ -2226,7 +2226,7 @@ func (api *API) workspaceACL(rw http.ResponseWriter, r *http.Request) {
 	groups := make([]codersdk.WorkspaceGroup, 0, len(dbGroups))
 	for _, it := range dbGroups {
 		var members []database.GroupMember
-		// For context see https://github.com/DanielRondonGarcia/coder/pull/19375
+		// For context see https://github.com/coder/coder/pull/19375
 		// nolint:gocritic
 		members, err = api.Database.GetGroupMembersByGroupID(dbauthz.AsSystemRestricted(ctx), database.GetGroupMembersByGroupIDParams{
 			GroupID:       it.Group.ID,

@@ -3,7 +3,7 @@ package resourcesmonitor
 import (
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/clistat"
+	"github.com/coder/clistat"
 )
 
 type Statter interface {

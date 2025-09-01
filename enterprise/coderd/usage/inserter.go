@@ -7,11 +7,11 @@ import (
 	"github.com/google/uuid"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtime"
-	agplusage "github.com/DanielRondonGarcia/coder/v2/coderd/usage"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/usage/usagetypes"
-	"github.com/DanielRondonGarcia/quartz"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database/dbtime"
+	agplusage "github.com/coder/coder/v2/coderd/usage"
+	"github.com/coder/coder/v2/coderd/usage/usagetypes"
+	"github.com/coder/quartz"
 )
 
 // dbInserter collects usage events and stores them in the database for

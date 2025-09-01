@@ -3,7 +3,7 @@ package codersdk
 import (
 	"net/http"
 
-	"github.com/DanielRondonGarcia/websocket"
+	"github.com/coder/websocket"
 )
 
 // SessionTokenProvider provides the session token to access the Coder service (coderd).

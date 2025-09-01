@@ -19,9 +19,9 @@ import (
 	"github.com/stretchr/testify/require"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/pty"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
-	"github.com/DanielRondonGarcia/serpent"
+	"github.com/coder/coder/v2/pty"
+	"github.com/coder/coder/v2/testutil"
+	"github.com/coder/serpent"
 )
 
 func New(t *testing.T, opts ...pty.Option) *PTY {

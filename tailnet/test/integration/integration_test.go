@@ -27,9 +27,9 @@ import (
 	"tailscale.com/tailcfg"
 	"tailscale.com/types/nettype"
 
-	"github.com/DanielRondonGarcia/coder/v2/tailnet"
-	"github.com/DanielRondonGarcia/coder/v2/tailnet/test/integration"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/coder/coder/v2/tailnet"
+	"github.com/coder/coder/v2/tailnet/test/integration"
+	"github.com/coder/coder/v2/testutil"
 )
 
 const runTestEnv = "CODER_TAILNET_TESTS"

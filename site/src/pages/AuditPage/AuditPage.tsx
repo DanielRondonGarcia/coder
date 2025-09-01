@@ -18,7 +18,7 @@ const AuditPage: FC = () => {
 	// The "else false" is required if audit_log is undefined.
 	// It may happen if owner removes the license.
 	//
-	// see: https://github.com/DanielRondonGarcia/coder/issues/14798
+	// see: https://github.com/coder/coder/issues/14798
 	const isAuditLogVisible = feats.audit_log || false;
 
 	const { showOrganizations } = useDashboard();

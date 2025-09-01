@@ -9,7 +9,7 @@ import (
 	"github.com/muesli/termenv"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/pretty"
+	"github.com/coder/pretty"
 )
 
 var ErrCanceled = xerrors.New("canceled")

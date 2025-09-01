@@ -3,7 +3,7 @@ package dynamicparameters
 import (
 	"github.com/hashicorp/hcl/v2"
 
-	"github.com/DanielRondonGarcia/preview"
+	"github.com/coder/preview"
 )
 
 // CheckPresets extracts the preset related diagnostics from a template version preset

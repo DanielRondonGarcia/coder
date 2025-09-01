@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/DanielRondonGarcia/coder/v2/buildinfo"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/httpapi"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/coder/coder/v2/buildinfo"
+	"github.com/coder/coder/v2/coderd/httpapi"
+	"github.com/coder/coder/v2/codersdk"
 )
 
 // RequireExperiment returns middleware that checks if all required experiments are enabled.

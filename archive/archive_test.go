@@ -15,9 +15,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DanielRondonGarcia/coder/v2/archive"
-	"github.com/DanielRondonGarcia/coder/v2/archive/archivetest"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/coder/coder/v2/archive"
+	"github.com/coder/coder/v2/archive/archivetest"
+	"github.com/coder/coder/v2/testutil"
 )
 
 func TestCreateTarFromZip(t *testing.T) {

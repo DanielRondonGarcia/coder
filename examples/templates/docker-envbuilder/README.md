@@ -30,12 +30,12 @@ sudo -u coder docker ps
 
 ## Architecture
 
-Coder supports Envbuilder containers based on `devcontainer.json` via [envbuilder](https://github.com/DanielRondonGarcia/envbuilder), an open source project. Read more about this in [Coder's documentation](https://coder.com/docs/templates/dev-containers).
+Coder supports Envbuilder containers based on `devcontainer.json` via [envbuilder](https://github.com/coder/envbuilder), an open source project. Read more about this in [Coder's documentation](https://coder.com/docs/templates/dev-containers).
 
 This template provisions the following resources:
 
-- Envbuilder cached image (conditional, persistent) using [`terraform-provider-envbuilder`](https://github.com/DanielRondonGarcia/terraform-provider-envbuilder)
-- Docker image (persistent) using [`envbuilder`](https://github.com/DanielRondonGarcia/envbuilder)
+- Envbuilder cached image (conditional, persistent) using [`terraform-provider-envbuilder`](https://github.com/coder/terraform-provider-envbuilder)
+- Docker image (persistent) using [`envbuilder`](https://github.com/coder/envbuilder)
 - Docker container (ephemeral)
 - Docker volume (persistent on `/workspaces`)
 
@@ -49,7 +49,7 @@ Edit the `devcontainer.json` instead!
 
 ## Docker-in-Docker
 
-See the [Envbuilder documentation](https://github.com/DanielRondonGarcia/envbuilder/blob/main/docs/docker.md) for information on running Docker containers inside an Envbuilder container.
+See the [Envbuilder documentation](https://github.com/coder/envbuilder/blob/main/docs/docker.md) for information on running Docker containers inside an Envbuilder container.
 
 ## Caching
 
@@ -69,7 +69,7 @@ docker run --detach \
 
 Then, when creating the template, enter `localhost:5000/envbuilder-cache` for the parameter `cache_repo`.
 
-See the [Envbuilder Terraform Provider Examples](https://github.com/DanielRondonGarcia/terraform-provider-envbuilder/blob/main/examples/resources/envbuilder_cached_image/envbuilder_cached_image_resource.tf/) for a more complete example of how the provider works.
+See the [Envbuilder Terraform Provider Examples](https://github.com/coder/terraform-provider-envbuilder/blob/main/examples/resources/envbuilder_cached_image/envbuilder_cached_image_resource.tf/) for a more complete example of how the provider works.
 
 > [!NOTE]
 > We recommend using a registry cache with authentication enabled.

@@ -1,7 +1,7 @@
 # Amazon Web Services
 
 This guide is designed to get you up and running with a Coder proof-of-concept
-VM on AWS EC2 using a [Coder-provided AMI](https://github.com/DanielRondonGarcia/packages).
+VM on AWS EC2 using a [Coder-provided AMI](https://github.com/coder/packages).
 If you are familiar with EC2 however, you can use our
 [install script](../cli.md) to run Coder on any popular Linux distribution.
 
@@ -35,7 +35,7 @@ After launching the instance, wait 30 seconds and navigate to the public IPv4
 address. You should be redirected to a public tunnel URL.
 
 <video autoplay playsinline loop>
-  <source src="https://github.com/DanielRondonGarcia/coder/blob/main/docs/images/platforms/aws/launch.mp4?raw=true" type="video/mp4">
+  <source src="https://github.com/coder/coder/blob/main/docs/images/platforms/aws/launch.mp4?raw=true" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
@@ -65,7 +65,7 @@ sudo systemctl restart coder # restart Coder
 
 Instead of running containers on the Coder instance, you can offer developers
 full EC2 instances with the
-[aws-linux](https://github.com/DanielRondonGarcia/coder/tree/main/examples/templates/aws-linux)
+[aws-linux](https://github.com/coder/coder/tree/main/examples/templates/aws-linux)
 template.
 
 Before you add the AWS template from the dashboard or CLI, you'll need to modify
@@ -75,7 +75,7 @@ the instance IAM role.
 
 You must create or select a role that has `EC2FullAccess` permissions or a
 limited
-[Coder-specific permissions policy](https://github.com/DanielRondonGarcia/coder/tree/main/examples/templates/aws-linux#required-permissions--policy).
+[Coder-specific permissions policy](https://github.com/coder/coder/tree/main/examples/templates/aws-linux#required-permissions--policy).
 
 From there, you can import the AWS starter template in the dashboard and begin
 creating VM-based workspaces.

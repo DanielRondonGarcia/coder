@@ -17,11 +17,11 @@ import (
 	"golang.org/x/exp/maps"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/agent/agentcontainers/dcspec"
-	"github.com/DanielRondonGarcia/coder/v2/agent/agentexec"
-	"github.com/DanielRondonGarcia/coder/v2/agent/usershell"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/ptr"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/coder/coder/v2/agent/agentcontainers/dcspec"
+	"github.com/coder/coder/v2/agent/agentexec"
+	"github.com/coder/coder/v2/agent/usershell"
+	"github.com/coder/coder/v2/coderd/util/ptr"
+	"github.com/coder/coder/v2/codersdk"
 )
 
 // DockerEnvInfoer is an implementation of agentssh.EnvInfoer that returns

@@ -10,20 +10,20 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"github.com/DanielRondonGarcia/serpent"
+	"github.com/coder/serpent"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/pty/ptytest"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/coder/coder/v2/coderd"
+	"github.com/coder/coder/v2/coderd/coderdtest"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/pty/ptytest"
+	"github.com/coder/coder/v2/testutil"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DanielRondonGarcia/coder/v2/buildinfo"
-	"github.com/DanielRondonGarcia/coder/v2/cli"
-	"github.com/DanielRondonGarcia/coder/v2/cli/clitest"
+	"github.com/coder/coder/v2/buildinfo"
+	"github.com/coder/coder/v2/cli"
+	"github.com/coder/coder/v2/cli/clitest"
 )
 
 //nolint:tparallel,paralleltest

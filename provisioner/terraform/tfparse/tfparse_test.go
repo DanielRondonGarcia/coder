@@ -11,8 +11,8 @@ import (
 	"cdr.dev/slog"
 	"cdr.dev/slog/sloggers/sloghuman"
 
-	"github.com/DanielRondonGarcia/coder/v2/provisioner/terraform/tfparse"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/coder/coder/v2/provisioner/terraform/tfparse"
+	"github.com/coder/coder/v2/testutil"
 )
 
 func Test_WorkspaceTagDefaultsFromFile(t *testing.T) {
@@ -629,7 +629,7 @@ func Test_WorkspaceTagDefaultsFromFile(t *testing.T) {
 // Last run results:
 // goos: linux
 // goarch: amd64
-// pkg: github.com/DanielRondonGarcia/coder/v2/provisioner/terraform/tfparse
+// pkg: github.com/coder/coder/v2/provisioner/terraform/tfparse
 // cpu: AMD EPYC 7502P 32-Core Processor
 // BenchmarkWorkspaceTagDefaultsFromFile/Tar-16         	    1922	    847236 ns/op	  176257 B/op	    1073 allocs/op
 // BenchmarkWorkspaceTagDefaultsFromFile/Zip-16         	    1273	    946910 ns/op	  225293 B/op	    1130 allocs/op

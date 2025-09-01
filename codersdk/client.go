@@ -20,8 +20,8 @@ import (
 	"go.opentelemetry.io/otel/semconv/v1.14.0/httpconv"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/tracing"
-	"github.com/DanielRondonGarcia/websocket"
+	"github.com/coder/coder/v2/coderd/tracing"
+	"github.com/coder/websocket"
 
 	"cdr.dev/slog"
 )

@@ -23,11 +23,11 @@ import (
 
 	"cdr.dev/slog"
 	"cdr.dev/slog/sloggers/slogtest"
-	"github.com/DanielRondonGarcia/coder/v2/agent/agentcontainers"
-	"github.com/DanielRondonGarcia/coder/v2/agent/agentexec"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/pty"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/coder/coder/v2/agent/agentcontainers"
+	"github.com/coder/coder/v2/agent/agentexec"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/pty"
+	"github.com/coder/coder/v2/testutil"
 )
 
 func TestDevcontainerCLI_ArgsAndParsing(t *testing.T) {

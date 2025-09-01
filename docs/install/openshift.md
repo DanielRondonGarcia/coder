@@ -84,7 +84,7 @@ value. [See our Helm documentation](./kubernetes.md) on configuring the
 PostgreSQL connection URL as a secret. Additionally, if accessing Coder over a
 hostname, set the `CODER_ACCESS_URL` value.
 
-By default, Coder creates the cache directory in `/home/DanielRondonGarcia/.cache`. Given the
+By default, Coder creates the cache directory in `/home/coder/.cache`. Given the
 OpenShift-provided UID and `readOnlyRootFS` security context constraint, the
 Coder container does not have permission to write to this directory.
 
@@ -302,7 +302,7 @@ Security Context Constraints (SCCs) in OpenShift.
    ```console
    oc get imagestreamtag
    NAME                     IMAGE REFERENCE                                                                                                                                    UPDATED
-   enterprise-base:latest   image-registry.openshift-image-registry.svc:5000/DanielRondonGarcia/enterprise-base@sha256:1dbbe4ee11be9218e1e4741264135a4f57501fe592d94d20db6bfe11692accd1   55 minutes ago
+   enterprise-base:latest   image-registry.openshift-image-registry.svc:5000/coder/enterprise-base@sha256:1dbbe4ee11be9218e1e4741264135a4f57501fe592d94d20db6bfe11692accd1   55 minutes ago
    ```
 
 ### 7. Create an OpenShift-compatible template

@@ -35,7 +35,7 @@ for more information.
 
 ### Coder Observability Chart
 
-Use the [Observability Helm chart](https://github.com/DanielRondonGarcia/observability) for a
+Use the [Observability Helm chart](https://github.com/coder/observability) for a
 pre-built set of dashboards to monitor your Coder deployments over time. It
 includes pre-configured instances of Grafana, Prometheus, Loki, and Alertmanager
 to ingest and display key observability data.
@@ -43,7 +43,7 @@ to ingest and display key observability data.
 We recommend that all administrators deploying on Kubernetes or on an existing
 Prometheus or Grafana stack set the observability bundle up with the control
 plane from the start. For installation instructions, visit the
-[observability repository](https://github.com/DanielRondonGarcia/observability?tab=readme-ov-file#installation),
+[observability repository](https://github.com/coder/observability?tab=readme-ov-file#installation),
 or our [Kubernetes installation guide](../../install/kubernetes.md).
 
 ### Enable Prometheus metrics for Coder
@@ -100,7 +100,7 @@ workloads, so the cluster should be deployed as such, without production-level
 configurations.
 
 Adjust the CPU and memory values as shown in
-[Helm provisioner values.yaml](https://github.com/DanielRondonGarcia/coder/blob/main/helm/provisioner/values.yaml#L134-L141):
+[Helm provisioner values.yaml](https://github.com/coder/coder/blob/main/helm/provisioner/values.yaml#L134-L141):
 
 ```yaml
 …

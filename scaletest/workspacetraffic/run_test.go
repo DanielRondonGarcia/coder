@@ -18,14 +18,14 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DanielRondonGarcia/coder/v2/agent/agenttest"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/provisioner/echo"
-	"github.com/DanielRondonGarcia/coder/v2/provisionersdk/proto"
-	"github.com/DanielRondonGarcia/coder/v2/scaletest/workspacetraffic"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
-	"github.com/DanielRondonGarcia/websocket"
+	"github.com/coder/coder/v2/agent/agenttest"
+	"github.com/coder/coder/v2/coderd/coderdtest"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/provisioner/echo"
+	"github.com/coder/coder/v2/provisionersdk/proto"
+	"github.com/coder/coder/v2/scaletest/workspacetraffic"
+	"github.com/coder/coder/v2/testutil"
+	"github.com/coder/websocket"
 )
 
 func TestRun(t *testing.T) {

@@ -6,7 +6,7 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac"
+	"github.com/coder/coder/v2/coderd/rbac"
 )
 
 // This is defined separately in slim builds to avoid importing the rbac

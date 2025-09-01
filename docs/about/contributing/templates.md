@@ -134,13 +134,13 @@ resource "coder_agent" "main" {
 
 # Registry modules for IDEs and tools
 module "code-server" {
-  source   = "registry.coder.com/DanielRondonGarcia/code-server/coder"
+  source   = "registry.coder.com/coder/code-server/coder"
   version  = "~> 1.0"
   agent_id = coder_agent.main.id
 }
 
 module "git-clone" {
-  source   = "registry.coder.com/DanielRondonGarcia/git-clone/coder"
+  source   = "registry.coder.com/coder/git-clone/coder"
   version  = "~> 1.0"
   agent_id = coder_agent.main.id
   url      = "https://github.com/example/repo.git"
@@ -263,7 +263,7 @@ Use registry modules for common features:
 # VS Code in browser
 module "code-server" {
   count    = data.coder_workspace.me.start_count
-  source   = "registry.coder.com/DanielRondonGarcia/code-server/coder"
+  source   = "registry.coder.com/coder/code-server/coder"
   version  = "1.3.0"
   agent_id = coder_agent.example.id
 }
@@ -271,26 +271,26 @@ module "code-server" {
 # JetBrains IDEs
 module "jetbrains" {
   count    = data.coder_workspace.me.start_count
-  source   = "registry.coder.com/DanielRondonGarcia/jetbrains/coder"
+  source   = "registry.coder.com/coder/jetbrains/coder"
   version  = "1.0.0"
   agent_id = coder_agent.example.id
-  folder   = "/home/DanielRondonGarcia/project"
+  folder   = "/home/coder/project"
 }
 
 # Git repository cloning
 module "git-clone" {
   count    = data.coder_workspace.me.start_count
-  source   = "registry.coder.com/DanielRondonGarcia/git-clone/coder"
+  source   = "registry.coder.com/coder/git-clone/coder"
   version  = "1.1.0"
   agent_id = coder_agent.example.id
-  url      = "https://github.com/DanielRondonGarcia/coder"
+  url      = "https://github.com/coder/coder"
   base_dir = "~/projects/coder"
 }
 
 # File browser interface
 module "filebrowser" {
   count    = data.coder_workspace.me.start_count
-  source   = "registry.coder.com/DanielRondonGarcia/filebrowser/coder"
+  source   = "registry.coder.com/coder/filebrowser/coder"
   version  = "1.1.1"
   agent_id = coder_agent.example.id
 }
@@ -298,7 +298,7 @@ module "filebrowser" {
 # Dotfiles management
 module "dotfiles" {
   count    = data.coder_workspace.me.start_count
-  source   = "registry.coder.com/DanielRondonGarcia/dotfiles/coder"
+  source   = "registry.coder.com/coder/dotfiles/coder"
   version  = "1.2.0"
   agent_id = coder_agent.example.id
 }
@@ -518,7 +518,7 @@ resource "kubernetes_pod" "workspace" {
   - [Google Compute Engine (Linux)](https://registry.coder.com/templates/gcp-vm-container) - GCP VM instances
   - [Scratch](https://registry.coder.com/templates/scratch) - Minimal starter template
 - **Modules**: Browse available modules at [registry.coder.com/modules](https://registry.coder.com/modules)
-- **Issues**: Open an issue at [github.com/DanielRondonGarcia/registry](https://github.com/DanielRondonGarcia/registry/issues)
+- **Issues**: Open an issue at [github.com/coder/registry](https://github.com/coder/registry/issues)
 - **Community**: Join the [Coder Discord](https://discord.gg/coder) for questions
 - **Documentation**: Check the [Coder docs](https://coder.com/docs) for template guidance
 

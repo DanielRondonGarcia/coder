@@ -27,16 +27,16 @@ import (
 	"golang.org/x/xerrors"
 
 	"cdr.dev/slog"
-	"github.com/DanielRondonGarcia/coder/v2/agent/agentcontainers/ignore"
-	"github.com/DanielRondonGarcia/coder/v2/agent/agentcontainers/watcher"
-	"github.com/DanielRondonGarcia/coder/v2/agent/agentexec"
-	"github.com/DanielRondonGarcia/coder/v2/agent/usershell"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/httpapi"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/agentsdk"
-	"github.com/DanielRondonGarcia/coder/v2/provisioner"
-	"github.com/DanielRondonGarcia/quartz"
-	"github.com/DanielRondonGarcia/websocket"
+	"github.com/coder/coder/v2/agent/agentcontainers/ignore"
+	"github.com/coder/coder/v2/agent/agentcontainers/watcher"
+	"github.com/coder/coder/v2/agent/agentexec"
+	"github.com/coder/coder/v2/agent/usershell"
+	"github.com/coder/coder/v2/coderd/httpapi"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/codersdk/agentsdk"
+	"github.com/coder/coder/v2/provisioner"
+	"github.com/coder/quartz"
+	"github.com/coder/websocket"
 )
 
 const (
@@ -1637,7 +1637,7 @@ func (api *API) maybeInjectSubAgentIntoContainerLocked(ctx context.Context, dc c
 		displayAppsMap := map[codersdk.DisplayApp]bool{
 			// NOTE(DanielleMaywood):
 			// We use the same defaults here as set in terraform-provider-coder.
-			// https://github.com/DanielRondonGarcia/terraform-provider-coder/blob/c1c33f6d556532e75662c0ca373ed8fdea220eb5/provider/agent.go#L38-L51
+			// https://github.com/coder/terraform-provider-coder/blob/c1c33f6d556532e75662c0ca373ed8fdea220eb5/provider/agent.go#L38-L51
 			codersdk.DisplayAppVSCodeDesktop:  true,
 			codersdk.DisplayAppVSCodeInsiders: false,
 			codersdk.DisplayAppWebTerminal:    true,

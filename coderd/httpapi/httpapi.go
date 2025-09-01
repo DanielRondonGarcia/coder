@@ -16,12 +16,12 @@ import (
 	"github.com/go-playground/validator/v10"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/websocket"
-	"github.com/DanielRondonGarcia/websocket/wsjson"
+	"github.com/coder/websocket"
+	"github.com/coder/websocket/wsjson"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/httpapi/httpapiconstraints"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/tracing"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/coder/coder/v2/coderd/httpapi/httpapiconstraints"
+	"github.com/coder/coder/v2/coderd/tracing"
+	"github.com/coder/coder/v2/codersdk"
 )
 
 var Validate *validator.Validate

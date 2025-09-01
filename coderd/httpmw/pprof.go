@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"runtime/pprof"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/pproflabel"
+	"github.com/coder/coder/v2/coderd/pproflabel"
 )
 
 // WithProfilingLabels adds a pprof label to all http request handlers. This is

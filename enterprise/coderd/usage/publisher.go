@@ -14,15 +14,15 @@ import (
 	"golang.org/x/xerrors"
 
 	"cdr.dev/slog"
-	"github.com/DanielRondonGarcia/coder/v2/buildinfo"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtime"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/pproflabel"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/usage/usagetypes"
-	"github.com/DanielRondonGarcia/coder/v2/cryptorand"
-	"github.com/DanielRondonGarcia/coder/v2/enterprise/coderd/license"
-	"github.com/DanielRondonGarcia/quartz"
+	"github.com/coder/coder/v2/buildinfo"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database/dbauthz"
+	"github.com/coder/coder/v2/coderd/database/dbtime"
+	"github.com/coder/coder/v2/coderd/pproflabel"
+	"github.com/coder/coder/v2/coderd/usage/usagetypes"
+	"github.com/coder/coder/v2/cryptorand"
+	"github.com/coder/coder/v2/enterprise/coderd/license"
+	"github.com/coder/quartz"
 )
 
 const (

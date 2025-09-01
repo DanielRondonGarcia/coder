@@ -7,10 +7,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/DanielRondonGarcia/coder/v2/cli/clilog"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/serpent"
+	"github.com/coder/coder/v2/cli/clilog"
+	"github.com/coder/coder/v2/coderd/coderdtest"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/serpent"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

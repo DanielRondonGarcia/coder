@@ -30,23 +30,23 @@ import (
 	"cdr.dev/slog"
 	"cdr.dev/slog/sloggers/slogtest"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/audit"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest/oidctest"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest/testjar"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/cryptokeys"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbgen"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtestutil"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/jwtutils"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/notifications/notificationstest"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/promoauth"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/cryptorand"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/coder/coder/v2/coderd"
+	"github.com/coder/coder/v2/coderd/audit"
+	"github.com/coder/coder/v2/coderd/coderdtest"
+	"github.com/coder/coder/v2/coderd/coderdtest/oidctest"
+	"github.com/coder/coder/v2/coderd/coderdtest/testjar"
+	"github.com/coder/coder/v2/coderd/cryptokeys"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database/dbauthz"
+	"github.com/coder/coder/v2/coderd/database/dbgen"
+	"github.com/coder/coder/v2/coderd/database/dbtestutil"
+	"github.com/coder/coder/v2/coderd/jwtutils"
+	"github.com/coder/coder/v2/coderd/notifications"
+	"github.com/coder/coder/v2/coderd/notifications/notificationstest"
+	"github.com/coder/coder/v2/coderd/promoauth"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/cryptorand"
+	"github.com/coder/coder/v2/testutil"
 )
 
 // This test specifically tests logging in with OIDC when an expired
@@ -824,8 +824,8 @@ func TestUserOAuth2Github(t *testing.T) {
 
 	// The bug only is exercised when a deleted user with the same linked_id exists.
 	// Still related open issues:
-	// - https://github.com/DanielRondonGarcia/coder/issues/12116
-	// - https://github.com/DanielRondonGarcia/coder/issues/12115
+	// - https://github.com/coder/coder/issues/12116
+	// - https://github.com/coder/coder/issues/12115
 	t.Run("ChangedEmail", func(t *testing.T) {
 		t.Parallel()
 
@@ -1313,7 +1313,7 @@ func TestUserOIDC(t *testing.T) {
 			StatusCode:   http.StatusOK,
 		},
 		{
-			// See: https://github.com/DanielRondonGarcia/coder/issues/4472
+			// See: https://github.com/coder/coder/issues/4472
 			Name: "UsernameIsEmail",
 			IDTokenClaims: jwt.MapClaims{
 				"preferred_username": "kyle@kwc.io",

@@ -15,13 +15,13 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.uber.org/goleak"
 
-	"github.com/DanielRondonGarcia/coder/v2/agent/agentexec"
-	"github.com/DanielRondonGarcia/coder/v2/agent/agentscripts"
-	"github.com/DanielRondonGarcia/coder/v2/agent/agentssh"
-	"github.com/DanielRondonGarcia/coder/v2/agent/agenttest"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/agentsdk"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/coder/coder/v2/agent/agentexec"
+	"github.com/coder/coder/v2/agent/agentscripts"
+	"github.com/coder/coder/v2/agent/agentssh"
+	"github.com/coder/coder/v2/agent/agenttest"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/codersdk/agentsdk"
+	"github.com/coder/coder/v2/testutil"
 )
 
 func TestMain(m *testing.M) {
@@ -102,7 +102,7 @@ func TestEnv(t *testing.T) {
 func TestTimeout(t *testing.T) {
 	t.Parallel()
 	if runtime.GOOS == "darwin" {
-		t.Skip("this test is flaky on macOS, see https://github.com/DanielRondonGarcia/internal/issues/329")
+		t.Skip("this test is flaky on macOS, see https://github.com/coder/internal/issues/329")
 	}
 	runner := setup(t, nil)
 	defer runner.Close()

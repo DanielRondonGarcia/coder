@@ -97,7 +97,7 @@ coder:
           key: id
           name: arm-client-id
     - name: ARM_CLIENT_CERTIFICATE_PATH
-      value: /home/DanielRondonGarcia/az/
+      value: /home/coder/az/
     - name: ARM_CLIENT_CERTIFICATE_PASSWORD
       valueFrom:
         secretKeyRef:
@@ -119,7 +119,7 @@ coder:
         secretName: "azure-client-cert-secret"
   volumeMounts:
     - name: "azure-client-cert"
-      mountPath: "/home/DanielRondonGarcia/az/"
+      mountPath: "/home/coder/az/"
       readOnly: true
 ```
 

@@ -4,7 +4,7 @@
 > Do not store secrets in templates. Assume every user has cleartext access to every template.
 
 The Coder server's
-[provisioner](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/data-sources/provisioner)
+[provisioner](https://registry.terraform.io/providers/coder/coder/latest/docs/data-sources/provisioner)
 process needs to authenticate with other provider APIs to provision workspaces.
 There are two approaches to do this:
 

@@ -110,7 +110,7 @@ app, err := api.Database.GetOAuth2ProviderAppByClientID(ctx, clientID)
 ### Timing Issues
 
 NEVER use `time.Sleep` to mitigate timing issues. If an issue
-seems like it should use `time.Sleep`, read through https://github.com/DanielRondonGarcia/quartz and specifically the [README](https://github.com/DanielRondonGarcia/quartz/blob/main/README.md) to better understand how to handle timing issues.
+seems like it should use `time.Sleep`, read through https://github.com/coder/quartz and specifically the [README](https://github.com/coder/quartz/blob/main/README.md) to better understand how to handle timing issues.
 
 ## 🎯 Code Style
 

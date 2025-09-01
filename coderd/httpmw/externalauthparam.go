@@ -6,8 +6,8 @@ import (
 
 	"github.com/go-chi/chi/v5"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/externalauth"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/httpapi"
+	"github.com/coder/coder/v2/coderd/externalauth"
+	"github.com/coder/coder/v2/coderd/httpapi"
 )
 
 type externalAuthParamContextKey struct{}

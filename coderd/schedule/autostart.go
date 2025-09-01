@@ -5,7 +5,7 @@ import (
 
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/schedule/cron"
+	"github.com/coder/coder/v2/coderd/schedule/cron"
 )
 
 var ErrNoAllowedAutostart = xerrors.New("no allowed autostart")

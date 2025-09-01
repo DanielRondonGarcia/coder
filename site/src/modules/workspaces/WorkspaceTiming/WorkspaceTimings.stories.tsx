@@ -105,7 +105,7 @@ export const NavigateToStartStage: Story = {
 	},
 };
 
-// Test case for https://github.com/DanielRondonGarcia/coder/issues/15413
+// Test case for https://github.com/coder/coder/issues/15413
 export const DuplicatedScriptTiming: Story = {
 	args: {
 		agentScriptTimings: [
@@ -120,7 +120,7 @@ export const DuplicatedScriptTiming: Story = {
 };
 
 // Loading when agent script timings are empty
-// Test case for https://github.com/DanielRondonGarcia/coder/issues/15273
+// Test case for https://github.com/coder/coder/issues/15273
 export const LoadingWhenAgentScriptTimingsAreEmpty: Story = {
 	args: {
 		agentScriptTimings: undefined,

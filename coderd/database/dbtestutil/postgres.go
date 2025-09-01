@@ -21,9 +21,9 @@ import (
 	"github.com/ory/dockertest/v3/docker"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/migrations"
-	"github.com/DanielRondonGarcia/coder/v2/cryptorand"
-	"github.com/DanielRondonGarcia/retry"
+	"github.com/coder/coder/v2/coderd/database/migrations"
+	"github.com/coder/coder/v2/cryptorand"
+	"github.com/coder/retry"
 )
 
 const postgresImage = "us-docker.pkg.dev/coder-v2-images-public/public/postgres"

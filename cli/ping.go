@@ -19,16 +19,16 @@ import (
 
 	"github.com/briandowns/spinner"
 
-	"github.com/DanielRondonGarcia/pretty"
+	"github.com/coder/pretty"
 
-	"github.com/DanielRondonGarcia/serpent"
+	"github.com/coder/serpent"
 
-	"github.com/DanielRondonGarcia/coder/v2/cli/cliui"
-	"github.com/DanielRondonGarcia/coder/v2/cli/cliutil"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/ptr"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/healthsdk"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/workspacesdk"
+	"github.com/coder/coder/v2/cli/cliui"
+	"github.com/coder/coder/v2/cli/cliutil"
+	"github.com/coder/coder/v2/coderd/util/ptr"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/codersdk/healthsdk"
+	"github.com/coder/coder/v2/codersdk/workspacesdk"
 )
 
 type pingSummary struct {

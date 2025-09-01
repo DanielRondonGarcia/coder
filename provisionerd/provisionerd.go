@@ -22,14 +22,14 @@ import (
 	protobuf "google.golang.org/protobuf/proto"
 
 	"cdr.dev/slog"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/drpcsdk"
-	"github.com/DanielRondonGarcia/retry"
+	"github.com/coder/coder/v2/codersdk/drpcsdk"
+	"github.com/coder/retry"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/tracing"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/provisionerd/proto"
-	"github.com/DanielRondonGarcia/coder/v2/provisionerd/runner"
-	sdkproto "github.com/DanielRondonGarcia/coder/v2/provisionersdk/proto"
+	"github.com/coder/coder/v2/coderd/tracing"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/provisionerd/proto"
+	"github.com/coder/coder/v2/provisionerd/runner"
+	sdkproto "github.com/coder/coder/v2/provisionersdk/proto"
 )
 
 // Dialer represents the function to create a daemon client connection.
@@ -254,7 +254,7 @@ connectLoop:
 		// successfully connecting to coderd. It doesn't add much value if the
 		// daemon is built-in, so we only log it on the info level if p.externalProvisioner
 		// is true. This log message is mentioned in the docs:
-		// https://github.com/DanielRondonGarcia/coder/blob/5bd86cb1c06561d1d3e90ce689da220467e525c0/docs/admin/provisioners.md#L346
+		// https://github.com/coder/coder/blob/5bd86cb1c06561d1d3e90ce689da220467e525c0/docs/admin/provisioners.md#L346
 		logConnect(p.closeContext, "successfully connected to coderd")
 		retrier.Reset()
 		p.initConnectionOnce.Do(func() {

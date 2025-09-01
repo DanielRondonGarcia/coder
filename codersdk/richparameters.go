@@ -6,8 +6,8 @@ import (
 	"golang.org/x/xerrors"
 	"tailscale.com/types/ptr"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/slice"
-	"github.com/DanielRondonGarcia/terraform-provider-coder/v2/provider"
+	"github.com/coder/coder/v2/coderd/util/slice"
+	"github.com/coder/terraform-provider-coder/v2/provider"
 )
 
 func ValidateNewWorkspaceParameters(richParameters []TemplateVersionParameter, buildParameters []WorkspaceBuildParameter) error {

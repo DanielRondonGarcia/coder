@@ -15,7 +15,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/DanielRondonGarcia/guts"
+	"github.com/coder/guts"
 )
 
 // updateGoldenFiles is a flag that can be set to update golden files.

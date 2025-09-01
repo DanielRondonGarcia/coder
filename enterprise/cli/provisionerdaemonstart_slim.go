@@ -3,8 +3,8 @@
 package cli
 
 import (
-	agplcli "github.com/DanielRondonGarcia/coder/v2/cli"
-	"github.com/DanielRondonGarcia/serpent"
+	agplcli "github.com/coder/coder/v2/cli"
+	"github.com/coder/serpent"
 )
 
 func (r *RootCmd) provisionerDaemonStart() *serpent.Command {

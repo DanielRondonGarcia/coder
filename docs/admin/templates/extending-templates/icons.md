@@ -10,15 +10,15 @@ come bundled with your Coder deployment.
   - Make templates and workspaces visually recognizable with a relevant or
     memorable icon
 
-- [**Terraform**](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs):
+- [**Terraform**](https://registry.terraform.io/providers/coder/coder/latest/docs):
 
-  - [`coder_app`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/app#icon-1)
-  - [`coder_parameter`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/data-sources/parameter#icon-1)
+  - [`coder_app`](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/app#icon-1)
+  - [`coder_parameter`](https://registry.terraform.io/providers/coder/coder/latest/docs/data-sources/parameter#icon-1)
     and
-    [`option`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/data-sources/parameter#nested-schema-for-option)
+    [`option`](https://registry.terraform.io/providers/coder/coder/latest/docs/data-sources/parameter#nested-schema-for-option)
     blocks
-  - [`coder_script`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/script#icon-1)
-  - [`coder_metadata`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/metadata#icon-1)
+  - [`coder_script`](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/script#icon-1)
+  - [`coder_metadata`](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/metadata#icon-1)
 
   These can all be configured to use an icon by setting the `icon` field.
 
@@ -54,7 +54,7 @@ come bundled with your Coder deployment.
 Coder is distributed with a bundle of icons for popular cloud providers and
 programming languages. You can see all of the icons (or suggest new ones) in our
 repository on
-[GitHub](https://github.com/DanielRondonGarcia/coder/tree/main/site/static/icon).
+[GitHub](https://github.com/coder/coder/tree/main/site/static/icon).
 
 You can also view the entire list, with search and previews, by navigating to
 `/icons` on your Coder deployment (for example,

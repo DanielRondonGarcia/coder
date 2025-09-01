@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/DanielRondonGarcia/coder/v2/vpn"
+	"github.com/coder/coder/v2/vpn"
 )
 
 func TestRPCVersionLatest(t *testing.T) {

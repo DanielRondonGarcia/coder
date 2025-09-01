@@ -2,7 +2,7 @@ package wsjson
 
 import (
 	"cdr.dev/slog"
-	"github.com/DanielRondonGarcia/websocket"
+	"github.com/coder/websocket"
 )
 
 // Stream is a two-way messaging interface over a WebSocket connection.

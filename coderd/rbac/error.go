@@ -10,8 +10,8 @@ import (
 	"github.com/open-policy-agent/opa/v1/rego"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/httpapi/httpapiconstraints"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac/policy"
+	"github.com/coder/coder/v2/coderd/httpapi/httpapiconstraints"
+	"github.com/coder/coder/v2/coderd/rbac/policy"
 )
 
 const (

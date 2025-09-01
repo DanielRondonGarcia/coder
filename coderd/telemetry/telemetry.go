@@ -29,13 +29,13 @@ import (
 
 	"cdr.dev/slog"
 
-	"github.com/DanielRondonGarcia/coder/v2/buildinfo"
-	clitelemetry "github.com/DanielRondonGarcia/coder/v2/cli/telemetry"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtime"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/ptr"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	tailnetproto "github.com/DanielRondonGarcia/coder/v2/tailnet/proto"
+	"github.com/coder/coder/v2/buildinfo"
+	clitelemetry "github.com/coder/coder/v2/cli/telemetry"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database/dbtime"
+	"github.com/coder/coder/v2/coderd/util/ptr"
+	"github.com/coder/coder/v2/codersdk"
+	tailnetproto "github.com/coder/coder/v2/tailnet/proto"
 )
 
 const (
@@ -366,7 +366,7 @@ func (r *remoteReporter) deployment() error {
 }
 
 // idpOrgSyncConfig is a subset of
-// https://github.com/DanielRondonGarcia/coder/blob/5c6578d84e2940b9cfd04798c45e7c8042c3fe0e/coderd/idpsync/organization.go#L148
+// https://github.com/coder/coder/blob/5c6578d84e2940b9cfd04798c45e7c8042c3fe0e/coderd/idpsync/organization.go#L148
 type idpOrgSyncConfig struct {
 	Field string `json:"field"`
 }
@@ -385,9 +385,9 @@ type idpOrgSyncConfig struct {
 //
 // While this approach duplicates code, it's simpler than the alternative.
 //
-// See https://github.com/DanielRondonGarcia/coder/pull/16323 for more details.
+// See https://github.com/coder/coder/pull/16323 for more details.
 func checkIDPOrgSync(ctx context.Context, db database.Store, values *codersdk.DeploymentValues) (bool, error) {
-	// key based on https://github.com/DanielRondonGarcia/coder/blob/5c6578d84e2940b9cfd04798c45e7c8042c3fe0e/coderd/idpsync/idpsync.go#L168
+	// key based on https://github.com/coder/coder/blob/5c6578d84e2940b9cfd04798c45e7c8042c3fe0e/coderd/idpsync/idpsync.go#L168
 	syncConfigRaw, err := db.GetRuntimeConfig(ctx, "organization-sync-settings")
 	if err != nil {
 		if errors.Is(err, sql.ErrNoRows) {

@@ -1,9 +1,9 @@
 # Resource monitoring
 
 Use the
-[`resources_monitoring`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/agent#resources_monitoring-1)
+[`resources_monitoring`](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/agent#resources_monitoring-1)
 block on the
-[`coder_agent`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/agent)
+[`coder_agent`](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/agent)
 resource in our Terraform provider to monitor out of memory (OOM) and out of
 disk (OOD) errors and alert users when they overutilize memory and disk.
 

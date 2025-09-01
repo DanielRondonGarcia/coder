@@ -6,7 +6,7 @@ import (
 	"sync/atomic"
 
 	"cdr.dev/slog"
-	"github.com/DanielRondonGarcia/websocket"
+	"github.com/coder/websocket"
 )
 
 type Decoder[T any] struct {

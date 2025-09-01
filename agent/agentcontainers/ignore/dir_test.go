@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/DanielRondonGarcia/coder/v2/agent/agentcontainers/ignore"
+	"github.com/coder/coder/v2/agent/agentcontainers/ignore"
 )
 
 func TestFilePathToParts(t *testing.T) {

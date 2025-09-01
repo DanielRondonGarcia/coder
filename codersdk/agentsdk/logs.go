@@ -15,9 +15,9 @@ import (
 	"golang.org/x/xerrors"
 
 	"cdr.dev/slog"
-	"github.com/DanielRondonGarcia/coder/v2/agent/proto"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/retry"
+	"github.com/coder/coder/v2/agent/proto"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/retry"
 )
 
 const (

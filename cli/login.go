@@ -16,12 +16,12 @@ import (
 	"github.com/pkg/browser"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/pretty"
+	"github.com/coder/pretty"
 
-	"github.com/DanielRondonGarcia/coder/v2/cli/cliui"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/userpassword"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/serpent"
+	"github.com/coder/coder/v2/cli/cliui"
+	"github.com/coder/coder/v2/coderd/userpassword"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/serpent"
 )
 
 const (

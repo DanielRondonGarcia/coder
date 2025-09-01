@@ -10,7 +10,7 @@ import (
 	"github.com/jedib0t/go-pretty/v6/table"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/serpent"
+	"github.com/coder/serpent"
 )
 
 type OutputFormat interface {

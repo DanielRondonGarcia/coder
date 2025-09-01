@@ -7,9 +7,9 @@ import (
 	"golang.org/x/xerrors"
 
 	"cdr.dev/slog"
-	agentproto "github.com/DanielRondonGarcia/coder/v2/agent/proto"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/wspubsub"
+	agentproto "github.com/coder/coder/v2/agent/proto"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/wspubsub"
 )
 
 type AppsAPI struct {

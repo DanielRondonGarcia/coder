@@ -27,7 +27,7 @@ WITH
 	-- initial workspace creation. Subsequent stop/start transitions will not have a value for template_version_preset_id,
 	-- and therefore we can't rely on (say) the latest build's chosen template_version_preset_id.
 	--
-	-- See https://github.com/DanielRondonGarcia/internal/issues/398
+	-- See https://github.com/coder/internal/issues/398
 	workspaces_with_latest_presets AS (
 		SELECT DISTINCT ON (workspace_id) workspace_id, template_version_preset_id
 		FROM workspace_builds

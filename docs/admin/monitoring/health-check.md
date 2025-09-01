@@ -340,4 +340,4 @@ version of Coder.
 deployment health. It may resolve on its own.
 
 **Solution:** This may be a bug.
-[File a GitHub issue](https://github.com/DanielRondonGarcia/coder/issues/new)!
+[File a GitHub issue](https://github.com/coder/coder/issues/new)!

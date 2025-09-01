@@ -27,11 +27,11 @@ func Test_removeMainlineBlurb(t *testing.T) {
 
 - Add support for additional Azure Instance Identity RSA Certificates (#13028) (@kylecarbs)
 
-Compare: [` + "`" + `v2.10.1...v2.10.2` + "`" + `](https://github.com/DanielRondonGarcia/coder/compare/v2.10.1...v2.10.2)
+Compare: [` + "`" + `v2.10.1...v2.10.2` + "`" + `](https://github.com/coder/coder/compare/v2.10.1...v2.10.2)
 
 ## Container image
 
-- ` + "`" + `docker pull ghcr.io/DanielRondonGarcia/coder:v2.10.2` + "`" + `
+- ` + "`" + `docker pull ghcr.io/coder/coder:v2.10.2` + "`" + `
 
 ## Install/upgrade
 
@@ -43,11 +43,11 @@ Refer to our docs to [install](https://coder.com/docs/install) or [upgrade](http
 
 - Add support for additional Azure Instance Identity RSA Certificates (#13028) (@kylecarbs)
 
-Compare: [` + "`" + `v2.10.1...v2.10.2` + "`" + `](https://github.com/DanielRondonGarcia/coder/compare/v2.10.1...v2.10.2)
+Compare: [` + "`" + `v2.10.1...v2.10.2` + "`" + `](https://github.com/coder/coder/compare/v2.10.1...v2.10.2)
 
 ## Container image
 
-- ` + "`" + `docker pull ghcr.io/DanielRondonGarcia/coder:v2.10.2` + "`" + `
+- ` + "`" + `docker pull ghcr.io/coder/coder:v2.10.2` + "`" + `
 
 ## Install/upgrade
 
@@ -59,17 +59,17 @@ Refer to our docs to [install](https://coder.com/docs/install) or [upgrade](http
 			body: `## Changelog
 
 > [!NOTE]
-> This is a mainline Coder release. We advise enterprise customers without a staging environment to install our [latest stable release](https://github.com/DanielRondonGarcia/coder/releases/latest) while we refine this version. Learn more about our [Release Schedule](https://coder.com/docs/install/releases).
+> This is a mainline Coder release. We advise enterprise customers without a staging environment to install our [latest stable release](https://github.com/coder/coder/releases/latest) while we refine this version. Learn more about our [Release Schedule](https://coder.com/docs/install/releases).
 
 ### Chores
 
 - Add support for additional Azure Instance Identity RSA Certificates (#13028) (@kylecarbs)
 
-Compare: [` + "`" + `v2.10.1...v2.10.2` + "`" + `](https://github.com/DanielRondonGarcia/coder/compare/v2.10.1...v2.10.2)
+Compare: [` + "`" + `v2.10.1...v2.10.2` + "`" + `](https://github.com/coder/coder/compare/v2.10.1...v2.10.2)
 
 ## Container image
 
-- ` + "`" + `docker pull ghcr.io/DanielRondonGarcia/coder:v2.10.2` + "`" + `
+- ` + "`" + `docker pull ghcr.io/coder/coder:v2.10.2` + "`" + `
 
 ## Install/upgrade
 
@@ -81,11 +81,11 @@ Refer to our docs to [install](https://coder.com/docs/install) or [upgrade](http
 
 - Add support for additional Azure Instance Identity RSA Certificates (#13028) (@kylecarbs)
 
-Compare: [` + "`" + `v2.10.1...v2.10.2` + "`" + `](https://github.com/DanielRondonGarcia/coder/compare/v2.10.1...v2.10.2)
+Compare: [` + "`" + `v2.10.1...v2.10.2` + "`" + `](https://github.com/coder/coder/compare/v2.10.1...v2.10.2)
 
 ## Container image
 
-- ` + "`" + `docker pull ghcr.io/DanielRondonGarcia/coder:v2.10.2` + "`" + `
+- ` + "`" + `docker pull ghcr.io/coder/coder:v2.10.2` + "`" + `
 
 ## Install/upgrade
 
@@ -97,7 +97,7 @@ Refer to our docs to [install](https://coder.com/docs/install) or [upgrade](http
 			body: `## Changelog
 
 > [!NOTE]
-> This is a mainline Coder release. We advise enterprise customers without a staging environment to install our [latest stable release](https://github.com/DanielRondonGarcia/coder/releases/latest) while we refine this version. Learn more about our [Release Schedule](https://coder.com/docs/install/releases).
+> This is a mainline Coder release. We advise enterprise customers without a staging environment to install our [latest stable release](https://github.com/coder/coder/releases/latest) while we refine this version. Learn more about our [Release Schedule](https://coder.com/docs/install/releases).
 > This is an extended note.
 > This is another extended note.
 

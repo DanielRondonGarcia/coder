@@ -4,7 +4,7 @@
 
 <div class="tabs">
 
-To get started with Coder, the easiest way to set up the required environment is to use the provided [Nix environment](https://github.com/DanielRondonGarcia/coder/tree/main/nix).
+To get started with Coder, the easiest way to set up the required environment is to use the provided [Nix environment](https://github.com/coder/coder/tree/main/nix).
 Learn more [how Nix works](https://nixos.org/guides/how-nix-works).
 
 ### Nix
@@ -44,7 +44,7 @@ Learn more [how Nix works](https://nixos.org/guides/how-nix-works).
    ```shell
    cd ~/code/coder
 
-   direnv: loading ~/code/DanielRondonGarcia/.envrc
+   direnv: loading ~/code/coder/.envrc
    direnv: using nix
    direnv: export +AR +AS +CC +CONFIG_SHELL +CXX +HOST_PATH +IN_NIX_SHELL +LD +NIX_BINTOOLS +NIX_BINTOOLS_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu +NIX_BUILD_CORES +NIX_BUILD_TOP +NIX_CC +NIX_CC_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu +NIX_CFLAGS_COMPILE +NIX_ENFORCE_NO_NATIVE +NIX_HARDENING_ENABLE +NIX_INDENT_MAKE +NIX_LDFLAGS +NIX_STORE +NM +NODE_PATH +OBJCOPY +OBJDUMP +RANLIB +READELF +SIZE +SOURCE_DATE_EPOCH +STRINGS +STRIP +TEMP +TEMPDIR +TMP +TMPDIR +XDG_DATA_DIRS +buildInputs +buildPhase +builder +cmakeFlags +configureFlags +depsBuildBuild +depsBuildBuildPropagated +depsBuildTarget +depsBuildTargetPropagated +depsHostHost +depsHostHostPropagated +depsTargetTarget +depsTargetTargetPropagated +doCheck +doInstallCheck +mesonFlags +name +nativeBuildInputs +out +outputs +patches +phases +propagatedBuildInputs +propagatedNativeBuildInputs +shell +shellHook +stdenv +strictDeps +system ~PATH
 
@@ -56,7 +56,7 @@ Learn more [how Nix works](https://nixos.org/guides/how-nix-works).
 
 ### Without Nix
 
-If you're not using the Nix environment, you can launch a local [DevContainer](https://github.com/DanielRondonGarcia/coder/tree/main/.devcontainer) to get a fully configured development environment.
+If you're not using the Nix environment, you can launch a local [DevContainer](https://github.com/coder/coder/tree/main/.devcontainer) to get a fully configured development environment.
 
 DevContainers are supported in tools like **VS Code** and **GitHub Codespaces**, and come preloaded with all required dependencies: Docker, Go, Node.js with `pnpm`, and `make`.
 
@@ -94,7 +94,7 @@ Use the following `make` commands and scripts in development:
    ./scripts/coder-dev.sh list
       ```
 
-   This should return an empty list of workspaces. If you encounter an error, review the output from the [develop.sh](https://github.com/DanielRondonGarcia/coder/blob/main/scripts/develop.sh) script for issues.
+   This should return an empty list of workspaces. If you encounter an error, review the output from the [develop.sh](https://github.com/coder/coder/blob/main/scripts/develop.sh) script for issues.
 
    > [!NOTE]
    > `coder-dev.sh` is a helper script that behaves like the regular coder CLI, but uses the binary built from your local source and shares the same configuration directory set up by `develop.sh`. This ensures your local changes are reflected when testing.
@@ -118,7 +118,7 @@ this:
 
 - Run `./scripts/deploy-pr.sh`
 - Manually trigger the
-  [`pr-deploy.yaml`](https://github.com/DanielRondonGarcia/coder/actions/workflows/pr-deploy.yaml)
+  [`pr-deploy.yaml`](https://github.com/coder/coder/actions/workflows/pr-deploy.yaml)
   GitHub Action workflow:
 
   <Image src="./images/deploy-pr-manually.png" alt="Deploy PR manually" height="348px" align="center" />
@@ -168,11 +168,11 @@ be applied selectively or to discourage anyone from contributing.
 ## Releases
 
 Coder releases are initiated via
-[`./scripts/release.sh`](https://github.com/DanielRondonGarcia/coder/blob/main/scripts/release.sh)
+[`./scripts/release.sh`](https://github.com/coder/coder/blob/main/scripts/release.sh)
 and automated via GitHub Actions. Specifically, the
-[`release.yaml`](https://github.com/DanielRondonGarcia/coder/blob/main/.github/workflows/release.yaml)
+[`release.yaml`](https://github.com/coder/coder/blob/main/.github/workflows/release.yaml)
 workflow. They are created based on the current
-[`main`](https://github.com/DanielRondonGarcia/coder/tree/main) branch.
+[`main`](https://github.com/coder/coder/tree/main) branch.
 
 The release notes for a release are automatically generated from commit titles
 and metadata from PRs that are merged into `main`.
@@ -180,7 +180,7 @@ and metadata from PRs that are merged into `main`.
 ### Creating a release
 
 The creation of a release is initiated via
-[`./scripts/release.sh`](https://github.com/DanielRondonGarcia/coder/blob/main/scripts/release.sh).
+[`./scripts/release.sh`](https://github.com/coder/coder/blob/main/scripts/release.sh).
 This script will show a preview of the release that will be created, and if you
 choose to continue, create and push the tag which will trigger the creation of
 the release via GitHub Actions.
@@ -192,7 +192,7 @@ See `./scripts/release.sh --help` for more information.
 Typically the workflow dispatch is only used to test (dry-run) a release,
 meaning no actual release will take place. The workflow can be dispatched
 manually from
-[Actions: Release](https://github.com/DanielRondonGarcia/coder/actions/workflows/release.yaml).
+[Actions: Release](https://github.com/coder/coder/actions/workflows/release.yaml).
 Simply press "Run workflow" and choose dry-run.
 
 If a release has failed after the tag has been created and pushed, it can be
@@ -233,7 +233,7 @@ Breaking changes can be triggered in two ways:
 - Add `!` to the commit message title, e.g.
   `feat(api)!: remove deprecated endpoint /test`
 - Add the
-  [`release/breaking`](https://github.com/DanielRondonGarcia/coder/issues?q=sort%3Aupdated-desc+label%3Arelease%2Fbreaking)
+  [`release/breaking`](https://github.com/coder/coder/issues?q=sort%3Aupdated-desc+label%3Arelease%2Fbreaking)
   label to a PR that has, or will be, merged into `main`.
 
 ### Generative AI
@@ -248,14 +248,14 @@ are followed. If most of your PR was generated by AI, please read and comply wit
 > to <security@coder.com>.
 
 The
-[`security`](https://github.com/DanielRondonGarcia/coder/issues?q=sort%3Aupdated-desc+label%3Asecurity)
+[`security`](https://github.com/coder/coder/issues?q=sort%3Aupdated-desc+label%3Asecurity)
 label can be added to PRs that have, or will be, merged into `main`. Doing so
 will make sure the change stands out in the release notes.
 
 ### Experimental
 
 The
-[`release/experimental`](https://github.com/DanielRondonGarcia/coder/issues?q=sort%3Aupdated-desc+label%3Arelease%2Fexperimental)
+[`release/experimental`](https://github.com/coder/coder/issues?q=sort%3Aupdated-desc+label%3Arelease%2Fexperimental)
 label can be used to move the note to the bottom of the release notes under a
 separate title.
 

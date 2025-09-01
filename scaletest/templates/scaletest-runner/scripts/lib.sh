@@ -9,7 +9,7 @@ fi
 
 # Source scripts/lib.sh from coder/coder for common functions.
 # shellcheck source=scripts/lib.sh
-. "${HOME}/DanielRondonGarcia/scripts/lib.sh"
+. "${HOME}/coder/scripts/lib.sh"
 
 # Make shellcheck happy.
 DRY_RUN=${DRY_RUN:-0}

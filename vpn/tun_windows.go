@@ -21,8 +21,8 @@ import (
 	"tailscale.com/wgengine/router"
 
 	"cdr.dev/slog"
-	"github.com/DanielRondonGarcia/coder/v2/tailnet"
-	"github.com/DanielRondonGarcia/retry"
+	"github.com/coder/coder/v2/tailnet"
+	"github.com/coder/retry"
 )
 
 const (

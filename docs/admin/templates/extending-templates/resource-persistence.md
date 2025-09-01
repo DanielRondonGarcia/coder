@@ -15,7 +15,7 @@ compute instances.
 ## Disabling persistence
 
 The Terraform
-[`coder_workspace` data source](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/data-sources/workspace)
+[`coder_workspace` data source](https://registry.terraform.io/providers/coder/coder/latest/docs/data-sources/workspace)
 exposes the `start_count = [0 | 1]` attribute. To make a resource ephemeral, you
 can assign the `start_count` attribute to resource's
 [`count`](https://developer.hashicorp.com/terraform/language/meta-arguments/count)

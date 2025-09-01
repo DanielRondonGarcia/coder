@@ -1,7 +1,7 @@
 # envbuilder dogfood template
 
 This template uses the same image as the [dogfood](../dogfood) template, but
-builds it on-demand using the latest _preview_ version of [envbuilder](https://github.com/DanielRondonGarcia/envbuilder).
+builds it on-demand using the latest _preview_ version of [envbuilder](https://github.com/coder/envbuilder).
 
 In theory, it should work with any Git repository containing a `devcontainer.json`.
 The Git repository specified by `devcontainer_repo` is cloned into `/workspaces` upon startup and the container is built from the devcontainer located under the path specified by `devcontainer_dir`.

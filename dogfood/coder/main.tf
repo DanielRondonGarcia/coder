@@ -18,7 +18,7 @@ terraform {
 // In reality, modules might have accidental bloat from non-terraform files such
 // as images & documentation.
 module "large-5mb-module" {
-  source = "git::https://github.com/DanielRondonGarcia/large-module.git"
+  source = "git::https://github.com/coder/large-module.git"
 }
 
 locals {
@@ -35,8 +35,8 @@ locals {
     "za-cpt"      = "tcp://schonkopf-cpt-cdr-dev.tailscale.svc.cluster.local:2375"
   }
 
-  repo_base_dir  = data.coder_parameter.repo_base_dir.value == "~" ? "/home/coder" : replace(data.coder_parameter.repo_base_dir.value, "/^~\\//", "/home/DanielRondonGarcia/")
-  repo_dir       = replace(try(module.git-clone[0].repo_dir, ""), "/^~\\//", "/home/DanielRondonGarcia/")
+  repo_base_dir  = data.coder_parameter.repo_base_dir.value == "~" ? "/home/coder" : replace(data.coder_parameter.repo_base_dir.value, "/^~\\//", "/home/coder/")
+  repo_dir       = replace(try(module.git-clone[0].repo_dir, ""), "/^~\\//", "/home/coder/")
   container_name = "coder-${data.coder_workspace_owner.me.name}-${lower(data.coder_workspace.me.name)}"
   has_ai_prompt  = data.coder_parameter.ai_prompt.value != ""
 }
@@ -130,7 +130,7 @@ data "coder_parameter" "repo_base_dir" {
   type        = "string"
   name        = "Coder Repository Base Directory"
   default     = "~"
-  description = "The directory specified will be created (if missing) and [coder/coder](https://github.com/DanielRondonGarcia/coder) will be automatically cloned into [base directory]/coder 🪄."
+  description = "The directory specified will be created (if missing) and [coder/coder](https://github.com/coder/coder) will be automatically cloned into [base directory]/coder 🪄."
   mutable     = true
 }
 
@@ -245,7 +245,7 @@ data "coder_parameter" "devcontainer_autostart" {
   type        = "bool"
   name        = "Automatically start devcontainer for coder/coder"
   default     = false
-  description = "If enabled, a devcontainer will be automatically started for the [coder/coder](https://github.com/DanielRondonGarcia/coder) repository."
+  description = "If enabled, a devcontainer will be automatically started for the [coder/coder](https://github.com/coder/coder) repository."
   mutable     = true
 }
 
@@ -346,7 +346,7 @@ data "coder_parameter" "vscode_channel" {
 
 module "slackme" {
   count            = data.coder_workspace.me.start_count
-  source           = "dev.registry.coder.com/DanielRondonGarcia/slackme/coder"
+  source           = "dev.registry.coder.com/coder/slackme/coder"
   version          = "1.0.31"
   agent_id         = coder_agent.dev.id
   auth_provider_id = "slack"
@@ -354,14 +354,14 @@ module "slackme" {
 
 module "dotfiles" {
   count    = data.coder_workspace.me.start_count
-  source   = "dev.registry.coder.com/DanielRondonGarcia/dotfiles/coder"
+  source   = "dev.registry.coder.com/coder/dotfiles/coder"
   version  = "1.2.1"
   agent_id = coder_agent.dev.id
 }
 
 module "git-config" {
   count    = data.coder_workspace.me.start_count
-  source   = "dev.registry.coder.com/DanielRondonGarcia/git-config/coder"
+  source   = "dev.registry.coder.com/coder/git-config/coder"
   version  = "1.0.31"
   agent_id = coder_agent.dev.id
   # If you prefer to commit with a different email, this allows you to do so.
@@ -370,23 +370,23 @@ module "git-config" {
 
 module "git-clone" {
   count    = data.coder_workspace.me.start_count
-  source   = "dev.registry.coder.com/DanielRondonGarcia/git-clone/coder"
+  source   = "dev.registry.coder.com/coder/git-clone/coder"
   version  = "1.1.1"
   agent_id = coder_agent.dev.id
-  url      = "https://github.com/DanielRondonGarcia/coder"
+  url      = "https://github.com/coder/coder"
   base_dir = local.repo_base_dir
 }
 
 module "personalize" {
   count    = data.coder_workspace.me.start_count
-  source   = "dev.registry.coder.com/DanielRondonGarcia/personalize/coder"
+  source   = "dev.registry.coder.com/coder/personalize/coder"
   version  = "1.0.31"
   agent_id = coder_agent.dev.id
 }
 
 module "code-server" {
   count                   = contains(jsondecode(data.coder_parameter.ide_choices.value), "code-server") ? data.coder_workspace.me.start_count : 0
-  source                  = "dev.registry.coder.com/DanielRondonGarcia/code-server/coder"
+  source                  = "dev.registry.coder.com/coder/code-server/coder"
   version                 = "1.3.1"
   agent_id                = coder_agent.dev.id
   folder                  = local.repo_dir
@@ -396,7 +396,7 @@ module "code-server" {
 
 module "vscode-web" {
   count                   = contains(jsondecode(data.coder_parameter.ide_choices.value), "vscode-web") ? data.coder_workspace.me.start_count : 0
-  source                  = "dev.registry.coder.com/DanielRondonGarcia/vscode-web/coder"
+  source                  = "dev.registry.coder.com/coder/vscode-web/coder"
   version                 = "1.4.1"
   agent_id                = coder_agent.dev.id
   folder                  = local.repo_dir
@@ -408,7 +408,7 @@ module "vscode-web" {
 
 module "jetbrains" {
   count         = contains(jsondecode(data.coder_parameter.ide_choices.value), "jetbrains") ? data.coder_workspace.me.start_count : 0
-  source        = "dev.registry.coder.com/DanielRondonGarcia/jetbrains/coder"
+  source        = "dev.registry.coder.com/coder/jetbrains/coder"
   version       = "1.0.3"
   agent_id      = coder_agent.dev.id
   agent_name    = "dev"
@@ -418,7 +418,7 @@ module "jetbrains" {
 
 module "filebrowser" {
   count      = data.coder_workspace.me.start_count
-  source     = "dev.registry.coder.com/DanielRondonGarcia/filebrowser/coder"
+  source     = "dev.registry.coder.com/coder/filebrowser/coder"
   version    = "1.1.2"
   agent_id   = coder_agent.dev.id
   agent_name = "dev"
@@ -426,14 +426,14 @@ module "filebrowser" {
 
 module "coder-login" {
   count    = data.coder_workspace.me.start_count
-  source   = "dev.registry.coder.com/DanielRondonGarcia/coder-login/coder"
+  source   = "dev.registry.coder.com/coder/coder-login/coder"
   version  = "1.1.0"
   agent_id = coder_agent.dev.id
 }
 
 module "cursor" {
   count    = contains(jsondecode(data.coder_parameter.ide_choices.value), "cursor") ? data.coder_workspace.me.start_count : 0
-  source   = "dev.registry.coder.com/DanielRondonGarcia/cursor/coder"
+  source   = "dev.registry.coder.com/coder/cursor/coder"
   version  = "1.3.2"
   agent_id = coder_agent.dev.id
   folder   = local.repo_dir
@@ -441,7 +441,7 @@ module "cursor" {
 
 module "windsurf" {
   count    = contains(jsondecode(data.coder_parameter.ide_choices.value), "windsurf") ? data.coder_workspace.me.start_count : 0
-  source   = "dev.registry.coder.com/DanielRondonGarcia/windsurf/coder"
+  source   = "dev.registry.coder.com/coder/windsurf/coder"
   version  = "1.2.0"
   agent_id = coder_agent.dev.id
   folder   = local.repo_dir
@@ -449,7 +449,7 @@ module "windsurf" {
 
 module "zed" {
   count      = contains(jsondecode(data.coder_parameter.ide_choices.value), "zed") ? data.coder_workspace.me.start_count : 0
-  source     = "dev.registry.coder.com/DanielRondonGarcia/zed/coder"
+  source     = "dev.registry.coder.com/coder/zed/coder"
   version    = "1.1.0"
   agent_id   = coder_agent.dev.id
   agent_name = "dev"
@@ -458,7 +458,7 @@ module "zed" {
 
 module "jetbrains-fleet" {
   count      = contains(jsondecode(data.coder_parameter.ide_choices.value), "fleet") ? data.coder_workspace.me.start_count : 0
-  source     = "registry.coder.com/DanielRondonGarcia/jetbrains-fleet/coder"
+  source     = "registry.coder.com/coder/jetbrains-fleet/coder"
   version    = "1.0.1"
   agent_id   = coder_agent.dev.id
   agent_name = "dev"
@@ -474,7 +474,7 @@ module "devcontainers-cli" {
 
 module "claude-code" {
   count               = local.has_ai_prompt ? data.coder_workspace.me.start_count : 0
-  source              = "dev.registry.coder.com/DanielRondonGarcia/claude-code/coder"
+  source              = "dev.registry.coder.com/coder/claude-code/coder"
   version             = "2.2.0"
   agent_id            = coder_agent.dev.id
   folder              = local.repo_dir
@@ -781,7 +781,7 @@ resource "docker_container" "workspace" {
     ip   = "host-gateway"
   }
   volumes {
-    container_path = "/home/DanielRondonGarcia/"
+    container_path = "/home/coder/"
     volume_name    = docker_volume.home_volume.name
     read_only      = false
   }

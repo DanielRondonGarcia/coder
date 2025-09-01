@@ -13,9 +13,9 @@ import (
 
 	"cdr.dev/slog"
 
-	agentproto "github.com/DanielRondonGarcia/coder/v2/agent/proto"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/agentmetrics"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/pproflabel"
+	agentproto "github.com/coder/coder/v2/agent/proto"
+	"github.com/coder/coder/v2/coderd/agentmetrics"
+	"github.com/coder/coder/v2/coderd/pproflabel"
 )
 
 const (

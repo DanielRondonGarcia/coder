@@ -5,9 +5,9 @@ import (
 
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/cli/cliui"
-	"github.com/DanielRondonGarcia/serpent"
-	"github.com/DanielRondonGarcia/serpent/completion"
+	"github.com/coder/coder/v2/cli/cliui"
+	"github.com/coder/serpent"
+	"github.com/coder/serpent/completion"
 )
 
 func (*RootCmd) completion() *serpent.Command {

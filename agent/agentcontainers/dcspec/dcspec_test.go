@@ -10,8 +10,8 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/stretchr/testify/require"
 
-	"github.com/DanielRondonGarcia/coder/v2/agent/agentcontainers/dcspec"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/ptr"
+	"github.com/coder/coder/v2/agent/agentcontainers/dcspec"
+	"github.com/coder/coder/v2/coderd/util/ptr"
 )
 
 func TestUnmarshalDevContainer(t *testing.T) {

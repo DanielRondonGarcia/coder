@@ -7,8 +7,8 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/healthcheck/health"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/healthsdk"
+	"github.com/coder/coder/v2/coderd/healthcheck/health"
+	"github.com/coder/coder/v2/codersdk/healthsdk"
 )
 
 type AccessURLReport healthsdk.AccessURLReport

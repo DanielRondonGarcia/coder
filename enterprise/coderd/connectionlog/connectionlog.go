@@ -6,10 +6,10 @@ import (
 	"github.com/hashicorp/go-multierror"
 
 	"cdr.dev/slog"
-	agpl "github.com/DanielRondonGarcia/coder/v2/coderd/connectionlog"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
-	auditbackends "github.com/DanielRondonGarcia/coder/v2/enterprise/audit/backends"
+	agpl "github.com/coder/coder/v2/coderd/connectionlog"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database/dbauthz"
+	auditbackends "github.com/coder/coder/v2/enterprise/audit/backends"
 )
 
 type Backend interface {

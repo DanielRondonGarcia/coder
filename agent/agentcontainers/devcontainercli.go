@@ -14,8 +14,8 @@ import (
 	"golang.org/x/xerrors"
 
 	"cdr.dev/slog"
-	"github.com/DanielRondonGarcia/coder/v2/agent/agentexec"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/coder/coder/v2/agent/agentexec"
+	"github.com/coder/coder/v2/codersdk"
 )
 
 // DevcontainerConfig is a wrapper around the output from `read-configuration`.
@@ -43,7 +43,7 @@ type DevcontainerFeatures map[string]any
 // The format is FEATURE_<FEATURE_NAME>_OPTION_<OPTION_NAME>=<value>.
 // For example, if the feature is:
 //
-//		"ghcr.io/DanielRondonGarcia/devcontainer-features/code-server:1": {
+//		"ghcr.io/coder/devcontainer-features/code-server:1": {
 //	   "port": 9090,
 //	 }
 //
@@ -52,7 +52,7 @@ type DevcontainerFeatures map[string]any
 //	FEATURE_CODE_SERVER_OPTION_PORT=9090
 //
 // Note that the feature name is derived from the last part of the key,
-// so "ghcr.io/DanielRondonGarcia/devcontainer-features/code-server:1" becomes
+// so "ghcr.io/coder/devcontainer-features/code-server:1" becomes
 // "CODE_SERVER". The version part (e.g. ":1") is removed, and dashes in
 // the feature and option names are replaced with underscores.
 func (f DevcontainerFeatures) OptionsAsEnvs() []string {

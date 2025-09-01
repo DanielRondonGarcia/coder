@@ -34,7 +34,7 @@ module "git-clone" {
   source   = "registry.coder.com/modules/git-clone/coder"
   version  = "1.0.12"
   agent_id = coder_agent.example.id
-  url      = "https://github.com/DanielRondonGarcia/coder"
+  url      = "https://github.com/coder/coder"
 }
 ```
 
@@ -51,7 +51,7 @@ supports multiple projects.
 data "coder_parameter" "git_repo" {
   name         = "git_repo"
   display_name = "Git repository"
-  default      = "https://github.com/DanielRondonGarcia/coder"
+  default      = "https://github.com/coder/coder"
 }
 
 module "git-clone" {

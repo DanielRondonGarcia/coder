@@ -13,7 +13,7 @@ import (
 	"tailscale.com/ipn/ipnstate"
 	"tailscale.com/tailcfg"
 
-	"github.com/DanielRondonGarcia/coder/v2/tailnet"
+	"github.com/coder/coder/v2/tailnet"
 )
 
 func TestNewDERPMap(t *testing.T) {

@@ -25,17 +25,17 @@ import (
 	"cdr.dev/slog/sloggers/sloghuman"
 	"cdr.dev/slog/sloggers/slogjson"
 	"cdr.dev/slog/sloggers/slogstackdriver"
-	"github.com/DanielRondonGarcia/serpent"
+	"github.com/coder/serpent"
 
-	"github.com/DanielRondonGarcia/coder/v2/agent"
-	"github.com/DanielRondonGarcia/coder/v2/agent/agentcontainers"
-	"github.com/DanielRondonGarcia/coder/v2/agent/agentexec"
-	"github.com/DanielRondonGarcia/coder/v2/agent/agentssh"
-	"github.com/DanielRondonGarcia/coder/v2/agent/reaper"
-	"github.com/DanielRondonGarcia/coder/v2/buildinfo"
-	"github.com/DanielRondonGarcia/coder/v2/cli/clilog"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/agentsdk"
+	"github.com/coder/coder/v2/agent"
+	"github.com/coder/coder/v2/agent/agentcontainers"
+	"github.com/coder/coder/v2/agent/agentexec"
+	"github.com/coder/coder/v2/agent/agentssh"
+	"github.com/coder/coder/v2/agent/reaper"
+	"github.com/coder/coder/v2/buildinfo"
+	"github.com/coder/coder/v2/cli/clilog"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/codersdk/agentsdk"
 )
 
 func (r *RootCmd) workspaceAgent() *serpent.Command {
@@ -536,7 +536,7 @@ func (r *RootCmd) workspaceAgent() *serpent.Command {
 func ServeHandler(ctx context.Context, logger slog.Logger, handler http.Handler, addr, name string) (closeFunc func()) {
 	// ReadHeaderTimeout is purposefully not enabled. It caused some issues with
 	// websockets over the dev tunnel.
-	// See: https://github.com/DanielRondonGarcia/coder/pull/3730
+	// See: https://github.com/coder/coder/pull/3730
 	//nolint:gosec
 	srv := &http.Server{
 		Addr:    addr,

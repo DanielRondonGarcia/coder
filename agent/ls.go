@@ -13,8 +13,8 @@ import (
 	"github.com/shirou/gopsutil/v4/disk"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/httpapi"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/coder/coder/v2/coderd/httpapi"
+	"github.com/coder/coder/v2/codersdk"
 )
 
 var WindowsDriveRegex = regexp.MustCompile(`^[a-zA-Z]:\\$`)
@@ -185,7 +185,7 @@ type LSResponse struct {
 type LSFile struct {
 	Name string `json:"name"`
 	// e.g. "C:\\Users\\coder\\hello.txt"
-	//      "/home/DanielRondonGarcia/hello.txt"
+	//      "/home/coder/hello.txt"
 	AbsolutePathString string `json:"absolute_path_string"`
 	IsDir              bool   `json:"is_dir"`
 }

@@ -2,10 +2,10 @@
 
 Frequently asked questions on Coder OSS and licensed deployments. These FAQs
 come from our community and customers, feel free to
-[contribute to this page](https://github.com/DanielRondonGarcia/coder/edit/main/docs/tutorials/faqs.md).
+[contribute to this page](https://github.com/coder/coder/edit/main/docs/tutorials/faqs.md).
 
 For other community resources, see our
-[GitHub discussions](https://github.com/DanielRondonGarcia/coder/discussions), or join our
+[GitHub discussions](https://github.com/coder/coder/discussions), or join our
 [Discord server](https://discord.gg/coder).
 
 ## How do I add a Premium trial license?
@@ -104,7 +104,7 @@ properly.
 
 The visibility of Coder apps is configurable in the template. To change the
 default (shows all), add this block inside the
-[`coder_agent`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/agent)
+[`coder_agent`](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/agent)
 of a template and configure as needed:
 
 ```tf
@@ -118,7 +118,7 @@ of a template and configure as needed:
 ```
 
 This example will hide all built-in
-[`coder_app`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/app)
+[`coder_app`](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/app)
 icons except the web terminal.
 
 ## I want to allow code-server to be accessible by other users in my deployment
@@ -138,8 +138,8 @@ Set deployment (Kubernetes) to allow path app sharing:
 ```
 
 In the template, set
-[`coder_app`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/app)
-[`share`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/app#share)
+[`coder_app`](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/app)
+[`share`](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/app#share)
 option to `authenticated` and when a workspace is built with this template, the
 pretty globe shows up next to path-based `code-server`:
 
@@ -178,7 +178,7 @@ Even `coder server` which creates a reverse proxy, will let you use
 
 When updating a template, be aware of potential issues with input variables. For
 example, if a template prompts users to choose options like a
-[code-server](https://github.com/DanielRondonGarcia/code-server)
+[code-server](https://github.com/coder/code-server)
 [VS Code](https://code.visualstudio.com/) IDE release, a
 [container image](https://hub.docker.com/u/codercom), or a
 [VS Code extension](https://marketplace.visualstudio.com/vscode), removing any
@@ -224,7 +224,7 @@ psql "postgres://coder@localhost:53737/coder?sslmode=disable&password=I2S...pTk"
 
 ## How to find out Coder's latest Terraform provider version?
 
-[Coder is on the HashiCorp's Terraform registry](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest).
+[Coder is on the HashiCorp's Terraform registry](https://registry.terraform.io/providers/coder/coder/latest).
 Check this frequently to make sure you are on the latest version.
 
 Sometimes, the version may change and `resource` configurations will either
@@ -325,8 +325,8 @@ tar -cvh -C ./template_1 | coder templates <push|create> -d - <name>
 
 References:
 
-- [Public GitHub Issue 6117](https://github.com/DanielRondonGarcia/coder/issues/6117)
-- [Public GitHub Issue 5677](https://github.com/DanielRondonGarcia/coder/issues/5677)
+- [Public GitHub Issue 6117](https://github.com/coder/coder/issues/6117)
+- [Public GitHub Issue 5677](https://github.com/coder/coder/issues/5677)
 - [Coder docs: Templates/Change Management](../admin/templates/managing-templates/change-management.md)
 
 ## Can I run Coder in an air-gapped or offline mode? (no Internet)?
@@ -370,7 +370,7 @@ JetBrains IDE versions. If downloading from
 [jetbrains.com](https://www.jetbrains.com/remote-development/gateway/) is
 acceptable, see the example templates below which specifies the product code,
 IDE version and build number in the
-[`coder_app`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/app#share)
+[`coder_app`](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/app#share)
 resource. This will present an icon in the workspace dashboard which when
 clicked, will look for a locally installed Gateway, and open it. Alternatively,
 the IDE can be baked into the container image and manually open Gateway (or
@@ -380,12 +380,12 @@ open the IDE.
 ## What options do I have for adding VS Code extensions into code-server, VS Code Desktop or Microsoft's Code Server?
 
 Coder has an open-source project called
-[`code-marketplace`](https://github.com/DanielRondonGarcia/code-marketplace) which is a
+[`code-marketplace`](https://github.com/coder/code-marketplace) which is a
 private VS Code extension marketplace. There is even integration with JFrog
 Artifactory.
 
 - [Blog post](https://coder.com/blog/running-a-private-vs-code-extension-marketplace)
-- [OSS project](https://github.com/DanielRondonGarcia/code-marketplace)
+- [OSS project](https://github.com/coder/code-marketplace)
 
 You can also use Microsoft's code-server - which is like Coder's, but it
 can connect to Microsoft's extension marketplace so Copilot and chat can be
@@ -489,7 +489,7 @@ like code-server when creating the workspace.
 
 ## Why am I getting this "remote host doesn't meet VS Code Server's prerequisites" error when opening up VSCode remote in a Linux environment?
 
-![VS Code Server prerequisite](https://github.com/DanielRondonGarcia/coder/assets/10648092/150c5996-18b1-4fae-afd0-be2b386a3239)
+![VS Code Server prerequisite](https://github.com/coder/coder/assets/10648092/150c5996-18b1-4fae-afd0-be2b386a3239)
 
 It is because, more than likely, the supported OS of either the container image
 or VM/VPS doesn't have the proper C libraries to run the VS Code Server. For

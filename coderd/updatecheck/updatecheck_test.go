@@ -14,9 +14,9 @@ import (
 
 	"cdr.dev/slog/sloggers/slogtest"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtestutil"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/updatecheck"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/coder/coder/v2/coderd/database/dbtestutil"
+	"github.com/coder/coder/v2/coderd/updatecheck"
+	"github.com/coder/coder/v2/testutil"
 )
 
 func TestChecker_Notify(t *testing.T) {

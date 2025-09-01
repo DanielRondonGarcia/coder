@@ -12,9 +12,9 @@ import (
 
 	"github.com/acarl005/stripansi"
 
-	"github.com/DanielRondonGarcia/coder/v2/buildinfo"
-	"github.com/DanielRondonGarcia/flog"
-	"github.com/DanielRondonGarcia/serpent"
+	"github.com/coder/coder/v2/buildinfo"
+	"github.com/coder/flog"
+	"github.com/coder/serpent"
 )
 
 //go:embed command.tpl

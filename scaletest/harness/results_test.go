@@ -14,8 +14,8 @@ import (
 	"github.com/stretchr/testify/require"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/httpapi"
-	"github.com/DanielRondonGarcia/coder/v2/scaletest/harness"
+	"github.com/coder/coder/v2/coderd/httpapi"
+	"github.com/coder/coder/v2/scaletest/harness"
 )
 
 type testError struct {
@@ -117,7 +117,7 @@ Test results:
 			"duration_ms": 1000,
 			"total_bytes_read": 1024,
 			"total_bytes_written": 2048,
-			"error": "test-0/0 error:\n    github.com/DanielRondonGarcia/coder/v2/scaletest/harness_test.Test_Results\n        [working_directory]/results_test.go:43"
+			"error": "test-0/0 error:\n    github.com/coder/coder/v2/scaletest/harness_test.Test_Results\n        [working_directory]/results_test.go:43"
 		},
 		"test-0/1": {
 			"full_id": "test-0/1",

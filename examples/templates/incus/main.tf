@@ -56,7 +56,7 @@ data "coder_parameter" "memory" {
 data "coder_parameter" "git_repo" {
   type        = "string"
   name        = "Git repository"
-  default     = "https://github.com/DanielRondonGarcia/coder"
+  default     = "https://github.com/coder/coder"
   description = "Clone a git repo into [base directory]"
   mutable     = true
 }
@@ -103,9 +103,9 @@ resource "coder_agent" "main" {
   }
 }
 
-# https://registry.coder.com/modules/DanielRondonGarcia/git-clone
+# https://registry.coder.com/modules/coder/git-clone
 module "git-clone" {
-  source = "registry.coder.com/DanielRondonGarcia/git-clone/coder"
+  source = "registry.coder.com/coder/git-clone/coder"
   # This ensures that the latest non-breaking version of the module gets downloaded, you can also pin the module version to prevent breaking changes in production.
   version  = "~> 1.0"
   agent_id = local.agent_id
@@ -113,26 +113,26 @@ module "git-clone" {
   base_dir = local.repo_base_dir
 }
 
-# https://registry.coder.com/modules/DanielRondonGarcia/code-server
+# https://registry.coder.com/modules/coder/code-server
 module "code-server" {
-  source = "registry.coder.com/DanielRondonGarcia/code-server/coder"
+  source = "registry.coder.com/coder/code-server/coder"
   # This ensures that the latest non-breaking version of the module gets downloaded, you can also pin the module version to prevent breaking changes in production.
   version  = "~> 1.0"
   agent_id = local.agent_id
   folder   = local.repo_base_dir
 }
 
-# https://registry.coder.com/modules/DanielRondonGarcia/filebrowser
+# https://registry.coder.com/modules/coder/filebrowser
 module "filebrowser" {
-  source = "registry.coder.com/DanielRondonGarcia/filebrowser/coder"
+  source = "registry.coder.com/coder/filebrowser/coder"
   # This ensures that the latest non-breaking version of the module gets downloaded, you can also pin the module version to prevent breaking changes in production.
   version  = "~> 1.0"
   agent_id = local.agent_id
 }
 
-# https://registry.coder.com/modules/DanielRondonGarcia/coder-login
+# https://registry.coder.com/modules/coder/coder-login
 module "coder-login" {
-  source = "registry.coder.com/DanielRondonGarcia/coder-login/coder"
+  source = "registry.coder.com/coder/coder-login/coder"
   # This ensures that the latest non-breaking version of the module gets downloaded, you can also pin the module version to prevent breaking changes in production.
   version  = "~> 1.0"
   agent_id = local.agent_id
@@ -160,7 +160,7 @@ resource "incus_instance_file" "agent_token" {
 CODER_AGENT_TOKEN=${local.agent_token}
 EOF
   create_directories = true
-  target_path        = "/opt/DanielRondonGarcia/init.env"
+  target_path        = "/opt/coder/init.env"
 }
 
 resource "incus_instance" "dev" {
@@ -186,7 +186,7 @@ users:
     shell: /bin/bash
     sudo: ['ALL=(ALL) NOPASSWD:ALL']
 write_files:
-  - path: /opt/DanielRondonGarcia/init
+  - path: /opt/coder/init
     permissions: "0755"
     encoding: b64
     content: ${base64encode(local.agent_init_script)}
@@ -200,8 +200,8 @@ write_files:
 
       [Service]
       User=${local.workspace_user}
-      EnvironmentFile=/opt/DanielRondonGarcia/init.env
-      ExecStart=/opt/DanielRondonGarcia/init
+      EnvironmentFile=/opt/coder/init.env
+      ExecStart=/opt/coder/init
       Restart=always
       RestartSec=10
       TimeoutStopSec=90
@@ -229,7 +229,7 @@ write_files:
     permissions: "0644"
     content: |
       [Path]
-      PathModified=/opt/DanielRondonGarcia/init.env
+      PathModified=/opt/coder/init.env
       Unit=coder-agent-watcher.service
 
       [Install]

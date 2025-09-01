@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/usage/usagetypes"
+	"github.com/coder/coder/v2/coderd/usage/usagetypes"
 )
 
 func TestTallymanV1UsageEvent(t *testing.T) {

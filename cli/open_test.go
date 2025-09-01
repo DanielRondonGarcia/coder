@@ -15,17 +15,17 @@ import (
 	"github.com/stretchr/testify/require"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/agent"
-	"github.com/DanielRondonGarcia/coder/v2/agent/agentcontainers"
-	"github.com/DanielRondonGarcia/coder/v2/agent/agentcontainers/watcher"
-	"github.com/DanielRondonGarcia/coder/v2/agent/agenttest"
-	"github.com/DanielRondonGarcia/coder/v2/cli/clitest"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtime"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/provisionersdk/proto"
-	"github.com/DanielRondonGarcia/coder/v2/pty/ptytest"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/coder/coder/v2/agent"
+	"github.com/coder/coder/v2/agent/agentcontainers"
+	"github.com/coder/coder/v2/agent/agentcontainers/watcher"
+	"github.com/coder/coder/v2/agent/agenttest"
+	"github.com/coder/coder/v2/cli/clitest"
+	"github.com/coder/coder/v2/coderd/coderdtest"
+	"github.com/coder/coder/v2/coderd/database/dbtime"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/provisionersdk/proto"
+	"github.com/coder/coder/v2/pty/ptytest"
+	"github.com/coder/coder/v2/testutil"
 )
 
 func TestOpenVSCode(t *testing.T) {
@@ -356,7 +356,7 @@ func TestOpenVSCodeDevContainer(t *testing.T) {
 
 	devcontainerID := uuid.New()
 	devcontainerName := "wilson"
-	workspaceFolder := "/home/DanielRondonGarcia/wilson"
+	workspaceFolder := "/home/coder/wilson"
 	configFile := path.Join(workspaceFolder, ".devcontainer", "devcontainer.json")
 
 	containerID := uuid.NewString()

@@ -31,39 +31,39 @@ import (
 
 	"cdr.dev/slog"
 	"cdr.dev/slog/sloggers/slogtest"
-	"github.com/DanielRondonGarcia/quartz"
-	"github.com/DanielRondonGarcia/websocket"
+	"github.com/coder/quartz"
+	"github.com/coder/websocket"
 
-	"github.com/DanielRondonGarcia/coder/v2/agent"
-	"github.com/DanielRondonGarcia/coder/v2/agent/agentcontainers"
-	"github.com/DanielRondonGarcia/coder/v2/agent/agentcontainers/acmock"
-	"github.com/DanielRondonGarcia/coder/v2/agent/agentcontainers/watcher"
-	"github.com/DanielRondonGarcia/coder/v2/agent/agenttest"
-	agentproto "github.com/DanielRondonGarcia/coder/v2/agent/proto"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest/oidctest"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbfake"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbgen"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtestutil"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtime"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/pubsub"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/externalauth"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/jwtutils"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/prebuilds"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/telemetry"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/ptr"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/agentsdk"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/workspacesdk"
-	"github.com/DanielRondonGarcia/coder/v2/provisioner/echo"
-	"github.com/DanielRondonGarcia/coder/v2/provisionersdk/proto"
-	"github.com/DanielRondonGarcia/coder/v2/tailnet"
-	tailnetproto "github.com/DanielRondonGarcia/coder/v2/tailnet/proto"
-	"github.com/DanielRondonGarcia/coder/v2/tailnet/tailnettest"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/coder/coder/v2/agent"
+	"github.com/coder/coder/v2/agent/agentcontainers"
+	"github.com/coder/coder/v2/agent/agentcontainers/acmock"
+	"github.com/coder/coder/v2/agent/agentcontainers/watcher"
+	"github.com/coder/coder/v2/agent/agenttest"
+	agentproto "github.com/coder/coder/v2/agent/proto"
+	"github.com/coder/coder/v2/coderd/coderdtest"
+	"github.com/coder/coder/v2/coderd/coderdtest/oidctest"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database/dbauthz"
+	"github.com/coder/coder/v2/coderd/database/dbfake"
+	"github.com/coder/coder/v2/coderd/database/dbgen"
+	"github.com/coder/coder/v2/coderd/database/dbtestutil"
+	"github.com/coder/coder/v2/coderd/database/dbtime"
+	"github.com/coder/coder/v2/coderd/database/pubsub"
+	"github.com/coder/coder/v2/coderd/externalauth"
+	"github.com/coder/coder/v2/coderd/jwtutils"
+	"github.com/coder/coder/v2/coderd/prebuilds"
+	"github.com/coder/coder/v2/coderd/rbac"
+	"github.com/coder/coder/v2/coderd/telemetry"
+	"github.com/coder/coder/v2/coderd/util/ptr"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/codersdk/agentsdk"
+	"github.com/coder/coder/v2/codersdk/workspacesdk"
+	"github.com/coder/coder/v2/provisioner/echo"
+	"github.com/coder/coder/v2/provisionersdk/proto"
+	"github.com/coder/coder/v2/tailnet"
+	tailnetproto "github.com/coder/coder/v2/tailnet/proto"
+	"github.com/coder/coder/v2/tailnet/tailnettest"
+	"github.com/coder/coder/v2/testutil"
 )
 
 func TestWorkspaceAgent(t *testing.T) {
@@ -1413,8 +1413,8 @@ func TestWatchWorkspaceAgentDevcontainers(t *testing.T) {
 				FriendlyName: "container1",
 				Image:        "busybox:latest",
 				Labels: map[string]string{
-					agentcontainers.DevcontainerLocalFolderLabel: "/home/DanielRondonGarcia/project1",
-					agentcontainers.DevcontainerConfigFileLabel:  "/home/DanielRondonGarcia/project1/.devcontainer/devcontainer.json",
+					agentcontainers.DevcontainerLocalFolderLabel: "/home/coder/project1",
+					agentcontainers.DevcontainerConfigFileLabel:  "/home/coder/project1/.devcontainer/devcontainer.json",
 				},
 				Running: true,
 				Status:  "running",
@@ -1426,8 +1426,8 @@ func TestWatchWorkspaceAgentDevcontainers(t *testing.T) {
 				FriendlyName: "container2",
 				Image:        "busybox:latest",
 				Labels: map[string]string{
-					agentcontainers.DevcontainerLocalFolderLabel: "/home/DanielRondonGarcia/project2",
-					agentcontainers.DevcontainerConfigFileLabel:  "/home/DanielRondonGarcia/project2/.devcontainer/devcontainer.json",
+					agentcontainers.DevcontainerLocalFolderLabel: "/home/coder/project2",
+					agentcontainers.DevcontainerConfigFileLabel:  "/home/coder/project2/.devcontainer/devcontainer.json",
 				},
 				Running: true,
 				Status:  "running",

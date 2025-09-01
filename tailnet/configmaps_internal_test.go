@@ -21,9 +21,9 @@ import (
 	"tailscale.com/wgengine/router"
 	"tailscale.com/wgengine/wgcfg"
 
-	"github.com/DanielRondonGarcia/coder/v2/tailnet/proto"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
-	"github.com/DanielRondonGarcia/quartz"
+	"github.com/coder/coder/v2/tailnet/proto"
+	"github.com/coder/coder/v2/testutil"
+	"github.com/coder/quartz"
 )
 
 func TestConfigMaps_setAddresses_different(t *testing.T) {

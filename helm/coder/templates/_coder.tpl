@@ -51,7 +51,7 @@ env:
       key: psk
 {{- end }}
   # Set the default access URL so a `helm apply` works by default.
-  # See: https://github.com/DanielRondonGarcia/coder/issues/5024
+  # See: https://github.com/coder/coder/issues/5024
 {{- $hasAccessURL := false }}
 {{- range .Values.coder.env }}
 {{- if eq .name "CODER_ACCESS_URL" }}

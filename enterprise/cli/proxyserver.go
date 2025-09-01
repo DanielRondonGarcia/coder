@@ -22,16 +22,16 @@ import (
 	"golang.org/x/xerrors"
 
 	"cdr.dev/slog"
-	"github.com/DanielRondonGarcia/coder/v2/cli"
-	"github.com/DanielRondonGarcia/coder/v2/cli/clilog"
-	"github.com/DanielRondonGarcia/coder/v2/cli/cliui"
-	"github.com/DanielRondonGarcia/coder/v2/coderd"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/httpmw"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/workspaceapps/appurl"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/enterprise/wsproxy"
-	"github.com/DanielRondonGarcia/pretty"
-	"github.com/DanielRondonGarcia/serpent"
+	"github.com/coder/coder/v2/cli"
+	"github.com/coder/coder/v2/cli/clilog"
+	"github.com/coder/coder/v2/cli/cliui"
+	"github.com/coder/coder/v2/coderd"
+	"github.com/coder/coder/v2/coderd/httpmw"
+	"github.com/coder/coder/v2/coderd/workspaceapps/appurl"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/enterprise/wsproxy"
+	"github.com/coder/pretty"
+	"github.com/coder/serpent"
 )
 
 type closerFuncs []func()
@@ -288,7 +288,7 @@ func (r *RootCmd) proxyServer() *serpent.Command {
 			closers.Add(shutdownConns)
 			// ReadHeaderTimeout is purposefully not enabled. It caused some
 			// issues with websockets over the dev tunnel.
-			// See: https://github.com/DanielRondonGarcia/coder/pull/3730
+			// See: https://github.com/coder/coder/pull/3730
 			//nolint:gosec
 			httpServer := &http.Server{
 				// These errors are typically noise like "TLS: EOF". Vault does

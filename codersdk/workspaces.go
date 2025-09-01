@@ -13,7 +13,7 @@ import (
 
 	"cdr.dev/slog"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/tracing"
+	"github.com/coder/coder/v2/coderd/tracing"
 )
 
 type AutomaticUpdates string

@@ -5,8 +5,8 @@ import (
 
 	"github.com/hashicorp/hcl/v2"
 
-	"github.com/DanielRondonGarcia/preview"
-	previewtypes "github.com/DanielRondonGarcia/preview/types"
+	"github.com/coder/preview"
+	previewtypes "github.com/coder/preview/types"
 )
 
 func CheckTags(output *preview.Output, diags hcl.Diagnostics) *DiagnosticError {

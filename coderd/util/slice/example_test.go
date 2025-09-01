@@ -3,7 +3,7 @@ package slice_test
 import (
 	"fmt"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/slice"
+	"github.com/coder/coder/v2/coderd/util/slice"
 )
 
 //nolint:revive // They want me to error check my Printlns

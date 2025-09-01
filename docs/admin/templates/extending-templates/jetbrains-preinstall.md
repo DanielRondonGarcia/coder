@@ -40,7 +40,7 @@ Add the following command to your template's `startup_script`:
 
 ## Configure JetBrains Gateway Module
 
-If you are using our [jetbrains-gateway](https://registry.coder.com/modules/DanielRondonGarcia/jetbrains-gateway) module, you can configure it by adding the following snippet to your template:
+If you are using our [jetbrains-gateway](https://registry.coder.com/modules/coder/jetbrains-gateway) module, you can configure it by adding the following snippet to your template:
 
 ```tf
 module "jetbrains_gateway" {
@@ -48,7 +48,7 @@ module "jetbrains_gateway" {
   source         = "registry.coder.com/modules/jetbrains-gateway/coder"
   version        = "1.0.29"
   agent_id       = coder_agent.main.id
-  folder         = "/home/DanielRondonGarcia/example"
+  folder         = "/home/coder/example"
   jetbrains_ides = ["IU"]
   default        = "IU"
   latest         = false

@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/httpapi"
-	"github.com/DanielRondonGarcia/coder/v2/scaletest/placebo"
+	"github.com/coder/coder/v2/coderd/httpapi"
+	"github.com/coder/coder/v2/scaletest/placebo"
 )
 
 func Test_Config(t *testing.T) {

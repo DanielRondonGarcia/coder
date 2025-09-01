@@ -272,7 +272,7 @@ func Test_sshConfigExecEscapeSeparatorForce(t *testing.T) {
 		{
 			name:           "windows_force_unix_with_spaces",
 			path:           `C:\Program Files\Coder\bin\coder.exe`,
-			expWindowsPath: `"C:/Program Files/DanielRondonGarcia/bin/coder.exe"`,
+			expWindowsPath: `"C:/Program Files/Coder/bin/coder.exe"`,
 			expOtherPath:   `"C:\Program Files\Coder\bin\coder.exe"`,
 			forceUnix:      true,
 			wantErr:        false,
@@ -280,7 +280,7 @@ func Test_sshConfigExecEscapeSeparatorForce(t *testing.T) {
 		{
 			name:           "windows_force_unix",
 			path:           `C:\ProgramFiles\Coder\bin\coder.exe`,
-			expWindowsPath: `C:/ProgramFiles/DanielRondonGarcia/bin/coder.exe`,
+			expWindowsPath: `C:/ProgramFiles/Coder/bin/coder.exe`,
 			expOtherPath:   `C:\ProgramFiles\Coder\bin\coder.exe`,
 			forceUnix:      true,
 			wantErr:        false,

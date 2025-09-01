@@ -19,12 +19,12 @@ import (
 	"github.com/tailscale/wireguard-go/tun"
 
 	"cdr.dev/slog"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/workspacesdk"
-	"github.com/DanielRondonGarcia/coder/v2/tailnet"
-	"github.com/DanielRondonGarcia/coder/v2/tailnet/proto"
-	"github.com/DanielRondonGarcia/quartz"
-	"github.com/DanielRondonGarcia/websocket"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/codersdk/workspacesdk"
+	"github.com/coder/coder/v2/tailnet"
+	"github.com/coder/coder/v2/tailnet/proto"
+	"github.com/coder/quartz"
+	"github.com/coder/websocket"
 )
 
 type Conn interface {

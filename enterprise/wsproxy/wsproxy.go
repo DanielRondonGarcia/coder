@@ -26,21 +26,21 @@ import (
 	"tailscale.com/types/key"
 
 	"cdr.dev/slog"
-	"github.com/DanielRondonGarcia/coder/v2/buildinfo"
-	"github.com/DanielRondonGarcia/coder/v2/cli/cliutil"
-	"github.com/DanielRondonGarcia/coder/v2/coderd"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/cryptokeys"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/httpapi"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/httpmw"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/httpmw/loggermw"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/tracing"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/workspaceapps"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	"github.com/DanielRondonGarcia/coder/v2/enterprise/derpmesh"
-	"github.com/DanielRondonGarcia/coder/v2/enterprise/replicasync"
-	"github.com/DanielRondonGarcia/coder/v2/enterprise/wsproxy/wsproxysdk"
-	"github.com/DanielRondonGarcia/coder/v2/site"
-	"github.com/DanielRondonGarcia/coder/v2/tailnet"
+	"github.com/coder/coder/v2/buildinfo"
+	"github.com/coder/coder/v2/cli/cliutil"
+	"github.com/coder/coder/v2/coderd"
+	"github.com/coder/coder/v2/coderd/cryptokeys"
+	"github.com/coder/coder/v2/coderd/httpapi"
+	"github.com/coder/coder/v2/coderd/httpmw"
+	"github.com/coder/coder/v2/coderd/httpmw/loggermw"
+	"github.com/coder/coder/v2/coderd/tracing"
+	"github.com/coder/coder/v2/coderd/workspaceapps"
+	"github.com/coder/coder/v2/codersdk"
+	"github.com/coder/coder/v2/enterprise/derpmesh"
+	"github.com/coder/coder/v2/enterprise/replicasync"
+	"github.com/coder/coder/v2/enterprise/wsproxy/wsproxysdk"
+	"github.com/coder/coder/v2/site"
+	"github.com/coder/coder/v2/tailnet"
 )
 
 type Options struct {
@@ -351,7 +351,7 @@ func New(ctx context.Context, opts *Options) (*Server, error) {
 		// This header stops a browser from trying to MIME-sniff the content type and
 		// forces it to stick with the declared content-type. This is the only valid
 		// value for this header.
-		// See: https://github.com/DanielRondonGarcia/security/issues/12
+		// See: https://github.com/coder/security/issues/12
 		func(next http.Handler) http.Handler {
 			return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 				w.Header().Add("X-Content-Type-Options", "nosniff")

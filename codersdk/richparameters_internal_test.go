@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/DanielRondonGarcia/terraform-provider-coder/v2/provider"
+	"github.com/coder/terraform-provider-coder/v2/provider"
 )
 
 func Test_inOptionSet(t *testing.T) {

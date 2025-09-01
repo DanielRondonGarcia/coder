@@ -17,11 +17,11 @@ import (
 	"golang.org/x/xerrors"
 
 	"cdr.dev/slog"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk/drpcsdk"
+	"github.com/coder/coder/v2/codersdk/drpcsdk"
 
 	protobuf "google.golang.org/protobuf/proto"
 
-	"github.com/DanielRondonGarcia/coder/v2/provisionersdk/proto"
+	"github.com/coder/coder/v2/provisionersdk/proto"
 )
 
 const (

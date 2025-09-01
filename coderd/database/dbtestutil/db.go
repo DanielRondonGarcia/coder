@@ -19,14 +19,14 @@ import (
 	"golang.org/x/xerrors"
 
 	"cdr.dev/slog"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/pubsub"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database/pubsub"
+	"github.com/coder/coder/v2/testutil"
 )
 
 // WillUsePostgres returns true if a call to NewDB() will return a real, postgres-backed Store and Pubsub.
 // TODO(hugodutka): since we removed the in-memory database, this is always true,
-// and we need to remove this function. https://github.com/DanielRondonGarcia/internal/issues/758
+// and we need to remove this function. https://github.com/coder/internal/issues/758
 func WillUsePostgres() bool {
 	return true
 }

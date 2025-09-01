@@ -576,9 +576,9 @@ lint/ts: site/node_modules/.installed
 lint/go:
 	./scripts/check_enterprise_imports.sh
 	./scripts/check_codersdk_imports.sh
-	linter_ver=$(shell egrep -o 'GOLANGCI_LINT_VERSION=\S+' dogfood/DanielRondonGarcia/Dockerfile | cut -d '=' -f 2)
+	linter_ver=$(shell egrep -o 'GOLANGCI_LINT_VERSION=\S+' dogfood/coder/Dockerfile | cut -d '=' -f 2)
 	go run github.com/golangci/golangci-lint/cmd/golangci-lint@v$$linter_ver run
-	go run github.com/DanielRondonGarcia/paralleltestctx/cmd/paralleltestctx@v0.0.1 -custom-funcs="testutil.Context" ./...
+	go run github.com/coder/paralleltestctx/cmd/paralleltestctx@v0.0.1 -custom-funcs="testutil.Context" ./...
 .PHONY: lint/go
 
 lint/examples:
@@ -668,7 +668,7 @@ gen/golden-files: \
 	coderd/notifications/.gen-golden \
 	enterprise/cli/testdata/.gen-golden \
 	enterprise/tailnet/testdata/.gen-golden \
-	helm/DanielRondonGarcia/tests/testdata/.gen-golden \
+	helm/coder/tests/testdata/.gen-golden \
 	helm/provisioner/tests/testdata/.gen-golden \
 	provisioner/terraform/testdata/.gen-golden \
 	tailnet/testdata/.gen-golden
@@ -902,7 +902,7 @@ clean/golden-files:
 		coderd/testdata \
 		enterprise/cli/testdata \
 		enterprise/tailnet/testdata \
-		helm/DanielRondonGarcia/tests/testdata \
+		helm/coder/tests/testdata \
 		helm/provisioner/tests/testdata \
 		provisioner/terraform/testdata \
 		tailnet/testdata \
@@ -925,8 +925,8 @@ enterprise/tailnet/testdata/.gen-golden: $(wildcard enterprise/tailnet/testdata/
 	TZ=UTC go test ./enterprise/tailnet -run="TestDebugTemplate" -update
 	touch "$@"
 
-helm/DanielRondonGarcia/tests/testdata/.gen-golden: $(wildcard helm/DanielRondonGarcia/tests/testdata/*.yaml) $(wildcard helm/DanielRondonGarcia/tests/testdata/*.golden) $(GO_SRC_FILES) $(wildcard helm/DanielRondonGarcia/tests/*_test.go)
-	TZ=UTC go test ./helm/DanielRondonGarcia/tests -run=TestUpdateGoldenFiles -update
+helm/coder/tests/testdata/.gen-golden: $(wildcard helm/coder/tests/testdata/*.yaml) $(wildcard helm/coder/tests/testdata/*.golden) $(GO_SRC_FILES) $(wildcard helm/coder/tests/*_test.go)
+	TZ=UTC go test ./helm/coder/tests -run=TestUpdateGoldenFiles -update
 	touch "$@"
 
 helm/provisioner/tests/testdata/.gen-golden: $(wildcard helm/provisioner/tests/testdata/*.yaml) $(wildcard helm/provisioner/tests/testdata/*.golden) $(GO_SRC_FILES) $(wildcard helm/provisioner/tests/*_test.go)
@@ -1132,5 +1132,5 @@ else
 endif
 .PHONY: test-e2e
 
-dogfood/DanielRondonGarcia/nix.hash: flake.nix flake.lock
-	sha256sum flake.nix flake.lock >./dogfood/DanielRondonGarcia/nix.hash
+dogfood/coder/nix.hash: flake.nix flake.lock
+	sha256sum flake.nix flake.lock >./dogfood/coder/nix.hash

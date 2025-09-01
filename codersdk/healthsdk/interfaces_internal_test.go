@@ -10,7 +10,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"tailscale.com/net/interfaces"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/healthcheck/health"
+	"github.com/coder/coder/v2/coderd/healthcheck/health"
 )
 
 func Test_generateInterfacesReport(t *testing.T) {

@@ -6,9 +6,9 @@ import (
 
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/guts"
-	"github.com/DanielRondonGarcia/guts/bindings"
-	"github.com/DanielRondonGarcia/guts/config"
+	"github.com/coder/guts"
+	"github.com/coder/guts/bindings"
+	"github.com/coder/guts/config"
 )
 
 func main() {
@@ -18,9 +18,9 @@ func main() {
 	}
 
 	generateDirectories := map[string]string{
-		"github.com/DanielRondonGarcia/coder/v2/codersdk":                  "",
-		"github.com/DanielRondonGarcia/coder/v2/coderd/healthcheck/health": "Health",
-		"github.com/DanielRondonGarcia/coder/v2/codersdk/healthsdk":        "",
+		"github.com/coder/coder/v2/codersdk":                  "",
+		"github.com/coder/coder/v2/coderd/healthcheck/health": "Health",
+		"github.com/coder/coder/v2/codersdk/healthsdk":        "",
 	}
 	for dir, prefix := range generateDirectories {
 		err = gen.IncludeGenerateWithPrefix(dir, prefix)
@@ -32,8 +32,8 @@ func main() {
 	// Serpent has some types referenced in the codersdk.
 	// We want the referenced types generated.
 	referencePackages := map[string]string{
-		"github.com/DanielRondonGarcia/preview/types": "Preview",
-		"github.com/DanielRondonGarcia/serpent":       "Serpent",
+		"github.com/coder/preview/types": "Preview",
+		"github.com/coder/serpent":       "Serpent",
 		"tailscale.com/derp":             "",
 		// Conflicting name "DERPRegion"
 		"tailscale.com/tailcfg":      "Tail",
@@ -94,7 +94,7 @@ func TypeMappings(gen *guts.GoParser) error {
 	gen.IncludeCustomDeclaration(config.StandardMappings())
 
 	gen.IncludeCustomDeclaration(map[string]guts.TypeOverride{
-		"github.com/DanielRondonGarcia/coder/v2/codersdk.NullTime": config.OverrideNullable(config.OverrideLiteral(bindings.KeywordString)),
+		"github.com/coder/coder/v2/codersdk.NullTime": config.OverrideNullable(config.OverrideLiteral(bindings.KeywordString)),
 		// opt.Bool can return 'null' if unset
 		"tailscale.com/types/opt.Bool": config.OverrideNullable(config.OverrideLiteral(bindings.KeywordBoolean)),
 		// hcl diagnostics should be cast to `preview.FriendlyDiagnostic`
@@ -105,7 +105,7 @@ func TypeMappings(gen *guts.GoParser) error {
 				Prefix:  "",
 			})
 		},
-		"github.com/DanielRondonGarcia/preview/types.HCLString": func() bindings.ExpressionType {
+		"github.com/coder/preview/types.HCLString": func() bindings.ExpressionType {
 			return bindings.Reference(bindings.Identifier{
 				Name:    "NullHCLString",
 				Package: nil,
@@ -116,16 +116,16 @@ func TypeMappings(gen *guts.GoParser) error {
 
 	err := gen.IncludeCustom(map[string]string{
 		// Serpent fields should be converted to their primitive types
-		"github.com/DanielRondonGarcia/serpent.Regexp":         "string",
-		"github.com/DanielRondonGarcia/serpent.StringArray":    "string",
-		"github.com/DanielRondonGarcia/serpent.String":         "string",
-		"github.com/DanielRondonGarcia/serpent.YAMLConfigPath": "string",
-		"github.com/DanielRondonGarcia/serpent.Strings":        "[]string",
-		"github.com/DanielRondonGarcia/serpent.Int64":          "int64",
-		"github.com/DanielRondonGarcia/serpent.Bool":           "bool",
-		"github.com/DanielRondonGarcia/serpent.Duration":       "int64",
-		"github.com/DanielRondonGarcia/serpent.URL":            "string",
-		"github.com/DanielRondonGarcia/serpent.HostPort":       "string",
+		"github.com/coder/serpent.Regexp":         "string",
+		"github.com/coder/serpent.StringArray":    "string",
+		"github.com/coder/serpent.String":         "string",
+		"github.com/coder/serpent.YAMLConfigPath": "string",
+		"github.com/coder/serpent.Strings":        "[]string",
+		"github.com/coder/serpent.Int64":          "int64",
+		"github.com/coder/serpent.Bool":           "bool",
+		"github.com/coder/serpent.Duration":       "int64",
+		"github.com/coder/serpent.URL":            "string",
+		"github.com/coder/serpent.HostPort":       "string",
 		"encoding/json.RawMessage":                "map[string]string",
 	})
 	if err != nil {

@@ -8,9 +8,9 @@
  * these projects are importing the file:
  *
  * - The Coder VS Code extension
- *   @see {@link https://github.com/DanielRondonGarcia/vscode-coder}
+ *   @see {@link https://github.com/coder/vscode-coder}
  * - The Coder Backstage plugin
- *   @see {@link https://github.com/DanielRondonGarcia/backstage-plugins}
+ *   @see {@link https://github.com/coder/backstage-plugins}
  *
  * It is important that this file not do any aliased imports, or else the other
  * consumers could break (particularly for platforms that limit how much you can
@@ -1521,7 +1521,7 @@ class ApiMethods {
 	};
 
 	// API definition:
-	// https://github.com/DanielRondonGarcia/coder/blob/db665e7261f3c24a272ccec48233a3e276878239/coderd/users.go#L33-L53
+	// https://github.com/coder/coder/blob/db665e7261f3c24a272ccec48233a3e276878239/coderd/users.go#L33-L53
 	hasFirstUser = async (): Promise<boolean> => {
 		try {
 			// If it is success, it is true

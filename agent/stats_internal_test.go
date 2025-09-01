@@ -13,8 +13,8 @@ import (
 
 	"tailscale.com/types/netlogtype"
 
-	"github.com/DanielRondonGarcia/coder/v2/agent/proto"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/coder/coder/v2/agent/proto"
+	"github.com/coder/coder/v2/testutil"
 )
 
 func TestStatsReporter(t *testing.T) {

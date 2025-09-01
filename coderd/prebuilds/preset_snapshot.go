@@ -11,12 +11,12 @@ import (
 
 	"cdr.dev/slog"
 
-	"github.com/DanielRondonGarcia/quartz"
+	"github.com/coder/quartz"
 
-	tf_provider_helpers "github.com/DanielRondonGarcia/terraform-provider-coder/v2/provider/helpers"
+	tf_provider_helpers "github.com/coder/terraform-provider-coder/v2/provider/helpers"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/schedule/cron"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/schedule/cron"
 )
 
 // ActionType represents the type of action needed to reconcile prebuilds.

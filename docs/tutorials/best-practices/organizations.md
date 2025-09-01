@@ -80,7 +80,7 @@ provisioner and the provisioner is responsible for executing the Terraform.
 There are planned improvements to the troubleshooting provisioners process.
 Follow this GitHub issue for more details:
 
-- [coder/coder#15192](https://github.com/DanielRondonGarcia/coder/issues/15192)
+- [coder/coder#15192](https://github.com/coder/coder/issues/15192)
 
 ## Identity Provider (SSO) Sync
 
@@ -117,7 +117,7 @@ Some examples of custom roles that can be created:
   users or delete templates.
 
 We’re interested in identifying new use cases for custom roles. Please
-[create a GitHub issue](https://github.com/DanielRondonGarcia/internal/issues/new?title=request%28orgs%29%3A+request+title+here&labels=["customer-feedback"]&body=please+enter+your+request+here)
+[create a GitHub issue](https://github.com/coder/internal/issues/new?title=request%28orgs%29%3A+request+title+here&labels=["customer-feedback"]&body=please+enter+your+request+here)
 with your suggestion or request.
 
 ## Managing Organizations at Scale
@@ -131,4 +131,4 @@ so that this can be done declaratively and bulk updates to things like templates
 and quotas can be performed easily:
 
 - Issue
-  [coder/terraform-provider-coderd#39](https://github.com/DanielRondonGarcia/terraform-provider-coderd/issues/39)
+  [coder/terraform-provider-coderd#39](https://github.com/coder/terraform-provider-coderd/issues/39)

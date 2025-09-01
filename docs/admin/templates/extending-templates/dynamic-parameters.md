@@ -82,7 +82,7 @@ Dynamic Parameters introduces three primary enhancements to the standard paramet
 
 - **Reference User Properties**
 
-  - Read user data at build time from [`coder_workspace_owner`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/data-sources/workspace_owner)
+  - Read user data at build time from [`coder_workspace_owner`](https://registry.terraform.io/providers/coder/coder/latest/docs/data-sources/workspace_owner)
   - Conditionally hide parameters based on user's role
   - Change parameter options based on user groups
   - Reference user name, groups, and roles in parameter text
@@ -104,7 +104,7 @@ Dynamic Parameters introduces three primary enhancements to the standard paramet
 > then reference that data in Terraform.
 >
 > If you have a use case for external data fetching, please file an issue or create a discussion in the
-> [Coder GitHub repository](https://github.com/DanielRondonGarcia/coder).
+> [Coder GitHub repository](https://github.com/coder/coder).
 
 ## Available Form Input Types
 
@@ -114,7 +114,7 @@ Dynamic Parameters supports a variety of form types to create rich, interactive 
 
 Different parameter types support different form types.
 You can specify the form type using the
-[`form_type`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/data-sources/parameter#form_type-1) attribute.
+[`form_type`](https://registry.terraform.io/providers/coder/coder/latest/docs/data-sources/parameter#form_type-1) attribute.
 
 The **Options** column in the table below indicates whether the form type supports options (**Yes**) or doesn't support them (**No**).
 When supported, you can specify options using one or more `option` blocks in your parameter definition,
@@ -170,7 +170,7 @@ Not all styling attributes are supported by all form types, use the reference be
 ### New Form Types
 
 The following examples show some basic usage of the
-[`form_type`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/data-sources/parameter#form_type-1)
+[`form_type`](https://registry.terraform.io/providers/coder/coder/latest/docs/data-sources/parameter#form_type-1)
 attribute [explained above](#available-form-input-types).
 These are used to change the input style of form controls in the create workspace form.
 
@@ -646,7 +646,7 @@ This is helpful for establishing governance policy directly in the workspace cre
 rather than creating multiple templates to manage RBAC.
 
 User identity is referenced in Terraform by reading the
-[`coder_workspace_owner`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/data-sources/workspace_owner) data source.
+[`coder_workspace_owner`](https://registry.terraform.io/providers/coder/coder/latest/docs/data-sources/workspace_owner) data source.
 
 <div class="tabs">
 
@@ -654,7 +654,7 @@ User identity is referenced in Terraform by reading the
 
 Template administrators often want to expose certain experimental or unstable options only to those with elevated roles.
 You can now do this by setting `count` based on a user's group or role, referencing the
-[`coder_workspace_owner`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/data-sources/workspace_owner)
+[`coder_workspace_owner`](https://registry.terraform.io/providers/coder/coder/latest/docs/data-sources/workspace_owner)
 data source.
 
 [Try out admin-only options in the Playground](https://playground.coder.app/parameters/5Gn9W3hYs7).
@@ -784,13 +784,13 @@ data "coder_parameter" "your_groups" {
 
 ## Troubleshooting
 
-Dynamic Parameters is now in general availability. We're tracking a list of known issues [here in Github](https://github.com/DanielRondonGarcia/coder/issues?q=sort%3Aupdated-desc%20is%3Aissue%20is%3Aopen%20label%3Aparameters) as we continue to polish and improve the workflow.
+Dynamic Parameters is now in general availability. We're tracking a list of known issues [here in Github](https://github.com/coder/coder/issues?q=sort%3Aupdated-desc%20is%3Aissue%20is%3Aopen%20label%3Aparameters) as we continue to polish and improve the workflow.
 If you have any issues during upgrade, please file an issue in our
-[GitHub repository](https://github.com/DanielRondonGarcia/coder/issues/new?labels=parameters) with the `parameters` label and include a
+[GitHub repository](https://github.com/coder/coder/issues/new?labels=parameters) with the `parameters` label and include a
 [Playground link](https://playground.coder.app/parameters) where applicable.
 We appreciate the feedback and look forward to what the community creates with this system!
 
-You can also [search or track the list of known issues](https://github.com/DanielRondonGarcia/coder/issues?q=is%3Aissue%20state%3Aopen%20label%3Aparameters).
+You can also [search or track the list of known issues](https://github.com/coder/coder/issues?q=is%3Aissue%20state%3Aopen%20label%3Aparameters).
 
 You can share anything you build with Dynamic Parameters in our [Discord](https://coder.com/chat).
 
@@ -798,8 +798,8 @@ You can share anything you build with Dynamic Parameters in our [Discord](https:
 
 Ensure that the following version requirements are met:
 
-- `coder/coder`: >= [v2.25.0](https://github.com/DanielRondonGarcia/coder/releases/tag/v2.25.0)
-- `coder/terraform-provider-coder`: >= [v2.5.3](https://github.com/DanielRondonGarcia/terraform-provider-coder/releases/tag/v2.5.3)
+- `coder/coder`: >= [v2.25.0](https://github.com/coder/coder/releases/tag/v2.25.0)
+- `coder/terraform-provider-coder`: >= [v2.5.3](https://github.com/coder/terraform-provider-coder/releases/tag/v2.5.3)
 
 Enabling Dynamic Parameters on an existing template requires administrators to publish a new template version.
 This will resolve the necessary template metadata to render the form.
@@ -818,7 +818,7 @@ To revert Dynamic Parameters on a template:
 
 ### Template variables not showing up
 
-Dynamic Parameters is GA as of [v2.25.0](https://github.com/DanielRondonGarcia/coder/releases/tag/v2.25.0), and this issue has been resolved. In beta ([v2.24.0](https://github.com/DanielRondonGarcia/coder/releases/tag/v2.24.0)), template variables were not supported in Dynamic Parameters.
+Dynamic Parameters is GA as of [v2.25.0](https://github.com/coder/coder/releases/tag/v2.25.0), and this issue has been resolved. In beta ([v2.24.0](https://github.com/coder/coder/releases/tag/v2.24.0)), template variables were not supported in Dynamic Parameters.
 
 If you are experiencing issues with template variables, try upgrading to the latest version with dynamic parameters in GA. Otherwise, please file an issue in our Github.
 

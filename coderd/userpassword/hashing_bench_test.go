@@ -7,7 +7,7 @@ import (
 	"golang.org/x/crypto/bcrypt"
 	"golang.org/x/crypto/pbkdf2"
 
-	"github.com/DanielRondonGarcia/coder/v2/cryptorand"
+	"github.com/coder/coder/v2/cryptorand"
 )
 
 var (

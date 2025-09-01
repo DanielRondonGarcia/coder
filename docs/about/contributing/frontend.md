@@ -282,7 +282,7 @@ local machine, or execute the following command if you don't have the repo
 available:
 
 ```bash
-bash <(curl -sSL https://raw.githubusercontent.com/DanielRondonGarcia/coder/main/scripts/remote_playwright.sh) [workspace]
+bash <(curl -sSL https://raw.githubusercontent.com/coder/coder/main/scripts/remote_playwright.sh) [workspace]
 ```
 
 The `scripts/remote_playwright.sh` script will start a Playwright server on your

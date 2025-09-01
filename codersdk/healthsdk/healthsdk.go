@@ -12,8 +12,8 @@ import (
 	"tailscale.com/net/netcheck"
 	"tailscale.com/tailcfg"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/healthcheck/health"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/coder/coder/v2/coderd/healthcheck/health"
+	"github.com/coder/coder/v2/codersdk"
 )
 
 // @typescript-ignore HealthClient

@@ -16,16 +16,16 @@ import (
 	"github.com/stretchr/testify/require"
 	protobuf "google.golang.org/protobuf/proto"
 
-	"github.com/DanielRondonGarcia/terraform-provider-coder/v2/provider"
+	"github.com/coder/terraform-provider-coder/v2/provider"
 
 	"cdr.dev/slog"
 	"cdr.dev/slog/sloggers/slogtest"
 
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
+	"github.com/coder/coder/v2/testutil"
 
-	"github.com/DanielRondonGarcia/coder/v2/cryptorand"
-	"github.com/DanielRondonGarcia/coder/v2/provisioner/terraform"
-	"github.com/DanielRondonGarcia/coder/v2/provisionersdk/proto"
+	"github.com/coder/coder/v2/cryptorand"
+	"github.com/coder/coder/v2/provisioner/terraform"
+	"github.com/coder/coder/v2/provisionersdk/proto"
 )
 
 func ctxAndLogger(t *testing.T) (context.Context, slog.Logger) {

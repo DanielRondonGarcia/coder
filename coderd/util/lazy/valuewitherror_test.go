@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/lazy"
+	"github.com/coder/coder/v2/coderd/util/lazy"
 )
 
 func TestLazyWithErrorOK(t *testing.T) {

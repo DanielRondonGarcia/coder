@@ -110,7 +110,7 @@ practical template, you would add arguments to these blocks to configure the
 providers, if needed.
 
 The
-[`coder_workspace`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/data-sources/workspace)
+[`coder_workspace`](https://registry.terraform.io/providers/coder/coder/latest/docs/data-sources/workspace)
 data source provides details about the state of a workspace, such as its name,
 owner, and so on. The data source also lets us know when a workspace is being
 started or stopped. We'll use this information in later steps to:
@@ -121,7 +121,7 @@ started or stopped. We'll use this information in later steps to:
 ## 3. coder_agent
 
 All templates need to create and run a
-[Coder agent](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/agent).
+[Coder agent](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/agent).
 This lets developers connect to their workspaces. The `coder_agent` resource
 runs inside the compute aspect of your workspace, typically a VM or container.
 In our case, it will run in Docker.
@@ -176,14 +176,14 @@ host, your template will need
 This template's agent also runs a startup script, sets environment variables,
 and provides metadata.
 
-- [`startup script`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/agent#startup_script)
+- [`startup script`](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/agent#startup_script)
 
   - Installs [code-server](https://coder.com/docs/code-server), a browser-based
     [VS Code](https://code.visualstudio.com/) app that runs in the workspace.
 
     We'll give users access to code-server through `coder_app` later.
 
-- [`env` block](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/agent#env)
+- [`env` block](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/agent#env)
 
   - Sets environments variables for the workspace.
 
@@ -201,7 +201,7 @@ and provides metadata.
 ## 4. coder_app
 
 A
-[`coder_app`](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/app)
+[`coder_app`](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/app)
 resource lets a developer use an app from the workspace's Coder dashboard.
 
 ![Apps in a Coder workspace](../images/templates/workspace-apps.png)

@@ -11,10 +11,10 @@ import (
 	"github.com/google/uuid"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/aisdk-go"
+	"github.com/coder/aisdk-go"
 
-	"github.com/DanielRondonGarcia/coder/v2/buildinfo"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/coder/coder/v2/buildinfo"
+	"github.com/coder/coder/v2/codersdk"
 )
 
 // Tool name constants to avoid hardcoded strings
@@ -850,7 +850,7 @@ data "cloudinit_config" "user_data" {
 	// packages:
 	//   - git
 	// write_files:
-	//   - path: /opt/DanielRondonGarcia/init
+	//   - path: /opt/coder/init
 	//     permissions: "0755"
 	//     encoding: b64
 	//     content: ${init_script}
@@ -864,7 +864,7 @@ data "cloudinit_config" "user_data" {
 
 	//       [Service]
 	//       User=${username}
-	//       ExecStart=/opt/DanielRondonGarcia/init
+	//       ExecStart=/opt/coder/init
 	//       Restart=always
 	//       RestartSec=10
 	//       TimeoutStopSec=90

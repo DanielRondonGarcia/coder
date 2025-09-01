@@ -66,7 +66,7 @@ See
 ### Windows
 
 Download the latest Windows installer or binary from
-[GitHub releases](https://github.com/DanielRondonGarcia/coder/releases/latest), or upgrade
+[GitHub releases](https://github.com/coder/coder/releases/latest), or upgrade
 from Winget.
 
 ```pwsh

@@ -27,7 +27,7 @@ on:
         default: false
 
 env:
-  REPO: ghcr.io/DanielRondonGarcia/coder-preview
+  REPO: ghcr.io/coder/coder-preview
 
 permissions:
   contents: read
@@ -108,8 +108,8 @@ jobs:
           echo "CODER_BASE_IMAGE_TAG=$CODER_BASE_IMAGE_TAG" >> "$GITHUB_OUTPUT"
           echo "CODER_IMAGE_TAG=$CODER_IMAGE_TAG" >> "$GITHUB_OUTPUT"
         env:
-          CODER_BASE_IMAGE_TAG: ghcr.io/DanielRondonGarcia/coder-preview-base:pr${{ steps.pr_info.outputs.PR_NUMBER }}
-          CODER_IMAGE_TAG: ghcr.io/DanielRondonGarcia/coder-preview:pr${{ steps.pr_info.outputs.PR_NUMBER }}
+          CODER_BASE_IMAGE_TAG: ghcr.io/coder/coder-preview-base:pr${{ steps.pr_info.outputs.PR_NUMBER }}
+          CODER_IMAGE_TAG: ghcr.io/coder/coder-preview:pr${{ steps.pr_info.outputs.PR_NUMBER }}
 
       - name: Set up kubeconfig
         run: |
@@ -304,18 +304,18 @@ jobs:
         run: |
           set -euo pipefail
           foundTag=$(
-            gh api /orgs/DanielRondonGarcia/packages/container/coder-preview/versions |
+            gh api /orgs/coder/packages/container/coder-preview/versions |
             jq -r --arg tag "pr${PR_NUMBER}" '.[] |
             select(.metadata.container.tags == [$tag]) |
             .metadata.container.tags[0]'
           )
           if [ -z "$foundTag" ]; then
             echo "Image not found"
-            echo "${CODER_IMAGE_TAG} not found in ghcr.io/DanielRondonGarcia/coder-preview"
+            echo "${CODER_IMAGE_TAG} not found in ghcr.io/coder/coder-preview"
             exit 1
           else
             echo "Image found"
-            echo "$foundTag tag found in ghcr.io/DanielRondonGarcia/coder-preview"
+            echo "$foundTag tag found in ghcr.io/coder/coder-preview"
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -460,14 +460,14 @@ jobs:
             "https://${PR_HOSTNAME}"
 
           # Create a user for the github.actor
-          # TODO: update once https://github.com/DanielRondonGarcia/coder/issues/15466 is resolved
+          # TODO: update once https://github.com/coder/coder/issues/15466 is resolved
           # coder users create \
           #   --username ${GITHUB_ACTOR} \
           #   --login-type github
 
           # promote the user to admin role
           # coder org members edit-role ${GITHUB_ACTOR} organization-admin
-          # TODO: update once https://github.com/DanielRondonGarcia/internal/issues/207 is resolved
+          # TODO: update once https://github.com/coder/internal/issues/207 is resolved
 
       - name: Send Slack notification
         if: needs.get_info.outputs.NEW == 'true' || github.event.inputs.deploy == 'true'

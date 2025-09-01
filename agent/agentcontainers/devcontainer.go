@@ -8,7 +8,7 @@ import (
 	"github.com/google/uuid"
 
 	"cdr.dev/slog"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/coder/coder/v2/codersdk"
 )
 
 const (

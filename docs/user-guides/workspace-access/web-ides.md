@@ -11,7 +11,7 @@ networks, data science, contractors, and infrequent code contributors.
 ![Row of IDEs](../../images/ide-row.png)
 
 In Coder, web IDEs are defined as
-[coder_app](https://registry.terraform.io/providers/DanielRondonGarcia/coder/latest/docs/resources/app)
+[coder_app](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/app)
 resources in the template. With our generic model, any web application can be
 used as a Coder application. For example:
 
@@ -22,7 +22,7 @@ To learn more about configuring IDEs in templates, see our docs on
 
 ## code-server
 
-[`code-server`](https://github.com/DanielRondonGarcia/code-server) is our supported method of
+[`code-server`](https://github.com/coder/code-server) is our supported method of
 running VS Code in the web browser. You can read more in our
 [documentation for code-server](https://coder.com/docs/code-server).
 

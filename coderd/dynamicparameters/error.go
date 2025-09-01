@@ -7,7 +7,7 @@ import (
 
 	"github.com/hashicorp/hcl/v2"
 
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/coder/coder/v2/codersdk"
 )
 
 func parameterValidationError(diags hcl.Diagnostics) *DiagnosticError {

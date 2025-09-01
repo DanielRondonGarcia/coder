@@ -79,7 +79,7 @@ given project.
 
 Envbuilder has various caching modes to ensure workspaces start as fast as
 possible, such as layer caching and even full image caching and fetching via the
-[Envbuilder Terraform provider](https://registry.terraform.io/providers/DanielRondonGarcia/envbuilder/latest/docs).
+[Envbuilder Terraform provider](https://registry.terraform.io/providers/coder/envbuilder/latest/docs).
 
 ### Cost optimization
 
@@ -108,7 +108,7 @@ language-specific runtimes and compilers.
 
 ## Coder Envbuilder
 
-[Envbuilder](https://github.com/DanielRondonGarcia/envbuilder/) is an open-source project
+[Envbuilder](https://github.com/coder/envbuilder/) is an open-source project
 maintained by Coder that runs dev containers via Coder templates and your
 underlying infrastructure. Envbuilder can run on Docker or Kubernetes.
 

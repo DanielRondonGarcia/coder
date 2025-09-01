@@ -7,8 +7,8 @@ import (
 
 	"cdr.dev/slog"
 	"cdr.dev/slog/sloggers/sloghuman"
-	"github.com/DanielRondonGarcia/coder/v2/vpn"
-	"github.com/DanielRondonGarcia/serpent"
+	"github.com/coder/coder/v2/vpn"
+	"github.com/coder/serpent"
 )
 
 func (r *RootCmd) vpnDaemonRun() *serpent.Command {

@@ -1,8 +1,8 @@
 package cli
 
 import (
-	"github.com/DanielRondonGarcia/coder/v2/cli"
-	"github.com/DanielRondonGarcia/serpent"
+	"github.com/coder/coder/v2/cli"
+	"github.com/coder/serpent"
 )
 
 type RootCmd struct {

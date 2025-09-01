@@ -11,22 +11,22 @@ import (
 	"github.com/stretchr/testify/require"
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/coder/v2/coderd"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/coderdtest/oidctest"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/db2sdk"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbauthz"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbgen"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/database/dbtestutil"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/rbac"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/util/slice"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
-	coderden "github.com/DanielRondonGarcia/coder/v2/enterprise/coderd"
-	"github.com/DanielRondonGarcia/coder/v2/enterprise/coderd/coderdenttest"
-	"github.com/DanielRondonGarcia/coder/v2/enterprise/coderd/license"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
-	"github.com/DanielRondonGarcia/serpent"
+	"github.com/coder/coder/v2/coderd"
+	"github.com/coder/coder/v2/coderd/coderdtest"
+	"github.com/coder/coder/v2/coderd/coderdtest/oidctest"
+	"github.com/coder/coder/v2/coderd/database"
+	"github.com/coder/coder/v2/coderd/database/db2sdk"
+	"github.com/coder/coder/v2/coderd/database/dbauthz"
+	"github.com/coder/coder/v2/coderd/database/dbgen"
+	"github.com/coder/coder/v2/coderd/database/dbtestutil"
+	"github.com/coder/coder/v2/coderd/rbac"
+	"github.com/coder/coder/v2/coderd/util/slice"
+	"github.com/coder/coder/v2/codersdk"
+	coderden "github.com/coder/coder/v2/enterprise/coderd"
+	"github.com/coder/coder/v2/enterprise/coderd/coderdenttest"
+	"github.com/coder/coder/v2/enterprise/coderd/license"
+	"github.com/coder/coder/v2/testutil"
+	"github.com/coder/serpent"
 )
 
 // nolint:bodyclose
@@ -348,7 +348,7 @@ func TestUserOIDC(t *testing.T) {
 		// roles from an updated claim.
 		t.Run("NewUserAndRemoveRolesOnRefresh", func(t *testing.T) {
 			// TODO: Implement new feature to update roles/groups on OIDC
-			// refresh tokens. https://github.com/DanielRondonGarcia/coder/issues/9312
+			// refresh tokens. https://github.com/coder/coder/issues/9312
 			t.Skip("Refreshing tokens does not update roles :(")
 			t.Parallel()
 
@@ -539,7 +539,7 @@ func TestUserOIDC(t *testing.T) {
 			t.Parallel()
 
 			// TODO: Implement new feature to update roles/groups on OIDC
-			// refresh tokens. https://github.com/DanielRondonGarcia/coder/issues/9312
+			// refresh tokens. https://github.com/coder/coder/issues/9312
 			t.Skip("Refreshing tokens does not update groups :(")
 
 			const groupClaim = "custom-groups"

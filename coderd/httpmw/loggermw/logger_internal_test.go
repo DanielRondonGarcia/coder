@@ -16,9 +16,9 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"cdr.dev/slog"
-	"github.com/DanielRondonGarcia/coder/v2/coderd/tracing"
-	"github.com/DanielRondonGarcia/coder/v2/testutil"
-	"github.com/DanielRondonGarcia/websocket"
+	"github.com/coder/coder/v2/coderd/tracing"
+	"github.com/coder/coder/v2/testutil"
+	"github.com/coder/websocket"
 )
 
 func TestRequestLogger_WriteLog(t *testing.T) {

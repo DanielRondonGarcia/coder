@@ -10,7 +10,7 @@ import (
 	"tailscale.com/util/clientmetric"
 
 	"cdr.dev/slog"
-	"github.com/DanielRondonGarcia/coder/v2/agent/proto"
+	"github.com/coder/coder/v2/agent/proto"
 )
 
 type agentMetrics struct {

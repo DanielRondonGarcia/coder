@@ -5,7 +5,7 @@ package cli
 import (
 	"golang.org/x/xerrors"
 
-	"github.com/DanielRondonGarcia/serpent"
+	"github.com/coder/serpent"
 )
 
 func (*RootCmd) vpnDaemonRun() *serpent.Command {

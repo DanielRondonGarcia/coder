@@ -9,8 +9,8 @@ import (
 
 	"cdr.dev/slog"
 
-	agentproto "github.com/DanielRondonGarcia/coder/v2/agent/proto"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	agentproto "github.com/coder/coder/v2/agent/proto"
+	"github.com/coder/coder/v2/codersdk"
 )
 
 // SubAgent represents an agent running in a dev container.

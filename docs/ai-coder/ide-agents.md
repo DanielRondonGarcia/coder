@@ -23,4 +23,4 @@ Follow the Coder Documentation for [Connecting to Workspaces](../user-guides/wor
 
 ## Pre-Configuring Extensions &amp; Plugins
 
-Read our [VS Code module documentation](https://registry.coder.com/modules/DanielRondonGarcia/vscode-web) for examples on how to pre-install plugins like GitHub Copilot, RooCode, Sourcegraph Cody, and more in Coder workspaces.
+Read our [VS Code module documentation](https://registry.coder.com/modules/coder/vscode-web) for examples on how to pre-install plugins like GitHub Copilot, RooCode, Sourcegraph Cody, and more in Coder workspaces.

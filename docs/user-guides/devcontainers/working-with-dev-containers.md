@@ -72,17 +72,17 @@ This forwards port 8080 (local) -> 8080 (agent) -> 8080 (dev container) and port
 
 You can use standard dev container features in your `devcontainer.json` file.
 Coder also maintains a
-[repository of features](https://github.com/DanielRondonGarcia/devcontainer-features) to
+[repository of features](https://github.com/coder/devcontainer-features) to
 enhance your development experience.
 
-Currently available features include [code-server](https://github.com/DanielRondonGarcia/devcontainer-features/blob/main/src/code-server).
+Currently available features include [code-server](https://github.com/coder/devcontainer-features/blob/main/src/code-server).
 
 To use the code-server feature, add the following to your `devcontainer.json`:
 
 ```json
 {
     "features": {
-        "ghcr.io/DanielRondonGarcia/devcontainer-features/code-server:1": {
+        "ghcr.io/coder/devcontainer-features/code-server:1": {
             "port": 13337,
             "host": "0.0.0.0"
         }

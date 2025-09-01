@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/DanielRondonGarcia/coder/v2/cli/cliutil"
-	"github.com/DanielRondonGarcia/coder/v2/codersdk"
+	"github.com/coder/coder/v2/cli/cliutil"
+	"github.com/coder/coder/v2/codersdk"
 )
 
 func TestWarnMatchedProvisioners(t *testing.T) {
